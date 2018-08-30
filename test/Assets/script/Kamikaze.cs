@@ -30,7 +30,7 @@ public class Kamikaze : MonoBehaviour {
             if (Vector2.Distance(transform.position, player.position) <= radius)
             {
                 KamikazeAngriff();
-                if (Vector2.Distance(transform.position, absturzPunkt.position) == 0)
+                if (Vector2.Distance(transform.position, absturzPunkt) == 0)
                 {
                     isTriggered = true;
                 }
@@ -41,6 +41,6 @@ public class Kamikaze : MonoBehaviour {
     void KamikazeAngriff()
     {
         absturzPunkt = player.position;
-        transform.position = Vector2.MoveTowards(transform.position, absturzPunkt.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, absturzPunkt, speed * Time.deltaTime);
     }
 }
