@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a058f15481bf4394382f0be5289f4a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 
+  level: dorf
   LevelToUnlock: 2
 --- !u!61 &12571113
 BoxCollider2D:
@@ -6224,9 +6224,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: RoboBoy
+    sentences:
+    - Genug Steine werde ich nicht finden, um aus dieser Grube rrauszukommen.
+  trigger: {fileID: 197786262}
 --- !u!61 &197786265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6282,7 +6283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee67eb3e9f3a34a4584fb6eea7d6d2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dauer: 2
+  dauer: 0.2
 --- !u!50 &214532276
 Rigidbody2D:
   serializedVersion: 4
@@ -8054,9 +8055,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: "Dorfw\xE4chter"
+    sentences:
+    - FEIND! FEIND! Waffe lassen fallen oder du tot!
+    - "***Dr\xFCcke F, um die Waffe fallen zu lassen***"
+  trigger: {fileID: 381386458}
 --- !u!61 &381386461
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8124,9 +8127,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: RoboBoy
+    sentences:
+    - "So viel Gr\xFCnfl\xE4che habe ich schon lange nicht mehr gesehen. Ob das die
+      Zukunft ist?"
+  trigger: {fileID: 385904097}
 --- !u!61 &385904100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9482,7 +9487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a11e5e0fc1e0194dac667033d9c0736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: e3c101a924faa394d9141184aebeb26d, type: 2}
 --- !u!114 &529833953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11362,9 +11367,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: RoboBoy
+    sentences:
+    - "Die Zeitmaschine sieht nicht funktionst\xFCchtig aus. Ich hoffe ich befinde
+      mich in der Zukunft und kann schnell Ersatzteile besorgen."
+    - Am besten suche ich erstmal den Weg hier raus.
+  trigger: {fileID: 654323431}
 --- !u!61 &654323434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12669,9 +12677,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: RoboBoy
+    sentences:
+    - Ein Raptor?! Ich bin verloren...
+    - '***Klicke auf die linke Maustaste, um Steine zu werfen***'
+  trigger: {fileID: 783848866}
 --- !u!61 &783848869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14153,9 +14163,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: RoboBoy
+    sentences:
+    - "***Halte STRG gedr\xFCckt, um zu kriechen***"
+  trigger: {fileID: 925076862}
 --- !u!61 &925076865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14462,9 +14473,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: RoboBoy
+    sentences:
+    - "Unbewaffnet und alleine im Nirgendo. Ich sollte die Steine mitnehmen. Man wei\xDF
+      ja nie..."
+  trigger: {fileID: 976026689}
 --- !u!61 &976026692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16042,9 +16055,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: RoboBoy
+    sentences:
+    - "***Dr\xFCcke LEERTASTE, um zu springen***"
+  trigger: {fileID: 1155311873}
 --- !u!61 &1155311876
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17276,9 +17290,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 591246bf59b24a944aed55539555dd67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  dialogueText: {fileID: 0}
-  animator: {fileID: 0}
+  nameText: {fileID: 475007125}
+  dialogueText: {fileID: 24649876}
+  animator: {fileID: 1140586023}
 --- !u!4 &1269756790
 Transform:
   m_ObjectHideFlags: 0
@@ -17707,6 +17721,7 @@ GameObject:
   - component: {fileID: 1332715721}
   - component: {fileID: 1332715720}
   - component: {fileID: 1332715719}
+  - component: {fileID: 1332715722}
   m_Layer: 0
   m_Name: Flugsurier
   m_TagString: Untagged
@@ -17725,8 +17740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b81eee57ea79cc47ae323e0860eb9c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  radius: 0
+  speed: 10
+  radius: 20
   startPos: {x: 0, y: 0, z: 0}
   Lvlmanager: {fileID: 0}
   player: {fileID: 0}
@@ -17784,12 +17799,227 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1332715718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.93, y: -99.89, z: 0}
+  m_LocalPosition: {x: -38.19, y: -100.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1332715722
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1332715718}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.62, y: 4.6}
+    newSize: {x: 6.62, y: 4.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.45999998, y: -2.08}
+      - {x: 0.45999998, y: -1.99}
+      - {x: 0.38, y: -1.9499999}
+      - {x: 0.26999998, y: -2}
+      - {x: 0.25, y: -1.9399999}
+      - {x: 0.08, y: -1.93}
+      - {x: 0.08, y: -1.9499999}
+      - {x: -0.16, y: -1.92}
+      - {x: -0.22999999, y: -1.88}
+      - {x: -0.17, y: -1.8499999}
+      - {x: -0.03, y: -1.8199999}
+      - {x: 0.25, y: -1.8299999}
+      - {x: 1.35, y: -1.9499999}
+      - {x: 1.4699999, y: -1.9599999}
+      - {x: 1.7099999, y: -1.9699999}
+      - {x: 1.9399999, y: -1.9799999}
+      - {x: 2.18, y: -1.99}
+      - {x: 2.37, y: -1.99}
+      - {x: 2.6799998, y: -1.9399999}
+      - {x: 2.87, y: -2.03}
+      - {x: 2.97, y: -2.1}
+      - {x: 3.03, y: -2.11}
+      - {x: 3.21, y: -1.9399999}
+      - {x: 3.31, y: -1.8399999}
+      - {x: 3.31, y: -1.77}
+      - {x: 3.03, y: -1.52}
+      - {x: 2.97, y: -1.4399999}
+      - {x: 2.8999999, y: -1.49}
+      - {x: 2.81, y: -1.64}
+      - {x: 2.7, y: -1.76}
+      - {x: 2.56, y: -1.8299999}
+      - {x: 2.36, y: -1.87}
+      - {x: 1.8299999, y: -1.8299999}
+      - {x: 1.4599999, y: -1.78}
+      - {x: 1.04, y: -1.7099999}
+      - {x: 0.52, y: -1.5899999}
+      - {x: 0.29, y: -1.54}
+      - {x: 0.089999996, y: -1.4699999}
+      - {x: -0.049999997, y: -1.4}
+      - {x: -0.099999994, y: -1.31}
+      - {x: -0.07, y: -1.17}
+      - {x: 0.14, y: -0.87}
+      - {x: 0.24, y: -0.77}
+      - {x: 0.59999996, y: -0.5}
+      - {x: 0.68, y: -0.45999998}
+      - {x: 0.91999996, y: -0.32999998}
+      - {x: 1.04, y: -0.29}
+      - {x: 1.26, y: -0.21}
+      - {x: 1.5699999, y: -0.12}
+      - {x: 1.7099999, y: -0.099999994}
+      - {x: 2, y: -0.089999996}
+      - {x: 2, y: -0.099999994}
+      - {x: 2.12, y: -0.11}
+      - {x: 2.1399999, y: -0.06}
+      - {x: 2.06, y: -0.01}
+      - {x: 1.9399999, y: 0.04}
+      - {x: 1.73, y: 0.12}
+      - {x: 1.65, y: 0.14}
+      - {x: 1.39, y: 0.17999999}
+      - {x: 1.29, y: 0.19}
+      - {x: 0.96999997, y: 0.19}
+      - {x: 0.87, y: 0.17999999}
+      - {x: 0.59, y: 0.14}
+      - {x: 0.42, y: 0.08}
+      - {x: 0.26999998, y: 0.03}
+      - {x: 0.17999999, y: -0.01}
+      - {x: 0.02, y: -0.049999997}
+      - {x: 0.11, y: 0.22}
+      - {x: 0.17, y: 0.37}
+      - {x: 0.17, y: 0.39}
+      - {x: 0.34, y: 0.7}
+      - {x: 0.58, y: 1.0699999}
+      - {x: 0.72999996, y: 1.25}
+      - {x: 0.94, y: 1.4699999}
+      - {x: 0.95, y: 1.4699999}
+      - {x: 1.17, y: 1.65}
+      - {x: 1.4, y: 1.8}
+      - {x: 1.52, y: 1.88}
+      - {x: 1.77, y: 2}
+      - {x: 1.9399999, y: 2.07}
+      - {x: 2.1499999, y: 2.1399999}
+      - {x: 2.34, y: 2.19}
+      - {x: 2.3899999, y: 2.21}
+      - {x: 2.3999999, y: 2.26}
+      - {x: 2.35, y: 2.29}
+      - {x: 2.22, y: 2.3}
+      - {x: 1.55, y: 2.3}
+      - {x: 1.48, y: 2.29}
+      - {x: 1.28, y: 2.26}
+      - {x: 1.13, y: 2.22}
+      - {x: 0.84999996, y: 2.1}
+      - {x: 0.62, y: 1.99}
+      - {x: 0.42, y: 1.87}
+      - {x: 0.24, y: 1.75}
+      - {x: -0.01, y: 1.55}
+      - {x: -0.14999999, y: 1.4399999}
+      - {x: -0.37, y: 1.24}
+      - {x: -0.57, y: 1.03}
+      - {x: -0.63, y: 0.96}
+      - {x: -0.68, y: 0.88}
+      - {x: -0.77, y: 0.71999997}
+      - {x: -0.83, y: 0.72999996}
+      - {x: -0.91999996, y: 0.84999996}
+      - {x: -1.02, y: 0.89}
+      - {x: -1.11, y: 0.91999996}
+      - {x: -1.1999999, y: 0.94}
+      - {x: -1.35, y: 0.96}
+      - {x: -1.37, y: 0.94}
+      - {x: -1.36, y: 0.90999997}
+      - {x: -1.09, y: 0.82}
+      - {x: -0.97999996, y: 0.77}
+      - {x: -0.96999997, y: 0.65}
+      - {x: -1.04, y: 0.59999996}
+      - {x: -1.18, y: 0.45999998}
+      - {x: -1.2099999, y: 0.39999998}
+      - {x: -1.27, y: 0.26999998}
+      - {x: -1.27, y: 0.24}
+      - {x: -1.25, y: 0.22}
+      - {x: -1.22, y: 0.22999999}
+      - {x: -1.14, y: 0.32999998}
+      - {x: -0.98999995, y: 0.5}
+      - {x: -0.91999996, y: 0.48}
+      - {x: -0.90999997, y: 0.42}
+      - {x: -0.90999997, y: 0.26}
+      - {x: -0.96, y: 0.07}
+      - {x: -1, y: -0.19}
+      - {x: -1.09, y: -0.53}
+      - {x: -1.18, y: -0.81}
+      - {x: -1.3299999, y: -1.0699999}
+      - {x: -1.51, y: -1.06}
+      - {x: -1.73, y: -1}
+      - {x: -1.8, y: -0.95}
+      - {x: -1.92, y: -0.9}
+      - {x: -2.09, y: -0.90999997}
+      - {x: -2.1599998, y: -0.96}
+      - {x: -2.26, y: -0.90999997}
+      - {x: -2.35, y: -0.9}
+      - {x: -2.3899999, y: -0.93}
+      - {x: -2.3899999, y: -0.97999996}
+      - {x: -2.37, y: -1}
+      - {x: -2.3799999, y: -1.1}
+      - {x: -2.34, y: -1.16}
+      - {x: -2.45, y: -1.25}
+      - {x: -2.55, y: -1.27}
+      - {x: -2.78, y: -1.37}
+      - {x: -3.1, y: -1.52}
+      - {x: -3.21, y: -1.5899999}
+      - {x: -3.29, y: -1.66}
+      - {x: -3.31, y: -1.7099999}
+      - {x: -3.31, y: -1.76}
+      - {x: -3.1999998, y: -1.74}
+      - {x: -3.12, y: -1.6999999}
+      - {x: -3.09, y: -1.75}
+      - {x: -3.03, y: -1.73}
+      - {x: -2.9399998, y: -1.6899999}
+      - {x: -2.84, y: -1.66}
+      - {x: -2.73, y: -1.64}
+      - {x: -2.6499999, y: -1.5899999}
+      - {x: -2.36, y: -1.5}
+      - {x: -2.33, y: -1.49}
+      - {x: -2.26, y: -1.4699999}
+      - {x: -2.27, y: -1.4699999}
+      - {x: -2.34, y: -1.55}
+      - {x: -2.45, y: -1.66}
+      - {x: -2.6599998, y: -1.8499999}
+      - {x: -2.7, y: -1.9599999}
+      - {x: -2.62, y: -1.99}
+      - {x: -2.33, y: -1.81}
+      - {x: -2.03, y: -1.64}
+      - {x: -1.8299999, y: -1.49}
+      - {x: -1.67, y: -1.3399999}
+      - {x: -1.36, y: -1.52}
+      - {x: -1.29, y: -1.65}
+      - {x: -1.14, y: -1.81}
+      - {x: -1.0799999, y: -1.8499999}
+      - {x: -0.96999997, y: -1.91}
+      - {x: -0.84999996, y: -1.92}
+      - {x: -0.89, y: -1.9799999}
+      - {x: -0.89, y: -2.1}
+      - {x: -0.84, y: -2.1499999}
+      - {x: -0.78999996, y: -2.18}
+      - {x: -0.59, y: -2.1699998}
+      - {x: -0.41, y: -2.1599998}
+      - {x: -0.26999998, y: -2.1699998}
+      - {x: -0.22, y: -2.22}
+      - {x: -0.14999999, y: -2.26}
+      - {x: -0.07, y: -2.3}
+      - {x: 0.12, y: -2.3}
+      - {x: 0.22999999, y: -2.24}
+      - {x: 0.28, y: -2.24}
+      - {x: 0.32999998, y: -2.22}
 --- !u!1 &1338751781
 GameObject:
   m_ObjectHideFlags: 0
@@ -18647,9 +18877,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: RoboBoy
+    sentences:
+    - "***Erkl\xE4rung zum Coin***"
+  trigger: {fileID: 1428141046}
 --- !u!61 &1428141049
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19326,8 +19557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e913942c066c495488d68a89aaf4b0ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
-  OptionenUI: {fileID: 0}
+  pauseMenuUI: {fileID: 388396191}
+  OptionenUI: {fileID: 602473975}
 --- !u!1 &1471791477
 GameObject:
   m_ObjectHideFlags: 0
@@ -20460,9 +20691,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: RoboBoy
+    sentences:
+    - "***Klick auf die rechte Maustaste, um Dialoge fortzuf\xFChren***"
+    - Ich werd noch behindert. Wo bin ich hier? Was denkt sich mein Vater, mich in
+      die Zeitschmaschine zu schubsen?!
+    - "Ich sollte mich mal umsehen und so schnell wie m\xF6glich zur\xFCck."
+    - '***Benutze W A S D, um dich zu bewegen.***'
+  trigger: {fileID: 1570008390}
 --- !u!61 &1570008393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23997,9 +24233,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: RoboBoy
+    sentences:
+    - Ich darf auf keinen Fall hier runterfallen.
+  trigger: {fileID: 1832367866}
 --- !u!61 &1832367869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24376,9 +24613,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: RoboBoy
+    sentences:
+    - Der Felsen ist riesig. Ich brauche etwas, um mich drauf zu stellen.
+  trigger: {fileID: 1863465431}
 --- !u!61 &1863465434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26064,13 +26302,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f157bc3b8bc248d4382ed1ab6186d3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCheckpoint: {fileID: 0}
-  leben: 0
+  currentCheckpoint: {fileID: 465524518}
+  leben: 5
   spieler: {fileID: 0}
-  lebentxt: {fileID: 0}
-  GameOverUI: {fileID: 0}
-  timertxt: {fileID: 0}
-  roundTimer: 0
+  lebentxt: {fileID: 1920865145}
+  GameOverUI: {fileID: 1602861778}
+  timertxt: {fileID: 776622931}
+  roundTimer: 500
 --- !u!4 &2034210074
 Transform:
   m_ObjectHideFlags: 0
@@ -26231,9 +26469,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: RoboBoy
+    sentences:
+    - Der Baumstamm sieht nicht stabil aus.
+  trigger: {fileID: 2049139022}
 --- !u!61 &2049139025
 BoxCollider2D:
   m_ObjectHideFlags: 0

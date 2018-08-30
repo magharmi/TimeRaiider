@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Kamikaze : MonoBehaviour {
+public class Kamikaze : MonoBehaviour
+{
 
     public float speed;
     public float radius;
@@ -12,10 +13,12 @@ public class Kamikaze : MonoBehaviour {
     public SpriteRenderer sr;
 
     private bool isTriggered = false;
+    private bool absturzSet = false;
     private Vector3 absturzPunkt;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         player = GameObject.FindGameObjectWithTag("spieler").transform;
         Lvlmanager = FindObjectOfType<lvlmanager>();
         startPos = transform.position;
@@ -32,7 +35,7 @@ public class Kamikaze : MonoBehaviour {
                 KamikazeAngriff();
                 if (Vector2.Distance(transform.position, absturzPunkt) == 0)
                 {
-                    isTriggered = true;
+                    Destroy(gameObject);
                 }
             }
         }
@@ -40,7 +43,11 @@ public class Kamikaze : MonoBehaviour {
 
     void KamikazeAngriff()
     {
-        absturzPunkt = player.position;
+        if (absturzSet == false)
+        {
+            absturzPunkt = player.position;
+            absturzSet = true;
+        }
         transform.position = Vector2.MoveTowards(transform.position, absturzPunkt, speed * Time.deltaTime);
     }
 }
