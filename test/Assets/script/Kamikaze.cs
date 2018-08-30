@@ -33,10 +33,10 @@ public class Kamikaze : MonoBehaviour
             if (Vector2.Distance(transform.position, player.position) <= radius)
             {
                 KamikazeAngriff();
-                if (Vector2.Distance(transform.position, absturzPunkt) == 0)
+                /*if (Vector2.Distance(transform.position, absturzPunkt) == 0)
                 {
-                    //Destroy(gameObject);
-                }
+                    Destroy(gameObject);
+                }*/
             }
         }
     }
