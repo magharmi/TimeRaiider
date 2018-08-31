@@ -7,6 +7,7 @@ public class PlatformFallen : MonoBehaviour {
     private Rigidbody2D rb2dPlatform;
     public float dauer = 2;
     private GameObject platform;
+    public bool PlattformBewegenDeaktivieren = true;
 
 	// Use this for initialization
 	void Start ()
@@ -34,6 +35,10 @@ public class PlatformFallen : MonoBehaviour {
     IEnumerator Fall()
     {
         yield return new WaitForSeconds(dauer);
+        if (PlattformBewegenDeaktivieren == true)
+        {
+            gameObject.GetComponent<PlatformBewegen>().enabled = false;
+        }
         rb2dPlatform.isKinematic = false;
     }
 
