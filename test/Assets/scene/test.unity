@@ -6284,6 +6284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dauer: 0.2
+  PlattformBewegenDeaktivieren: 1
 --- !u!50 &214532276
 Rigidbody2D:
   serializedVersion: 4
@@ -27193,6 +27194,27 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2127308896}
   m_CullTransparentMesh: 0
+--- !u!1 &2134121572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 87a2357765801c34292d6718d8b4d770,
+    type: 2}
+  m_PrefabInternal: {fileID: 2140001952}
+--- !u!114 &2134121573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2134121572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d666895a72e005346931ccad8c0cc373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgrounds:
+  - {fileID: 715454454}
+  - {fileID: 586031033}
+  - {fileID: 1812971250}
+  smoothing: 5
 --- !u!1001 &2140001952
 Prefab:
   m_ObjectHideFlags: 0
