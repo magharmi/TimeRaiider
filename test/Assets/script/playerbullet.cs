@@ -45,7 +45,7 @@ public class playerbullet : MonoBehaviour {
             else
             {
                 //Links werfen
-               clone = Instantiate(bulletPrefab, bulletspawn.position, bulletspawn.rotation);
+                clone = Instantiate(bulletPrefab, bulletspawn.position, bulletspawn.rotation);
                 clone.AddForce(bulletspawn.transform.right * -bulletSpeed);
 
              }
