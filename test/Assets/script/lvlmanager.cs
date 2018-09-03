@@ -21,7 +21,7 @@ public class lvlmanager : MonoBehaviour {
 
     void Start()
     {
-        lebentxt.text ="Leben: "+leben.ToString();
+        lebentxt.text =" "+leben.ToString();
     }
 
 

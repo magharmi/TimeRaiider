@@ -8,15 +8,15 @@ public class Gegner : MonoBehaviour {
 
     public lvlmanager Lvlmanager;
     public Vector3 startPos;
-    public Vector3 newPos;
+      public Vector3 newPos;
     public Vector3 tempPos;
     public float speed;
     public SpriteRenderer sr;
     public bool hit = true;
     public float weg = 6;
     public int leben = 100;
-
-
+    public GameObject bloodEffect;
+ 
     // Use this for initialization
     void Start ()
     {
@@ -64,12 +64,14 @@ public class Gegner : MonoBehaviour {
         if (other.gameObject.tag == "bullet")
         {
             leben -= 10;
-            if(leben == 0)
+            
+            if (leben == 0)
             {
                 Destroy(gameObject, 0.2f);
+                Instantiate(bloodEffect, transform.position, Quaternion.identity);
             }
-        //Destroy(gameObject, 0.2f);
-        Destroy(other.gameObject,0f);
+            //Destroy(gameObject, 0.2f);
+            Destroy(other.gameObject,0f);
         }
     }
 
