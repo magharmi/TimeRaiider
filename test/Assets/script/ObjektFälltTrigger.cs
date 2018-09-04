@@ -66,10 +66,13 @@ public class ObjektFälltTrigger : MonoBehaviour
         yield return new WaitForSeconds(zeitBisRespawn);
         if (objektRespawnen == true)
         {
-            for (int i = 0; i < fallendeObjekte.Length; i++)
+            for (int i = 0; i <fallendeObjekte.Length ; i++)
             {
                 fallendeObjekte[i].transform.position = anfangsPosition[i];
+          
             }
+            Debug.Log("hat gerespawnt");
+           
             StartCoroutine(Fall());
         }
     }

@@ -13050,7 +13050,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 646507443}
   m_LocalRotation: {x: -0, y: -0, z: -0.9999993, w: 0.0012495398}
-  m_LocalPosition: {x: -9.660652, y: 6.4082336, z: -0.34570312}
+  m_LocalPosition: {x: -9.673294, y: 6.4054565, z: -0.34570312}
   m_LocalScale: {x: 0.5048666, y: 0.5112571, z: 0.63907015}
   m_Children: []
   m_Father: {fileID: 2005647794}
@@ -16013,7 +16013,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 765723373}
   m_LocalRotation: {x: -0, y: -0, z: -0.9999993, w: 0.0012495398}
-  m_LocalPosition: {x: -9.14064, y: 6.4095306, z: -0.34570312}
+  m_LocalPosition: {x: -9.153282, y: 6.4067535, z: -0.34570312}
   m_LocalScale: {x: 0.5048666, y: 0.5112571, z: 0.63907015}
   m_Children: []
   m_Father: {fileID: 2005647794}
@@ -18526,6 +18526,8 @@ GameObject:
   m_Component:
   - component: {fileID: 900414331}
   - component: {fileID: 900414330}
+  - component: {fileID: 900414333}
+  - component: {fileID: 900414332}
   m_Layer: 0
   m_Name: Stein2
   m_TagString: Untagged
@@ -18592,6 +18594,44 @@ Transform:
   m_Father: {fileID: 2053859265}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &900414332
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 900414329}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.76, y: 4}
+    newSize: {x: 6.76, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.76, y: 4}
+  m_EdgeRadius: 0
+--- !u!114 &900414333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 900414329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &910926785
 GameObject:
   m_ObjectHideFlags: 0
@@ -33164,7 +33204,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1735223069}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.077354, y: 7.102783, z: -0.34375}
+  m_LocalPosition: {x: -24.09, y: 7.1, z: -0.34375}
   m_LocalScale: {x: 1.7880001, y: 1.345, z: 1}
   m_Children: []
   m_Father: {fileID: 1093307832}
@@ -33391,7 +33431,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1755442513}
   m_LocalRotation: {x: -0, y: -0, z: -0.9999993, w: 0.0012495398}
-  m_LocalPosition: {x: -8.610558, y: 6.4210815, z: -0.34570312}
+  m_LocalPosition: {x: -8.623199, y: 6.4183044, z: -0.34570312}
   m_LocalScale: {x: 0.5048666, y: 0.5112571, z: 0.63907015}
   m_Children: []
   m_Father: {fileID: 2005647794}
@@ -34199,7 +34239,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1800079056}
   m_LocalRotation: {x: -0, y: -0, z: -0.9999993, w: 0.0012495398}
-  m_LocalPosition: {x: -10.170555, y: 6.40184, z: -0.34570312}
+  m_LocalPosition: {x: -10.183197, y: 6.399063, z: -0.34570312}
   m_LocalScale: {x: 0.5048666, y: 0.5112571, z: 0.63907015}
   m_Children: []
   m_Father: {fileID: 2005647794}
@@ -37160,6 +37200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2005647794}
+  - component: {fileID: 2005647795}
   m_Layer: 0
   m_Name: Spitzen an Decke
   m_TagString: Untagged
@@ -37210,6 +37251,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2005647795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2005647793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &2010796491
 GameObject:
   m_ObjectHideFlags: 0
@@ -37915,11 +37969,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 591
+      value: 123.6
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -154.5
+      value: -133.3
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.z
@@ -38028,6 +38082,7 @@ GameObject:
   - component: {fileID: 2059866020}
   - component: {fileID: 2059866023}
   - component: {fileID: 2059866022}
+  - component: {fileID: 2059866021}
   m_Layer: 0
   m_Name: spitze (16)
   m_TagString: Untagged
@@ -38094,6 +38149,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2059866021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2059866018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
 --- !u!60 &2059866022
 PolygonCollider2D:
   m_ObjectHideFlags: 0
