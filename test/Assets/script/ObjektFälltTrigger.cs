@@ -21,7 +21,7 @@ public class ObjektFälltTrigger : MonoBehaviour
         anfangsPosition = new Vector3[fallendeObjekte.Length];
         for(int i = 0; i < fallendeObjekte.Length; i++)
         {
-            anfangsPosition[i] = fallendeObjekte[i].transform.position;
+         //   anfangsPosition[i] = fallendeObjekte[i].transform.position;
 
         }
     }
