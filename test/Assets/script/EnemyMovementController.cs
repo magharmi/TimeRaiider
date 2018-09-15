@@ -23,9 +23,10 @@ public class EnemyMovementController : MonoBehaviour {
     //attack
     public float chargeTime;
     float startChargeTime;
-    bool charging;
+    bool charging,isAttack;
     Rigidbody2D enemyRB;
-
+    //bool isAttack;
+    
     // Use this for initialization
     void Start () {
         localScale = transform.localScale;
@@ -60,6 +61,7 @@ public class EnemyMovementController : MonoBehaviour {
 
             charging = true;
             startChargeTime = Time.time + chargeTime;
+            
         }
     }
 
@@ -68,9 +70,13 @@ public class EnemyMovementController : MonoBehaviour {
         if(other.tag == "spieler") {
            if(startChargeTime < Time.time){
                 if (!facingRight) enemyRB.AddForce(new Vector2(-1, 0) * enemySpeed);
+
                 else enemyRB.AddForce(new Vector2(1, 0) * enemySpeed);
-                enemyAnimator.SetBool("isFollow", charging);
-            
+               enemyAnimator.SetBool("isFollow", charging);
+                
+               
+                  isAttack = true;
+                enemyAnimator.SetBool("isAttack", isAttack);
             }
             
         }
@@ -82,8 +88,10 @@ public class EnemyMovementController : MonoBehaviour {
         {
             canFlip = true;
             charging = false;
+            isAttack = false;
             enemyRB.velocity = new Vector2(0f, 0f);
-            enemyAnimator.SetBool("isFollow", charging);
+           enemyAnimator.SetBool("isFollow", charging);
+          enemyAnimator.SetBool("isAttack", isAttack);
         }
     }
 
@@ -96,9 +104,7 @@ public class EnemyMovementController : MonoBehaviour {
 
         float facingX; 
         facingX = enemyGraphic.transform.localScale.x;
-
         facingX *= -1f;
-
         enemyGraphic.transform.localScale = new Vector3(facingX, enemyGraphic.transform.localScale.y,enemyGraphic.transform.localScale.z);
 
         facingRight = !facingRight;

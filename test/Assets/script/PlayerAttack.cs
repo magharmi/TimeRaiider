@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour {
+   
     private float timeBtwAttack;
     public float startTimeBtwAttack;
-    public Animator camAnim;
+    //public Animator camAnim;
    
     public Transform attackPos;
     public float attackRange;
@@ -15,7 +16,7 @@ public class PlayerAttack : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-      
+   
     }
 
     // Update is called once per frame
@@ -25,11 +26,11 @@ public class PlayerAttack : MonoBehaviour {
         {
 
 
-            if (Input.GetKey(KeyCode.T))
+            if (Input.GetKeyDown(KeyCode.T))
             {
-                camAnim.SetTrigger("shake");
-                // m_Anim.SetBool("Keule",true);
+               // camAnim.SetTrigger("shake");
               
+                
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
