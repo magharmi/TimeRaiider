@@ -10,6 +10,7 @@ public class DialogueTrigger : MonoBehaviour
     public Dialogue dialogue;
     public GameObject trigger;
 
+
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
