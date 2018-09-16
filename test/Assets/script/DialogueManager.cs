@@ -8,7 +8,6 @@ public class DialogueManager : MonoBehaviour
 
     public Text nameText;
     public Text dialogueText;
-
     public Animator animator;
 
     private Queue<string> sentences;
