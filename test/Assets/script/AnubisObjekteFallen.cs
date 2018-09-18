@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AnubisObjekteFallen : MonoBehaviour
 {
-    private Rigidbody2D objekt;
     public int zeitBisZerstoerung;
     public float dauer = 2;
     public GameObject[] fallendeObjekte;
@@ -12,13 +11,16 @@ public class AnubisObjekteFallen : MonoBehaviour
     public bool objektZerstören = true;
     public float zeitBisRespawn;
     public bool triggerZerstören = false;
+    public AnubisKampf anubisKampfController;
 
+    private Rigidbody2D objekt;
     private Vector3[] anfangsPosition;
 
     // Use this for initialization
     void Start()
     {
         anfangsPosition = new Vector3[fallendeObjekte.Length];
+        anubisKampfController = GetComponent<AnubisKampf>();
         for (int i = 0; i < fallendeObjekte.Length; i++)
         {
             //   anfangsPosition[i] = fallendeObjekte[i].transform.position;
@@ -39,7 +41,7 @@ public class AnubisObjekteFallen : MonoBehaviour
 
             if (triggerZerstören == true)
             {
-                gameObject.GetComponent<ObjektFälltTrigger>().enabled = false;
+                gameObject.GetComponent<AnubisObjekteFallen>().enabled = false;
             }
 
             //Plattform nach unten fallen
@@ -84,6 +86,7 @@ public class AnubisObjekteFallen : MonoBehaviour
         {
             Destroy(fallendeObjekte[i]);
         }
+        anubisKampfController.ersterAnubisAngriff();
     }
 
 

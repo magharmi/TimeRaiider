@@ -14,7 +14,7 @@ public class player : MonoBehaviour
     private int counter = 0;
     public Text scoretxt;
     public Text highscoretxt;
-    public GameObject fakel,stoneAgeKnife;
+    //public GameObject fakel,stoneAgeKnife;
     Inventory inventory;
 
 
@@ -31,9 +31,9 @@ public class player : MonoBehaviour
      
         //  Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Spieler"), LayerMask.NameToLayer("Enemy"));
         leben.Initialize();
-        fakel.SetActive(false);
+        //fakel.SetActive(false);
      
-        stoneAgeKnife.SetActive(false);
+        //stoneAgeKnife.SetActive(false);
 
         counter = 0;
         //lade den highscore
@@ -49,19 +49,19 @@ public class player : MonoBehaviour
         //Feuer An
         if (Input.GetKey(KeyCode.F))
         {
-            fakel.SetActive(true);
+            //fakel.SetActive(true);
         }
         else
         {
-            fakel.SetActive(false);
+            //fakel.SetActive(false);
         }
         if (Input.GetKey(KeyCode.T))
         {
-            stoneAgeKnife.SetActive(true);
+            //stoneAgeKnife.SetActive(true);
         }
         else
         {
-            stoneAgeKnife.SetActive(false);
+            //stoneAgeKnife.SetActive(false);
         }
         /* 
          if (Input.GetKeyDown(KeyCode.Q))
