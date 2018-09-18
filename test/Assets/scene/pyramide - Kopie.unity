@@ -509,6 +509,7 @@ Transform:
   - {fileID: 673179520}
   - {fileID: 147095750}
   - {fileID: 1339302797}
+  - {fileID: 2112778447}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1623,6 +1624,8 @@ GameObject:
   - component: {fileID: 135580899}
   - component: {fileID: 135580898}
   - component: {fileID: 135580900}
+  - component: {fileID: 135580902}
+  - component: {fileID: 135580901}
   m_Layer: 0
   m_Name: "s\xE4ge"
   m_TagString: Untagged
@@ -1703,6 +1706,34 @@ MonoBehaviour:
   speed: 3.5
   reichweite: 7
   richtung: y
+--- !u!114 &135580901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 135580897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &135580902
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 135580897}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &138813454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,6 +2252,8 @@ GameObject:
   - component: {fileID: 160966473}
   - component: {fileID: 160966472}
   - component: {fileID: 160966471}
+  - component: {fileID: 160966475}
+  - component: {fileID: 160966474}
   m_Layer: 0
   m_Name: "s\xE4ge (11)"
   m_TagString: Untagged
@@ -2301,6 +2334,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 141
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160966474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 160966470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &160966475
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 160966470}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &173973478
 GameObject:
   m_ObjectHideFlags: 0
@@ -2380,6 +2441,8 @@ GameObject:
   - component: {fileID: 179997983}
   - component: {fileID: 179997982}
   - component: {fileID: 179997981}
+  - component: {fileID: 179997985}
+  - component: {fileID: 179997984}
   m_Layer: 0
   m_Name: "s\xE4ge (19)"
   m_TagString: Untagged
@@ -2460,6 +2523,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 193
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179997984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179997980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &179997985
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179997980}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &202263590
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,6 +2711,8 @@ GameObject:
   - component: {fileID: 208686202}
   - component: {fileID: 208686201}
   - component: {fileID: 208686200}
+  - component: {fileID: 208686204}
+  - component: {fileID: 208686203}
   m_Layer: 0
   m_Name: "s\xE4ge (18)"
   m_TagString: Untagged
@@ -2700,6 +2793,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 190
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &208686203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208686199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &208686204
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208686199}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &221922583
 GameObject:
   m_ObjectHideFlags: 0
@@ -2753,7 +2874,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3014,6 +3135,8 @@ GameObject:
   m_Component:
   - component: {fileID: 242048746}
   - component: {fileID: 242048745}
+  - component: {fileID: 242048748}
+  - component: {fileID: 242048747}
   m_Layer: 0
   m_Name: spitze (2)
   m_TagString: Untagged
@@ -3080,6 +3203,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 164
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &242048747
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 242048744}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0076904297, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.99, y: 1.7}
+    newSize: {x: 7.9186425, y: 1.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.909912, y: 1.7}
+  m_EdgeRadius: 0
+--- !u!114 &242048748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 242048744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &246920273
 GameObject:
   m_ObjectHideFlags: 0
@@ -3133,7 +3294,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3297,7 +3458,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4312,7 +4473,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4536,7 +4697,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4611,6 +4772,8 @@ GameObject:
   - component: {fileID: 359445157}
   - component: {fileID: 359445156}
   - component: {fileID: 359445155}
+  - component: {fileID: 359445159}
+  - component: {fileID: 359445158}
   m_Layer: 0
   m_Name: "s\xE4ge (15)"
   m_TagString: Untagged
@@ -4691,6 +4854,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 181
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &359445158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 359445154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &359445159
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 359445154}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &363411928
 GameObject:
   m_ObjectHideFlags: 0
@@ -4845,7 +5036,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4919,6 +5110,8 @@ GameObject:
   m_Component:
   - component: {fileID: 374577028}
   - component: {fileID: 374577027}
+  - component: {fileID: 374577030}
+  - component: {fileID: 374577029}
   m_Layer: 0
   m_Name: spitze
   m_TagString: Untagged
@@ -4985,6 +5178,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 121
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &374577029
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 374577026}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -7.328888, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.99, y: 1.7}
+    newSize: {x: 134.61198, y: 1.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 148.91528, y: 1.7}
+  m_EdgeRadius: 0
+--- !u!114 &374577030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 374577026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &378239260
 GameObject:
   m_ObjectHideFlags: 0
@@ -6252,6 +6483,8 @@ GameObject:
   - component: {fileID: 466795948}
   - component: {fileID: 466795947}
   - component: {fileID: 466795946}
+  - component: {fileID: 466795950}
+  - component: {fileID: 466795949}
   m_Layer: 0
   m_Name: "s\xE4ge (27)"
   m_TagString: Untagged
@@ -6332,6 +6565,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 216
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &466795949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 466795945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &466795950
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 466795945}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &481736626
 GameObject:
   m_ObjectHideFlags: 0
@@ -6783,7 +7044,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6882,7 +7143,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 38.829998, y: 25.550001}
-    newSize: {x: 293.05542, y: 70.71105}
+    newSize: {x: 296.7778, y: 70.71105}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -6930,7 +7191,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 293.05542, y: 70.71105}
+  m_Size: {x: 296.7778, y: 70.71105}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6943,7 +7204,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 515029592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 121.302, y: -111.1, z: 0}
+  m_LocalPosition: {x: 121.563, y: -111.1, z: 0}
   m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7687,6 +7948,8 @@ GameObject:
   - component: {fileID: 584745149}
   - component: {fileID: 584745148}
   - component: {fileID: 584745147}
+  - component: {fileID: 584745151}
+  - component: {fileID: 584745150}
   m_Layer: 0
   m_Name: "s\xE4ge (8)"
   m_TagString: Untagged
@@ -7767,6 +8030,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 135
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &584745150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584745146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &584745151
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584745146}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &591992350
 GameObject:
   m_ObjectHideFlags: 0
@@ -8475,6 +8766,8 @@ GameObject:
   - component: {fileID: 665427905}
   - component: {fileID: 665427904}
   - component: {fileID: 665427903}
+  - component: {fileID: 665427907}
+  - component: {fileID: 665427906}
   m_Layer: 0
   m_Name: "s\xE4ge (5)"
   m_TagString: Untagged
@@ -8555,6 +8848,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &665427906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 665427902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &665427907
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 665427902}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &667270558
 GameObject:
   m_ObjectHideFlags: 0
@@ -9107,6 +9428,8 @@ GameObject:
   - component: {fileID: 728388167}
   - component: {fileID: 728388166}
   - component: {fileID: 728388165}
+  - component: {fileID: 728388169}
+  - component: {fileID: 728388168}
   m_Layer: 0
   m_Name: "s\xE4ge (2)"
   m_TagString: Untagged
@@ -9187,6 +9510,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &728388168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 728388164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &728388169
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 728388164}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &729839957
 GameObject:
   m_ObjectHideFlags: 0
@@ -9520,6 +9871,8 @@ GameObject:
   - component: {fileID: 749957527}
   - component: {fileID: 749957526}
   - component: {fileID: 749957525}
+  - component: {fileID: 749957529}
+  - component: {fileID: 749957528}
   m_Layer: 0
   m_Name: "s\xE4ge (3)"
   m_TagString: Untagged
@@ -9600,6 +9953,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &749957528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 749957524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &749957529
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 749957524}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &765925685
 GameObject:
   m_ObjectHideFlags: 0
@@ -9853,7 +10234,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10857,6 +11238,8 @@ GameObject:
   - component: {fileID: 883183224}
   - component: {fileID: 883183223}
   - component: {fileID: 883183222}
+  - component: {fileID: 883183226}
+  - component: {fileID: 883183225}
   m_Layer: 0
   m_Name: "s\xE4ge (24)"
   m_TagString: Untagged
@@ -10937,6 +11320,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 207
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &883183225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 883183221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &883183226
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 883183221}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &885875017
 GameObject:
   m_ObjectHideFlags: 0
@@ -12523,6 +12934,8 @@ GameObject:
   - component: {fileID: 1025792637}
   - component: {fileID: 1025792636}
   - component: {fileID: 1025792635}
+  - component: {fileID: 1025792639}
+  - component: {fileID: 1025792638}
   m_Layer: 0
   m_Name: "s\xE4ge (1)"
   m_TagString: Untagged
@@ -12603,6 +13016,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1025792638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1025792634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1025792639
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1025792634}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1026850107
 GameObject:
   m_ObjectHideFlags: 0
@@ -13218,7 +13659,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13609,7 +14050,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15014,7 +15455,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15342,6 +15783,8 @@ GameObject:
   - component: {fileID: 1212942626}
   - component: {fileID: 1212942625}
   - component: {fileID: 1212942624}
+  - component: {fileID: 1212942628}
+  - component: {fileID: 1212942627}
   m_Layer: 0
   m_Name: "s\xE4ge (23)"
   m_TagString: Untagged
@@ -15422,6 +15865,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 205
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1212942627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1212942623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1212942628
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1212942623}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1240013639
 GameObject:
   m_ObjectHideFlags: 0
@@ -16008,6 +16479,8 @@ GameObject:
   - component: {fileID: 1287794598}
   - component: {fileID: 1287794597}
   - component: {fileID: 1287794596}
+  - component: {fileID: 1287794600}
+  - component: {fileID: 1287794599}
   m_Layer: 0
   m_Name: "s\xE4ge (14)"
   m_TagString: Untagged
@@ -16088,6 +16561,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 178
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1287794599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1287794595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1287794600
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1287794595}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1291865995
 GameObject:
   m_ObjectHideFlags: 0
@@ -16098,6 +16599,8 @@ GameObject:
   - component: {fileID: 1291865998}
   - component: {fileID: 1291865997}
   - component: {fileID: 1291865996}
+  - component: {fileID: 1291866000}
+  - component: {fileID: 1291865999}
   m_Layer: 0
   m_Name: "s\xE4ge (10)"
   m_TagString: Untagged
@@ -16178,6 +16681,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 139
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1291865999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1291865995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1291866000
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1291865995}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1293063191
 GameObject:
   m_ObjectHideFlags: 0
@@ -17123,6 +17654,8 @@ GameObject:
   - component: {fileID: 1359298168}
   - component: {fileID: 1359298167}
   - component: {fileID: 1359298166}
+  - component: {fileID: 1359298170}
+  - component: {fileID: 1359298169}
   m_Layer: 0
   m_Name: "s\xE4ge (7)"
   m_TagString: Untagged
@@ -17203,6 +17736,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 133
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1359298169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1359298165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1359298170
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1359298165}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1361352449
 GameObject:
   m_ObjectHideFlags: 0
@@ -17385,7 +17946,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18004,7 +18565,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18468,7 +19029,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18543,6 +19104,8 @@ GameObject:
   - component: {fileID: 1423988969}
   - component: {fileID: 1423988968}
   - component: {fileID: 1423988967}
+  - component: {fileID: 1423988971}
+  - component: {fileID: 1423988970}
   m_Layer: 0
   m_Name: "s\xE4ge (6)"
   m_TagString: Untagged
@@ -18623,6 +19186,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 131
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1423988970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1423988966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1423988971
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1423988966}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1432448409
 GameObject:
   m_ObjectHideFlags: 0
@@ -18708,6 +19299,8 @@ GameObject:
   - component: {fileID: 1435537692}
   - component: {fileID: 1435537691}
   - component: {fileID: 1435537690}
+  - component: {fileID: 1435537694}
+  - component: {fileID: 1435537693}
   m_Layer: 0
   m_Name: "s\xE4ge (12)"
   m_TagString: Untagged
@@ -18788,6 +19381,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 142
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1435537693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1435537689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1435537694
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1435537689}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1439042042
 GameObject:
   m_ObjectHideFlags: 0
@@ -18798,6 +19419,8 @@ GameObject:
   - component: {fileID: 1439042045}
   - component: {fileID: 1439042044}
   - component: {fileID: 1439042043}
+  - component: {fileID: 1439042047}
+  - component: {fileID: 1439042046}
   m_Layer: 0
   m_Name: "s\xE4ge (4)"
   m_TagString: Untagged
@@ -18878,6 +19501,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1439042046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1439042042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1439042047
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1439042042}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1439895011
 GameObject:
   m_ObjectHideFlags: 0
@@ -19006,7 +19657,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -19314,7 +19965,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -19790,6 +20441,8 @@ GameObject:
   - component: {fileID: 1521435088}
   - component: {fileID: 1521435087}
   - component: {fileID: 1521435086}
+  - component: {fileID: 1521435090}
+  - component: {fileID: 1521435089}
   m_Layer: 0
   m_Name: "s\xE4ge (26)"
   m_TagString: Untagged
@@ -19870,6 +20523,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 213
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1521435089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1521435085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1521435090
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1521435085}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1526111055
 GameObject:
   m_ObjectHideFlags: 0
@@ -20415,7 +21096,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -20991,6 +21672,8 @@ GameObject:
   - component: {fileID: 1598744143}
   - component: {fileID: 1598744142}
   - component: {fileID: 1598744141}
+  - component: {fileID: 1598744145}
+  - component: {fileID: 1598744144}
   m_Layer: 0
   m_Name: "s\xE4ge (16)"
   m_TagString: Untagged
@@ -21071,6 +21754,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 183
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598744144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598744140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1598744145
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598744140}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1603173095
 GameObject:
   m_ObjectHideFlags: 0
@@ -22547,6 +23258,8 @@ GameObject:
   - component: {fileID: 1722283017}
   - component: {fileID: 1722283016}
   - component: {fileID: 1722283015}
+  - component: {fileID: 1722283019}
+  - component: {fileID: 1722283018}
   m_Layer: 0
   m_Name: "s\xE4ge (28)"
   m_TagString: Untagged
@@ -22627,6 +23340,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 220
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1722283018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1722283014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1722283019
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1722283014}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1727089027
 GameObject:
   m_ObjectHideFlags: 0
@@ -23559,7 +24300,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -23677,7 +24418,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -23751,6 +24492,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1849183153}
   - component: {fileID: 1849183152}
+  - component: {fileID: 1849183155}
+  - component: {fileID: 1849183154}
   m_Layer: 0
   m_Name: spitze (1)
   m_TagString: Untagged
@@ -23817,6 +24560,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 125
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1849183154
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1849183151}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.37968445, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.99, y: 1.7}
+    newSize: {x: 134.61198, y: 1.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 136.13333, y: 1.7}
+  m_EdgeRadius: 0
+--- !u!114 &1849183155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1849183151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &1850654298
 GameObject:
   m_ObjectHideFlags: 0
@@ -23928,6 +24709,8 @@ GameObject:
   - component: {fileID: 1861954480}
   - component: {fileID: 1861954479}
   - component: {fileID: 1861954478}
+  - component: {fileID: 1861954482}
+  - component: {fileID: 1861954481}
   m_Layer: 0
   m_Name: "s\xE4ge (13)"
   m_TagString: Untagged
@@ -24008,6 +24791,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 176
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1861954481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1861954477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1861954482
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1861954477}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1865200417
 GameObject:
   m_ObjectHideFlags: 0
@@ -24018,6 +24829,8 @@ GameObject:
   - component: {fileID: 1865200420}
   - component: {fileID: 1865200419}
   - component: {fileID: 1865200418}
+  - component: {fileID: 1865200422}
+  - component: {fileID: 1865200421}
   m_Layer: 0
   m_Name: "s\xE4ge (21)"
   m_TagString: Untagged
@@ -24098,6 +24911,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 200
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1865200421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865200417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1865200422
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865200417}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1865668028
 GameObject:
   m_ObjectHideFlags: 0
@@ -24257,6 +25098,8 @@ GameObject:
   - component: {fileID: 1891871496}
   - component: {fileID: 1891871495}
   - component: {fileID: 1891871494}
+  - component: {fileID: 1891871498}
+  - component: {fileID: 1891871497}
   m_Layer: 0
   m_Name: "s\xE4ge (22)"
   m_TagString: Untagged
@@ -24337,6 +25180,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 202
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1891871497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1891871493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1891871498
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1891871493}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1900609589
 GameObject:
   m_ObjectHideFlags: 0
@@ -24390,7 +25261,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -24807,7 +25678,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -25107,6 +25978,8 @@ GameObject:
   - component: {fileID: 1949590138}
   - component: {fileID: 1949590137}
   - component: {fileID: 1949590136}
+  - component: {fileID: 1949590140}
+  - component: {fileID: 1949590139}
   m_Layer: 0
   m_Name: "s\xE4ge (9)"
   m_TagString: Untagged
@@ -25187,6 +26060,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 137
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1949590139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1949590135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1949590140
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1949590135}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1963282055
 GameObject:
   m_ObjectHideFlags: 0
@@ -25530,6 +26431,8 @@ GameObject:
   - component: {fileID: 1990308498}
   - component: {fileID: 1990308497}
   - component: {fileID: 1990308496}
+  - component: {fileID: 1990308500}
+  - component: {fileID: 1990308499}
   m_Layer: 0
   m_Name: "s\xE4ge (20)"
   m_TagString: Untagged
@@ -25610,6 +26513,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 197
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1990308499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1990308495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1990308500
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1990308495}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &1998054652
 GameObject:
   m_ObjectHideFlags: 0
@@ -25695,6 +26626,8 @@ GameObject:
   - component: {fileID: 1998559880}
   - component: {fileID: 1998559879}
   - component: {fileID: 1998559878}
+  - component: {fileID: 1998559882}
+  - component: {fileID: 1998559881}
   m_Layer: 0
   m_Name: "s\xE4ge (17)"
   m_TagString: Untagged
@@ -25775,6 +26708,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 188
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1998559881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998559877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &1998559882
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998559877}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &2001385690
 GameObject:
   m_ObjectHideFlags: 0
@@ -26280,7 +27241,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -26882,6 +27843,9 @@ GameObject:
   - component: {fileID: 2099696502}
   - component: {fileID: 2099696501}
   - component: {fileID: 2099696500}
+  - component: {fileID: 2099696505}
+  - component: {fileID: 2099696504}
+  - component: {fileID: 2099696503}
   m_Layer: 0
   m_Name: "s\xE4ge (25)"
   m_TagString: Untagged
@@ -26962,6 +27926,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 211
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2099696503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2099696499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!114 &2099696504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2099696499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
+--- !u!58 &2099696505
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2099696499}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.495
 --- !u!1 &2101803585 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1094505813020706, guid: 7f1263a0e293c3a42a54b366b782a6dd,
@@ -27154,6 +28159,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2112778446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2112778447}
+  - component: {fileID: 2112778449}
+  - component: {fileID: 2112778448}
+  m_Layer: 0
+  m_Name: Bei Plattformhindernis (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2112778447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2112778446}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 416.7, y: -0.36, z: 0}
+  m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000007}
+  m_Children: []
+  m_Father: {fileID: 42433773}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2112778448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2112778446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8826c1436760940ae72848e66f343a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+--- !u!61 &2112778449
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2112778446}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.61309314}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.2261863}
+  m_EdgeRadius: 0
 --- !u!1 &2115529228
 GameObject:
   m_ObjectHideFlags: 0
