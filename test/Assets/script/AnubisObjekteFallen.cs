@@ -86,7 +86,7 @@ public class AnubisObjekteFallen : MonoBehaviour
         {
             Destroy(fallendeObjekte[i]);
         }
-        anubisKampfController.ersterAnubisAngriff();
+        anubisKampfController.AnubisAngriff();
     }
 
 
