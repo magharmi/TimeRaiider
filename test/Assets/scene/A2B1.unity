@@ -7913,11 +7913,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -85.74
+      value: -67.2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -125.83
+      value: -56
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8028,8 +8028,6 @@ MonoBehaviour:
     currentVal: 0
   scoretxt: {fileID: 21994176}
   highscoretxt: {fileID: 1017901935}
-  fakel: {fileID: 0}
-  stoneAgeKnife: {fileID: 0}
 --- !u!1 &429757542
 GameObject:
   m_ObjectHideFlags: 0
@@ -8232,7 +8230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  resetObjekt:
+  - {fileID: 2071354655}
 --- !u!61 &442701098
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16583,6 +16582,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b77283281094946b5cbcbb6e84c53f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  neuesZielErstellen: 0
+  altesZiel: {fileID: 0}
+  neuesZiel: {fileID: 0}
   dialogue:
     name: RoboBoy
     sentences:
