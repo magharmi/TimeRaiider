@@ -7,11 +7,11 @@ using UnityEngine.SceneManagement;
 public class lvlmanager : MonoBehaviour {
 
     //checkpoint
-   // public GameObject currentCheckpoint;
+    public GameObject currentCheckpoint;
     public int leben;
     public GameObject spieler;
     public Text lebentxt;
- //   public GameObject GameOverUI;
+    public GameObject GameOverUI;
 
     public Text timertxt;
     public float roundTimer;
@@ -57,13 +57,13 @@ public class lvlmanager : MonoBehaviour {
         //überprüfen ob spieler noch leben hat
         if (leben > 0)
         {
-           // spieler.transform.position = currentCheckpoint.transform.position;
+            spieler.transform.position = currentCheckpoint.transform.position;
         }
         else if(leben == 0)
         {
             Debug.Log("game over");
             //bild stop
-         //   GameOverUI.SetActive(true);
+            GameOverUI.SetActive(true);
             Time.timeScale = 0f;
             leben = -1;
             StartCoroutine(WarteAufEnter());

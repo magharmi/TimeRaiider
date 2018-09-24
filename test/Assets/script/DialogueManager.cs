@@ -8,15 +8,16 @@ public class DialogueManager : MonoBehaviour
 
     public Text nameText;
     public Text dialogueText;
-
     public Animator animator;
 
     private Queue<string> sentences;
+    private GameObject[] gegner;
 
     // Use this for initialization
     void Start()
     {
         sentences = new Queue<string>();
+        gegner = GameObject.FindGameObjectsWithTag("GegnerVonDialogboxAbhängig");
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -66,6 +67,10 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        for(int i = 0; i < gegner.Length; i++)
+        {
+            gegner[i].GetComponent<GegnerAI>().enabled = true;
+        }
     }
 
     IEnumerator WarteAufAntwort()
