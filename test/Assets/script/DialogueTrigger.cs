@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public bool neuesZielErstellen = false;
-    public BoxCollider2D altesZiel = null;
-    public BoxCollider2D neuesZiel;
+
     public Dialogue dialogue;
     public GameObject trigger;
-
 
     public void TriggerDialogue()
     {
@@ -22,11 +19,6 @@ public class DialogueTrigger : MonoBehaviour
         {
             TriggerDialogue();
             trigger.SetActive(false);
-        }
-        if(neuesZielErstellen == true)
-        {
-            Destroy(altesZiel);
-            neuesZiel.enabled = true;
         }
     }
 

@@ -24,7 +24,7 @@ public class checkpoint : MonoBehaviour {
         {
             Debug.Log("checkpoint");
             //neuen checkpoint abspeichern
-            Lvlmanager.currentCheckpoint = gameObject;
+          //  Lvlmanager.currentCheckpoint = gameObject;
             
         }
     }
