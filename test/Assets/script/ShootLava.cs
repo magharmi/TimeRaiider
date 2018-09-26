@@ -32,14 +32,14 @@ public class ShootLava : MonoBehaviour {
         {
             nexShootTime = Time.time + shootTime;
             if (Random.Range(0, 10) >= chanceShoot)
-            
+            {
 
                 Instantiate(lavaStein, shootfrom.position, Quaternion.identity);
                 //lavaanim.SetTrigger("cannonShoot");
             }
         }
 
- }
+    }
 
-     
+ }     
 

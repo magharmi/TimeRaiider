@@ -33,7 +33,7 @@ public class respawn : MonoBehaviour
         if (other.tag == "spieler")
         {
             Debug.Log("spieler tot");
-          //  Lvlmanager.RespawnSpieler();
+            Lvlmanager.RespawnSpieler();
             for (int i = 0; i < resetObjekt.Length; i++)
             {
                 objektBody[i].velocity = Vector3.zero;

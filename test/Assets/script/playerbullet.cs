@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Playerbullet : MonoBehaviour {
+public class playerbullet : MonoBehaviour {
 
     //spawn finden
     public Transform bulletspawn;
@@ -23,13 +23,12 @@ public class Playerbullet : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        
         if (Input.GetButtonDown("Fire1"))
         {
             //feuern
             Debug.Log("bam");
             Attack();
-          
+            
         }
 
     }
