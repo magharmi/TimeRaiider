@@ -8,6 +8,8 @@ public class DialogueManager : MonoBehaviour
 
     public Text nameText;
     public Text dialogueText;
+    public bool GegnerAIVorhanden = false;
+    public bool LandwirtRenntWegVorhanden = false;
     public Animator animator;
 
     private Queue<string> sentences;
@@ -69,7 +71,10 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", false);
         for(int i = 0; i < gegner.Length; i++)
         {
-            gegner[i].GetComponent<GegnerAI>().enabled = true;
+            if(GegnerAIVorhanden)
+                gegner[i].GetComponent<GegnerAI>().enabled = true;
+            if(LandwirtRenntWegVorhanden)
+            gegner[i].GetComponent<LandwirtRenntWeg>().enabled = true;
         }
     }
 
