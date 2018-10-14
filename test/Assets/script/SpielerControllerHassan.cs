@@ -196,7 +196,7 @@ public class SpielerControllerHassan : MonoBehaviour
             }
         //}
     }
-
+    
     public void PfeilSchuss(int value)
     {
         if (!OnGround && value == 1 || OnGround && value == 0)
