@@ -152,4 +152,8 @@ public class PlatformerCharacter : MonoBehaviour
         leben.CurrentVal -= 10;
     }
 
+    public void spielerGeschwindigkeit(float maxSpeed)
+    {
+        m_MaxSpeed = maxSpeed;
+    }
 }
