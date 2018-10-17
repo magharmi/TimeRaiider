@@ -12,6 +12,7 @@ public class respawn : MonoBehaviour
     private Vector3[] originalPosition;
     private Quaternion[] originalRotation;
     private Rigidbody2D[] objektBody;
+    private bool gehitted = false;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class respawn : MonoBehaviour
         originalPosition = new Vector3[resetObjekt.Length];
         originalRotation = new Quaternion[resetObjekt.Length];
         objektBody = new Rigidbody2D[resetObjekt.Length];
-        for(int i = 0; i < resetObjekt.Length; i++)
+        for (int i = 0; i < resetObjekt.Length; i++)
         {
             originalPosition[i] = resetObjekt[i].transform.position;
             originalRotation[i] = resetObjekt[i].transform.rotation;
@@ -32,6 +33,7 @@ public class respawn : MonoBehaviour
         //Debug.Log("spieler tot");
         if (other.tag == "spieler")
         {
+
             Debug.Log("spieler tot");
             Lvlmanager.RespawnSpieler();
             for (int i = 0; i < resetObjekt.Length; i++)
@@ -42,6 +44,7 @@ public class respawn : MonoBehaviour
                 resetObjekt[i].transform.rotation = originalRotation[i];
                 objektBody[i].bodyType = RigidbodyType2D.Kinematic;
             }
+
         }
         else
         {

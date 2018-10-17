@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class lvlmanager : MonoBehaviour {
+public class lvlmanager : MonoBehaviour
+{
 
     //checkpoint
     public GameObject currentCheckpoint;
@@ -22,7 +23,7 @@ public class lvlmanager : MonoBehaviour {
 
     void Start()
     {
-        lebentxt.text =" "+leben.ToString();
+        lebentxt.text = " " + leben.ToString();
     }
 
 
@@ -33,12 +34,12 @@ public class lvlmanager : MonoBehaviour {
         {
             //spiel beenden 
             Debug.Log("Spiel beenden");
-            Application.Quit(); 
+            Application.Quit();
         }
 
         //vergangene zeit abziehen vom counter
-        roundTimer = roundTimer-Time.deltaTime;
-     
+        roundTimer = roundTimer - Time.deltaTime;
+
         timertxt.text = ((int)roundTimer).ToString();
 
         if (roundTimer <= 0f)
@@ -47,33 +48,30 @@ public class lvlmanager : MonoBehaviour {
             Debug.Log("zeit abgelaufen");
         }
     }
-   
+
 
     public void RespawnSpieler()
     {
-        if (gehitted == false)
+
+        //leben abziehen
+        leben = leben - 1;
+        //lebensanzeige aktualisieren
+        lebentxt.text = "Leben: " + leben.ToString();
+        //überprüfen ob spieler noch leben hat
+        if (leben > 0)
         {
-            gehitted = true;
-            //leben abziehen
-            leben = leben - 1;
-            //lebensanzeige aktualisieren
-            lebentxt.text = "Leben: " + leben.ToString();
-            //überprüfen ob spieler noch leben hat
-            if (leben > 0)
-            {
-                spieler.transform.position = currentCheckpoint.transform.position;
-            }
-            else if (leben == 0)
-            {
-                Debug.Log("game over");
-                //bild stop
-                GameOverUI.SetActive(true);
-                Time.timeScale = 0f;
-                leben = -1;
-                StartCoroutine(WarteAufEnter());
-            }
+            spieler.transform.position = currentCheckpoint.transform.position;
         }
-        gehitted = false;
+        else if (leben == 0)
+        {
+            Debug.Log("game over");
+            //bild stop
+            GameOverUI.SetActive(true);
+            Time.timeScale = 0f;
+            leben = -1;
+            StartCoroutine(WarteAufEnter());
+        }
+
         //nein -> spielende
     }
 
