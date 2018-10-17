@@ -16,6 +16,7 @@ public class lvlmanager : MonoBehaviour {
     public Text timertxt;
     public float roundTimer;
     private DialogueManager dialogueManager;
+    private bool gehitted = false;
 
 
 
@@ -50,24 +51,29 @@ public class lvlmanager : MonoBehaviour {
 
     public void RespawnSpieler()
     {
-        //leben abziehen
-        leben = leben-1;
-        //lebensanzeige aktualisieren
-        lebentxt.text = "Leben: " +leben.ToString();
-        //überprüfen ob spieler noch leben hat
-        if (leben > 0)
+        if (gehitted == false)
         {
-            spieler.transform.position = currentCheckpoint.transform.position;
+            gehitted = true;
+            //leben abziehen
+            leben = leben - 1;
+            //lebensanzeige aktualisieren
+            lebentxt.text = "Leben: " + leben.ToString();
+            //überprüfen ob spieler noch leben hat
+            if (leben > 0)
+            {
+                spieler.transform.position = currentCheckpoint.transform.position;
+            }
+            else if (leben == 0)
+            {
+                Debug.Log("game over");
+                //bild stop
+                GameOverUI.SetActive(true);
+                Time.timeScale = 0f;
+                leben = -1;
+                StartCoroutine(WarteAufEnter());
+            }
         }
-        else if(leben == 0)
-        {
-            Debug.Log("game over");
-            //bild stop
-            GameOverUI.SetActive(true);
-            Time.timeScale = 0f;
-            leben = -1;
-            StartCoroutine(WarteAufEnter());
-        }
+        gehitted = false;
         //nein -> spielende
     }
 
