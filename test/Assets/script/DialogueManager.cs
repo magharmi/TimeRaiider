@@ -14,12 +14,14 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
     private GameObject[] gegner;
+    private GameObject spieler;
 
     // Use this for initialization
     void Start()
     {
         sentences = new Queue<string>();
         gegner = GameObject.FindGameObjectsWithTag("GegnerVonDialogboxAbhängig");
+        spieler = GameObject.FindGameObjectWithTag("spieler");
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -75,6 +77,8 @@ public class DialogueManager : MonoBehaviour
                 gegner[i].GetComponent<GegnerAI>().enabled = true;
             if(LandwirtRenntWegVorhanden)
             gegner[i].GetComponent<LandwirtRenntWeg>().enabled = true;
+            spieler.GetComponent<Animator>().enabled = true;
+            spieler.GetComponent<PlatformerUserControl>().enabled = true;
         }
     }
 
