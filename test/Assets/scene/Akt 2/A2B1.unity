@@ -1091,8 +1091,8 @@ GameObject:
   m_Component:
   - component: {fileID: 61416143}
   - component: {fileID: 61416144}
-  - component: {fileID: 61416146}
   - component: {fileID: 61416145}
+  - component: {fileID: 61416147}
   m_Layer: 0
   m_Name: Kaktus
   m_TagString: Untagged
@@ -1168,7 +1168,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1425,7 +1425,7 @@ PolygonCollider2D:
       - {x: -0.9, y: -5.7799997}
       - {x: 1.6999999, y: -5.7799997}
       - {x: 1.7199999, y: -5.7599998}
---- !u!114 &61416146
+--- !u!114 &61416147
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1433,19 +1433,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 61416142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43285920d0d98c46a2cad90c2488c62, type: 3}
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Lvlmanager: {fileID: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  speed: 0
-  sr: {fileID: 0}
-  hit: 1
-  weg: 0
-  leben: 2147483647
-  bloodEffect: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &65481215
 GameObject:
   m_ObjectHideFlags: 0
@@ -2505,8 +2497,8 @@ GameObject:
   m_Component:
   - component: {fileID: 188055512}
   - component: {fileID: 188055513}
-  - component: {fileID: 188055515}
   - component: {fileID: 188055514}
+  - component: {fileID: 188055516}
   m_Layer: 0
   m_Name: Kaktus (9)
   m_TagString: Untagged
@@ -2582,7 +2574,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2839,7 +2831,7 @@ PolygonCollider2D:
       - {x: -0.9, y: -5.7799997}
       - {x: 1.6999999, y: -5.7799997}
       - {x: 1.7199999, y: -5.7599998}
---- !u!114 &188055515
+--- !u!114 &188055516
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2847,19 +2839,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 188055511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43285920d0d98c46a2cad90c2488c62, type: 3}
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Lvlmanager: {fileID: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  speed: 0
-  sr: {fileID: 0}
-  hit: 1
-  weg: 0
-  leben: 2147483647
-  bloodEffect: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &193424703
 GameObject:
   m_ObjectHideFlags: 0
@@ -14930,8 +14914,8 @@ GameObject:
   m_Component:
   - component: {fileID: 595130853}
   - component: {fileID: 595130854}
-  - component: {fileID: 595130855}
   - component: {fileID: 595130856}
+  - component: {fileID: 595130857}
   m_Layer: 0
   m_Name: Kaktus (1)
   m_TagString: Untagged
@@ -14998,27 +14982,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &595130855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 595130852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43285920d0d98c46a2cad90c2488c62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  speed: 0
-  sr: {fileID: 0}
-  hit: 1
-  weg: 0
-  leben: 2147483647
-  bloodEffect: {fileID: 0}
 --- !u!60 &595130856
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15028,7 +14991,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15285,6 +15248,19 @@ PolygonCollider2D:
       - {x: -0.9, y: -5.7799997}
       - {x: 1.6999999, y: -5.7799997}
       - {x: 1.7199999, y: -5.7599998}
+--- !u!114 &595130857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 595130852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &602149687
 GameObject:
   m_ObjectHideFlags: 0
@@ -15294,8 +15270,8 @@ GameObject:
   m_Component:
   - component: {fileID: 602149688}
   - component: {fileID: 602149689}
-  - component: {fileID: 602149691}
   - component: {fileID: 602149690}
+  - component: {fileID: 602149692}
   m_Layer: 0
   m_Name: Kaktus (6)
   m_TagString: Untagged
@@ -15371,7 +15347,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15404,7 +15380,7 @@ PolygonCollider2D:
       - {x: 0.355, y: -0.51}
       - {x: 0.45499998, y: -0.35999998}
       - {x: 0.45499998, y: 0.17999999}
---- !u!114 &602149691
+--- !u!114 &602149692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15412,19 +15388,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 602149687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43285920d0d98c46a2cad90c2488c62, type: 3}
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Lvlmanager: {fileID: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  speed: 0
-  sr: {fileID: 0}
-  hit: 1
-  weg: 0
-  leben: 2147483647
-  bloodEffect: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &608079735
 GameObject:
   m_ObjectHideFlags: 0
@@ -17341,8 +17309,8 @@ GameObject:
   m_Component:
   - component: {fileID: 898280119}
   - component: {fileID: 898280120}
-  - component: {fileID: 898280122}
   - component: {fileID: 898280121}
+  - component: {fileID: 898280123}
   m_Layer: 0
   m_Name: Kaktus (4)
   m_TagString: Untagged
@@ -17418,7 +17386,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17471,7 +17439,7 @@ PolygonCollider2D:
       - {x: 0.32999998, y: -0.59}
       - {x: 0.35, y: -0.32999998}
       - {x: 0.48, y: -0.099999994}
---- !u!114 &898280122
+--- !u!114 &898280123
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17479,19 +17447,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 898280118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43285920d0d98c46a2cad90c2488c62, type: 3}
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Lvlmanager: {fileID: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  speed: 0
-  sr: {fileID: 0}
-  hit: 1
-  weg: 0
-  leben: 2147483647
-  bloodEffect: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &900646165
 GameObject:
   m_ObjectHideFlags: 0
@@ -17502,7 +17462,7 @@ GameObject:
   - component: {fileID: 900646166}
   - component: {fileID: 900646167}
   - component: {fileID: 900646169}
-  - component: {fileID: 900646168}
+  - component: {fileID: 900646170}
   m_Layer: 0
   m_Name: Kaktus (7)
   m_TagString: Untagged
@@ -17569,27 +17529,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &900646168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 900646165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43285920d0d98c46a2cad90c2488c62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  speed: 0
-  sr: {fileID: 0}
-  hit: 1
-  weg: 0
-  leben: 2147483647
-  bloodEffect: {fileID: 0}
 --- !u!60 &900646169
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -17599,7 +17538,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17632,6 +17571,19 @@ PolygonCollider2D:
       - {x: 0.355, y: -0.51}
       - {x: 0.45499998, y: -0.35999998}
       - {x: 0.45499998, y: 0.17999999}
+--- !u!114 &900646170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 900646165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &913422910
 GameObject:
   m_ObjectHideFlags: 0
@@ -17642,7 +17594,7 @@ GameObject:
   - component: {fileID: 913422911}
   - component: {fileID: 913422912}
   - component: {fileID: 913422914}
-  - component: {fileID: 913422913}
+  - component: {fileID: 913422915}
   m_Layer: 0
   m_Name: Kaktus (5)
   m_TagString: Untagged
@@ -17709,27 +17661,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &913422913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 913422910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43285920d0d98c46a2cad90c2488c62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  speed: 0
-  sr: {fileID: 0}
-  hit: 1
-  weg: 0
-  leben: 2147483647
-  bloodEffect: {fileID: 0}
 --- !u!60 &913422914
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -17739,7 +17670,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -17773,6 +17704,19 @@ PolygonCollider2D:
       - {x: 0.29, y: -0.45}
       - {x: 0.35999998, y: -0.03}
       - {x: 0.42, y: -0.01}
+--- !u!114 &913422915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 913422910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &924406003
 GameObject:
   m_ObjectHideFlags: 0
@@ -18053,6 +17997,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neuesZielErstellen: 0
+  spielerEinfrieren: 0
+  idleSprite: {fileID: 0}
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
@@ -18388,8 +18334,8 @@ GameObject:
   m_Component:
   - component: {fileID: 956988829}
   - component: {fileID: 956988830}
-  - component: {fileID: 956988832}
   - component: {fileID: 956988831}
+  - component: {fileID: 956988833}
   m_Layer: 0
   m_Name: Kaktus (2)
   m_TagString: Untagged
@@ -18465,7 +18411,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18722,7 +18668,7 @@ PolygonCollider2D:
       - {x: -0.9, y: -5.7799997}
       - {x: 1.6999999, y: -5.7799997}
       - {x: 1.7199999, y: -5.7599998}
---- !u!114 &956988832
+--- !u!114 &956988833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18730,19 +18676,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 956988828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43285920d0d98c46a2cad90c2488c62, type: 3}
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Lvlmanager: {fileID: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  speed: 0
-  sr: {fileID: 0}
-  hit: 1
-  weg: 0
-  leben: 2147483647
-  bloodEffect: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &958028811
 GameObject:
   m_ObjectHideFlags: 0
@@ -21697,7 +21635,7 @@ GameObject:
   - component: {fileID: 1317649977}
   - component: {fileID: 1317649978}
   - component: {fileID: 1317649980}
-  - component: {fileID: 1317649979}
+  - component: {fileID: 1317649981}
   m_Layer: 0
   m_Name: Kaktus (8)
   m_TagString: Untagged
@@ -21764,27 +21702,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1317649979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1317649976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43285920d0d98c46a2cad90c2488c62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  speed: 0
-  sr: {fileID: 0}
-  hit: 1
-  weg: 0
-  leben: 2147483647
-  bloodEffect: {fileID: 0}
 --- !u!60 &1317649980
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -21794,7 +21711,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -21856,6 +21773,19 @@ PolygonCollider2D:
       - {x: 0.655, y: -0.285}
       - {x: 0.775, y: -0.235}
       - {x: 0.84499997, y: -0.185}
+--- !u!114 &1317649981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1317649976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &1318933296
 GameObject:
   m_ObjectHideFlags: 0
@@ -27418,7 +27348,7 @@ GameObject:
   - component: {fileID: 1993295744}
   - component: {fileID: 1993295745}
   - component: {fileID: 1993295747}
-  - component: {fileID: 1993295746}
+  - component: {fileID: 1993295748}
   m_Layer: 0
   m_Name: Kaktus (3)
   m_TagString: Untagged
@@ -27485,27 +27415,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1993295746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1993295743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43285920d0d98c46a2cad90c2488c62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  speed: 0
-  sr: {fileID: 0}
-  hit: 1
-  weg: 0
-  leben: 2147483647
-  bloodEffect: {fileID: 0}
 --- !u!60 &1993295747
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -27515,7 +27424,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -27577,6 +27486,19 @@ PolygonCollider2D:
       - {x: 0.655, y: -0.285}
       - {x: 0.775, y: -0.235}
       - {x: 0.84499997, y: -0.185}
+--- !u!114 &1993295748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1993295743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lvlmanager: {fileID: 0}
+  resetObjekt: []
 --- !u!1 &1997490949
 GameObject:
   m_ObjectHideFlags: 0
