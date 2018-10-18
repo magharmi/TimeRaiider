@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 17303262}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3507, y: -67.134, z: 0}
+  m_LocalPosition: {x: 7.821, y: -67.134, z: 0}
   m_LocalScale: {x: 0.04808035, y: 0.59800005, z: 0.598}
   m_Children: []
   m_Father: {fileID: 1838916412}
@@ -182,7 +182,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 442.26913, y: -36.778408}
+  m_Size: {x: 669.7804, y: -36.778408}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -581,7 +581,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -67.15
+      value: 67.2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.y
@@ -609,7 +609,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_TagString
@@ -1974,7 +1974,7 @@ Transform:
   m_LocalScale: {x: 1.6124994, y: 1.2875001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &359270789
 GameObject:
@@ -2070,7 +2070,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 371578064}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3508, y: -56.197784, z: 0}
+  m_LocalPosition: {x: 7.821, y: -56.197784, z: 0}
   m_LocalScale: {x: 0.04808035, y: 0.59800005, z: 0.598}
   m_Children: []
   m_Father: {fileID: 1838916412}
@@ -2116,7 +2116,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 442.26913, y: 3.299865}
+  m_Size: {x: 669.7804, y: 3.299865}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2134,18 +2134,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06578827, y: 0}
+  m_Offset: {x: -0.25657654, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 12.51, y: 3.3}
-    newSize: {x: 442.26913, y: 3.299865}
+    newSize: {x: 669.7804, y: 3.299865}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 442.312, y: 3.25}
+  m_Size: {x: 670.5078, y: 3.25}
   m_EdgeRadius: 0
 --- !u!1 &385793111
 GameObject:
@@ -2787,7 +2787,7 @@ GameObject:
   - component: {fileID: 530957824}
   - component: {fileID: 530957825}
   m_Layer: 0
-  m_Name: Bosskampf Wand (1)
+  m_Name: Bosskampf Wand rechts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8197,7 +8197,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 579.0351, y: 5.78}
+  m_Size: {x: 876.90125, y: 5.78}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -8210,7 +8210,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1442465640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.0271, y: -55.73, z: 0}
+  m_LocalPosition: {x: 82.24, y: -55.73, z: 0}
   m_LocalScale: {x: 0.45799997, y: 0.458, z: 0.458}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10010,6 +10010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neuesZielErstellen: 0
   spielerEinfrieren: 1
+  idleSprite: {fileID: 0}
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
@@ -11015,7 +11016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8238cc53530b64fbb7828c3d3bb591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2003817978}
   damping: 0
   lookAheadFactor: 0
   lookAheadReturnSpeed: 0
@@ -11777,6 +11778,7 @@ GameObject:
   - component: {fileID: 2074726849}
   - component: {fileID: 2074726848}
   - component: {fileID: 2074726850}
+  - component: {fileID: 2074726851}
   m_Layer: 0
   m_Name: Landwirt (1)
   m_TagString: Untagged
@@ -11892,6 +11894,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 24.67, y: 37.9}
   m_EdgeRadius: 0
+--- !u!114 &2074726851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074726846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e32d49cf5d2800d49ad502d119cff6ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2083808230
 GameObject:
   m_ObjectHideFlags: 0
