@@ -77,9 +77,9 @@ public class DialogueManager : MonoBehaviour
                 gegner[i].GetComponent<GegnerAI>().enabled = true;
             if(LandwirtRenntWegVorhanden)
             gegner[i].GetComponent<LandwirtRenntWeg>().enabled = true;
-            spieler.GetComponent<Animator>().enabled = true;
-            spieler.GetComponent<PlatformerUserControl>().enabled = true;
         }
+        spieler.GetComponent<Animator>().enabled = true;
+        spieler.GetComponent<PlatformerUserControl>().enabled = true;
     }
 
     IEnumerator WarteAufAntwort()
