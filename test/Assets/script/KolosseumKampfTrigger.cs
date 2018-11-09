@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class KolosseumKampfTrigger : MonoBehaviour {
 
-    public KolosseumKampf kolosseumKampfController;
+    private KolosseumKampf kolosseumKampfController;
 
 	// Use this for initialization
 	void Start () {
-        kolosseumKampfController = GetComponent<KolosseumKampf>();
+        kolosseumKampfController = GameObject.Find("KampfController").GetComponent<KolosseumKampf>();
 	}
 
     private void OnCollisionEnter2D(Collision2D other)
