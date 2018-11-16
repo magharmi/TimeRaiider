@@ -33,7 +33,6 @@ public class Kamikaze : MonoBehaviour
             if (Vector2.Distance(transform.position, player.position) <= radius)
             {
                 KamikazeAngriff();
-                gameObject.GetComponent<Gegner>().enabled = false;
                 /*if (Vector2.Distance(transform.position, absturzPunkt) == 0)
                 {
                     Destroy(gameObject);

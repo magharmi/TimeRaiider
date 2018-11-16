@@ -6,8 +6,8 @@ public class PlayerAttack : MonoBehaviour {
    
     private float timeBtwAttack;
     public float startTimeBtwAttack;
-    //public Animator camAnim;
-   
+    private Shake shake;
+
     public Transform attackPos;
     public float attackRange;
     public int damage;
@@ -16,7 +16,7 @@ public class PlayerAttack : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-   
+        //shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class PlayerAttack : MonoBehaviour {
 
             if (Input.GetKeyDown(KeyCode.T))
             {
-               // camAnim.SetTrigger("shake");
+               // shake.CamShake();
               
                 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange);
@@ -36,6 +36,8 @@ public class PlayerAttack : MonoBehaviour {
                 {
                    
                     enemiesToDamage[i].GetComponent<EnemyHealthBar>().addDamage(damage);
+                    enemiesToDamage[i].GetComponent<Boss>().damage-=damage;
+
                 }
             }
             timeBtwAttack = startTimeBtwAttack;
