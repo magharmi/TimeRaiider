@@ -16,7 +16,8 @@ public class lvlmanager : MonoBehaviour {
     public Text timertxt;
     public float roundTimer;
     private DialogueManager dialogueManager;
-
+    [SerializeField]
+    public Button shop;
 
 
     void Start()
