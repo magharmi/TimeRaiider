@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FakelScript : MonoBehaviour {
+public class FackelScript : MonoBehaviour {
    
 	// Use this for initialization
 	void Start () {

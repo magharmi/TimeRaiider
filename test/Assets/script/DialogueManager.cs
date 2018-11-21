@@ -8,15 +8,20 @@ public class DialogueManager : MonoBehaviour
 
     public Text nameText;
     public Text dialogueText;
-
+    public bool GegnerAIVorhanden = false;
+    public bool LandwirtRenntWegVorhanden = false;
     public Animator animator;
 
     private Queue<string> sentences;
+    private GameObject[] gegner;
+    private GameObject spieler;
 
     // Use this for initialization
     void Start()
     {
         sentences = new Queue<string>();
+        gegner = GameObject.FindGameObjectsWithTag("GegnerVonDialogboxAbhängig");
+        spieler = GameObject.FindGameObjectWithTag("spieler");
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -66,6 +71,15 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        for(int i = 0; i < gegner.Length; i++)
+        {
+            if(GegnerAIVorhanden)
+                gegner[i].GetComponent<GegnerAI>().enabled = true;
+            if(LandwirtRenntWegVorhanden)
+            gegner[i].GetComponent<LandwirtRenntWeg>().enabled = true;
+        }
+        spieler.GetComponent<Animator>().enabled = true;
+        spieler.GetComponent<PlatformerUserControl>().enabled = true;
     }
 
     IEnumerator WarteAufAntwort()
