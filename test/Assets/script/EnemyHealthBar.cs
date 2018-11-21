@@ -7,7 +7,6 @@ public class EnemyHealthBar : MonoBehaviour {
 <<<<<<< HEAD
     [SerializeField]
     GameObject TextHit;
-   
     public Slider enemySlider;
 =======
 >>>>>>> parent of 7ac7aa5... hasans shit

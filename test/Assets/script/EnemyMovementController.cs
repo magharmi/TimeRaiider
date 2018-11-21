@@ -92,6 +92,7 @@ public class EnemyMovementController : MonoBehaviour {
             enemyRB.velocity = new Vector2(0f, 0f);
 <<<<<<< HEAD
             myAnimator.SetBool("isRun", charging);
+<<<<<<< HEAD
 
         }
         else
@@ -102,8 +103,10 @@ public class EnemyMovementController : MonoBehaviour {
            enemyAnimator.SetBool("isFollow", charging);
           enemyAnimator.SetBool("isAttack", isAttack);
 >>>>>>> parent of 7ac7aa5... hasans shit
+=======
+           
+>>>>>>> parent of 70f88ec... Test
         }
-        
     }
 
 

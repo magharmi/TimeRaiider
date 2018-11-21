@@ -18,11 +18,16 @@ public class lvlmanager : MonoBehaviour
     public float roundTimer;
     private DialogueManager dialogueManager;
 <<<<<<< HEAD
+<<<<<<< HEAD
  
 =======
     private bool gehitted = false;
 
 >>>>>>> parent of 7ac7aa5... hasans shit
+=======
+    [SerializeField]
+    public Button shop;
+>>>>>>> parent of 70f88ec... Test
 
 
     void Start()
