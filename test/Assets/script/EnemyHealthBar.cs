@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EnemyHealthBar : MonoBehaviour {
     [SerializeField]
     GameObject TextHit;
+   
     public Slider enemySlider;
     public float enemyMaxHealth;
     float currentHealth;
