@@ -21,9 +21,11 @@ GameObject:
   - component: {fileID: 4075411069707132}
   - component: {fileID: 212654099096835924}
   - component: {fileID: 50943405664847050}
+  - component: {fileID: 58990760931315572}
   - component: {fileID: 58387717655333236}
   - component: {fileID: 114687769609494820}
   - component: {fileID: 114718194104428746}
+  - component: {fileID: 114572302163069000}
   m_Layer: 9
   m_Name: Achtung
   m_TagString: enemy
@@ -73,12 +75,41 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.025924683, y: 0}
   serializedVersion: 2
   m_Radius: 0.69483185
+--- !u!58 &58990760931315572
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999576156673132}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.38
+--- !u!114 &114572302163069000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999576156673132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2032a46fc81ba1444851015114c7df97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  damageRate: 0.5
+  pushBackforce: 3
 --- !u!114 &114687769609494820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,8 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4710f500e933b5c448d151a0900fa8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaSteinSpeedHigh: 40
-  lavaSteinSpeedLow: 1
+  lavaSteinSpeedHigh: 30
+  lavaSteinSpeedLow: 10
   lavaRichtung: 15
   lavaTurkAngle: 45
 --- !u!212 &212654099096835924
