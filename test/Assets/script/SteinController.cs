@@ -3,37 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SteinController : MonoBehaviour {
-
-    [SerializeField]
-    private float speed;
-
+   
     Rigidbody2D myRb;
+    public float  velX = 5f;
+    private float velY = 0f;
 
-    private Vector2 direction;
-    
     void Start()
     {
         myRb = GetComponent<Rigidbody2D>();
-  
     }
 
-
-    
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-        myRb.velocity = direction * speed;
+	void Update () {
+        myRb.velocity = new Vector2(velX, velY);
+        Destroy(gameObject, 3f);
 	}
-
-    public void Initialize(Vector2 direction)
-    {
-        this.direction = direction;
-    }
-
-    void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
-
-    
 }

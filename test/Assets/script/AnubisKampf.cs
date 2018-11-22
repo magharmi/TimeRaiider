@@ -6,7 +6,7 @@ public class AnubisKampf : MonoBehaviour {
 
     public GameObject zielItem;
 
-    private GameObject anubis;
+    private GameObject anubis, kampfKamera, mainCamera, unsichtbareWand;
     private Vector3 startPosition;
     private bool anubisZurück = false;
     private bool mumienSpawnen = false;
@@ -21,6 +21,8 @@ public class AnubisKampf : MonoBehaviour {
         mumien = GameObject.FindGameObjectsWithTag("AnubisMumien");
         mumien2 = GameObject.FindGameObjectsWithTag("AnubisMumien2");
         steine = GameObject.FindGameObjectsWithTag("AnubisSteine");
+        kampfKamera = GameObject.Find("Kampf Kamera");
+        mainCamera = GameObject.Find("Main Camera");
         startPosition = anubis.transform.position;
 }
 	
@@ -85,6 +87,9 @@ public class AnubisKampf : MonoBehaviour {
             if (anubis.GetComponent<GegnerAI>().leben == 0)
             {
                 zielItem.GetComponent<SpriteRenderer>().enabled = true;
+                kampfKamera.GetComponent<Camera>().enabled = false;
+                mainCamera.GetComponent<Camera>().enabled = true;
+                unsichtbareWand.SetActive(false);
                 leben0 = false;
             }
         }

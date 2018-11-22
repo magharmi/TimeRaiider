@@ -53,7 +53,7 @@ public class GegnerAI : MonoBehaviour {
         {
             if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
             {
-                transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, new Vector3(player.position.x, transform.position.y, player.position.z), speed * Time.deltaTime);
             }
             else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
             {
