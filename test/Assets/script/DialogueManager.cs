@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public bool GegnerAIVorhanden = false;
     public bool LandwirtRenntWegVorhanden = false;
+    public bool NaechstesZiel = false;
     public Animator animator;
 
     private Queue<string> sentences;
@@ -76,7 +78,7 @@ public class DialogueManager : MonoBehaviour
             if(GegnerAIVorhanden)
                 gegner[i].GetComponent<GegnerAI>().enabled = true;
             if(LandwirtRenntWegVorhanden)
-            gegner[i].GetComponent<LandwirtRenntWeg>().enabled = true;
+                gegner[i].GetComponent<LandwirtRenntWeg>().enabled = true;
         }
         spieler.GetComponent<Animator>().enabled = true;
         spieler.GetComponent<PlatformerUserControl>().enabled = true;

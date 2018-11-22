@@ -6,7 +6,7 @@ public class DaheimKampf : MonoBehaviour
 {
     public GameObject zielItem;
 
-    private GameObject champion, kampfKamera, mainCamera, unsichtbareWand;
+    private GameObject champion, kampfKamera, mainCamera, unsichtbareWand, helikopter, beiZeitmaschine, grossvater;
     private GameObject[] agenten, raumschiffAgenten;
 
     // Use this for initialization
@@ -17,6 +17,9 @@ public class DaheimKampf : MonoBehaviour
         raumschiffAgenten = GameObject.FindGameObjectsWithTag("AnubisMumien2");
         kampfKamera = GameObject.Find("Kampf Kamera");
         mainCamera = GameObject.Find("Main Camera");
+        helikopter = GameObject.Find("Helikopter");
+        beiZeitmaschine = GameObject.Find("Bei Zeitmaschine");
+        grossvater = GameObject.Find("Grossvater");
     }
 
     // Update is called once per frame
@@ -51,7 +54,10 @@ public class DaheimKampf : MonoBehaviour
         if (agentenNummer == 0)
         {
             Debug.Log("Alle Tot aus erster Welle");
+            beiZeitmaschine.SetActive(false);
+            helikopter.GetComponent<Rigidbody2D>().isKinematic = false;
             yield return new WaitForSeconds(5);
+            helikopter.GetComponent<Rigidbody2D>().isKinematic = true;
             raumschiffAgentenSpawnenAufruf();
         }
     }
@@ -78,15 +84,10 @@ public class DaheimKampf : MonoBehaviour
         if (raumschiffAgentenNummer == 0)
         {
             Debug.Log("Alle Tot aus zweiter Welle");
-            yield return new WaitForSeconds(5);
-            championSpawnen();
+            grossvater.GetComponent<BoxCollider2D>().enabled = true;
+            grossvater.GetComponent<GegnerAI>().enabled = true;
+            
         }
-    }
-
-    void championSpawnen()
-    {
-        champion.GetComponent<SpriteRenderer>().enabled = true;
-        champion.GetComponent<GegnerAI>().enabled = true;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
