@@ -84,14 +84,8 @@ public class EnemyMovementController : MonoBehaviour {
             charging = false;
             enemyRB.velocity = new Vector2(0f, 0f);
             myAnimator.SetBool("isRun", charging);
-
+           
         }
-        else
-        {
-            myAnimator.SetBool("isRun", false);
-            myAnimator.SetBool("isAttack", true);
-        }
-        
     }
    
     void flipFacing()
