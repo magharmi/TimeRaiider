@@ -68,7 +68,7 @@ public class Gegner : MonoBehaviour {
             if (leben == 0)
             {
                 Destroy(gameObject, 0.2f);
-                Instantiate(bloodEffect, transform.position, Quaternion.identity);
+               // Instantiate(bloodEffect, transform.position, Quaternion.identity);
             }
             //Destroy(gameObject, 0.2f);
             Destroy(other.gameObject,0f);
