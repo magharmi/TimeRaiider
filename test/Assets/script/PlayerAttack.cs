@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour {
     private float timeBtwAttack;
     public float startTimeBtwAttack;
     //public Animator camAnim;
-   
+   private Animator anim;
     public Transform attackPos;
     public float attackRange;
     public int damage;
@@ -16,7 +16,7 @@ public class PlayerAttack : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-   
+   anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,13 +29,13 @@ public class PlayerAttack : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.T))
             {
                // camAnim.SetTrigger("shake");
-              
+              anim.SetTrigger("Attack_Speer");
                 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                    
-                    enemiesToDamage[i].GetComponent<EnemyHealthBar>().addDamage(damage);
+//                    enemiesToDamage[i].GetComponent<EnemyHealthBar>().addDamage(damage);
                 }
             }
             timeBtwAttack = startTimeBtwAttack;

@@ -21,15 +21,50 @@ namespace UnityStandardAssets._2D
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
                                             //public Inventory inventory;
         
+        //Meine Sachen Start!
+        private Animator myAnimator;
+        /* 
+        [SerializeField]
+        private Transform steinPos,pfeilPos;
+        */
+       //[SerializeField]
+        //private GameObject stein,pfeil;
+
+        
+
+    public Rigidbody2D MyRigidbody { get; set; }
+    public bool Attack { get; set; }
+    public bool  Slide { get; set; }
+    public bool  Jump { get; set; }
+    public bool OnGround { get; set; }
+
+    public static  PlatformerCharacter2D Instance
+    {
+        get
+        {
+            if (Instance == null)
+            {
+                return Instance = GameObject.FindObjectOfType<PlatformerCharacter2D>();
+            }
+            return Instance;
+        }
+        set
+        {
+            Instance = value;
+        }
+    }
+
         private void Awake()
         {
-           
+            
             // Setting up references.
             m_GroundCheck = transform.Find("GroundCheck");
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
         }
+        
+
 
 
         private void FixedUpdate()
@@ -49,8 +84,8 @@ namespace UnityStandardAssets._2D
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
-
-         
+            
+           
         }
 
        
@@ -68,7 +103,7 @@ namespace UnityStandardAssets._2D
 
             // Set whether or not the character is crouching in the animator
             m_Anim.SetBool("Crouch", crouch);
-
+           
             //only control the player if grounded or airControl is turned on
             if (m_Grounded || m_AirControl)
             {
@@ -157,5 +192,28 @@ namespace UnityStandardAssets._2D
         {
             m_MaxSpeed = maxSpeed;
         }
+    
+    private void HandleInput()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            m_Anim.SetTrigger("isAttack");
+        }
+      
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            m_Anim.SetTrigger("isSteinWurf");
+            SoundManagerScript.PlaySound("steinwurf");
+            //  SteinWurf(0);
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            m_Anim.SetTrigger("isArmbrust");
+            //  SteinWurf(0);
+            SoundManagerScript.PlaySound("crossbow");
+            }
+        }
+    
     }
 }

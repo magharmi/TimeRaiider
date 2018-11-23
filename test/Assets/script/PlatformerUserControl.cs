@@ -9,7 +9,8 @@ public class PlatformerUserControl : MonoBehaviour
     private PlatformerCharacter m_Character;
     private bool m_Jump;
     private DialogueManager dialogueManager;
-
+    
+    
 
     private void Awake()
     {
@@ -30,7 +31,9 @@ public class PlatformerUserControl : MonoBehaviour
     private void FixedUpdate()
     {
         // Read the inputs.
-
+        //Mein befehl
+        bool c = Input.GetKey(KeyCode.V);
+       
         bool crouch = Input.GetKey(KeyCode.LeftControl);
         float h = CrossPlatformInputManager.GetAxis("Horizontal");
         // Pass all parameters to the character control script.
