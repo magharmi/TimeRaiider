@@ -11,7 +11,6 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public bool GegnerAIVorhanden = false;
     public bool LandwirtRenntWegVorhanden = false;
-    public bool NaechstesZiel = false;
     public Animator animator;
 
     private Queue<string> sentences;

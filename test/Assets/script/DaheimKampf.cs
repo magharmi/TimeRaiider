@@ -6,13 +6,12 @@ public class DaheimKampf : MonoBehaviour
 {
     public GameObject zielItem;
 
-    private GameObject champion, kampfKamera, mainCamera, unsichtbareWand, helikopter, beiZeitmaschine, grossvater;
+    private GameObject kampfKamera, mainCamera, unsichtbareWand, helikopter, beiZeitmaschine, grossvater, nächstesZiel;
     private GameObject[] agenten, raumschiffAgenten;
 
     // Use this for initialization
     void Start()
     {
-        champion = GameObject.FindGameObjectWithTag("Boss");
         agenten = GameObject.FindGameObjectsWithTag("AnubisMumien");
         raumschiffAgenten = GameObject.FindGameObjectsWithTag("AnubisMumien2");
         kampfKamera = GameObject.Find("Kampf Kamera");
@@ -20,16 +19,8 @@ public class DaheimKampf : MonoBehaviour
         helikopter = GameObject.Find("Helikopter");
         beiZeitmaschine = GameObject.Find("Bei Zeitmaschine");
         grossvater = GameObject.Find("Grossvater");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (champion.GetComponent<GegnerAI>().leben == 0)
-        {
-            zielItem.GetComponent<SpriteRenderer>().enabled = true;
-            zielItem.GetComponent<PolygonCollider2D>().enabled = true;
-        }
+        unsichtbareWand = GameObject.Find("Bei Opa");
+        nächstesZiel = GameObject.Find("Ziel");
     }
 
     public void agentenSpawnenAufruf()
@@ -56,8 +47,9 @@ public class DaheimKampf : MonoBehaviour
             Debug.Log("Alle Tot aus erster Welle");
             beiZeitmaschine.SetActive(false);
             helikopter.GetComponent<Rigidbody2D>().isKinematic = false;
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(3);
             helikopter.GetComponent<Rigidbody2D>().isKinematic = true;
+            yield return new WaitForSeconds(2);
             raumschiffAgentenSpawnenAufruf();
         }
     }
@@ -86,7 +78,11 @@ public class DaheimKampf : MonoBehaviour
             Debug.Log("Alle Tot aus zweiter Welle");
             grossvater.GetComponent<BoxCollider2D>().enabled = true;
             grossvater.GetComponent<GegnerAI>().enabled = true;
-            
+            mainCamera.GetComponent<Camera>().enabled = true;
+            kampfKamera.GetComponent<Camera>().enabled = false;
+            Destroy(unsichtbareWand);
+            nächstesZiel.GetComponent<BoxCollider2D>().enabled = true;
+
         }
     }
 

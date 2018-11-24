@@ -279,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neuesZielErstellen: 0
   spielerEinfrieren: 1
-  idleSprite: {fileID: 21300000, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+  idleSprite: {fileID: 21300000, guid: 85be9c17c01908f41b5ef90547d4ea45, type: 3}
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neuesZielErstellen: 0
   spielerEinfrieren: 0
-  idleSprite: {fileID: 21300000, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+  idleSprite: {fileID: 21300000, guid: 85be9c17c01908f41b5ef90547d4ea45, type: 3}
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
@@ -2345,7 +2345,6 @@ MonoBehaviour:
   dialogueText: {fileID: 2136604715}
   GegnerAIVorhanden: 0
   LandwirtRenntWegVorhanden: 0
-  NaechstesZiel: 1
   animator: {fileID: 1806933206}
 --- !u!4 &224512846
 Transform:
@@ -3500,7 +3499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neuesZielErstellen: 0
   spielerEinfrieren: 1
-  idleSprite: {fileID: 21300000, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+  idleSprite: {fileID: 21300000, guid: 85be9c17c01908f41b5ef90547d4ea45, type: 3}
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
@@ -5570,11 +5569,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -61.969997
+      value: -61.98
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -55.6
+      value: -55.65
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5643,6 +5642,51 @@ Prefab:
     - target: {fileID: 11400000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 85be9c17c01908f41b5ef90547d4ea45,
+        type: 3}
+    - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_Offset.y
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_Offset.y
+      value: 0.052398086
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_Size.y
+      value: 0.7847961
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_Offset.x
+      value: -0.0000023245811
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_Size.x
+      value: 0.30988806
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.4901285
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2.4901252
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.405635
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
@@ -6960,7 +7004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a058f15481bf4394382f0be5289f4a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: test
+  level: Haus
   LevelToUnlock: 2
 --- !u!61 &733158252
 BoxCollider2D:
@@ -6994,7 +7038,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 733158250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.51, y: -48.25, z: -0.091796875}
+  m_LocalPosition: {x: -0.1, y: -48.25, z: -0.091796875}
   m_LocalScale: {x: -2.3362663, y: -16.919697, z: -1.235973}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10652,7 +10696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1506763730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10707,7 +10751,7 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1506763729}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.064662635, g: 0.16500117, b: 0.19117647, a: 0.841}

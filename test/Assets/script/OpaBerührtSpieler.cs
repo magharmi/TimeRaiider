@@ -21,9 +21,9 @@ public class OpaBerührtSpieler : MonoBehaviour {
         if(other.gameObject.name == "spieler")
         {
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            gameObject.GetComponent<OpaBerührtSpieler>().enabled = false;
-            gameObject.GetComponent<DialogueTrigger>().enabled = true;
             nächstesZiel.GetComponent<BoxCollider2D>().enabled = true;
+            gameObject.GetComponent<DialogueTrigger>().enabled = true;
+            gameObject.GetComponent<OpaBerührtSpieler>().enabled = false;
         }
     }
 }
