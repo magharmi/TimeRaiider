@@ -10,20 +10,18 @@ public class DrohneAngriff : MonoBehaviour
     public Vector3 startPos;
     public lvlmanager Lvlmanager;
     public Transform player;
-    public SpriteRenderer sr;
+    public float zeitBisSchuss;
 
-    private bool isTriggered = false;
     private bool absturzSet = false;
     private Vector3 absturzPunkt;
-    private Transform drohnenPosition;
+    private bool bulletVerfügbar = true;
+    private bool isTriggered = false;
 
     // Use this for initialization
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("spieler").transform;
         Lvlmanager = FindObjectOfType<lvlmanager>();
-        startPos = transform.position;
-        sr = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -31,26 +29,25 @@ public class DrohneAngriff : MonoBehaviour
     {
         if (isTriggered == false)
         {
-            if (Vector2.Distance(drohne.transform.position, player.position) <= radius)
+            if (bulletVerfügbar == true)
+                transform.position = drohne.transform.position;
+
+            if (Vector2.Distance(transform.position, player.position) <= radius)
             {
-                schiessen();
-                gameObject.GetComponent<Gegner>().enabled = false;
-                /*if (Vector2.Distance(transform.position, absturzPunkt) == 0)
-                {
-                    Destroy(gameObject);
-                }*/
+                StartCoroutine(schiessen());
+                isTriggered = true;
             }
         }
     }
 
-    void schiessen()
+    IEnumerator schiessen()
     {
-        if (absturzSet == false)
-        {
-            absturzPunkt = player.position;
-            absturzSet = true;
-        }
+        bulletVerfügbar = false;
+        absturzPunkt = player.position;
         transform.position = Vector2.MoveTowards(transform.position, absturzPunkt, bulletspeed * Time.deltaTime);
+        Debug.Log("Schuss");
+        yield return new WaitForSeconds(zeitBisSchuss);
+        bulletVerfügbar = true;
     }
 
     void OnCollisionEnter2D()

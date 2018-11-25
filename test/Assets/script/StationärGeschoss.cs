@@ -11,7 +11,7 @@ public class StationärGeschoss : MonoBehaviour
     Rigidbody2D clone;
     public float bulletSpeed = 300f;
     public Transform player;
-    public int schussGeschwindigkeit;
+    public float schussGeschwindigkeit;
 
     // Use this for initialization
     void Start()
@@ -44,6 +44,4 @@ public class StationärGeschoss : MonoBehaviour
 
         }
     }
-
-
 }
