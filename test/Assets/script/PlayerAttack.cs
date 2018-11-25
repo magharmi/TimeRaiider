@@ -3,20 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour {
-   
+  
+    
     private float timeBtwAttack;
     public float startTimeBtwAttack;
+    public LayerMask whatIsEnemies;
+  
+   // public float spielerSpeed;
     //public Animator camAnim;
-   private Animator anim;
+    private Animator anim;
     public Transform attackPos;
+    public Transform pfeilPos;
     public float attackRange;
     public int damage;
    
-    public LayerMask whatIsEnemies;
+    //GameObjects
+   
+    Rigidbody2D m_Rigidbody2D;
+ 
+   
+
     // Use this for initialization
     void Start()
     {
-   anim = GetComponent<Animator>();
+      
+       
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,14 +36,11 @@ public class PlayerAttack : MonoBehaviour {
     {
         if (startTimeBtwAttack <= 0)
         {
-             if (Input.GetKeyDown(KeyCode.V))
-            {
-                 anim.SetTrigger("isArmbrust");
-            }
+           
             if (Input.GetKeyDown(KeyCode.T))
             {
-               // camAnim.SetTrigger("shake");
-              anim.SetTrigger("Attack_Speer");
+                // camAnim.SetTrigger("shake");
+                anim.SetTrigger("Attack_Speer");
                 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
@@ -47,11 +56,21 @@ public class PlayerAttack : MonoBehaviour {
             timeBtwAttack -= Time.deltaTime;
         }
     }
+  
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
+  
+  
+    
+   
+
+    
+
+  
+
 }
 
 
