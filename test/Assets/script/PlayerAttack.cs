@@ -24,8 +24,10 @@ public class PlayerAttack : MonoBehaviour {
     {
         if (startTimeBtwAttack <= 0)
         {
-
-
+             if (Input.GetKeyDown(KeyCode.V))
+            {
+                 anim.SetTrigger("isArmbrust");
+            }
             if (Input.GetKeyDown(KeyCode.T))
             {
                // camAnim.SetTrigger("shake");
