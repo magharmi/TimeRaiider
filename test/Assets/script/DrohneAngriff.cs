@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Kamikaze : MonoBehaviour
+public class DrohneAngriff : MonoBehaviour
 {
-
-    public float speed;
+    public GameObject drohne;
+    public float bulletspeed;
     public float radius;
     public Vector3 startPos;
     public lvlmanager Lvlmanager;
@@ -15,6 +15,7 @@ public class Kamikaze : MonoBehaviour
     private bool isTriggered = false;
     private bool absturzSet = false;
     private Vector3 absturzPunkt;
+    private Transform drohnenPosition;
 
     // Use this for initialization
     void Start()
@@ -30,9 +31,9 @@ public class Kamikaze : MonoBehaviour
     {
         if (isTriggered == false)
         {
-            if (Vector2.Distance(transform.position, player.position) <= radius)
+            if (Vector2.Distance(drohne.transform.position, player.position) <= radius)
             {
-                KamikazeAngriff();
+                schiessen();
                 gameObject.GetComponent<Gegner>().enabled = false;
                 /*if (Vector2.Distance(transform.position, absturzPunkt) == 0)
                 {
@@ -42,16 +43,14 @@ public class Kamikaze : MonoBehaviour
         }
     }
 
-    void KamikazeAngriff()
+    void schiessen()
     {
-        gameObject.GetComponent<GegnerAI>().enabled = false;
         if (absturzSet == false)
         {
             absturzPunkt = player.position;
             absturzSet = true;
         }
-        transform.position = Vector2.MoveTowards(transform.position, absturzPunkt, speed * Time.deltaTime);
-        transform.rotation = Quaternion.Euler(0, 0, 30);
+        transform.position = Vector2.MoveTowards(transform.position, absturzPunkt, bulletspeed * Time.deltaTime);
     }
 
     void OnCollisionEnter2D()
