@@ -9,7 +9,7 @@ public class PlatformerCharacter : MonoBehaviour
     [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
     [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
     [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
-    [SerializeField] Stats leben;
+  
     private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
@@ -114,43 +114,9 @@ public class PlatformerCharacter : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
+   
 
-        if (other.tag == "enemy")
-        {
-
-            WerdeGeschlagen();
-
-        }
-    }
-
-    void OnCollison2D(PolygonCollider2D col)
-    {
-        if (col.tag == "enemy")
-        {
-
-            WerdeGeschlagen();
-
-        }
-    }
-    /*Sollange werde geschlagen
-
-    void OnTriggerStay2D(Collider2D other)
-    {
-
-        if (other.tag == "enemy")
-        {
-
-            WerdeGeschlagen();
-
-        }
-    }
-    */
-    void WerdeGeschlagen()
-    {
-        leben.CurrentVal -= 10;
-    }
+   
 
     public void spielerGeschwindigkeit(float maxSpeed)
     {

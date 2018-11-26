@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 58387717655333236}
   - component: {fileID: 114687769609494820}
   - component: {fileID: 114718194104428746}
+  - component: {fileID: 114357906412404596}
   m_Layer: 9
   m_Name: Achtung
   m_TagString: enemy
@@ -79,6 +80,20 @@ CircleCollider2D:
   m_Offset: {x: 0.025924683, y: 0}
   serializedVersion: 2
   m_Radius: 0.69483185
+--- !u!114 &114357906412404596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999576156673132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 9.52
+  damageRate: 1.05
+  pushBackforce: 1.24
 --- !u!114 &114687769609494820
 MonoBehaviour:
   m_ObjectHideFlags: 1

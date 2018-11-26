@@ -9,13 +9,14 @@ public class Spieler_Leben : MonoBehaviour
 
     public float fullLeben;
     float currentLeben;
-    //public GameObject deathFX;
+    public GameObject deathFX;
     [SerializeField]
     Slider sl;
 
     Spieler_Leben sp;
 
     public Image geschlagenScreen;
+
     bool geschlagen;
     Color geschlagenColour = new Color(164f, 15f, 12f, 0.60f);
     float smoothColour = 5f;
@@ -40,7 +41,7 @@ public class Spieler_Leben : MonoBehaviour
         }
         else
         {
-            geschlagenScreen.color = Color.Lerp(geschlagenScreen.color, Color.clear, smoothColour * Time.deltaTime);
+           geschlagenScreen.color = Color.Lerp(geschlagenScreen.color, Color.clear, smoothColour * Time.deltaTime);
         }
         geschlagen = false;
     }
@@ -51,7 +52,7 @@ public class Spieler_Leben : MonoBehaviour
     {
         if (damage <= 0) return;
         currentLeben -= damage;
-        SoundManagerScript.PlaySound("hit");
+       // SoundManagerScript.PlaySound("hit");
         sl.value = currentLeben;
         geschlagen = true;
         if (currentLeben <= 0)
@@ -70,7 +71,7 @@ public class Spieler_Leben : MonoBehaviour
     {
         geschlagenColour = new Color(164f, 15f, 12f, 100f);
         geschlagenScreen.color = geschlagenColour;
-        //  Instantiate(deathFX, transform.position, transform.rotation);
+        Instantiate(deathFX, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
