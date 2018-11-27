@@ -54,9 +54,9 @@ public class lvlmanager : MonoBehaviour
     {
 
         //leben abziehen
-        leben = leben - 1;
+        //leben = leben - 1;
         //lebensanzeige aktualisieren
-        lebentxt.text = "Leben: " + leben.ToString();
+        //lebentxt.text = "Leben: " + leben.ToString();
         //überprüfen ob spieler noch leben hat
         if (leben > 0)
         {
