@@ -8,7 +8,7 @@ public class Spieler_Leben : MonoBehaviour
 
 
     public float fullLeben;
-    float currentLeben;
+    public float currentLeben;
     public GameObject deathFX;
     [SerializeField]
     Slider sl;
@@ -16,6 +16,7 @@ public class Spieler_Leben : MonoBehaviour
     Spieler_Leben sp;
 
     public Image geschlagenScreen;
+    private lvlmanager lvlmanager;
 
     bool geschlagen;
     Color geschlagenColour = new Color(164f, 15f, 12f, 0.60f);
@@ -29,6 +30,7 @@ public class Spieler_Leben : MonoBehaviour
         sl.value = fullLeben;
         currentLeben = fullLeben;
         geschlagen = false;
+        lvlmanager = GameObject.Find("lvlmanager").GetComponent<lvlmanager>();
 
     }
 
@@ -58,6 +60,7 @@ public class Spieler_Leben : MonoBehaviour
         if (currentLeben <= 0)
         {
             makeDead();
+            lvlmanager.RespawnSpieler();
         }
     }
     public void addHealth(float healthAmount)
