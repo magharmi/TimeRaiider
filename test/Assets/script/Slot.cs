@@ -5,7 +5,9 @@ using UnityEngine;
 public class Slot : MonoBehaviour {
 
     private Inventory inventory;
-   [SerializeField]  int i;
+    [SerializeField]
+    public int i;
+
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("spieler").GetComponent<Inventory>();
