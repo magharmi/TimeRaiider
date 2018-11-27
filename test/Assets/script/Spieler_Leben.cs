@@ -8,7 +8,7 @@ public class Spieler_Leben : MonoBehaviour
 
 
     public float fullLeben;
-    float currentLeben;
+    public float currentLeben;
     public GameObject deathFX;
     [SerializeField]
     Slider sl;

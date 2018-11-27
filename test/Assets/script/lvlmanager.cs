@@ -9,7 +9,7 @@ public class lvlmanager : MonoBehaviour
 
     //checkpoint
     public GameObject currentCheckpoint;
-    public int leben;
+    public float leben;
     public GameObject spieler;
     public Text lebentxt;
     public GameObject GameOverUI;
@@ -24,6 +24,7 @@ public class lvlmanager : MonoBehaviour
     void Start()
     {
         lebentxt.text = " " + leben.ToString();
+        //leben = spieler.GetComponent<Spieler_Leben>().currentLeben;  GAMEOVER GEHT DAMIT NICHT!
     }
 
 
