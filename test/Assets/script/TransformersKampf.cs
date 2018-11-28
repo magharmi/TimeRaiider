@@ -7,7 +7,7 @@ public class TransformersKampf : MonoBehaviour
 
     public GameObject zielItem;
 
-    private GameObject transformers, kampfKamera, mainCamera, unsichtbareWand, spieler;
+    private GameObject transformers, kampfKamera, mainCamera, unsichtbareWand, spieler, russe;
     private Vector3 startPosition;
     private bool transformersZurück = false;
     private bool drohnenSpawnen = false;
@@ -29,65 +29,38 @@ public class TransformersKampf : MonoBehaviour
         mainCamera = GameObject.Find("Main Camera");
         startPosition = transformers.transform.position;
         spieler = GameObject.FindGameObjectWithTag("spieler");
+        russe = GameObject.Find("Russe");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (leben350 == true)
+
+        if (transformers.GetComponent<GegnerAI>().leben == 350)
         {
-            if (transformers.GetComponent<GegnerAI>().leben == 350)
+            Debug.Log("Beine kaputt");
+            hochGeflogen = true;
+            inMitte = true;
+            beiSpieler = true;
+            if (Vector3.Distance(transformers.transform.position, startPosition) != 0)
             {
-                if (transformersZurück == false)
-                {
-                    transformers.GetComponent<BoxCollider2D>().enabled = false;
-                    transformers.GetComponent<GegnerAI>().speed = 0;
-                    transformers.transform.position = Vector2.MoveTowards(transformers.transform.position, startPosition, 7 * Time.deltaTime);
-                    if (transformers.transform.position == startPosition)
-                    {
-                        Debug.Log("Transformers zurück");
-                        transformersZurück = true;
-                        drohnenSpawnen = true;
-                        transformers.GetComponent<GegnerAI>().leben = 350;
-                    }
-                }
-                else if (drohnenSpawnen == true)
-                {
-                    drohnenSpawnenAufruf();
-                    Debug.Log("Drohnen spawnen");
-                    drohnenSpawnen = false;
-                    leben350 = false;
-                    leben200 = true;
-                }
+                Debug.Log("Fliege zurück");
+                transformers.transform.position = Vector2.MoveTowards(transformers.transform.position, startPosition, 7 * Time.deltaTime);
+            }
+            else
+            {
+                drohnenSpawnenAufruf();
+                Debug.Log("Drohnen spawnen");
             }
         }
-        else if (leben200 == true)
-        {
+
+        else if (leben200 == true){
             if (transformers.GetComponent<GegnerAI>().leben == 200)
             {
-                if (transformersZurück == false)
-                {
-                    transformers.GetComponent<BoxCollider2D>().enabled = false;
-                    transformers.GetComponent<GegnerAI>().speed = 0;
-                    transformers.transform.position = Vector2.MoveTowards(transformers.transform.position, startPosition, 7 * Time.deltaTime);
-                    if (transformers.transform.position == startPosition)
-                    {
-                        Debug.Log("Transformers zurück");
-                        transformersZurück = true;
-                        drohnenSpawnen = true;
-                        transformers.GetComponent<GegnerAI>().leben = 200;
-                    }
-                }
-                else if (drohnenSpawnen == true)
-                {
-                    drohnenSpawnenAufruf2();
-                    Debug.Log("Drohnen spawnen");
-                    drohnenSpawnen = false;
-                    leben200 = false;
-                    leben0 = true;
-                }
+
             }
         }
+
         else if (leben0 == true)
         {
             if (transformers.GetComponent<GegnerAI>().leben == 0)
@@ -121,7 +94,7 @@ public class TransformersKampf : MonoBehaviour
                 StartCoroutine(warteSekundenDannSpielerAngriff(3));
             }
         }
-        if(beiSpieler == false)
+        if (beiSpieler == false)
         {
             transformers.transform.position = Vector3.MoveTowards(transformers.transform.position, spielerPosition, 15 * Time.deltaTime);
             if (Vector3.Distance(transformers.transform.position, spielerPosition) == 0)
@@ -129,7 +102,6 @@ public class TransformersKampf : MonoBehaviour
                 beiSpieler = true;
                 Debug.Log("Bei Spieler angekommen");
                 StartCoroutine(warteSekundenDannHoch(3));
-                //hochGeflogen = false;
             }
         }
     }
@@ -137,11 +109,14 @@ public class TransformersKampf : MonoBehaviour
     public void TransformersAngriff()
     {
         Debug.Log("Start");
-        transformersZurück = false;
         transformers.GetComponent<BoxCollider2D>().enabled = true;
         flugzielSetzen();
-        //transformers.GetComponent<GegnerAI>().speed = 5;
         hochGeflogen = false;
+    }
+
+    public void TransformersLaserSchiessen()
+    {
+
     }
 
     public void drohnenSpawnenAufruf()
@@ -166,7 +141,7 @@ public class TransformersKampf : MonoBehaviour
         if (drohnenNummer == 0)
         {
             yield return new WaitForSeconds(5);
-            TransformersAngriff();
+            leben200 = true;
         }
     }
 
@@ -192,12 +167,12 @@ public class TransformersKampf : MonoBehaviour
 
     private void flugzielSetzen()
     {
-        hochflugZiel = new Vector3(transformers.transform.position.x, transformers.transform.position.y + 7, 0.0f);
+        hochflugZiel = new Vector3(transformers.transform.position.x, transformers.transform.position.y + 12, 0.0f);
     }
 
     private void spielerPositionSetzen()
     {
-        spielerPosition = new Vector3(spieler.transform.position.x, (float)-49.199, spieler.transform.position.z);
+        spielerPosition = new Vector3(spieler.transform.position.x, (float)-51.5, spieler.transform.position.z);
     }
 
     IEnumerator warteSekundenDannSpielerAngriff(float sekunden)
