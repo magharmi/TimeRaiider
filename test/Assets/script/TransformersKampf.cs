@@ -14,7 +14,9 @@ public class TransformersKampf : MonoBehaviour
     private bool leben350 = true;
     private bool leben200 = false;
     private bool leben0 = false;
+    private bool hochGeflogen = true;
     private GameObject[] drohnen;
+    private Vector3 hochflugZiel;
 
     // Use this for initialization
     void Start()
@@ -94,13 +96,22 @@ public class TransformersKampf : MonoBehaviour
                 leben0 = false;
             }
         }
+
+        if (hochGeflogen == false)
+        {
+            Debug.Log("FLIEG");
+            transformers.transform.position = Vector3.MoveTowards(transformers.transform.position, hochflugZiel, 10 * Time.deltaTime);
+        }
     }
 
     public void TransformersAngriff()
     {
+        Debug.Log("Start");
         transformersZurück = false;
         transformers.GetComponent<BoxCollider2D>().enabled = true;
-        transformers.GetComponent<GegnerAI>().speed = 5;
+        flugzielSetzen();
+        //transformers.GetComponent<GegnerAI>().speed = 5;
+        hochGeflogen = false;
     }
 
     public void drohnenSpawnenAufruf()
@@ -148,4 +159,10 @@ public class TransformersKampf : MonoBehaviour
             StartCoroutine(drohnenSpawnenFunc2(drohnenNummer - 1));
         }
     }
+
+    private void flugzielSetzen()
+    {
+        hochflugZiel = new Vector3(transformers.transform.position.x, transformers.transform.position.y + 7, 0.0f);
+    }
+    
 }
