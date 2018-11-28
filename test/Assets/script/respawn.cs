@@ -13,10 +13,12 @@ public class respawn : MonoBehaviour
     private Quaternion[] originalRotation;
     private Rigidbody2D[] objektBody;
     private bool gehitted = false;
+    private Spieler_Leben leben;
 
     private void Start()
     {
         Lvlmanager = FindObjectOfType<lvlmanager>();
+        leben = GameObject.FindGameObjectWithTag("spieler").GetComponent<Spieler_Leben>();
         originalPosition = new Vector3[resetObjekt.Length];
         originalRotation = new Quaternion[resetObjekt.Length];
         objektBody = new Rigidbody2D[resetObjekt.Length];
@@ -35,7 +37,9 @@ public class respawn : MonoBehaviour
         {
 
             Debug.Log("spieler tot");
+            leben.addDamage(20);
             Lvlmanager.RespawnSpieler();
+
             for (int i = 0; i < resetObjekt.Length; i++)
             {
                 objektBody[i].velocity = Vector3.zero;

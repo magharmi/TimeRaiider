@@ -24,7 +24,7 @@ public class lvlmanager : MonoBehaviour
     void Start()
     {
         lebentxt.text = " " + leben.ToString();
-        //leben = spieler.GetComponent<Spieler_Leben>().currentLeben;  GAMEOVER GEHT DAMIT NICHT!
+        leben = spieler.GetComponent<Spieler_Leben>().currentLeben;  //GAMEOVER GEHT DAMIT NICHT!
     }
 
 
