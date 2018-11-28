@@ -1150,7 +1150,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -68, y: -48.87, z: 2.3984375}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 765397469}
+  - {fileID: 1727614265}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3995,10 +3997,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 765397468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -261.1, y: -182.15138, z: 4.049323}
+  m_LocalPosition: {x: 155.3674, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1332364831}
+  m_Father: {fileID: 285505320}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &765397470
@@ -8181,8 +8183,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 348.4674, y: 133.28139, z: -1.6508857}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 765397469}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9795,6 +9796,93 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1708203084}
   m_CullTransparentMesh: 0
+--- !u!1 &1727614264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1727614265}
+  - component: {fileID: 1727614267}
+  - component: {fileID: 1727614266}
+  m_Layer: 0
+  m_Name: RusseEnde
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1727614265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727614264}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 155.3674, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 285505320}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1727614266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727614264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b77283281094946b5cbcbb6e84c53f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neuesZielErstellen: 0
+  spielerEinfrieren: 1
+  idleSprite: {fileID: 21300000, guid: d7f4c7d7ce88e074d8f72e65b9f145d5, type: 3}
+  altesZiel: {fileID: 0}
+  neuesZiel: {fileID: 0}
+  dialogue:
+    name: Russe
+    sentences:
+    - "Wei\xDFt du, wir haben diesen Kampf schon viele Male ausgetragen. Jedes Mal
+      hast du gewonnen und anschlie\xDFend haben mich meine Leute wiederbelebt. Ich
+      bin durch die Zeit gereist und habe es noch einmal versucht. Ich habe alles
+      versucht um deine Familie auf zu halten doch es ist mir nie gelungen."
+    - "Doch mir ist aufgefallen, dass ich nicht alles gebe. Ich sorgte immer daf\xFCr,
+      dass ich es \xFCberleben werde, damit ich es noch einmal versuchen k\xF6nnte.
+      Diesen Fehler werde ich heute nicht machen. Ich kann vielleicht nicht gewinnen,
+      aber ich kann zumindest euch mit in den Tod rei\xDFen."
+    - "Du kennst mich kaum, ich wei\xDF jedoch alles \xFCber deine Familie und wenn
+      ich dich t\xF6te wird eure Blutlinie endlich ausgel\xF6scht. Dein Gro\xDFvater
+      ist zu gebrechlich um noch viel anzustellen aber dich werde ich mit dieser Station
+      in den Tod rei\xDFen."
+  trigger: {fileID: 1727614264}
+--- !u!61 &1727614267
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727614264}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 25.380878, y: -7.3774242}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 61.742058, y: 1.1285439}
+  m_EdgeRadius: 0
 --- !u!1 &1736458622
 GameObject:
   m_ObjectHideFlags: 0
@@ -10397,7 +10485,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1866355238}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -10422,12 +10510,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1866355238}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2f97ef9a362b2245a522d5e96088ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 6
   stoppingDistance: 0
   retreatDistance: 0
   radius: 100

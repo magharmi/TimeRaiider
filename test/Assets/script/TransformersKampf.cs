@@ -7,13 +7,9 @@ public class TransformersKampf : MonoBehaviour
 
     public GameObject zielItem;
 
-    private GameObject transformers, kampfKamera, mainCamera, unsichtbareWand, spieler, russe;
+    private GameObject transformers, spieler, russe;
     private Vector3 startPosition;
-    private bool transformersZurück = false;
-    private bool drohnenSpawnen = false;
-    private bool leben350 = true;
     private bool leben200 = false;
-    private bool leben0 = false;
     private bool hochGeflogen = true;
     private bool inMitte = true;
     private bool beiSpieler = true;
@@ -25,8 +21,6 @@ public class TransformersKampf : MonoBehaviour
     {
         transformers = GameObject.FindGameObjectWithTag("Boss");
         drohnen = GameObject.FindGameObjectsWithTag("AnubisMumien");
-        kampfKamera = GameObject.Find("Kampf Kamera");
-        mainCamera = GameObject.Find("Main Camera");
         startPosition = transformers.transform.position;
         spieler = GameObject.FindGameObjectWithTag("spieler");
         russe = GameObject.Find("Russe");
@@ -54,23 +48,21 @@ public class TransformersKampf : MonoBehaviour
             }
         }
 
-        else if (leben200 == true){
-            if (transformers.GetComponent<GegnerAI>().leben == 200)
-            {
-
-            }
+        else if (leben200 == true)
+        {
+            Debug.Log("Russe kommt");
+            transformers.GetComponent<BoxCollider2D>().enabled = false;
+            russe.GetComponent<SpriteRenderer>().enabled = true;
+            russe.GetComponent<GegnerAI>().enabled = true;
+            russe.GetComponent<BoxCollider2D>().enabled = true;
+            leben200 = false;
         }
 
-        else if (leben0 == true)
+
+        else if (russe.GetComponent<GegnerAI>().leben <= 0)
         {
-            if (transformers.GetComponent<GegnerAI>().leben == 0)
-            {
-                zielItem.GetComponent<SpriteRenderer>().enabled = true;
-                kampfKamera.GetComponent<Camera>().enabled = false;
-                mainCamera.GetComponent<Camera>().enabled = true;
-                unsichtbareWand.SetActive(false);
-                leben0 = false;
-            }
+            russe.GetComponent<GegnerAI>().enabled = false;
+            GameObject.Find("RusseEnde").GetComponent<BoxCollider2D>().enabled = true;
         }
 
         if (hochGeflogen == false)
@@ -142,26 +134,6 @@ public class TransformersKampf : MonoBehaviour
         {
             yield return new WaitForSeconds(5);
             leben200 = true;
-        }
-    }
-
-    public void drohnenSpawnenAufruf2()
-    {
-        StartCoroutine(drohnenSpawnenFunc2(drohnen.Length - 1));
-    }
-
-    IEnumerator drohnenSpawnenFunc2(int drohnenNummer)
-    {
-        yield return new WaitForSeconds(2);
-        if (drohnenNummer <= 8)
-        {
-            StartCoroutine(drohnenSpawnenFunc2(drohnenNummer - 1));
-            StartCoroutine(drohnenSpawnenFunc2(drohnenNummer - 2));
-            TransformersAngriff();
-        }
-        else if (drohnenNummer > 8)
-        {
-            StartCoroutine(drohnenSpawnenFunc2(drohnenNummer - 1));
         }
     }
 
