@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlatformerCharacter : MonoBehaviour
 {
+
+    float nextFire, fireRate;
+    [SerializeField] Transform pfeilPos;
+    [SerializeField] GameObject pfeil;
     [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
     [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
     [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -29,7 +33,17 @@ public class PlatformerCharacter : MonoBehaviour
         m_Anim = GetComponent<Animator>();
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
     }
+    private void Update()
+    {
 
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            // anim.SetTrigger("isArmbrust");
+            Armbrust();
+
+        }
+
+    }
 
     private void FixedUpdate()
     {
@@ -121,5 +135,24 @@ public class PlatformerCharacter : MonoBehaviour
     public void spielerGeschwindigkeit(float maxSpeed)
     {
         m_MaxSpeed = maxSpeed;
+    }
+
+
+    public void Armbrust()
+    {
+        if (Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            if (m_FacingRight)
+            {
+
+                Instantiate(pfeil, pfeilPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            }
+            else if (!m_FacingRight)
+            {
+
+                Instantiate(pfeil, pfeilPos.position, Quaternion.Euler(new Vector3(0, 0, 180f)));
+            }
+        }
     }
 }
