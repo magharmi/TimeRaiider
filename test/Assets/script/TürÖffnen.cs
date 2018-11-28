@@ -20,9 +20,14 @@ public class TürÖffnen : MonoBehaviour {
                 istGeöffnet = true;
             }
         }
-        else if(wirdGeschlossen == true)
+        else
         {
             Debug.Log("Tür wird schließen");
+            bewegeTür(5);
+            if (Vector3.Distance(oben.transform.position, obenZiel) == 0)
+            {
+                istGeöffnet = true;
+            }
         }
     }
 
@@ -32,9 +37,15 @@ public class TürÖffnen : MonoBehaviour {
         {
             türPositionenSetzenÖffnen();
             if (istGeöffnet == false)
+            {
+                türPositionenSetzenÖffnen();
                 wirdGeöffnet = true;
+            }
             else
+            {
+                türPositionenSetzenSchließen();
                 wirdGeschlossen = true;
+            }
         }
     }
 
