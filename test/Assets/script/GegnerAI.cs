@@ -73,7 +73,7 @@ public class GegnerAI : MonoBehaviour {
         if (other.gameObject.tag == "spieler" && hit == true)
         {
             GameObject.FindGameObjectWithTag("spieler").GetComponent<Spieler_Leben>().addDamage(20);
-            Lvlmanager.RespawnSpieler();
+            //Lvlmanager.RespawnSpieler();
             Debug.Log("geht nicht mehr");
             hit = false;
             StartCoroutine(FreezePlayer());
