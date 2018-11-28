@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class EnemyHealthBar : MonoBehaviour {
     public float enemyMaxHealth;
     // public GameObject enemyDeathFX;
-    Animator enemyAnimator;
-  //  public Slider enemySlider;
+    //Animator enemyAnimator;
+      public Slider enemySlider;
    // public Transform pos;
     //public GameObject blut;
     float currentHealth;
@@ -16,8 +16,8 @@ public class EnemyHealthBar : MonoBehaviour {
 	void Start () {
       //  enemyAnimator = GetComponentInChildren<Animator>();
         currentHealth = enemyMaxHealth;
-      //  enemySlider.maxValue = currentHealth;
-       // enemySlider.value = currentHealth;
+        enemySlider.maxValue = currentHealth;
+        enemySlider.value = currentHealth;
 	}
 	
 	// Update is called once per frame
@@ -28,12 +28,12 @@ public class EnemyHealthBar : MonoBehaviour {
 
     public void addDamage(float damage)
     {
-    //    enemySlider.gameObject.SetActive(true);
+        enemySlider.gameObject.SetActive(true);
        // SoundManagerScript.PlaySound("messer");
         currentHealth -= damage;
         Debug.Log("dagage Taken");
        // Instantiate(blut, transform.position, transform.rotation);
-       // enemySlider.value = currentHealth;
+        enemySlider.value = currentHealth;
         if (currentHealth <= 0) makeDead();
     }
 
