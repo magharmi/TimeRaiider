@@ -13,7 +13,7 @@ public class PlayerAttack : MonoBehaviour {
     //public Animator camAnim;
     private Animator anim;
     public Transform attackPos;
-    public Transform pfeilPos;
+    
     public float attackRange;
     public int damage;
    
@@ -40,13 +40,13 @@ public class PlayerAttack : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.T))
             {
                 // camAnim.SetTrigger("shake");
-                anim.SetTrigger("Attack_Speer");
+                anim.SetTrigger("isArm");
                 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                    
-//                    enemiesToDamage[i].GetComponent<EnemyHealthBar>().addDamage(damage);
+                   enemiesToDamage[i].GetComponent<EnemyHealthBar>().addDamage(damage);
                 }
             }
             timeBtwAttack = startTimeBtwAttack;
