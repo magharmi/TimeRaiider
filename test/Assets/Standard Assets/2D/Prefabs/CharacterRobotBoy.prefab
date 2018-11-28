@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,8 @@ GameObject:
   - component: {fileID: 114477132687694968}
   - component: {fileID: 114840806677684216}
   - component: {fileID: 114596989756277972}
-  m_Layer: 0
+  - component: {fileID: 114688240569865888}
+  m_Layer: 8
   m_Name: CharacterRobotBoy
   m_TagString: spieler
   m_Icon: {fileID: 0}
@@ -48,7 +49,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,8 +76,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -58.8452, y: -105.7774, z: 0}
-  m_LocalScale: {x: 2.865156, y: 2.865156, z: 1.61}
+  m_LocalPosition: {x: -59.29, y: -106.031, z: 0}
+  m_LocalScale: {x: 2.865156, y: 2.3643916, z: 1.61}
   m_Children:
   - {fileID: 400000}
   - {fileID: 400004}
@@ -243,7 +244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4556176323003738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PfeilPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4252048499074954}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpeerPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4045714199295956}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PfeilPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4927654948805606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpeerPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,6 +360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullLeben: 100
+  currentLeben: 0
+  deathFX: {fileID: 1624883000596224, guid: 0204359ac1e2392468ecf49a64e8e3e9, type: 2}
   sl: {fileID: 0}
   geschlagenScreen: {fileID: 0}
 --- !u!114 &114477132687694968
@@ -406,8 +409,24 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   smoothing: 3
+--- !u!114 &114688240569865888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f07df8f8623d549ad9cb77779ba3a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFull: 00000000
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114840806677684216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -426,7 +445,3 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
-  leben:
-    bar: {fileID: 0}
-    maxVal: 0
-    currentVal: 0
