@@ -7,7 +7,7 @@ public class TransformersKampf : MonoBehaviour
 
     public GameObject zielItem;
 
-    private GameObject transformers, kampfKamera, mainCamera, unsichtbareWand;
+    private GameObject transformers, kampfKamera, mainCamera, unsichtbareWand, spieler;
     private Vector3 startPosition;
     private bool transformersZurück = false;
     private bool drohnenSpawnen = false;
@@ -15,8 +15,10 @@ public class TransformersKampf : MonoBehaviour
     private bool leben200 = false;
     private bool leben0 = false;
     private bool hochGeflogen = true;
+    private bool inMitte = true;
+    private bool beiSpieler = true;
     private GameObject[] drohnen;
-    private Vector3 hochflugZiel;
+    private Vector3 hochflugZiel, spielerPosition;
 
     // Use this for initialization
     void Start()
@@ -26,6 +28,7 @@ public class TransformersKampf : MonoBehaviour
         kampfKamera = GameObject.Find("Kampf Kamera");
         mainCamera = GameObject.Find("Main Camera");
         startPosition = transformers.transform.position;
+        spieler = GameObject.FindGameObjectWithTag("spieler");
     }
 
     // Update is called once per frame
@@ -101,6 +104,31 @@ public class TransformersKampf : MonoBehaviour
         {
             Debug.Log("FLIEG");
             transformers.transform.position = Vector3.MoveTowards(transformers.transform.position, hochflugZiel, 10 * Time.deltaTime);
+            if (Vector3.Distance(transformers.transform.position, hochflugZiel) == 0)
+            {
+                hochGeflogen = true;
+                Debug.Log("Oben angekommen");
+                inMitte = false;
+            }
+        }
+        if (inMitte == false)
+        {
+            transformers.transform.position = Vector3.MoveTowards(transformers.transform.position, new Vector3(115, transformers.transform.position.y, transformers.transform.position.z), 10 * Time.deltaTime);
+            if (Vector3.Distance(transformers.transform.position, new Vector3(115, transformers.transform.position.y, transformers.transform.position.z)) == 0)
+            {
+                inMitte = true;
+                Debug.Log("In Mitte angekommen");
+                StartCoroutine(warteSekunden(3));
+            }
+        }
+        if(beiSpieler == false)
+        {
+            transformers.transform.position = Vector3.MoveTowards(transformers.transform.position, spielerPosition, 15 * Time.deltaTime);
+            if (Vector3.Distance(transformers.transform.position, spielerPosition) == 0)
+            {
+                beiSpieler = true;
+                Debug.Log("Bei Spieler angekommen");
+            }
         }
     }
 
@@ -163,6 +191,18 @@ public class TransformersKampf : MonoBehaviour
     private void flugzielSetzen()
     {
         hochflugZiel = new Vector3(transformers.transform.position.x, transformers.transform.position.y + 7, 0.0f);
+    }
+
+    private void spielerPositionSetzen()
+    {
+        spielerPosition = new Vector3(spieler.transform.position.x, (float)-49.199, spieler.transform.position.z);
+    }
+
+    IEnumerator warteSekunden(float sekunden)
+    {
+        yield return new WaitForSeconds(sekunden);
+        spielerPositionSetzen();
+        beiSpieler = false;
     }
     
 }
