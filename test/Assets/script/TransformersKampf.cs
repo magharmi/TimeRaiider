@@ -118,7 +118,7 @@ public class TransformersKampf : MonoBehaviour
             {
                 inMitte = true;
                 Debug.Log("In Mitte angekommen");
-                StartCoroutine(warteSekunden(3));
+                StartCoroutine(warteSekundenDannSpielerAngriff(3));
             }
         }
         if(beiSpieler == false)
@@ -128,6 +128,8 @@ public class TransformersKampf : MonoBehaviour
             {
                 beiSpieler = true;
                 Debug.Log("Bei Spieler angekommen");
+                StartCoroutine(warteSekundenDannHoch(3));
+                //hochGeflogen = false;
             }
         }
     }
@@ -198,11 +200,18 @@ public class TransformersKampf : MonoBehaviour
         spielerPosition = new Vector3(spieler.transform.position.x, (float)-49.199, spieler.transform.position.z);
     }
 
-    IEnumerator warteSekunden(float sekunden)
+    IEnumerator warteSekundenDannSpielerAngriff(float sekunden)
     {
         yield return new WaitForSeconds(sekunden);
         spielerPositionSetzen();
         beiSpieler = false;
     }
-    
+
+    IEnumerator warteSekundenDannHoch(float sekunden)
+    {
+        yield return new WaitForSeconds(sekunden);
+        hochGeflogen = false;
+        Debug.Log("wieder hoch");
+    }
+
 }
