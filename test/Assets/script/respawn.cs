@@ -37,7 +37,8 @@ public class respawn : MonoBehaviour
         {
 
             Debug.Log("spieler tot");
-            leben.addDamage(20);
+            GameObject.FindGameObjectWithTag("spieler").GetComponent<Spieler_Leben>().currentLeben = GameObject.FindGameObjectWithTag("spieler").GetComponent<Spieler_Leben>().currentLeben - 20;
+            GameObject.FindGameObjectWithTag("spieler").GetComponent<Spieler_Leben>().sl.value = GameObject.FindGameObjectWithTag("spieler").GetComponent<Spieler_Leben>().currentLeben;
             Lvlmanager.RespawnSpieler();
 
             for (int i = 0; i < resetObjekt.Length; i++)

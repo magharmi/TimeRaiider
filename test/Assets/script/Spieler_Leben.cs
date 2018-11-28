@@ -11,7 +11,7 @@ public class Spieler_Leben : MonoBehaviour
     public float currentLeben;
     public GameObject deathFX;
     [SerializeField]
-    Slider sl;
+    public Slider sl;
 
     Spieler_Leben sp;
 
@@ -59,8 +59,9 @@ public class Spieler_Leben : MonoBehaviour
         geschlagen = true;
         if (currentLeben <= 0)
         {
-            makeDead();
             lvlmanager.RespawnSpieler();
+            //makeDead();
+            
         }
     }
     public void addHealth(float healthAmount)
