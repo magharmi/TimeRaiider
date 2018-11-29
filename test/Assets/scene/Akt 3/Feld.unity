@@ -2242,7 +2242,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4018088844358856, guid: 2659c23919538294aa9595267351df49, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2659c23919538294aa9595267351df49, type: 2}
@@ -6332,7 +6332,7 @@ Transform:
   m_LocalScale: {x: 0.29062498, y: 0.16843751, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1250856657
 GameObject:
@@ -8638,6 +8638,8 @@ GameObject:
   - component: {fileID: 1674455086}
   - component: {fileID: 1674455085}
   - component: {fileID: 1674455084}
+  - component: {fileID: 1674455087}
+  - component: {fileID: 1674455088}
   m_Layer: 11
   m_Name: Sklave
   m_TagString: Untagged
@@ -8753,6 +8755,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1674455087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1674455082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b6abe95f5bb614986ac301e693ddb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMaxHealth: 100
+  enemySlider: {fileID: 0}
+--- !u!50 &1674455088
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1674455082}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1684377601
 GameObject:
   m_ObjectHideFlags: 0
@@ -9689,7 +9724,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   attackPos: {fileID: 1368582323}
-  pfeilPos: {fileID: 1119841208}
   attackRange: 0.66
   damage: 10
 --- !u!114 &1861607903
