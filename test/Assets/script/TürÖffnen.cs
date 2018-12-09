@@ -6,75 +6,98 @@ public class TürÖffnen : MonoBehaviour {
 
     public GameObject oben, unten, sOben, sUnten;
 
-    private bool wirdGeöffnet, wirdGeschlossen, istGeöffnet, istGeschlossen;
-    private Vector3 obenZiel, untenZiel, sUntenZiel, sObenZiel;
+    private Vector3 obenStart, untenStart, sUntenStart, sObenStart;
+    private Vector3 obenZielOffen, untenZielOffen, sUntenZielOffen, sObenZielOffen;
+    private Vector3 obenAktuell, untenAktuell, sUntenAktuell, sObenAktuell;
+    private bool geoeffnet, spielerImTrigger;
 
-    void Update()
+    private void Start()
     {
-        if(wirdGeöffnet == true)
+        tuerStartPositionenSetzen();
+        tuerZielPositionenSetzenOeffnen();
+    }
+
+    private void Update()
+    {
+        if (geoeffnet == false && spielerImTrigger == true)
         {
-            Debug.Log("Tür wird geöffnet");
-            bewegeTür(5);
-            if(Vector3.Distance(oben.transform.position, obenZiel) == 0)
-            {
-                istGeöffnet = true;
-            }
+            bewegeTuer(3, false);
         }
-        else
-        {
-            Debug.Log("Tür wird schließen");
-            bewegeTür(5);
-            if (Vector3.Distance(oben.transform.position, obenZiel) == 0)
-            {
-                istGeöffnet = true;
-            }
+        else if (geoeffnet == true && spielerImTrigger == false){
+            bewegeTuer(3, true);
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.tag == "spieler")
+        {
+            geoeffnet = false;
+            spielerImTrigger = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
         if(other.tag == "spieler")
         {
-            türPositionenSetzenÖffnen();
-            if (istGeöffnet == false)
-            {
-                türPositionenSetzenÖffnen();
-                wirdGeöffnet = true;
-            }
-            else
-            {
-                türPositionenSetzenSchließen();
-                wirdGeschlossen = true;
-            }
+            geoeffnet = true;
+            spielerImTrigger = false;
         }
     }
 
-    private void bewegeTür(float zeit)
+    private void tuerZielPositionenSetzenOeffnen()
     {
-        if (istGeöffnet == false)
+        obenZielOffen = new Vector3(obenStart.x, obenStart.y + 5, obenStart.z);
+        untenZielOffen = new Vector3(untenStart.x, untenStart.y + -5, untenStart.z);
+        sUntenZielOffen = new Vector3(sUntenStart.x, sUntenStart.y + -2, sUntenStart.z);
+        sObenZielOffen = new Vector3(sObenStart.x, sObenStart.y + 2, sObenStart.z);
+        Debug.Log("Zielpositionen gesetzt (Öffnen)");
+    }
+
+    private void tuerStartPositionenSetzen()
+    {
+        obenStart = oben.transform.position;
+        untenStart = unten.transform.position;
+        sUntenStart = sUnten.transform.position;
+        sObenStart = sOben.transform.position;
+
+        obenAktuell = obenStart;
+        untenAktuell = untenStart;
+        sUntenAktuell = sUntenStart;
+        sObenAktuell = sObenStart;
+        Debug.Log("Startpositionen gesetzt");
+    }
+
+    private void bewegeTuer(float zeit, bool istOffen)
+    {
+        if (istOffen == false)
         {
-            oben.transform.position = Vector3.MoveTowards(oben.transform.position, obenZiel, zeit * Time.deltaTime);
-            unten.transform.position = Vector3.MoveTowards(unten.transform.position, untenZiel, zeit * Time.deltaTime);
-            sUnten.transform.position = Vector3.MoveTowards(sUnten.transform.position, sUntenZiel, zeit * Time.deltaTime);
-            sOben.transform.position = Vector3.MoveTowards(sOben.transform.position, sObenZiel, zeit * Time.deltaTime);
+            oben.transform.position = Vector3.MoveTowards(oben.transform.position, obenZielOffen, zeit * Time.deltaTime);
+            unten.transform.position = Vector3.MoveTowards(unten.transform.position, untenZielOffen, zeit * Time.deltaTime);
+            sOben.transform.position = Vector3.MoveTowards(sOben.transform.position, sObenZielOffen, zeit/2 * Time.deltaTime);
+            sUnten.transform.position = Vector3.MoveTowards(sUnten.transform.position, sUntenZielOffen, zeit/2 * Time.deltaTime);
+            Debug.Log("Öffne Türen");
+            if (Vector3.Distance(oben.transform.position, obenZielOffen) == 0 && Vector3.Distance(unten.transform.position, untenZielOffen) == 0 && Vector3.Distance(sOben.transform.position, sObenZielOffen) == 0 && Vector3.Distance(sUnten.transform.position, sUntenZielOffen) == 0)
+            {
+                geoeffnet = true;
+                Debug.Log("Angekommen (geöffnet)");
+            }
+        }
+        else if (istOffen == true)
+        {
+            oben.transform.position = Vector3.MoveTowards(oben.transform.position, obenStart, zeit * Time.deltaTime);
+            unten.transform.position = Vector3.MoveTowards(unten.transform.position, untenStart, zeit * Time.deltaTime);
+            sOben.transform.position = Vector3.MoveTowards(sOben.transform.position, sObenStart, zeit / 2 * Time.deltaTime);
+            sUnten.transform.position = Vector3.MoveTowards(sUnten.transform.position, sUntenStart, zeit / 2 * Time.deltaTime);
+            Debug.Log("Schließe Tür");
+            if(Vector3.Distance(oben.transform.position, obenStart) == 0 && Vector3.Distance(unten.transform.position, untenStart) == 0 && Vector3.Distance(sOben.transform.position, sObenStart) == 0 && Vector3.Distance(sUnten.transform.position, sUntenStart) == 0)
+            {
+                geoeffnet = false;
+                Debug.Log("Angekommen (geschlossen)");
+            }
         }
     }
 
-    private void türPositionenSetzenÖffnen()
-    {
-        obenZiel = new Vector3(oben.transform.position.x, oben.transform.position.y + (float) 5, oben.transform.position.z);
-        untenZiel = new Vector3(unten.transform.position.x, unten.transform.position.y + (float)-5, unten.transform.position.z);
-        sUntenZiel = new Vector3(sUnten.transform.position.x, sUnten.transform.position.y + (float)-1, sUnten.transform.position.z);
-        sObenZiel = new Vector3(sOben.transform.position.x, sOben.transform.position.y + (float)1, sOben.transform.position.z);
-        Debug.Log("Türposition gesetzt");
-    }
-
-    private void türPositionenSetzenSchließen()
-    {
-        obenZiel = new Vector3(oben.transform.position.x, oben.transform.position.y + (float)-5, oben.transform.position.z);
-        untenZiel = new Vector3(unten.transform.position.x, unten.transform.position.y + (float)5, unten.transform.position.z);
-        sUntenZiel = new Vector3(sUnten.transform.position.x, sUnten.transform.position.y + (float)1, sUnten.transform.position.z);
-        sObenZiel = new Vector3(sOben.transform.position.x, sOben.transform.position.y + (float)-1, sOben.transform.position.z);
-        Debug.Log("Türposition gesetzt");
-    }
 }
