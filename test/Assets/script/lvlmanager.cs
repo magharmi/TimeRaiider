@@ -15,6 +15,10 @@ public class lvlmanager : MonoBehaviour
     private DialogueManager dialogueManager;
     private bool gehitted = false;
 
+    public void Start()
+    {
+        spieler = GameObject.FindGameObjectWithTag("spieler");
+    }
 
     private void Update()
     {

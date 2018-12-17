@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class Gegner : MonoBehaviour {
 
+    public bool lvlmanagerNoetig = true;
     public lvlmanager Lvlmanager;
     public Vector3 startPos;
-      public Vector3 newPos;
+    public Vector3 newPos;
     public Vector3 tempPos;
     public float speed;
     public SpriteRenderer sr;
@@ -20,7 +21,10 @@ public class Gegner : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        Lvlmanager = FindObjectOfType<lvlmanager>();
+        if(lvlmanagerNoetig == true)
+        {
+            Lvlmanager = FindObjectOfType<lvlmanager>();
+        }
         startPos = transform.position;
         //Zufällige Geschwindigkeit generieren
         speed = Random.Range(5f, 8f);
