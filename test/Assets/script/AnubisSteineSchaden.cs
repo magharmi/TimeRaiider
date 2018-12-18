@@ -16,6 +16,6 @@ public class AnubisSteineSchaden : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D boden)
     {
-        gameObject.GetComponent<Gegner>().hit = false;
+        gameObject.GetComponent<Spieler_Wierd_Verletzt>().damage = 0;
     }
 }

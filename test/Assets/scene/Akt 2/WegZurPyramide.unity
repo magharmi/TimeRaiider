@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 56038509}
   - component: {fileID: 56038512}
   - component: {fileID: 56038511}
+  - component: {fileID: 56038513}
   - component: {fileID: 56038510}
   m_Layer: 0
   m_Name: Kaktuss (21)
@@ -416,11 +417,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 56038508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &56038511
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -510,6 +512,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &56038513
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 56038508}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1, y: 0.96}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.55, y: 0.11}
+      - {x: 0.55, y: 0.41}
+      - {x: 0.52, y: 0.48}
+      - {x: 0.16, y: 0.48}
+      - {x: 0.089999996, y: 0.38}
+      - {x: -0.02, y: 0.39999998}
+      - {x: -0.11, y: 0.41}
+      - {x: -0.29999998, y: 0.35}
+      - {x: -0.47, y: 0.38}
+      - {x: -0.55, y: 0.35}
+      - {x: -0.55, y: 0.11}
+      - {x: -0.44, y: -0.02}
+      - {x: -0.45999998, y: -0.17999999}
+      - {x: -0.39999998, y: -0.42}
+      - {x: -0.32, y: -0.48}
+      - {x: 0.22999999, y: -0.48}
+      - {x: 0.29, y: -0.45}
+      - {x: 0.35999998, y: -0.03}
+      - {x: 0.42, y: -0.01}
 --- !u!1 &75417013
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,6 +978,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &139995293 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114997212147111434, guid: 010885f78837b394998cef3d31bbd824,
+    type: 2}
+  m_PrefabInternal: {fileID: 193847716}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &147619092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1169,7 @@ GameObject:
   - component: {fileID: 202673582}
   - component: {fileID: 202673585}
   - component: {fileID: 202673584}
+  - component: {fileID: 202673586}
   - component: {fileID: 202673583}
   m_Layer: 0
   m_Name: Kaktuss (28)
@@ -1147,11 +1199,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 202673581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &202673584
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1249,6 +1302,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &202673586
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202673581}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.21, y: 1.39}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.59499997, y: -0.195}
+      - {x: 0.60499996, y: -0.125}
+      - {x: 0.60499996, y: 0.285}
+      - {x: 0.565, y: 0.345}
+      - {x: 0.36499998, y: 0.36499998}
+      - {x: 0.305, y: 0.24499999}
+      - {x: 0.225, y: 0.024999999}
+      - {x: 0.21499999, y: 0.515}
+      - {x: 0.055, y: 0.695}
+      - {x: -0.155, y: 0.695}
+      - {x: -0.225, y: 0.635}
+      - {x: -0.285, y: 0.465}
+      - {x: -0.375, y: 0.36499998}
+      - {x: -0.42499998, y: 0.42499998}
+      - {x: -0.515, y: 0.415}
+      - {x: -0.60499996, y: 0.315}
+      - {x: -0.60499996, y: 0.114999995}
+      - {x: -0.525, y: -0.005}
+      - {x: -0.39499998, y: -0.065}
+      - {x: -0.285, y: -0.065}
+      - {x: -0.285, y: -0.36499998}
+      - {x: -0.255, y: -0.545}
+      - {x: -0.205, y: -0.695}
+      - {x: 0.105, y: -0.695}
+      - {x: 0.185, y: -0.525}
+      - {x: 0.24499999, y: -0.265}
+      - {x: 0.36499998, y: -0.295}
 --- !u!1 &229721476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,6 +1363,7 @@ GameObject:
   - component: {fileID: 229721477}
   - component: {fileID: 229721480}
   - component: {fileID: 229721479}
+  - component: {fileID: 229721481}
   - component: {fileID: 229721478}
   m_Layer: 0
   m_Name: Kaktuss (18)
@@ -1288,11 +1393,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 229721476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &229721479
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1382,6 +1488,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &229721481
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229721476}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1, y: 0.96}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.55, y: 0.11}
+      - {x: 0.55, y: 0.41}
+      - {x: 0.52, y: 0.48}
+      - {x: 0.16, y: 0.48}
+      - {x: 0.089999996, y: 0.38}
+      - {x: -0.02, y: 0.39999998}
+      - {x: -0.11, y: 0.41}
+      - {x: -0.29999998, y: 0.35}
+      - {x: -0.47, y: 0.38}
+      - {x: -0.55, y: 0.35}
+      - {x: -0.55, y: 0.11}
+      - {x: -0.44, y: -0.02}
+      - {x: -0.45999998, y: -0.17999999}
+      - {x: -0.39999998, y: -0.42}
+      - {x: -0.32, y: -0.48}
+      - {x: 0.22999999, y: -0.48}
+      - {x: 0.29, y: -0.45}
+      - {x: 0.35999998, y: -0.03}
+      - {x: 0.42, y: -0.01}
 --- !u!1 &245284017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,7 +2213,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 379247504}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 62.279907, y: -48, z: 13.90625}
+  m_LocalPosition: {x: 478.3, y: -48, z: 13.90625}
   m_LocalScale: {x: 0.659, y: 0.61600006, z: 1}
   m_Children: []
   m_Father: {fileID: 797013132}
@@ -2105,15 +2254,15 @@ SpriteRenderer:
   m_SortingLayerID: -1581064041
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f696b63578ce70e4e9431e9c388da550, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e41d089aa36fad4e91ba0fe1330bb38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 941.88446, y: 13.7300005}
+  m_Size: {x: 1303.5737, y: 13.7300005}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &389796630
@@ -2565,6 +2714,7 @@ GameObject:
   - component: {fileID: 512729743}
   - component: {fileID: 512729744}
   - component: {fileID: 512729745}
+  - component: {fileID: 512729747}
   - component: {fileID: 512729746}
   m_Layer: 0
   m_Name: Kaktuss (5)
@@ -2683,11 +2833,55 @@ MonoBehaviour:
   m_GameObject: {fileID: 512729742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
+--- !u!60 &512729747
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 512729742}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1, y: 0.96}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.55, y: 0.11}
+      - {x: 0.55, y: 0.41}
+      - {x: 0.52, y: 0.48}
+      - {x: 0.16, y: 0.48}
+      - {x: 0.089999996, y: 0.38}
+      - {x: -0.02, y: 0.39999998}
+      - {x: -0.11, y: 0.41}
+      - {x: -0.29999998, y: 0.35}
+      - {x: -0.47, y: 0.38}
+      - {x: -0.55, y: 0.35}
+      - {x: -0.55, y: 0.11}
+      - {x: -0.44, y: -0.02}
+      - {x: -0.45999998, y: -0.17999999}
+      - {x: -0.39999998, y: -0.42}
+      - {x: -0.32, y: -0.48}
+      - {x: 0.22999999, y: -0.48}
+      - {x: 0.29, y: -0.45}
+      - {x: 0.35999998, y: -0.03}
+      - {x: 0.42, y: -0.01}
 --- !u!1 &516591939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,6 +2892,7 @@ GameObject:
   - component: {fileID: 516591940}
   - component: {fileID: 516591943}
   - component: {fileID: 516591942}
+  - component: {fileID: 516591944}
   - component: {fileID: 516591941}
   m_Layer: 0
   m_Name: Kaktuss (10)
@@ -2727,11 +2922,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 516591939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &516591942
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2829,6 +3025,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &516591944
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 516591939}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.21, y: 1.39}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.59499997, y: -0.195}
+      - {x: 0.60499996, y: -0.125}
+      - {x: 0.60499996, y: 0.285}
+      - {x: 0.565, y: 0.345}
+      - {x: 0.36499998, y: 0.36499998}
+      - {x: 0.305, y: 0.24499999}
+      - {x: 0.225, y: 0.024999999}
+      - {x: 0.21499999, y: 0.515}
+      - {x: 0.055, y: 0.695}
+      - {x: -0.155, y: 0.695}
+      - {x: -0.225, y: 0.635}
+      - {x: -0.285, y: 0.465}
+      - {x: -0.375, y: 0.36499998}
+      - {x: -0.42499998, y: 0.42499998}
+      - {x: -0.515, y: 0.415}
+      - {x: -0.60499996, y: 0.315}
+      - {x: -0.60499996, y: 0.114999995}
+      - {x: -0.525, y: -0.005}
+      - {x: -0.39499998, y: -0.065}
+      - {x: -0.285, y: -0.065}
+      - {x: -0.285, y: -0.36499998}
+      - {x: -0.255, y: -0.545}
+      - {x: -0.205, y: -0.695}
+      - {x: 0.105, y: -0.695}
+      - {x: 0.185, y: -0.525}
+      - {x: 0.24499999, y: -0.265}
+      - {x: 0.36499998, y: -0.295}
 --- !u!1 &555379148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,6 +3086,7 @@ GameObject:
   - component: {fileID: 555379149}
   - component: {fileID: 555379152}
   - component: {fileID: 555379151}
+  - component: {fileID: 555379153}
   - component: {fileID: 555379150}
   m_Layer: 0
   m_Name: Kaktuss (7)
@@ -2868,11 +3116,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 555379148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &555379151
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3185,6 +3434,272 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &555379153
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555379148}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.42, y: 11.56}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.7199999, y: -5.6299996}
+      - {x: 1.6999999, y: -5.37}
+      - {x: 1.6899999, y: -5.23}
+      - {x: 1.67, y: -4.97}
+      - {x: 1.66, y: -4.79}
+      - {x: 1.73, y: -4.69}
+      - {x: 1.8399999, y: -4.5699997}
+      - {x: 1.89, y: -4.54}
+      - {x: 2.2, y: -4.54}
+      - {x: 2.4099998, y: -4.5299997}
+      - {x: 2.6399999, y: -4.5}
+      - {x: 2.83, y: -4.46}
+      - {x: 2.9199998, y: -4.43}
+      - {x: 3.06, y: -4.39}
+      - {x: 3.32, y: -4.24}
+      - {x: 3.36, y: -4.2}
+      - {x: 3.46, y: -4.25}
+      - {x: 3.49, y: -4.23}
+      - {x: 3.4399998, y: -4.15}
+      - {x: 3.6499999, y: -3.9399998}
+      - {x: 3.81, y: -3.76}
+      - {x: 3.9299998, y: -3.56}
+      - {x: 3.98, y: -3.47}
+      - {x: 4.15, y: -3.12}
+      - {x: 4.17, y: -3.07}
+      - {x: 4.18, y: -3.02}
+      - {x: 4.19, y: -2.71}
+      - {x: 4.2, y: -2.44}
+      - {x: 4.21, y: -2.19}
+      - {x: 4.21, y: -0.53999996}
+      - {x: 4.19, y: -0.29}
+      - {x: 4.15, y: 0.049999997}
+      - {x: 4.11, y: 0.29999998}
+      - {x: 4.0699997, y: 0.51}
+      - {x: 4.06, y: 0.58}
+      - {x: 4.14, y: 0.66999996}
+      - {x: 4.14, y: 0.71}
+      - {x: 4.11, y: 0.71999997}
+      - {x: 4.0299997, y: 0.68}
+      - {x: 4.0099998, y: 0.77}
+      - {x: 3.97, y: 0.87}
+      - {x: 3.8999999, y: 1.03}
+      - {x: 3.85, y: 1.12}
+      - {x: 3.79, y: 1.2099999}
+      - {x: 3.6999998, y: 1.3199999}
+      - {x: 3.58, y: 1.4399999}
+      - {x: 3.35, y: 1.56}
+      - {x: 3.1799998, y: 1.61}
+      - {x: 2.98, y: 1.64}
+      - {x: 2.81, y: 1.5999999}
+      - {x: 2.72, y: 1.5699999}
+      - {x: 2.57, y: 1.49}
+      - {x: 2.46, y: 1.39}
+      - {x: 2.37, y: 1.26}
+      - {x: 2.3, y: 1.13}
+      - {x: 2.23, y: 0.88}
+      - {x: 2.2, y: 0.77}
+      - {x: 2.2, y: 0.28}
+      - {x: 2.19, y: 0.26999998}
+      - {x: 2.19, y: -0.34}
+      - {x: 2.18, y: -0.35}
+      - {x: 2.18, y: -0.96}
+      - {x: 2.1699998, y: -0.96999997}
+      - {x: 2.1699998, y: -1.5799999}
+      - {x: 2.1599998, y: -1.5899999}
+      - {x: 2.1599998, y: -2.2}
+      - {x: 2.1499999, y: -2.21}
+      - {x: 2.1299999, y: -2.3}
+      - {x: 2.08, y: -2.44}
+      - {x: 1.9799999, y: -2.59}
+      - {x: 1.91, y: -2.6299999}
+      - {x: 1.79, y: -2.6299999}
+      - {x: 1.7199999, y: -2.4199998}
+      - {x: 1.67, y: -2.18}
+      - {x: 1.61, y: -1.75}
+      - {x: 1.5999999, y: -1.66}
+      - {x: 1.5899999, y: -1.55}
+      - {x: 1.5799999, y: -1.42}
+      - {x: 1.5699999, y: -1.27}
+      - {x: 1.56, y: -1.0699999}
+      - {x: 1.55, y: -0.81}
+      - {x: 1.54, y: -0.79999995}
+      - {x: 1.54, y: -0.29}
+      - {x: 1.53, y: -0.28}
+      - {x: 1.53, y: 1.6899999}
+      - {x: 1.52, y: 2.08}
+      - {x: 1.51, y: 2.28}
+      - {x: 1.56, y: 2.31}
+      - {x: 1.5699999, y: 2.33}
+      - {x: 1.51, y: 2.35}
+      - {x: 1.5, y: 2.53}
+      - {x: 1.48, y: 2.82}
+      - {x: 1.4599999, y: 3.04}
+      - {x: 1.42, y: 3.3899999}
+      - {x: 1.38, y: 3.6499999}
+      - {x: 1.3399999, y: 3.86}
+      - {x: 1.31, y: 4}
+      - {x: 1.3, y: 4.0699997}
+      - {x: 1.38, y: 4.16}
+      - {x: 1.43, y: 4.23}
+      - {x: 1.43, y: 4.25}
+      - {x: 1.4, y: 4.2599998}
+      - {x: 1.27, y: 4.14}
+      - {x: 1.26, y: 4.19}
+      - {x: 1.2099999, y: 4.36}
+      - {x: 1.13, y: 4.58}
+      - {x: 0.97999996, y: 4.9}
+      - {x: 0.88, y: 5.06}
+      - {x: 0.77, y: 5.2}
+      - {x: 0.59999996, y: 5.3599997}
+      - {x: 0.56, y: 5.39}
+      - {x: 0.64, y: 5.49}
+      - {x: 0.75, y: 5.69}
+      - {x: 0.76, y: 5.73}
+      - {x: 0.74, y: 5.75}
+      - {x: 0.71999997, y: 5.75}
+      - {x: 0.65, y: 5.68}
+      - {x: 0.47, y: 5.45}
+      - {x: 0.42999998, y: 5.49}
+      - {x: 0.26999998, y: 5.5699997}
+      - {x: 0.17, y: 5.6099997}
+      - {x: 0.07, y: 5.64}
+      - {x: -0.089999996, y: 5.64}
+      - {x: -0.22999999, y: 5.62}
+      - {x: -0.42999998, y: 5.5699997}
+      - {x: -0.64, y: 5.45}
+      - {x: -0.74, y: 5.38}
+      - {x: -0.88, y: 5.2}
+      - {x: -0.98999995, y: 5.0299997}
+      - {x: -1.0799999, y: 4.83}
+      - {x: -1.13, y: 4.7}
+      - {x: -1.1899999, y: 4.5}
+      - {x: -1.23, y: 4.3199997}
+      - {x: -1.26, y: 4.16}
+      - {x: -1.29, y: 3.9399998}
+      - {x: -1.31, y: 3.73}
+      - {x: -1.3199999, y: 3.59}
+      - {x: -1.3299999, y: 3.37}
+      - {x: -1.3299999, y: 2.6599998}
+      - {x: -1.3199999, y: 2.44}
+      - {x: -1.31, y: 2.29}
+      - {x: -1.29, y: 2.03}
+      - {x: -1.26, y: 1.7099999}
+      - {x: -1.22, y: 1.3399999}
+      - {x: -1.16, y: 0.82}
+      - {x: -1.09, y: 0.26999998}
+      - {x: -1.06, y: -0.04}
+      - {x: -1.04, y: -0.19}
+      - {x: -0.93, y: -0.96999997}
+      - {x: -0.88, y: -1.4599999}
+      - {x: -0.87, y: -1.5899999}
+      - {x: -0.85999995, y: -1.76}
+      - {x: -0.84999996, y: -2.09}
+      - {x: -0.85999995, y: -2.1}
+      - {x: -0.89, y: -2.33}
+      - {x: -0.93, y: -2.4299998}
+      - {x: -1.02, y: -2.49}
+      - {x: -1.16, y: -2.28}
+      - {x: -1.25, y: -2.11}
+      - {x: -1.31, y: -1.93}
+      - {x: -1.37, y: -1.78}
+      - {x: -1.4, y: -1.67}
+      - {x: -1.5, y: -1.22}
+      - {x: -1.5899999, y: -0.66999996}
+      - {x: -1.5899999, y: -0.59}
+      - {x: -1.61, y: -0.45}
+      - {x: -1.63, y: -0.38}
+      - {x: -1.7199999, y: 0.24}
+      - {x: -1.66, y: 0.34}
+      - {x: -1.7199999, y: 0.38}
+      - {x: -1.75, y: 0.42999998}
+      - {x: -1.8, y: 0.71}
+      - {x: -1.8299999, y: 0.84999996}
+      - {x: -1.87, y: 1.03}
+      - {x: -1.9399999, y: 1.3199999}
+      - {x: -2.05, y: 1.62}
+      - {x: -2.1699998, y: 1.8499999}
+      - {x: -2.28, y: 1.99}
+      - {x: -2.44, y: 2.1499999}
+      - {x: -2.56, y: 2.23}
+      - {x: -2.6799998, y: 2.28}
+      - {x: -2.76, y: 2.31}
+      - {x: -2.74, y: 2.37}
+      - {x: -2.74, y: 2.3999999}
+      - {x: -2.76, y: 2.4199998}
+      - {x: -2.79, y: 2.4099998}
+      - {x: -2.83, y: 2.32}
+      - {x: -2.8999999, y: 2.33}
+      - {x: -3.07, y: 2.33}
+      - {x: -3.1799998, y: 2.31}
+      - {x: -3.29, y: 2.28}
+      - {x: -3.4299998, y: 2.23}
+      - {x: -3.52, y: 2.19}
+      - {x: -3.6399999, y: 2.11}
+      - {x: -3.75, y: 2.03}
+      - {x: -3.81, y: 1.92}
+      - {x: -3.86, y: 1.8}
+      - {x: -3.8999999, y: 1.68}
+      - {x: -3.99, y: 1.73}
+      - {x: -4.16, y: 1.79}
+      - {x: -4.18, y: 1.77}
+      - {x: -4.17, y: 1.74}
+      - {x: -3.9199998, y: 1.5799999}
+      - {x: -3.9399998, y: 1.51}
+      - {x: -3.98, y: 1.29}
+      - {x: -4, y: 1.13}
+      - {x: -4.0099998, y: 1.02}
+      - {x: -4.0099998, y: 0.29}
+      - {x: -4, y: 0.099999994}
+      - {x: -3.98, y: -0.16}
+      - {x: -3.9499998, y: -0.45}
+      - {x: -3.9099998, y: -0.78}
+      - {x: -3.87, y: -1.05}
+      - {x: -3.81, y: -1.41}
+      - {x: -3.76, y: -1.6899999}
+      - {x: -3.72, y: -1.89}
+      - {x: -3.6399999, y: -2.28}
+      - {x: -3.62, y: -2.37}
+      - {x: -3.4499998, y: -3.05}
+      - {x: -3.37, y: -3.34}
+      - {x: -3.31, y: -3.53}
+      - {x: -3.25, y: -3.6499999}
+      - {x: -3.1799998, y: -3.74}
+      - {x: -3.04, y: -3.87}
+      - {x: -2.9399998, y: -3.9599998}
+      - {x: -2.8, y: -4.06}
+      - {x: -2.62, y: -4.16}
+      - {x: -2.27, y: -4.2799997}
+      - {x: -2.09, y: -4.33}
+      - {x: -1.79, y: -4.4}
+      - {x: -1.6899999, y: -4.42}
+      - {x: -1.49, y: -4.45}
+      - {x: -1.31, y: -4.47}
+      - {x: -1.16, y: -4.49}
+      - {x: -1.0799999, y: -4.66}
+      - {x: -1, y: -5}
+      - {x: -0.97999996, y: -5.15}
+      - {x: -0.95, y: -5.3399997}
+      - {x: -0.90999997, y: -5.75}
+      - {x: -0.9, y: -5.7799997}
+      - {x: 1.6999999, y: -5.7799997}
+      - {x: 1.7199999, y: -5.7599998}
 --- !u!1 &564240161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3285,6 +3800,7 @@ GameObject:
   - component: {fileID: 572606666}
   - component: {fileID: 572606669}
   - component: {fileID: 572606668}
+  - component: {fileID: 572606670}
   - component: {fileID: 572606667}
   m_Layer: 0
   m_Name: Kaktuss (29)
@@ -3314,11 +3830,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 572606665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &572606668
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3416,6 +3933,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &572606670
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 572606665}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.21, y: 1.39}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.59499997, y: -0.195}
+      - {x: 0.60499996, y: -0.125}
+      - {x: 0.60499996, y: 0.285}
+      - {x: 0.565, y: 0.345}
+      - {x: 0.36499998, y: 0.36499998}
+      - {x: 0.305, y: 0.24499999}
+      - {x: 0.225, y: 0.024999999}
+      - {x: 0.21499999, y: 0.515}
+      - {x: 0.055, y: 0.695}
+      - {x: -0.155, y: 0.695}
+      - {x: -0.225, y: 0.635}
+      - {x: -0.285, y: 0.465}
+      - {x: -0.375, y: 0.36499998}
+      - {x: -0.42499998, y: 0.42499998}
+      - {x: -0.515, y: 0.415}
+      - {x: -0.60499996, y: 0.315}
+      - {x: -0.60499996, y: 0.114999995}
+      - {x: -0.525, y: -0.005}
+      - {x: -0.39499998, y: -0.065}
+      - {x: -0.285, y: -0.065}
+      - {x: -0.285, y: -0.36499998}
+      - {x: -0.255, y: -0.545}
+      - {x: -0.205, y: -0.695}
+      - {x: 0.105, y: -0.695}
+      - {x: 0.185, y: -0.525}
+      - {x: 0.24499999, y: -0.265}
+      - {x: 0.36499998, y: -0.295}
 --- !u!1 &594245482
 GameObject:
   m_ObjectHideFlags: 0
@@ -3746,7 +4314,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 680345877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 515.68994, y: -45.242012, z: -1.09375}
+  m_LocalPosition: {x: 492.56, y: -45.242012, z: -1.09375}
   m_LocalScale: {x: 0.78999996, y: 0.58599997, z: 1}
   m_Children: []
   m_Father: {fileID: 797013132}
@@ -3787,15 +4355,15 @@ SpriteRenderer:
   m_SortingLayerID: -1581064041
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 40854a21500e4a247a3fc83ee9f22b96, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a07a29060c2047244890fe0f09b3d22c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1683.0337, y: 21.88}
+  m_Size: {x: 937.7639, y: 21.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &686718855
@@ -3947,6 +4515,7 @@ GameObject:
   - component: {fileID: 695051800}
   - component: {fileID: 695051803}
   - component: {fileID: 695051802}
+  - component: {fileID: 695051804}
   - component: {fileID: 695051801}
   m_Layer: 0
   m_Name: Kaktuss (14)
@@ -3976,11 +4545,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 695051799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &695051802
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4071,6 +4641,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &695051804
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695051799}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.84, y: 1.41}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.34, y: -0.695}
+      - {x: 0.39999998, y: -0.465}
+      - {x: 0.42, y: -0.305}
+      - {x: 0.42, y: 0.405}
+      - {x: 0.41, y: 0.53499997}
+      - {x: 0.37, y: 0.615}
+      - {x: 0.28, y: 0.705}
+      - {x: 0.08, y: 0.705}
+      - {x: -0.03, y: 0.575}
+      - {x: -0.089999996, y: 0.295}
+      - {x: -0.12, y: -0.024999999}
+      - {x: -0.29999998, y: 0.035}
+      - {x: -0.39, y: -0.055}
+      - {x: -0.42, y: -0.095}
+      - {x: -0.42, y: -0.565}
+      - {x: -0.37, y: -0.705}
+      - {x: -0.089999996, y: -0.705}
+      - {x: -0.08, y: -0.695}
+      - {x: -0.06, y: -0.705}
+      - {x: 0.32, y: -0.705}
 --- !u!1 &718326618
 GameObject:
   m_ObjectHideFlags: 0
@@ -4412,6 +5026,7 @@ GameObject:
   - component: {fileID: 779569977}
   - component: {fileID: 779569980}
   - component: {fileID: 779569979}
+  - component: {fileID: 779569981}
   - component: {fileID: 779569978}
   m_Layer: 0
   m_Name: Kaktuss (15)
@@ -4441,11 +5056,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 779569976}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &779569979
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4554,6 +5170,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &779569981
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 779569976}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.8, y: 1.4}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.62, y: -0.07}
+      - {x: 0.71999997, y: 0.12}
+      - {x: 0.71999997, y: 0.21}
+      - {x: 0.65999997, y: 0.37}
+      - {x: 0.87, y: 0.32}
+      - {x: 0.9, y: 0.39999998}
+      - {x: 0.9, y: 0.57}
+      - {x: 0.87, y: 0.59}
+      - {x: 0.71, y: 0.59999996}
+      - {x: 0.66999996, y: 0.7}
+      - {x: 0.42999998, y: 0.7}
+      - {x: 0.39999998, y: 0.61}
+      - {x: 0.42, y: 0.37}
+      - {x: 0.29999998, y: 0.26}
+      - {x: 0.26999998, y: 0.19}
+      - {x: 0.08, y: 0.25}
+      - {x: -0.11, y: 0.25}
+      - {x: -0.11, y: 0.35999998}
+      - {x: -0.17999999, y: 0.5}
+      - {x: -0.42, y: 0.62}
+      - {x: -0.55, y: 0.64}
+      - {x: -0.63, y: 0.59}
+      - {x: -0.61, y: 0.37}
+      - {x: -0.45999998, y: 0.24}
+      - {x: -0.58, y: 0.049999997}
+      - {x: -0.7, y: 0.01}
+      - {x: -0.9, y: -0.04}
+      - {x: -0.9, y: -0.26}
+      - {x: -0.84, y: -0.32}
+      - {x: -0.68, y: -0.37}
+      - {x: -0.52, y: -0.35999998}
+      - {x: -0.34, y: -0.44}
+      - {x: -0.26999998, y: -0.68}
+      - {x: -0.22999999, y: -0.7}
+      - {x: 0.29, y: -0.7}
+      - {x: 0.32999998, y: -0.59}
+      - {x: 0.35, y: -0.32999998}
+      - {x: 0.48, y: -0.099999994}
 --- !u!1 &789260985
 GameObject:
   m_ObjectHideFlags: 0
@@ -4564,6 +5242,7 @@ GameObject:
   - component: {fileID: 789260986}
   - component: {fileID: 789260989}
   - component: {fileID: 789260988}
+  - component: {fileID: 789260990}
   - component: {fileID: 789260987}
   m_Layer: 0
   m_Name: Kaktuss (19)
@@ -4593,11 +5272,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 789260985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &789260988
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4706,6 +5386,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &789260990
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789260985}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.8, y: 1.4}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.62, y: -0.07}
+      - {x: 0.71999997, y: 0.12}
+      - {x: 0.71999997, y: 0.21}
+      - {x: 0.65999997, y: 0.37}
+      - {x: 0.87, y: 0.32}
+      - {x: 0.9, y: 0.39999998}
+      - {x: 0.9, y: 0.57}
+      - {x: 0.87, y: 0.59}
+      - {x: 0.71, y: 0.59999996}
+      - {x: 0.66999996, y: 0.7}
+      - {x: 0.42999998, y: 0.7}
+      - {x: 0.39999998, y: 0.61}
+      - {x: 0.42, y: 0.37}
+      - {x: 0.29999998, y: 0.26}
+      - {x: 0.26999998, y: 0.19}
+      - {x: 0.08, y: 0.25}
+      - {x: -0.11, y: 0.25}
+      - {x: -0.11, y: 0.35999998}
+      - {x: -0.17999999, y: 0.5}
+      - {x: -0.42, y: 0.62}
+      - {x: -0.55, y: 0.64}
+      - {x: -0.63, y: 0.59}
+      - {x: -0.61, y: 0.37}
+      - {x: -0.45999998, y: 0.24}
+      - {x: -0.58, y: 0.049999997}
+      - {x: -0.7, y: 0.01}
+      - {x: -0.9, y: -0.04}
+      - {x: -0.9, y: -0.26}
+      - {x: -0.84, y: -0.32}
+      - {x: -0.68, y: -0.37}
+      - {x: -0.52, y: -0.35999998}
+      - {x: -0.34, y: -0.44}
+      - {x: -0.26999998, y: -0.68}
+      - {x: -0.22999999, y: -0.7}
+      - {x: 0.29, y: -0.7}
+      - {x: 0.32999998, y: -0.59}
+      - {x: 0.35, y: -0.32999998}
+      - {x: 0.48, y: -0.099999994}
 --- !u!1 &797013131
 GameObject:
   m_ObjectHideFlags: 0
@@ -4747,6 +5489,7 @@ GameObject:
   - component: {fileID: 816492550}
   - component: {fileID: 816492553}
   - component: {fileID: 816492552}
+  - component: {fileID: 816492554}
   - component: {fileID: 816492551}
   m_Layer: 0
   m_Name: Kaktuss (23)
@@ -4776,11 +5519,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 816492549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &816492552
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4869,6 +5613,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &816492554
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816492549}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 1.02}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.255, y: 0.35999998}
+      - {x: 0.035, y: 0.45}
+      - {x: 0.005, y: 0.51}
+      - {x: -0.105, y: 0.51}
+      - {x: -0.21499999, y: 0.44}
+      - {x: -0.375, y: 0.51}
+      - {x: -0.385, y: 0.51}
+      - {x: -0.435, y: 0.29}
+      - {x: -0.45499998, y: 0.19999999}
+      - {x: -0.45499998, y: 0.03}
+      - {x: -0.345, y: -0.02}
+      - {x: -0.33499998, y: -0.28}
+      - {x: -0.265, y: -0.41}
+      - {x: -0.175, y: -0.48999998}
+      - {x: -0.155, y: -0.51}
+      - {x: 0.355, y: -0.51}
+      - {x: 0.45499998, y: -0.35999998}
+      - {x: 0.45499998, y: 0.17999999}
 --- !u!1 &851928433
 GameObject:
   m_ObjectHideFlags: 0
@@ -5253,6 +6039,7 @@ GameObject:
   - component: {fileID: 918459947}
   - component: {fileID: 918459950}
   - component: {fileID: 918459949}
+  - component: {fileID: 918459951}
   - component: {fileID: 918459948}
   m_Layer: 0
   m_Name: Kaktuss (27)
@@ -5282,11 +6069,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 918459946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &918459949
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5384,6 +6172,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &918459951
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918459946}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.21, y: 1.39}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.59499997, y: -0.195}
+      - {x: 0.60499996, y: -0.125}
+      - {x: 0.60499996, y: 0.285}
+      - {x: 0.565, y: 0.345}
+      - {x: 0.36499998, y: 0.36499998}
+      - {x: 0.305, y: 0.24499999}
+      - {x: 0.225, y: 0.024999999}
+      - {x: 0.21499999, y: 0.515}
+      - {x: 0.055, y: 0.695}
+      - {x: -0.155, y: 0.695}
+      - {x: -0.225, y: 0.635}
+      - {x: -0.285, y: 0.465}
+      - {x: -0.375, y: 0.36499998}
+      - {x: -0.42499998, y: 0.42499998}
+      - {x: -0.515, y: 0.415}
+      - {x: -0.60499996, y: 0.315}
+      - {x: -0.60499996, y: 0.114999995}
+      - {x: -0.525, y: -0.005}
+      - {x: -0.39499998, y: -0.065}
+      - {x: -0.285, y: -0.065}
+      - {x: -0.285, y: -0.36499998}
+      - {x: -0.255, y: -0.545}
+      - {x: -0.205, y: -0.695}
+      - {x: 0.105, y: -0.695}
+      - {x: 0.185, y: -0.525}
+      - {x: 0.24499999, y: -0.265}
+      - {x: 0.36499998, y: -0.295}
 --- !u!1 &922666026
 GameObject:
   m_ObjectHideFlags: 0
@@ -5394,6 +6233,7 @@ GameObject:
   - component: {fileID: 922666027}
   - component: {fileID: 922666030}
   - component: {fileID: 922666029}
+  - component: {fileID: 922666031}
   - component: {fileID: 922666028}
   m_Layer: 0
   m_Name: Kaktuss (17)
@@ -5423,11 +6263,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 922666026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &922666029
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5517,6 +6358,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &922666031
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 922666026}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1, y: 0.96}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.55, y: 0.11}
+      - {x: 0.55, y: 0.41}
+      - {x: 0.52, y: 0.48}
+      - {x: 0.16, y: 0.48}
+      - {x: 0.089999996, y: 0.38}
+      - {x: -0.02, y: 0.39999998}
+      - {x: -0.11, y: 0.41}
+      - {x: -0.29999998, y: 0.35}
+      - {x: -0.47, y: 0.38}
+      - {x: -0.55, y: 0.35}
+      - {x: -0.55, y: 0.11}
+      - {x: -0.44, y: -0.02}
+      - {x: -0.45999998, y: -0.17999999}
+      - {x: -0.39999998, y: -0.42}
+      - {x: -0.32, y: -0.48}
+      - {x: 0.22999999, y: -0.48}
+      - {x: 0.29, y: -0.45}
+      - {x: 0.35999998, y: -0.03}
+      - {x: 0.42, y: -0.01}
 --- !u!1 &955379417
 GameObject:
   m_ObjectHideFlags: 0
@@ -5527,6 +6411,7 @@ GameObject:
   - component: {fileID: 955379418}
   - component: {fileID: 955379419}
   - component: {fileID: 955379420}
+  - component: {fileID: 955379422}
   - component: {fileID: 955379421}
   m_Layer: 0
   m_Name: Kaktuss (1)
@@ -5653,11 +6538,63 @@ MonoBehaviour:
   m_GameObject: {fileID: 955379417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
+--- !u!60 &955379422
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 955379417}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.21, y: 1.39}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.59499997, y: -0.195}
+      - {x: 0.60499996, y: -0.125}
+      - {x: 0.60499996, y: 0.285}
+      - {x: 0.565, y: 0.345}
+      - {x: 0.36499998, y: 0.36499998}
+      - {x: 0.305, y: 0.24499999}
+      - {x: 0.225, y: 0.024999999}
+      - {x: 0.21499999, y: 0.515}
+      - {x: 0.055, y: 0.695}
+      - {x: -0.155, y: 0.695}
+      - {x: -0.225, y: 0.635}
+      - {x: -0.285, y: 0.465}
+      - {x: -0.375, y: 0.36499998}
+      - {x: -0.42499998, y: 0.42499998}
+      - {x: -0.515, y: 0.415}
+      - {x: -0.60499996, y: 0.315}
+      - {x: -0.60499996, y: 0.114999995}
+      - {x: -0.525, y: -0.005}
+      - {x: -0.39499998, y: -0.065}
+      - {x: -0.285, y: -0.065}
+      - {x: -0.285, y: -0.36499998}
+      - {x: -0.255, y: -0.545}
+      - {x: -0.205, y: -0.695}
+      - {x: 0.105, y: -0.695}
+      - {x: 0.185, y: -0.525}
+      - {x: 0.24499999, y: -0.265}
+      - {x: 0.36499998, y: -0.295}
 --- !u!1 &956142394
 GameObject:
   m_ObjectHideFlags: 0
@@ -6051,6 +6988,7 @@ GameObject:
   - component: {fileID: 1086412839}
   - component: {fileID: 1086412840}
   - component: {fileID: 1086412841}
+  - component: {fileID: 1086412843}
   - component: {fileID: 1086412842}
   m_Layer: 0
   m_Name: Kaktuss (3)
@@ -6170,11 +7108,56 @@ MonoBehaviour:
   m_GameObject: {fileID: 1086412838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
+--- !u!60 &1086412843
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1086412838}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.84, y: 1.41}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.34, y: -0.695}
+      - {x: 0.39999998, y: -0.465}
+      - {x: 0.42, y: -0.305}
+      - {x: 0.42, y: 0.405}
+      - {x: 0.41, y: 0.53499997}
+      - {x: 0.37, y: 0.615}
+      - {x: 0.28, y: 0.705}
+      - {x: 0.08, y: 0.705}
+      - {x: -0.03, y: 0.575}
+      - {x: -0.089999996, y: 0.295}
+      - {x: -0.12, y: -0.024999999}
+      - {x: -0.29999998, y: 0.035}
+      - {x: -0.39, y: -0.055}
+      - {x: -0.42, y: -0.095}
+      - {x: -0.42, y: -0.565}
+      - {x: -0.37, y: -0.705}
+      - {x: -0.089999996, y: -0.705}
+      - {x: -0.08, y: -0.695}
+      - {x: -0.06, y: -0.705}
+      - {x: 0.32, y: -0.705}
 --- !u!1 &1181054260
 GameObject:
   m_ObjectHideFlags: 0
@@ -6509,6 +7492,7 @@ GameObject:
   - component: {fileID: 1246007661}
   - component: {fileID: 1246007664}
   - component: {fileID: 1246007663}
+  - component: {fileID: 1246007665}
   - component: {fileID: 1246007662}
   m_Layer: 0
   m_Name: Kaktuss (20)
@@ -6538,11 +7522,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1246007660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &1246007663
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6632,6 +7617,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1246007665
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1246007660}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1, y: 0.96}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.55, y: 0.11}
+      - {x: 0.55, y: 0.41}
+      - {x: 0.52, y: 0.48}
+      - {x: 0.16, y: 0.48}
+      - {x: 0.089999996, y: 0.38}
+      - {x: -0.02, y: 0.39999998}
+      - {x: -0.11, y: 0.41}
+      - {x: -0.29999998, y: 0.35}
+      - {x: -0.47, y: 0.38}
+      - {x: -0.55, y: 0.35}
+      - {x: -0.55, y: 0.11}
+      - {x: -0.44, y: -0.02}
+      - {x: -0.45999998, y: -0.17999999}
+      - {x: -0.39999998, y: -0.42}
+      - {x: -0.32, y: -0.48}
+      - {x: 0.22999999, y: -0.48}
+      - {x: 0.29, y: -0.45}
+      - {x: 0.35999998, y: -0.03}
+      - {x: 0.42, y: -0.01}
 --- !u!1 &1250573126
 GameObject:
   m_ObjectHideFlags: 0
@@ -6642,6 +7670,7 @@ GameObject:
   - component: {fileID: 1250573127}
   - component: {fileID: 1250573128}
   - component: {fileID: 1250573129}
+  - component: {fileID: 1250573131}
   - component: {fileID: 1250573130}
   m_Layer: 0
   m_Name: Kaktuss
@@ -6983,11 +8012,278 @@ MonoBehaviour:
   m_GameObject: {fileID: 1250573126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
+--- !u!60 &1250573131
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1250573126}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.42, y: 11.56}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.7199999, y: -5.6299996}
+      - {x: 1.6999999, y: -5.37}
+      - {x: 1.6899999, y: -5.23}
+      - {x: 1.67, y: -4.97}
+      - {x: 1.66, y: -4.79}
+      - {x: 1.73, y: -4.69}
+      - {x: 1.8399999, y: -4.5699997}
+      - {x: 1.89, y: -4.54}
+      - {x: 2.2, y: -4.54}
+      - {x: 2.4099998, y: -4.5299997}
+      - {x: 2.6399999, y: -4.5}
+      - {x: 2.83, y: -4.46}
+      - {x: 2.9199998, y: -4.43}
+      - {x: 3.06, y: -4.39}
+      - {x: 3.32, y: -4.24}
+      - {x: 3.36, y: -4.2}
+      - {x: 3.46, y: -4.25}
+      - {x: 3.49, y: -4.23}
+      - {x: 3.4399998, y: -4.15}
+      - {x: 3.6499999, y: -3.9399998}
+      - {x: 3.81, y: -3.76}
+      - {x: 3.9299998, y: -3.56}
+      - {x: 3.98, y: -3.47}
+      - {x: 4.15, y: -3.12}
+      - {x: 4.17, y: -3.07}
+      - {x: 4.18, y: -3.02}
+      - {x: 4.19, y: -2.71}
+      - {x: 4.2, y: -2.44}
+      - {x: 4.21, y: -2.19}
+      - {x: 4.21, y: -0.53999996}
+      - {x: 4.19, y: -0.29}
+      - {x: 4.15, y: 0.049999997}
+      - {x: 4.11, y: 0.29999998}
+      - {x: 4.0699997, y: 0.51}
+      - {x: 4.06, y: 0.58}
+      - {x: 4.14, y: 0.66999996}
+      - {x: 4.14, y: 0.71}
+      - {x: 4.11, y: 0.71999997}
+      - {x: 4.0299997, y: 0.68}
+      - {x: 4.0099998, y: 0.77}
+      - {x: 3.97, y: 0.87}
+      - {x: 3.8999999, y: 1.03}
+      - {x: 3.85, y: 1.12}
+      - {x: 3.79, y: 1.2099999}
+      - {x: 3.6999998, y: 1.3199999}
+      - {x: 3.58, y: 1.4399999}
+      - {x: 3.35, y: 1.56}
+      - {x: 3.1799998, y: 1.61}
+      - {x: 2.98, y: 1.64}
+      - {x: 2.81, y: 1.5999999}
+      - {x: 2.72, y: 1.5699999}
+      - {x: 2.57, y: 1.49}
+      - {x: 2.46, y: 1.39}
+      - {x: 2.37, y: 1.26}
+      - {x: 2.3, y: 1.13}
+      - {x: 2.23, y: 0.88}
+      - {x: 2.2, y: 0.77}
+      - {x: 2.2, y: 0.28}
+      - {x: 2.19, y: 0.26999998}
+      - {x: 2.19, y: -0.34}
+      - {x: 2.18, y: -0.35}
+      - {x: 2.18, y: -0.96}
+      - {x: 2.1699998, y: -0.96999997}
+      - {x: 2.1699998, y: -1.5799999}
+      - {x: 2.1599998, y: -1.5899999}
+      - {x: 2.1599998, y: -2.2}
+      - {x: 2.1499999, y: -2.21}
+      - {x: 2.1299999, y: -2.3}
+      - {x: 2.08, y: -2.44}
+      - {x: 1.9799999, y: -2.59}
+      - {x: 1.91, y: -2.6299999}
+      - {x: 1.79, y: -2.6299999}
+      - {x: 1.7199999, y: -2.4199998}
+      - {x: 1.67, y: -2.18}
+      - {x: 1.61, y: -1.75}
+      - {x: 1.5999999, y: -1.66}
+      - {x: 1.5899999, y: -1.55}
+      - {x: 1.5799999, y: -1.42}
+      - {x: 1.5699999, y: -1.27}
+      - {x: 1.56, y: -1.0699999}
+      - {x: 1.55, y: -0.81}
+      - {x: 1.54, y: -0.79999995}
+      - {x: 1.54, y: -0.29}
+      - {x: 1.53, y: -0.28}
+      - {x: 1.53, y: 1.6899999}
+      - {x: 1.52, y: 2.08}
+      - {x: 1.51, y: 2.28}
+      - {x: 1.56, y: 2.31}
+      - {x: 1.5699999, y: 2.33}
+      - {x: 1.51, y: 2.35}
+      - {x: 1.5, y: 2.53}
+      - {x: 1.48, y: 2.82}
+      - {x: 1.4599999, y: 3.04}
+      - {x: 1.42, y: 3.3899999}
+      - {x: 1.38, y: 3.6499999}
+      - {x: 1.3399999, y: 3.86}
+      - {x: 1.31, y: 4}
+      - {x: 1.3, y: 4.0699997}
+      - {x: 1.38, y: 4.16}
+      - {x: 1.43, y: 4.23}
+      - {x: 1.43, y: 4.25}
+      - {x: 1.4, y: 4.2599998}
+      - {x: 1.27, y: 4.14}
+      - {x: 1.26, y: 4.19}
+      - {x: 1.2099999, y: 4.36}
+      - {x: 1.13, y: 4.58}
+      - {x: 0.97999996, y: 4.9}
+      - {x: 0.88, y: 5.06}
+      - {x: 0.77, y: 5.2}
+      - {x: 0.59999996, y: 5.3599997}
+      - {x: 0.56, y: 5.39}
+      - {x: 0.64, y: 5.49}
+      - {x: 0.75, y: 5.69}
+      - {x: 0.76, y: 5.73}
+      - {x: 0.74, y: 5.75}
+      - {x: 0.71999997, y: 5.75}
+      - {x: 0.65, y: 5.68}
+      - {x: 0.47, y: 5.45}
+      - {x: 0.42999998, y: 5.49}
+      - {x: 0.26999998, y: 5.5699997}
+      - {x: 0.17, y: 5.6099997}
+      - {x: 0.07, y: 5.64}
+      - {x: -0.089999996, y: 5.64}
+      - {x: -0.22999999, y: 5.62}
+      - {x: -0.42999998, y: 5.5699997}
+      - {x: -0.64, y: 5.45}
+      - {x: -0.74, y: 5.38}
+      - {x: -0.88, y: 5.2}
+      - {x: -0.98999995, y: 5.0299997}
+      - {x: -1.0799999, y: 4.83}
+      - {x: -1.13, y: 4.7}
+      - {x: -1.1899999, y: 4.5}
+      - {x: -1.23, y: 4.3199997}
+      - {x: -1.26, y: 4.16}
+      - {x: -1.29, y: 3.9399998}
+      - {x: -1.31, y: 3.73}
+      - {x: -1.3199999, y: 3.59}
+      - {x: -1.3299999, y: 3.37}
+      - {x: -1.3299999, y: 2.6599998}
+      - {x: -1.3199999, y: 2.44}
+      - {x: -1.31, y: 2.29}
+      - {x: -1.29, y: 2.03}
+      - {x: -1.26, y: 1.7099999}
+      - {x: -1.22, y: 1.3399999}
+      - {x: -1.16, y: 0.82}
+      - {x: -1.09, y: 0.26999998}
+      - {x: -1.06, y: -0.04}
+      - {x: -1.04, y: -0.19}
+      - {x: -0.93, y: -0.96999997}
+      - {x: -0.88, y: -1.4599999}
+      - {x: -0.87, y: -1.5899999}
+      - {x: -0.85999995, y: -1.76}
+      - {x: -0.84999996, y: -2.09}
+      - {x: -0.85999995, y: -2.1}
+      - {x: -0.89, y: -2.33}
+      - {x: -0.93, y: -2.4299998}
+      - {x: -1.02, y: -2.49}
+      - {x: -1.16, y: -2.28}
+      - {x: -1.25, y: -2.11}
+      - {x: -1.31, y: -1.93}
+      - {x: -1.37, y: -1.78}
+      - {x: -1.4, y: -1.67}
+      - {x: -1.5, y: -1.22}
+      - {x: -1.5899999, y: -0.66999996}
+      - {x: -1.5899999, y: -0.59}
+      - {x: -1.61, y: -0.45}
+      - {x: -1.63, y: -0.38}
+      - {x: -1.7199999, y: 0.24}
+      - {x: -1.66, y: 0.34}
+      - {x: -1.7199999, y: 0.38}
+      - {x: -1.75, y: 0.42999998}
+      - {x: -1.8, y: 0.71}
+      - {x: -1.8299999, y: 0.84999996}
+      - {x: -1.87, y: 1.03}
+      - {x: -1.9399999, y: 1.3199999}
+      - {x: -2.05, y: 1.62}
+      - {x: -2.1699998, y: 1.8499999}
+      - {x: -2.28, y: 1.99}
+      - {x: -2.44, y: 2.1499999}
+      - {x: -2.56, y: 2.23}
+      - {x: -2.6799998, y: 2.28}
+      - {x: -2.76, y: 2.31}
+      - {x: -2.74, y: 2.37}
+      - {x: -2.74, y: 2.3999999}
+      - {x: -2.76, y: 2.4199998}
+      - {x: -2.79, y: 2.4099998}
+      - {x: -2.83, y: 2.32}
+      - {x: -2.8999999, y: 2.33}
+      - {x: -3.07, y: 2.33}
+      - {x: -3.1799998, y: 2.31}
+      - {x: -3.29, y: 2.28}
+      - {x: -3.4299998, y: 2.23}
+      - {x: -3.52, y: 2.19}
+      - {x: -3.6399999, y: 2.11}
+      - {x: -3.75, y: 2.03}
+      - {x: -3.81, y: 1.92}
+      - {x: -3.86, y: 1.8}
+      - {x: -3.8999999, y: 1.68}
+      - {x: -3.99, y: 1.73}
+      - {x: -4.16, y: 1.79}
+      - {x: -4.18, y: 1.77}
+      - {x: -4.17, y: 1.74}
+      - {x: -3.9199998, y: 1.5799999}
+      - {x: -3.9399998, y: 1.51}
+      - {x: -3.98, y: 1.29}
+      - {x: -4, y: 1.13}
+      - {x: -4.0099998, y: 1.02}
+      - {x: -4.0099998, y: 0.29}
+      - {x: -4, y: 0.099999994}
+      - {x: -3.98, y: -0.16}
+      - {x: -3.9499998, y: -0.45}
+      - {x: -3.9099998, y: -0.78}
+      - {x: -3.87, y: -1.05}
+      - {x: -3.81, y: -1.41}
+      - {x: -3.76, y: -1.6899999}
+      - {x: -3.72, y: -1.89}
+      - {x: -3.6399999, y: -2.28}
+      - {x: -3.62, y: -2.37}
+      - {x: -3.4499998, y: -3.05}
+      - {x: -3.37, y: -3.34}
+      - {x: -3.31, y: -3.53}
+      - {x: -3.25, y: -3.6499999}
+      - {x: -3.1799998, y: -3.74}
+      - {x: -3.04, y: -3.87}
+      - {x: -2.9399998, y: -3.9599998}
+      - {x: -2.8, y: -4.06}
+      - {x: -2.62, y: -4.16}
+      - {x: -2.27, y: -4.2799997}
+      - {x: -2.09, y: -4.33}
+      - {x: -1.79, y: -4.4}
+      - {x: -1.6899999, y: -4.42}
+      - {x: -1.49, y: -4.45}
+      - {x: -1.31, y: -4.47}
+      - {x: -1.16, y: -4.49}
+      - {x: -1.0799999, y: -4.66}
+      - {x: -1, y: -5}
+      - {x: -0.97999996, y: -5.15}
+      - {x: -0.95, y: -5.3399997}
+      - {x: -0.90999997, y: -5.75}
+      - {x: -0.9, y: -5.7799997}
+      - {x: 1.6999999, y: -5.7799997}
+      - {x: 1.7199999, y: -5.7599998}
 --- !u!1001 &1257682941
 Prefab:
   m_ObjectHideFlags: 0
@@ -7269,6 +8565,7 @@ GameObject:
   - component: {fileID: 1322748891}
   - component: {fileID: 1322748892}
   - component: {fileID: 1322748893}
+  - component: {fileID: 1322748895}
   - component: {fileID: 1322748894}
   m_Layer: 0
   m_Name: Kaktuss (4)
@@ -7406,11 +8703,74 @@ MonoBehaviour:
   m_GameObject: {fileID: 1322748890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
+--- !u!60 &1322748895
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1322748890}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.8, y: 1.4}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.62, y: -0.07}
+      - {x: 0.71999997, y: 0.12}
+      - {x: 0.71999997, y: 0.21}
+      - {x: 0.65999997, y: 0.37}
+      - {x: 0.87, y: 0.32}
+      - {x: 0.9, y: 0.39999998}
+      - {x: 0.9, y: 0.57}
+      - {x: 0.87, y: 0.59}
+      - {x: 0.71, y: 0.59999996}
+      - {x: 0.66999996, y: 0.7}
+      - {x: 0.42999998, y: 0.7}
+      - {x: 0.39999998, y: 0.61}
+      - {x: 0.42, y: 0.37}
+      - {x: 0.29999998, y: 0.26}
+      - {x: 0.26999998, y: 0.19}
+      - {x: 0.08, y: 0.25}
+      - {x: -0.11, y: 0.25}
+      - {x: -0.11, y: 0.35999998}
+      - {x: -0.17999999, y: 0.5}
+      - {x: -0.42, y: 0.62}
+      - {x: -0.55, y: 0.64}
+      - {x: -0.63, y: 0.59}
+      - {x: -0.61, y: 0.37}
+      - {x: -0.45999998, y: 0.24}
+      - {x: -0.58, y: 0.049999997}
+      - {x: -0.7, y: 0.01}
+      - {x: -0.9, y: -0.04}
+      - {x: -0.9, y: -0.26}
+      - {x: -0.84, y: -0.32}
+      - {x: -0.68, y: -0.37}
+      - {x: -0.52, y: -0.35999998}
+      - {x: -0.34, y: -0.44}
+      - {x: -0.26999998, y: -0.68}
+      - {x: -0.22999999, y: -0.7}
+      - {x: 0.29, y: -0.7}
+      - {x: 0.32999998, y: -0.59}
+      - {x: 0.35, y: -0.32999998}
+      - {x: 0.48, y: -0.099999994}
 --- !u!1 &1323922814
 GameObject:
   m_ObjectHideFlags: 0
@@ -7421,6 +8781,7 @@ GameObject:
   - component: {fileID: 1323922815}
   - component: {fileID: 1323922818}
   - component: {fileID: 1323922817}
+  - component: {fileID: 1323922819}
   - component: {fileID: 1323922816}
   m_Layer: 0
   m_Name: Kaktuss (12)
@@ -7450,11 +8811,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1323922814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &1323922817
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7543,6 +8905,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1323922819
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323922814}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 1.02}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.255, y: 0.35999998}
+      - {x: 0.035, y: 0.45}
+      - {x: 0.005, y: 0.51}
+      - {x: -0.105, y: 0.51}
+      - {x: -0.21499999, y: 0.44}
+      - {x: -0.375, y: 0.51}
+      - {x: -0.385, y: 0.51}
+      - {x: -0.435, y: 0.29}
+      - {x: -0.45499998, y: 0.19999999}
+      - {x: -0.45499998, y: 0.03}
+      - {x: -0.345, y: -0.02}
+      - {x: -0.33499998, y: -0.28}
+      - {x: -0.265, y: -0.41}
+      - {x: -0.175, y: -0.48999998}
+      - {x: -0.155, y: -0.51}
+      - {x: 0.355, y: -0.51}
+      - {x: 0.45499998, y: -0.35999998}
+      - {x: 0.45499998, y: 0.17999999}
 --- !u!1 &1328448398
 GameObject:
   m_ObjectHideFlags: 0
@@ -7889,6 +9293,7 @@ GameObject:
   - component: {fileID: 1482681449}
   - component: {fileID: 1482681452}
   - component: {fileID: 1482681451}
+  - component: {fileID: 1482681453}
   - component: {fileID: 1482681450}
   m_Layer: 0
   m_Name: Kaktuss (16)
@@ -7918,11 +9323,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1482681448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &1482681451
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8031,6 +9437,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1482681453
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482681448}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.8, y: 1.4}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.62, y: -0.07}
+      - {x: 0.71999997, y: 0.12}
+      - {x: 0.71999997, y: 0.21}
+      - {x: 0.65999997, y: 0.37}
+      - {x: 0.87, y: 0.32}
+      - {x: 0.9, y: 0.39999998}
+      - {x: 0.9, y: 0.57}
+      - {x: 0.87, y: 0.59}
+      - {x: 0.71, y: 0.59999996}
+      - {x: 0.66999996, y: 0.7}
+      - {x: 0.42999998, y: 0.7}
+      - {x: 0.39999998, y: 0.61}
+      - {x: 0.42, y: 0.37}
+      - {x: 0.29999998, y: 0.26}
+      - {x: 0.26999998, y: 0.19}
+      - {x: 0.08, y: 0.25}
+      - {x: -0.11, y: 0.25}
+      - {x: -0.11, y: 0.35999998}
+      - {x: -0.17999999, y: 0.5}
+      - {x: -0.42, y: 0.62}
+      - {x: -0.55, y: 0.64}
+      - {x: -0.63, y: 0.59}
+      - {x: -0.61, y: 0.37}
+      - {x: -0.45999998, y: 0.24}
+      - {x: -0.58, y: 0.049999997}
+      - {x: -0.7, y: 0.01}
+      - {x: -0.9, y: -0.04}
+      - {x: -0.9, y: -0.26}
+      - {x: -0.84, y: -0.32}
+      - {x: -0.68, y: -0.37}
+      - {x: -0.52, y: -0.35999998}
+      - {x: -0.34, y: -0.44}
+      - {x: -0.26999998, y: -0.68}
+      - {x: -0.22999999, y: -0.7}
+      - {x: 0.29, y: -0.7}
+      - {x: 0.32999998, y: -0.59}
+      - {x: 0.35, y: -0.32999998}
+      - {x: 0.48, y: -0.099999994}
 --- !u!1001 &1500933748
 Prefab:
   m_ObjectHideFlags: 0
@@ -8169,6 +9637,7 @@ GameObject:
   - component: {fileID: 1513550012}
   - component: {fileID: 1513550015}
   - component: {fileID: 1513550014}
+  - component: {fileID: 1513550016}
   - component: {fileID: 1513550013}
   m_Layer: 0
   m_Name: Kaktuss (25)
@@ -8198,11 +9667,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1513550011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &1513550014
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8292,6 +9762,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1513550016
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1513550011}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1, y: 0.96}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.55, y: 0.11}
+      - {x: 0.55, y: 0.41}
+      - {x: 0.52, y: 0.48}
+      - {x: 0.16, y: 0.48}
+      - {x: 0.089999996, y: 0.38}
+      - {x: -0.02, y: 0.39999998}
+      - {x: -0.11, y: 0.41}
+      - {x: -0.29999998, y: 0.35}
+      - {x: -0.47, y: 0.38}
+      - {x: -0.55, y: 0.35}
+      - {x: -0.55, y: 0.11}
+      - {x: -0.44, y: -0.02}
+      - {x: -0.45999998, y: -0.17999999}
+      - {x: -0.39999998, y: -0.42}
+      - {x: -0.32, y: -0.48}
+      - {x: 0.22999999, y: -0.48}
+      - {x: 0.29, y: -0.45}
+      - {x: 0.35999998, y: -0.03}
+      - {x: 0.42, y: -0.01}
 --- !u!1 &1515642282
 GameObject:
   m_ObjectHideFlags: 0
@@ -8381,6 +9894,7 @@ GameObject:
   - component: {fileID: 1523833105}
   - component: {fileID: 1523833108}
   - component: {fileID: 1523833107}
+  - component: {fileID: 1523833109}
   - component: {fileID: 1523833106}
   m_Layer: 0
   m_Name: Kaktuss (11)
@@ -8410,11 +9924,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1523833104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &1523833107
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8503,6 +10018,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1523833109
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1523833104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 1.02}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.255, y: 0.35999998}
+      - {x: 0.035, y: 0.45}
+      - {x: 0.005, y: 0.51}
+      - {x: -0.105, y: 0.51}
+      - {x: -0.21499999, y: 0.44}
+      - {x: -0.375, y: 0.51}
+      - {x: -0.385, y: 0.51}
+      - {x: -0.435, y: 0.29}
+      - {x: -0.45499998, y: 0.19999999}
+      - {x: -0.45499998, y: 0.03}
+      - {x: -0.345, y: -0.02}
+      - {x: -0.33499998, y: -0.28}
+      - {x: -0.265, y: -0.41}
+      - {x: -0.175, y: -0.48999998}
+      - {x: -0.155, y: -0.51}
+      - {x: 0.355, y: -0.51}
+      - {x: 0.45499998, y: -0.35999998}
+      - {x: 0.45499998, y: 0.17999999}
 --- !u!1 &1527360740
 GameObject:
   m_ObjectHideFlags: 0
@@ -8513,6 +10070,7 @@ GameObject:
   - component: {fileID: 1527360741}
   - component: {fileID: 1527360742}
   - component: {fileID: 1527360743}
+  - component: {fileID: 1527360745}
   - component: {fileID: 1527360744}
   m_Layer: 0
   m_Name: Kaktuss (2)
@@ -8630,11 +10188,54 @@ MonoBehaviour:
   m_GameObject: {fileID: 1527360740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
+--- !u!60 &1527360745
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1527360740}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 1.02}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.255, y: 0.35999998}
+      - {x: 0.035, y: 0.45}
+      - {x: 0.005, y: 0.51}
+      - {x: -0.105, y: 0.51}
+      - {x: -0.21499999, y: 0.44}
+      - {x: -0.375, y: 0.51}
+      - {x: -0.385, y: 0.51}
+      - {x: -0.435, y: 0.29}
+      - {x: -0.45499998, y: 0.19999999}
+      - {x: -0.45499998, y: 0.03}
+      - {x: -0.345, y: -0.02}
+      - {x: -0.33499998, y: -0.28}
+      - {x: -0.265, y: -0.41}
+      - {x: -0.175, y: -0.48999998}
+      - {x: -0.155, y: -0.51}
+      - {x: 0.355, y: -0.51}
+      - {x: 0.45499998, y: -0.35999998}
+      - {x: 0.45499998, y: 0.17999999}
 --- !u!1 &1535791834
 GameObject:
   m_ObjectHideFlags: 0
@@ -8994,6 +10595,7 @@ GameObject:
   - component: {fileID: 1619193047}
   - component: {fileID: 1619193050}
   - component: {fileID: 1619193049}
+  - component: {fileID: 1619193051}
   - component: {fileID: 1619193048}
   m_Layer: 0
   m_Name: Kaktuss (9)
@@ -9023,11 +10625,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1619193046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &1619193049
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9125,6 +10728,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1619193051
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1619193046}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.21, y: 1.39}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.59499997, y: -0.195}
+      - {x: 0.60499996, y: -0.125}
+      - {x: 0.60499996, y: 0.285}
+      - {x: 0.565, y: 0.345}
+      - {x: 0.36499998, y: 0.36499998}
+      - {x: 0.305, y: 0.24499999}
+      - {x: 0.225, y: 0.024999999}
+      - {x: 0.21499999, y: 0.515}
+      - {x: 0.055, y: 0.695}
+      - {x: -0.155, y: 0.695}
+      - {x: -0.225, y: 0.635}
+      - {x: -0.285, y: 0.465}
+      - {x: -0.375, y: 0.36499998}
+      - {x: -0.42499998, y: 0.42499998}
+      - {x: -0.515, y: 0.415}
+      - {x: -0.60499996, y: 0.315}
+      - {x: -0.60499996, y: 0.114999995}
+      - {x: -0.525, y: -0.005}
+      - {x: -0.39499998, y: -0.065}
+      - {x: -0.285, y: -0.065}
+      - {x: -0.285, y: -0.36499998}
+      - {x: -0.255, y: -0.545}
+      - {x: -0.205, y: -0.695}
+      - {x: 0.105, y: -0.695}
+      - {x: 0.185, y: -0.525}
+      - {x: 0.24499999, y: -0.265}
+      - {x: 0.36499998, y: -0.295}
 --- !u!1001 &1625699256
 Prefab:
   m_ObjectHideFlags: 0
@@ -9586,6 +11240,7 @@ GameObject:
   - component: {fileID: 1707423550}
   - component: {fileID: 1707423553}
   - component: {fileID: 1707423552}
+  - component: {fileID: 1707423554}
   - component: {fileID: 1707423551}
   m_Layer: 0
   m_Name: Kaktuss (8)
@@ -9615,11 +11270,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1707423549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &1707423552
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9717,6 +11373,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1707423554
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1707423549}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.21, y: 1.39}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.59499997, y: -0.195}
+      - {x: 0.60499996, y: -0.125}
+      - {x: 0.60499996, y: 0.285}
+      - {x: 0.565, y: 0.345}
+      - {x: 0.36499998, y: 0.36499998}
+      - {x: 0.305, y: 0.24499999}
+      - {x: 0.225, y: 0.024999999}
+      - {x: 0.21499999, y: 0.515}
+      - {x: 0.055, y: 0.695}
+      - {x: -0.155, y: 0.695}
+      - {x: -0.225, y: 0.635}
+      - {x: -0.285, y: 0.465}
+      - {x: -0.375, y: 0.36499998}
+      - {x: -0.42499998, y: 0.42499998}
+      - {x: -0.515, y: 0.415}
+      - {x: -0.60499996, y: 0.315}
+      - {x: -0.60499996, y: 0.114999995}
+      - {x: -0.525, y: -0.005}
+      - {x: -0.39499998, y: -0.065}
+      - {x: -0.285, y: -0.065}
+      - {x: -0.285, y: -0.36499998}
+      - {x: -0.255, y: -0.545}
+      - {x: -0.205, y: -0.695}
+      - {x: 0.105, y: -0.695}
+      - {x: 0.185, y: -0.525}
+      - {x: 0.24499999, y: -0.265}
+      - {x: 0.36499998, y: -0.295}
 --- !u!1 &1755449206
 GameObject:
   m_ObjectHideFlags: 0
@@ -9971,6 +11678,7 @@ GameObject:
   - component: {fileID: 1777526917}
   - component: {fileID: 1777526920}
   - component: {fileID: 1777526919}
+  - component: {fileID: 1777526921}
   - component: {fileID: 1777526918}
   m_Layer: 0
   m_Name: Kaktuss (13)
@@ -10000,11 +11708,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1777526916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &1777526919
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10095,6 +11804,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1777526921
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1777526916}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.84, y: 1.41}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.34, y: -0.695}
+      - {x: 0.39999998, y: -0.465}
+      - {x: 0.42, y: -0.305}
+      - {x: 0.42, y: 0.405}
+      - {x: 0.41, y: 0.53499997}
+      - {x: 0.37, y: 0.615}
+      - {x: 0.28, y: 0.705}
+      - {x: 0.08, y: 0.705}
+      - {x: -0.03, y: 0.575}
+      - {x: -0.089999996, y: 0.295}
+      - {x: -0.12, y: -0.024999999}
+      - {x: -0.29999998, y: 0.035}
+      - {x: -0.39, y: -0.055}
+      - {x: -0.42, y: -0.095}
+      - {x: -0.42, y: -0.565}
+      - {x: -0.37, y: -0.705}
+      - {x: -0.089999996, y: -0.705}
+      - {x: -0.08, y: -0.695}
+      - {x: -0.06, y: -0.705}
+      - {x: 0.32, y: -0.705}
 --- !u!1 &1777791351
 GameObject:
   m_ObjectHideFlags: 0
@@ -10105,6 +11858,7 @@ GameObject:
   - component: {fileID: 1777791352}
   - component: {fileID: 1777791355}
   - component: {fileID: 1777791354}
+  - component: {fileID: 1777791356}
   - component: {fileID: 1777791353}
   m_Layer: 0
   m_Name: Kaktuss (26)
@@ -10134,11 +11888,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1777791351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &1777791354
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10236,6 +11991,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1777791356
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1777791351}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.21, y: 1.39}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.59499997, y: -0.195}
+      - {x: 0.60499996, y: -0.125}
+      - {x: 0.60499996, y: 0.285}
+      - {x: 0.565, y: 0.345}
+      - {x: 0.36499998, y: 0.36499998}
+      - {x: 0.305, y: 0.24499999}
+      - {x: 0.225, y: 0.024999999}
+      - {x: 0.21499999, y: 0.515}
+      - {x: 0.055, y: 0.695}
+      - {x: -0.155, y: 0.695}
+      - {x: -0.225, y: 0.635}
+      - {x: -0.285, y: 0.465}
+      - {x: -0.375, y: 0.36499998}
+      - {x: -0.42499998, y: 0.42499998}
+      - {x: -0.515, y: 0.415}
+      - {x: -0.60499996, y: 0.315}
+      - {x: -0.60499996, y: 0.114999995}
+      - {x: -0.525, y: -0.005}
+      - {x: -0.39499998, y: -0.065}
+      - {x: -0.285, y: -0.065}
+      - {x: -0.285, y: -0.36499998}
+      - {x: -0.255, y: -0.545}
+      - {x: -0.205, y: -0.695}
+      - {x: 0.105, y: -0.695}
+      - {x: 0.185, y: -0.525}
+      - {x: 0.24499999, y: -0.265}
+      - {x: 0.36499998, y: -0.295}
 --- !u!1 &1796252709
 GameObject:
   m_ObjectHideFlags: 0
@@ -10246,6 +12052,7 @@ GameObject:
   - component: {fileID: 1796252710}
   - component: {fileID: 1796252713}
   - component: {fileID: 1796252712}
+  - component: {fileID: 1796252714}
   - component: {fileID: 1796252711}
   m_Layer: 0
   m_Name: Kaktuss (6)
@@ -10275,11 +12082,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1796252709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &1796252712
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10592,6 +12400,272 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1796252714
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1796252709}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.42, y: 11.56}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.7199999, y: -5.6299996}
+      - {x: 1.6999999, y: -5.37}
+      - {x: 1.6899999, y: -5.23}
+      - {x: 1.67, y: -4.97}
+      - {x: 1.66, y: -4.79}
+      - {x: 1.73, y: -4.69}
+      - {x: 1.8399999, y: -4.5699997}
+      - {x: 1.89, y: -4.54}
+      - {x: 2.2, y: -4.54}
+      - {x: 2.4099998, y: -4.5299997}
+      - {x: 2.6399999, y: -4.5}
+      - {x: 2.83, y: -4.46}
+      - {x: 2.9199998, y: -4.43}
+      - {x: 3.06, y: -4.39}
+      - {x: 3.32, y: -4.24}
+      - {x: 3.36, y: -4.2}
+      - {x: 3.46, y: -4.25}
+      - {x: 3.49, y: -4.23}
+      - {x: 3.4399998, y: -4.15}
+      - {x: 3.6499999, y: -3.9399998}
+      - {x: 3.81, y: -3.76}
+      - {x: 3.9299998, y: -3.56}
+      - {x: 3.98, y: -3.47}
+      - {x: 4.15, y: -3.12}
+      - {x: 4.17, y: -3.07}
+      - {x: 4.18, y: -3.02}
+      - {x: 4.19, y: -2.71}
+      - {x: 4.2, y: -2.44}
+      - {x: 4.21, y: -2.19}
+      - {x: 4.21, y: -0.53999996}
+      - {x: 4.19, y: -0.29}
+      - {x: 4.15, y: 0.049999997}
+      - {x: 4.11, y: 0.29999998}
+      - {x: 4.0699997, y: 0.51}
+      - {x: 4.06, y: 0.58}
+      - {x: 4.14, y: 0.66999996}
+      - {x: 4.14, y: 0.71}
+      - {x: 4.11, y: 0.71999997}
+      - {x: 4.0299997, y: 0.68}
+      - {x: 4.0099998, y: 0.77}
+      - {x: 3.97, y: 0.87}
+      - {x: 3.8999999, y: 1.03}
+      - {x: 3.85, y: 1.12}
+      - {x: 3.79, y: 1.2099999}
+      - {x: 3.6999998, y: 1.3199999}
+      - {x: 3.58, y: 1.4399999}
+      - {x: 3.35, y: 1.56}
+      - {x: 3.1799998, y: 1.61}
+      - {x: 2.98, y: 1.64}
+      - {x: 2.81, y: 1.5999999}
+      - {x: 2.72, y: 1.5699999}
+      - {x: 2.57, y: 1.49}
+      - {x: 2.46, y: 1.39}
+      - {x: 2.37, y: 1.26}
+      - {x: 2.3, y: 1.13}
+      - {x: 2.23, y: 0.88}
+      - {x: 2.2, y: 0.77}
+      - {x: 2.2, y: 0.28}
+      - {x: 2.19, y: 0.26999998}
+      - {x: 2.19, y: -0.34}
+      - {x: 2.18, y: -0.35}
+      - {x: 2.18, y: -0.96}
+      - {x: 2.1699998, y: -0.96999997}
+      - {x: 2.1699998, y: -1.5799999}
+      - {x: 2.1599998, y: -1.5899999}
+      - {x: 2.1599998, y: -2.2}
+      - {x: 2.1499999, y: -2.21}
+      - {x: 2.1299999, y: -2.3}
+      - {x: 2.08, y: -2.44}
+      - {x: 1.9799999, y: -2.59}
+      - {x: 1.91, y: -2.6299999}
+      - {x: 1.79, y: -2.6299999}
+      - {x: 1.7199999, y: -2.4199998}
+      - {x: 1.67, y: -2.18}
+      - {x: 1.61, y: -1.75}
+      - {x: 1.5999999, y: -1.66}
+      - {x: 1.5899999, y: -1.55}
+      - {x: 1.5799999, y: -1.42}
+      - {x: 1.5699999, y: -1.27}
+      - {x: 1.56, y: -1.0699999}
+      - {x: 1.55, y: -0.81}
+      - {x: 1.54, y: -0.79999995}
+      - {x: 1.54, y: -0.29}
+      - {x: 1.53, y: -0.28}
+      - {x: 1.53, y: 1.6899999}
+      - {x: 1.52, y: 2.08}
+      - {x: 1.51, y: 2.28}
+      - {x: 1.56, y: 2.31}
+      - {x: 1.5699999, y: 2.33}
+      - {x: 1.51, y: 2.35}
+      - {x: 1.5, y: 2.53}
+      - {x: 1.48, y: 2.82}
+      - {x: 1.4599999, y: 3.04}
+      - {x: 1.42, y: 3.3899999}
+      - {x: 1.38, y: 3.6499999}
+      - {x: 1.3399999, y: 3.86}
+      - {x: 1.31, y: 4}
+      - {x: 1.3, y: 4.0699997}
+      - {x: 1.38, y: 4.16}
+      - {x: 1.43, y: 4.23}
+      - {x: 1.43, y: 4.25}
+      - {x: 1.4, y: 4.2599998}
+      - {x: 1.27, y: 4.14}
+      - {x: 1.26, y: 4.19}
+      - {x: 1.2099999, y: 4.36}
+      - {x: 1.13, y: 4.58}
+      - {x: 0.97999996, y: 4.9}
+      - {x: 0.88, y: 5.06}
+      - {x: 0.77, y: 5.2}
+      - {x: 0.59999996, y: 5.3599997}
+      - {x: 0.56, y: 5.39}
+      - {x: 0.64, y: 5.49}
+      - {x: 0.75, y: 5.69}
+      - {x: 0.76, y: 5.73}
+      - {x: 0.74, y: 5.75}
+      - {x: 0.71999997, y: 5.75}
+      - {x: 0.65, y: 5.68}
+      - {x: 0.47, y: 5.45}
+      - {x: 0.42999998, y: 5.49}
+      - {x: 0.26999998, y: 5.5699997}
+      - {x: 0.17, y: 5.6099997}
+      - {x: 0.07, y: 5.64}
+      - {x: -0.089999996, y: 5.64}
+      - {x: -0.22999999, y: 5.62}
+      - {x: -0.42999998, y: 5.5699997}
+      - {x: -0.64, y: 5.45}
+      - {x: -0.74, y: 5.38}
+      - {x: -0.88, y: 5.2}
+      - {x: -0.98999995, y: 5.0299997}
+      - {x: -1.0799999, y: 4.83}
+      - {x: -1.13, y: 4.7}
+      - {x: -1.1899999, y: 4.5}
+      - {x: -1.23, y: 4.3199997}
+      - {x: -1.26, y: 4.16}
+      - {x: -1.29, y: 3.9399998}
+      - {x: -1.31, y: 3.73}
+      - {x: -1.3199999, y: 3.59}
+      - {x: -1.3299999, y: 3.37}
+      - {x: -1.3299999, y: 2.6599998}
+      - {x: -1.3199999, y: 2.44}
+      - {x: -1.31, y: 2.29}
+      - {x: -1.29, y: 2.03}
+      - {x: -1.26, y: 1.7099999}
+      - {x: -1.22, y: 1.3399999}
+      - {x: -1.16, y: 0.82}
+      - {x: -1.09, y: 0.26999998}
+      - {x: -1.06, y: -0.04}
+      - {x: -1.04, y: -0.19}
+      - {x: -0.93, y: -0.96999997}
+      - {x: -0.88, y: -1.4599999}
+      - {x: -0.87, y: -1.5899999}
+      - {x: -0.85999995, y: -1.76}
+      - {x: -0.84999996, y: -2.09}
+      - {x: -0.85999995, y: -2.1}
+      - {x: -0.89, y: -2.33}
+      - {x: -0.93, y: -2.4299998}
+      - {x: -1.02, y: -2.49}
+      - {x: -1.16, y: -2.28}
+      - {x: -1.25, y: -2.11}
+      - {x: -1.31, y: -1.93}
+      - {x: -1.37, y: -1.78}
+      - {x: -1.4, y: -1.67}
+      - {x: -1.5, y: -1.22}
+      - {x: -1.5899999, y: -0.66999996}
+      - {x: -1.5899999, y: -0.59}
+      - {x: -1.61, y: -0.45}
+      - {x: -1.63, y: -0.38}
+      - {x: -1.7199999, y: 0.24}
+      - {x: -1.66, y: 0.34}
+      - {x: -1.7199999, y: 0.38}
+      - {x: -1.75, y: 0.42999998}
+      - {x: -1.8, y: 0.71}
+      - {x: -1.8299999, y: 0.84999996}
+      - {x: -1.87, y: 1.03}
+      - {x: -1.9399999, y: 1.3199999}
+      - {x: -2.05, y: 1.62}
+      - {x: -2.1699998, y: 1.8499999}
+      - {x: -2.28, y: 1.99}
+      - {x: -2.44, y: 2.1499999}
+      - {x: -2.56, y: 2.23}
+      - {x: -2.6799998, y: 2.28}
+      - {x: -2.76, y: 2.31}
+      - {x: -2.74, y: 2.37}
+      - {x: -2.74, y: 2.3999999}
+      - {x: -2.76, y: 2.4199998}
+      - {x: -2.79, y: 2.4099998}
+      - {x: -2.83, y: 2.32}
+      - {x: -2.8999999, y: 2.33}
+      - {x: -3.07, y: 2.33}
+      - {x: -3.1799998, y: 2.31}
+      - {x: -3.29, y: 2.28}
+      - {x: -3.4299998, y: 2.23}
+      - {x: -3.52, y: 2.19}
+      - {x: -3.6399999, y: 2.11}
+      - {x: -3.75, y: 2.03}
+      - {x: -3.81, y: 1.92}
+      - {x: -3.86, y: 1.8}
+      - {x: -3.8999999, y: 1.68}
+      - {x: -3.99, y: 1.73}
+      - {x: -4.16, y: 1.79}
+      - {x: -4.18, y: 1.77}
+      - {x: -4.17, y: 1.74}
+      - {x: -3.9199998, y: 1.5799999}
+      - {x: -3.9399998, y: 1.51}
+      - {x: -3.98, y: 1.29}
+      - {x: -4, y: 1.13}
+      - {x: -4.0099998, y: 1.02}
+      - {x: -4.0099998, y: 0.29}
+      - {x: -4, y: 0.099999994}
+      - {x: -3.98, y: -0.16}
+      - {x: -3.9499998, y: -0.45}
+      - {x: -3.9099998, y: -0.78}
+      - {x: -3.87, y: -1.05}
+      - {x: -3.81, y: -1.41}
+      - {x: -3.76, y: -1.6899999}
+      - {x: -3.72, y: -1.89}
+      - {x: -3.6399999, y: -2.28}
+      - {x: -3.62, y: -2.37}
+      - {x: -3.4499998, y: -3.05}
+      - {x: -3.37, y: -3.34}
+      - {x: -3.31, y: -3.53}
+      - {x: -3.25, y: -3.6499999}
+      - {x: -3.1799998, y: -3.74}
+      - {x: -3.04, y: -3.87}
+      - {x: -2.9399998, y: -3.9599998}
+      - {x: -2.8, y: -4.06}
+      - {x: -2.62, y: -4.16}
+      - {x: -2.27, y: -4.2799997}
+      - {x: -2.09, y: -4.33}
+      - {x: -1.79, y: -4.4}
+      - {x: -1.6899999, y: -4.42}
+      - {x: -1.49, y: -4.45}
+      - {x: -1.31, y: -4.47}
+      - {x: -1.16, y: -4.49}
+      - {x: -1.0799999, y: -4.66}
+      - {x: -1, y: -5}
+      - {x: -0.97999996, y: -5.15}
+      - {x: -0.95, y: -5.3399997}
+      - {x: -0.90999997, y: -5.75}
+      - {x: -0.9, y: -5.7799997}
+      - {x: 1.6999999, y: -5.7799997}
+      - {x: 1.7199999, y: -5.7599998}
 --- !u!1 &1797991077
 GameObject:
   m_ObjectHideFlags: 0
@@ -10901,6 +12975,7 @@ GameObject:
   - component: {fileID: 1854505519}
   - component: {fileID: 1854505522}
   - component: {fileID: 1854505521}
+  - component: {fileID: 1854505523}
   - component: {fileID: 1854505520}
   m_Layer: 0
   m_Name: Kaktuss (22)
@@ -10930,11 +13005,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854505518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &1854505521
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -11023,6 +13099,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1854505523
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1854505518}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 1.02}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.255, y: 0.35999998}
+      - {x: 0.035, y: 0.45}
+      - {x: 0.005, y: 0.51}
+      - {x: -0.105, y: 0.51}
+      - {x: -0.21499999, y: 0.44}
+      - {x: -0.375, y: 0.51}
+      - {x: -0.385, y: 0.51}
+      - {x: -0.435, y: 0.29}
+      - {x: -0.45499998, y: 0.19999999}
+      - {x: -0.45499998, y: 0.03}
+      - {x: -0.345, y: -0.02}
+      - {x: -0.33499998, y: -0.28}
+      - {x: -0.265, y: -0.41}
+      - {x: -0.175, y: -0.48999998}
+      - {x: -0.155, y: -0.51}
+      - {x: 0.355, y: -0.51}
+      - {x: 0.45499998, y: -0.35999998}
+      - {x: 0.45499998, y: 0.17999999}
 --- !u!1 &1863737856
 GameObject:
   m_ObjectHideFlags: 0
@@ -11165,6 +13283,7 @@ GameObject:
   - component: {fileID: 1927772086}
   - component: {fileID: 1927772089}
   - component: {fileID: 1927772088}
+  - component: {fileID: 1927772090}
   - component: {fileID: 1927772087}
   m_Layer: 0
   m_Name: Kaktuss (24)
@@ -11194,11 +13313,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1927772085}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!60 &1927772088
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -11287,6 +13407,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1927772090
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1927772085}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 1.02}
+    newSize: {x: 8.42, y: 11.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.255, y: 0.35999998}
+      - {x: 0.035, y: 0.45}
+      - {x: 0.005, y: 0.51}
+      - {x: -0.105, y: 0.51}
+      - {x: -0.21499999, y: 0.44}
+      - {x: -0.375, y: 0.51}
+      - {x: -0.385, y: 0.51}
+      - {x: -0.435, y: 0.29}
+      - {x: -0.45499998, y: 0.19999999}
+      - {x: -0.45499998, y: 0.03}
+      - {x: -0.345, y: -0.02}
+      - {x: -0.33499998, y: -0.28}
+      - {x: -0.265, y: -0.41}
+      - {x: -0.175, y: -0.48999998}
+      - {x: -0.155, y: -0.51}
+      - {x: 0.355, y: -0.51}
+      - {x: 0.45499998, y: -0.35999998}
+      - {x: 0.45499998, y: 0.17999999}
 --- !u!1001 &1956438518
 Prefab:
   m_ObjectHideFlags: 0
@@ -11566,7 +13728,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1970984269}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 525.75995, y: -45.285004, z: -6.09375}
+  m_LocalPosition: {x: 526.82, y: -45.285004, z: -6.09375}
   m_LocalScale: {x: 0.84599996, y: 0.703, z: 1}
   m_Children: []
   m_Father: {fileID: 797013132}
@@ -11607,15 +13769,15 @@ SpriteRenderer:
   m_SortingLayerID: -1581064041
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1e78be53eda79dd49960d0f499ec0a29, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 884e4be68cae987428348b36c4714376, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1599.7128, y: 21.88}
+  m_Size: {x: 1041.09, y: 21.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1976300130
@@ -11693,6 +13855,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1976300130}
   m_CullTransparentMesh: 0
+--- !u!114 &1993134258 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114517132652365484, guid: 010885f78837b394998cef3d31bbd824,
+    type: 2}
+  m_PrefabInternal: {fileID: 193847716}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &2004217528
 Prefab:
   m_ObjectHideFlags: 0
@@ -12062,6 +14230,16 @@ Prefab:
       propertyPath: m_MaxSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114285182828340250, guid: 87a2357765801c34292d6718d8b4d770,
+        type: 2}
+      propertyPath: geschlagenScreen
+      value: 
+      objectReference: {fileID: 139995293}
+    - target: {fileID: 114285182828340250, guid: 87a2357765801c34292d6718d8b4d770,
+        type: 2}
+      propertyPath: sl
+      value: 
+      objectReference: {fileID: 1993134258}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
   m_IsPrefabAsset: 0

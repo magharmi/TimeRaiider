@@ -23,6 +23,7 @@ public class AnubisKampf : MonoBehaviour {
         steine = GameObject.FindGameObjectsWithTag("AnubisSteine");
         kampfKamera = GameObject.Find("Kampf Kamera");
         mainCamera = GameObject.Find("Main Camera");
+        unsichtbareWand = GameObject.Find("Ende Arena");
         startPosition = anubis.transform.position;
 }
 	
