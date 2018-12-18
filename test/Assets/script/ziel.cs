@@ -15,7 +15,7 @@ public class ziel : MonoBehaviour
             Debug.Log("ziel erreicht");
             SceneManager.LoadScene(level);
             PlayerPrefs.SetInt("levelReached", LevelToUnlock);
-            PlayerPrefs.SetString("letzteScene", "dorf");
+            PlayerPrefs.SetString("letzteScene", level);
         }
     }
 
