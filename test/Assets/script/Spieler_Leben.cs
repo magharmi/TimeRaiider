@@ -17,6 +17,7 @@ public class Spieler_Leben : MonoBehaviour
 
     public Image geschlagenScreen;
     private lvlmanager lvlmanager;
+    private GameObject slider;
 
     bool geschlagen;
     Color geschlagenColour = new Color(164f, 15f, 12f, 0.60f);
@@ -24,6 +25,8 @@ public class Spieler_Leben : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        slider = GameObject.Find("Slider");
+        sl = slider.GetComponent<Slider>();
         currentLeben = fullLeben;
         sp = GetComponent<Spieler_Leben>();
         sl.maxValue = fullLeben;

@@ -932,6 +932,8 @@ GameObject:
   - component: {fileID: 88130551}
   - component: {fileID: 88130550}
   - component: {fileID: 88130549}
+  - component: {fileID: 88130553}
+  - component: {fileID: 88130552}
   m_Layer: 0
   m_Name: Agent (1)
   m_TagString: AnubisMumien
@@ -949,8 +951,8 @@ Transform:
   m_LocalPosition: {x: 79.09, y: 0.88899994, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 1
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &88130549
 MonoBehaviour:
@@ -1047,6 +1049,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &88130552
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 88130547}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &88130553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 88130547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &98895147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,6 +1900,8 @@ GameObject:
   - component: {fileID: 194851351}
   - component: {fileID: 194851350}
   - component: {fileID: 194851349}
+  - component: {fileID: 194851353}
+  - component: {fileID: 194851352}
   m_Layer: 0
   m_Name: Agent (7)
   m_TagString: AnubisMumien
@@ -1873,11 +1916,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 194851347}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 362.73, y: 0.91, z: -5.2553167}
+  m_LocalPosition: {x: 362.73, y: 0.90999985, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 7
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &194851349
 MonoBehaviour:
@@ -1974,6 +2017,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &194851352
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 194851347}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &194851353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 194851347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &208736507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2861,11 +2943,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 352105424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 370.48, y: 4.4, z: -5.2553167}
+  m_LocalPosition: {x: 370.48, y: 4.4000015, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 22
+  m_Father: {fileID: 401959480}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &352105426
 MonoBehaviour:
@@ -3192,11 +3274,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 361191651}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 380.29, y: 5.05, z: -5.2553167}
+  m_LocalPosition: {x: 380.29, y: 5.049999, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 20
+  m_Father: {fileID: 401959480}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &361191653
 MonoBehaviour:
@@ -3731,6 +3813,42 @@ PolygonCollider2D:
       - {x: -0.955, y: -6.115}
       - {x: 0.955, y: -6.9849997}
       - {x: 0.955, y: -7.825}
+--- !u!1 &401959479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 401959480}
+  m_Layer: 0
+  m_Name: Drohnen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &401959480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 401959479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1372815893}
+  - {fileID: 1282529845}
+  - {fileID: 2016595049}
+  - {fileID: 804315181}
+  - {fileID: 996013257}
+  - {fileID: 361191652}
+  - {fileID: 550786866}
+  - {fileID: 352105425}
+  m_Father: {fileID: 1594190586}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &413779008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4915,11 +5033,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 550786865}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 376.27, y: 4.71, z: -5.2553167}
+  m_LocalPosition: {x: 376.27, y: 4.709999, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 21
+  m_Father: {fileID: 401959480}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &550786867
 MonoBehaviour:
@@ -5264,6 +5382,8 @@ GameObject:
   - component: {fileID: 582023042}
   - component: {fileID: 582023041}
   - component: {fileID: 582023040}
+  - component: {fileID: 582023044}
+  - component: {fileID: 582023043}
   m_Layer: 0
   m_Name: Agent (9)
   m_TagString: AnubisMumien
@@ -5278,11 +5398,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 582023038}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 131.67, y: 0.89, z: -5.2553167}
+  m_LocalPosition: {x: 131.67, y: 0.8899994, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 9
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &582023040
 MonoBehaviour:
@@ -5379,6 +5499,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &582023043
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 582023038}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &582023044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 582023038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &590498502
 GameObject:
   m_ObjectHideFlags: 0
@@ -6574,6 +6733,8 @@ GameObject:
   - component: {fileID: 792232722}
   - component: {fileID: 792232721}
   - component: {fileID: 792232720}
+  - component: {fileID: 792232724}
+  - component: {fileID: 792232723}
   m_Layer: 0
   m_Name: Agent (11)
   m_TagString: AnubisMumien
@@ -6591,8 +6752,8 @@ Transform:
   m_LocalPosition: {x: 245.91, y: 0.88899994, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 12
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &792232720
 MonoBehaviour:
@@ -6689,6 +6850,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &792232723
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 792232718}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &792232724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 792232718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &804315180
 GameObject:
   m_ObjectHideFlags: 0
@@ -6715,11 +6915,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 804315180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 333.82, y: 5.62, z: -5.2553167}
+  m_LocalPosition: {x: 333.82, y: 5.619999, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 16
+  m_Father: {fileID: 401959480}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &804315182
 MonoBehaviour:
@@ -7020,6 +7220,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &815762174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 815762175}
+  m_Layer: 0
+  m_Name: Agenten
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &815762175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815762174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 88130548}
+  - {fileID: 1348894986}
+  - {fileID: 1906913247}
+  - {fileID: 2080656612}
+  - {fileID: 938950208}
+  - {fileID: 1493495962}
+  - {fileID: 194851348}
+  - {fileID: 1462645297}
+  - {fileID: 582023039}
+  - {fileID: 1062914643}
+  - {fileID: 2100826044}
+  - {fileID: 792232719}
+  - {fileID: 1629461771}
+  - {fileID: 1355694452}
+  - {fileID: 2141281829}
+  - {fileID: 818712818}
+  m_Father: {fileID: 1594190586}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &818712817
 GameObject:
   m_ObjectHideFlags: 0
@@ -7031,6 +7275,8 @@ GameObject:
   - component: {fileID: 818712821}
   - component: {fileID: 818712820}
   - component: {fileID: 818712819}
+  - component: {fileID: 818712823}
+  - component: {fileID: 818712822}
   m_Layer: 0
   m_Name: Agent (14)
   m_TagString: AnubisMumien
@@ -7045,11 +7291,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 818712817}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 372.95, y: 1.07, z: -5.2553167}
+  m_LocalPosition: {x: 372.95, y: 1.0699997, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 23
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &818712819
 MonoBehaviour:
@@ -7146,6 +7392,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &818712822
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 818712817}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &818712823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 818712817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &822281408
 GameObject:
   m_ObjectHideFlags: 0
@@ -8423,6 +8708,8 @@ GameObject:
   - component: {fileID: 938950211}
   - component: {fileID: 938950210}
   - component: {fileID: 938950209}
+  - component: {fileID: 938950213}
+  - component: {fileID: 938950212}
   m_Layer: 0
   m_Name: Agent (5)
   m_TagString: AnubisMumien
@@ -8440,8 +8727,8 @@ Transform:
   m_LocalPosition: {x: 241.2, y: 0.88899994, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 5
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &938950209
 MonoBehaviour:
@@ -8538,6 +8825,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &938950212
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 938950207}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &938950213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 938950207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &944487749
 GameObject:
   m_ObjectHideFlags: 0
@@ -9187,8 +9513,8 @@ Transform:
   m_LocalPosition: {x: 364.72, y: 4.799999, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 19
+  m_Father: {fileID: 401959480}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &996013258
 MonoBehaviour:
@@ -9742,6 +10068,8 @@ GameObject:
   - component: {fileID: 1062914646}
   - component: {fileID: 1062914645}
   - component: {fileID: 1062914644}
+  - component: {fileID: 1062914648}
+  - component: {fileID: 1062914647}
   m_Layer: 0
   m_Name: Agent (4)
   m_TagString: AnubisMumien
@@ -9756,11 +10084,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1062914642}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 205.3, y: 0.92, z: -5.2553167}
+  m_LocalPosition: {x: 205.3, y: 0.91999817, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 10
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1062914644
 MonoBehaviour:
@@ -9857,6 +10185,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1062914647
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1062914642}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &1062914648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1062914642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &1096234041
 GameObject:
   m_ObjectHideFlags: 0
@@ -11016,11 +11383,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1282529844}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 311.6, y: 4.96, z: -5.2553167}
+  m_LocalPosition: {x: 311.6, y: 4.959999, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 14
+  m_Father: {fileID: 401959480}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1282529846
 MonoBehaviour:
@@ -12101,6 +12468,8 @@ GameObject:
   - component: {fileID: 1348894989}
   - component: {fileID: 1348894988}
   - component: {fileID: 1348894987}
+  - component: {fileID: 1348894991}
+  - component: {fileID: 1348894990}
   m_Layer: 0
   m_Name: Agent (2)
   m_TagString: AnubisMumien
@@ -12115,11 +12484,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348894985}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 83.46, y: 0.95, z: -5.2553167}
+  m_LocalPosition: {x: 83.46, y: 0.95000076, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 2
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1348894987
 MonoBehaviour:
@@ -12216,6 +12585,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1348894990
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1348894985}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &1348894991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1348894985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &1355633156
 GameObject:
   m_ObjectHideFlags: 0
@@ -12352,6 +12760,8 @@ GameObject:
   - component: {fileID: 1355694455}
   - component: {fileID: 1355694454}
   - component: {fileID: 1355694453}
+  - component: {fileID: 1355694457}
+  - component: {fileID: 1355694456}
   m_Layer: 0
   m_Name: Agent (4)
   m_TagString: AnubisMumien
@@ -12366,11 +12776,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1355694451}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 359.58, y: 0.91, z: -5.2553167}
+  m_LocalPosition: {x: 359.58, y: 0.90999985, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 17
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1355694453
 MonoBehaviour:
@@ -12467,6 +12877,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1355694456
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1355694451}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &1355694457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1355694451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &1359445197
 GameObject:
   m_ObjectHideFlags: 0
@@ -12908,10 +13357,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1372815889}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 284.59, y: 4.8, z: -5.2553167}
+  m_LocalPosition: {x: 284.59, y: 4.799999, z: -5.2553167}
   m_LocalScale: {x: 0.32754502, y: 0.32754502, z: 0.32754502}
   m_Children: []
-  m_Father: {fileID: 1594190586}
+  m_Father: {fileID: 401959480}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1372815894
@@ -13630,6 +14079,8 @@ GameObject:
   - component: {fileID: 1462645300}
   - component: {fileID: 1462645299}
   - component: {fileID: 1462645298}
+  - component: {fileID: 1462645302}
+  - component: {fileID: 1462645301}
   m_Layer: 0
   m_Name: Agent (8)
   m_TagString: AnubisMumien
@@ -13644,11 +14095,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1462645296}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 379.1, y: 0.88, z: -5.2553167}
+  m_LocalPosition: {x: 379.1, y: 0.88000107, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 8
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1462645298
 MonoBehaviour:
@@ -13745,6 +14196,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1462645301
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1462645296}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &1462645302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1462645296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &1472974970
 GameObject:
   m_ObjectHideFlags: 0
@@ -13954,6 +14444,8 @@ GameObject:
   - component: {fileID: 1493495965}
   - component: {fileID: 1493495964}
   - component: {fileID: 1493495963}
+  - component: {fileID: 1493495967}
+  - component: {fileID: 1493495966}
   m_Layer: 0
   m_Name: Agent (6)
   m_TagString: AnubisMumien
@@ -13968,11 +14460,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1493495961}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 336.22, y: 0.94, z: -5.2553167}
+  m_LocalPosition: {x: 336.22, y: 0.9399986, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 6
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1493495963
 MonoBehaviour:
@@ -14069,6 +14561,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1493495966
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1493495961}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &1493495967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1493495961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &1513610966
 GameObject:
   m_ObjectHideFlags: 0
@@ -14968,30 +15499,8 @@ Transform:
   m_LocalPosition: {x: -70.5, y: -56.29, z: 5.2553167}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1372815893}
-  - {fileID: 88130548}
-  - {fileID: 1348894986}
-  - {fileID: 1906913247}
-  - {fileID: 2080656612}
-  - {fileID: 938950208}
-  - {fileID: 1493495962}
-  - {fileID: 194851348}
-  - {fileID: 1462645297}
-  - {fileID: 582023039}
-  - {fileID: 1062914643}
-  - {fileID: 2100826044}
-  - {fileID: 792232719}
-  - {fileID: 1629461771}
-  - {fileID: 1282529845}
-  - {fileID: 2016595049}
-  - {fileID: 804315181}
-  - {fileID: 1355694452}
-  - {fileID: 2141281829}
-  - {fileID: 996013257}
-  - {fileID: 361191652}
-  - {fileID: 550786866}
-  - {fileID: 352105425}
-  - {fileID: 818712818}
+  - {fileID: 401959480}
+  - {fileID: 815762175}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15076,6 +15585,8 @@ GameObject:
   - component: {fileID: 1629461774}
   - component: {fileID: 1629461773}
   - component: {fileID: 1629461772}
+  - component: {fileID: 1629461776}
+  - component: {fileID: 1629461775}
   m_Layer: 0
   m_Name: Agent (12)
   m_TagString: AnubisMumien
@@ -15090,11 +15601,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1629461770}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 250.69, y: 0.92, z: -5.2553167}
+  m_LocalPosition: {x: 250.69, y: 0.91999817, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 13
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1629461772
 MonoBehaviour:
@@ -15191,6 +15702,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1629461775
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629461770}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &1629461776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629461770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &1634961918
 GameObject:
   m_ObjectHideFlags: 0
@@ -16646,6 +17196,8 @@ GameObject:
   - component: {fileID: 1906913250}
   - component: {fileID: 1906913249}
   - component: {fileID: 1906913248}
+  - component: {fileID: 1906913252}
+  - component: {fileID: 1906913251}
   m_Layer: 0
   m_Name: Agent (3)
   m_TagString: AnubisMumien
@@ -16660,11 +17212,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1906913246}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 127.67, y: 0.92, z: -5.2553167}
+  m_LocalPosition: {x: 127.67, y: 0.91999817, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 3
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1906913248
 MonoBehaviour:
@@ -16761,6 +17313,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1906913251
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1906913246}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &1906913252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1906913246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &1907685076
 GameObject:
   m_ObjectHideFlags: 0
@@ -17753,11 +18344,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2016595048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 325.71, y: 4.4, z: -5.2553167}
+  m_LocalPosition: {x: 325.71, y: 4.4000015, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 15
+  m_Father: {fileID: 401959480}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2016595050
 MonoBehaviour:
@@ -18527,6 +19118,8 @@ GameObject:
   - component: {fileID: 2080656615}
   - component: {fileID: 2080656614}
   - component: {fileID: 2080656613}
+  - component: {fileID: 2080656617}
+  - component: {fileID: 2080656616}
   m_Layer: 0
   m_Name: Agent (4)
   m_TagString: AnubisMumien
@@ -18541,11 +19134,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2080656611}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 209.22, y: 0.97, z: -5.2553167}
+  m_LocalPosition: {x: 209.22, y: 0.9700012, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 4
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &2080656613
 MonoBehaviour:
@@ -18642,6 +19235,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2080656616
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2080656611}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &2080656617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2080656611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &2100826043
 GameObject:
   m_ObjectHideFlags: 0
@@ -18653,6 +19285,8 @@ GameObject:
   - component: {fileID: 2100826047}
   - component: {fileID: 2100826046}
   - component: {fileID: 2100826045}
+  - component: {fileID: 2100826049}
+  - component: {fileID: 2100826048}
   m_Layer: 0
   m_Name: Agent (10)
   m_TagString: AnubisMumien
@@ -18667,11 +19301,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2100826043}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 212.15, y: 0.95, z: -5.2553167}
+  m_LocalPosition: {x: 212.15, y: 0.95000076, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 11
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &2100826045
 MonoBehaviour:
@@ -18768,6 +19402,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2100826048
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2100826043}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &2100826049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2100826043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &2104356669
 GameObject:
   m_ObjectHideFlags: 0
@@ -19071,6 +19744,8 @@ GameObject:
   - component: {fileID: 2141281832}
   - component: {fileID: 2141281831}
   - component: {fileID: 2141281830}
+  - component: {fileID: 2141281834}
+  - component: {fileID: 2141281833}
   m_Layer: 0
   m_Name: Agent (13)
   m_TagString: AnubisMumien
@@ -19088,8 +19763,8 @@ Transform:
   m_LocalPosition: {x: 366.15, y: 0.90999985, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
   m_Children: []
-  m_Father: {fileID: 1594190586}
-  m_RootOrder: 18
+  m_Father: {fileID: 815762175}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &2141281830
 MonoBehaviour:
@@ -19186,6 +19861,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2141281833
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2141281828}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.419998, y: 28.44}
+    newSize: {x: 20.419998, y: 28.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.419998, y: 28.44}
+  m_EdgeRadius: 0
+--- !u!114 &2141281834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2141281828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  damageRate: 2
+  pushBackforce: 0
 --- !u!1 &2147437217
 GameObject:
   m_ObjectHideFlags: 0
