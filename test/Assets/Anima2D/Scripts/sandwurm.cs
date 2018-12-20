@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class sandwurm : MonoBehaviour {
 
+
+    // 1  rechts herum sonst links 
+    public int r;
+    public int speed;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,7 +16,13 @@ public class sandwurm : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        transform.Rotate(0,0,1);
-
-	}
+        if (r == 1)
+        {
+            transform.Rotate(0, 0, -speed);
+        }
+        else if (r != 1)
+        {
+            transform.Rotate(0, 0, speed);
+        }
+    }
 }
