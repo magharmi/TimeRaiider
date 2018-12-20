@@ -1957,6 +1957,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1705612867}
+  - {fileID: 1053546256}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2207,7 +2208,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1861607900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -63.836, y: -55.284, z: 0}
+  m_LocalPosition: {x: -67.24, y: -55.36, z: 0}
   m_LocalScale: {x: 3.6948934, y: 3.1006372, z: 1.61}
   m_Children:
   - {fileID: 1855777331}
@@ -5427,6 +5428,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1053546255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1053546256}
+  - component: {fileID: 1053546258}
+  - component: {fileID: 1053546257}
+  m_Layer: 0
+  m_Name: DialogLandherr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1053546256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1053546255}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 150, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 439301121}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1053546257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1053546255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b77283281094946b5cbcbb6e84c53f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neuesZielErstellen: 0
+  spielerEinfrieren: 1
+  idleSprite: {fileID: 21300000, guid: d7f4c7d7ce88e074d8f72e65b9f145d5, type: 3}
+  altesZiel: {fileID: 0}
+  neuesZiel: {fileID: 0}
+  dialogue:
+    name: Dialog
+    sentences:
+    - "Landherr: \"Erst betrittst du mein Land! Und dann t\xF6test du meine Sklaven?\""
+    - "Landherr: \"DAF\xDCR WIRST DU BEZAHLEN!\""
+  trigger: {fileID: 1053546255}
+--- !u!61 &1053546258
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1053546255}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -3.720848}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 8.441696}
+  m_EdgeRadius: 0
 --- !u!1 &1062756766
 GameObject:
   m_ObjectHideFlags: 0
@@ -8596,11 +8674,11 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: RoboBoy
+    name: Dialog
     sentences:
-    - Wo bin ich schon wieder? Und wer bist du?
-    - Du bist hier auf meinem Land! Du hast hier nichts zu suchen!
-    - Sklaven! GREIFT AN!
+    - 'Ich: "Wo bin ich dieses Mal gelandet? Und wer bist du?"'
+    - 'Landherr: "Du bist hier auf meinem Land! Du hast hier nichts zu suchen!"'
+    - 'Landherr: "Sklaven! ERGREIFT IHN!"'
   trigger: {fileID: 1705612866}
 --- !u!61 &1705612869
 BoxCollider2D:

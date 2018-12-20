@@ -260,7 +260,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 18424595}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.54, y: 0, z: 0}
+  m_LocalPosition: {x: 8.97, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 29402718}
@@ -283,10 +283,11 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: RoboBoy
+    name: Dialog
     sentences:
-    - Grossvater!
-    - Peter! Hilf mir!
+    - "Ich: \"Gro\xDFvater, geht es dir gut?\""
+    - "Gro\xDFvater: \"Ja, beeil dich. Ich wusste du schafst es rechtzeitig zur\xFCck.
+      Sie versuchen Gro\xDFmutter zu entf\xFChren!\""
   trigger: {fileID: 18424595}
 --- !u!61 &18424598
 BoxCollider2D:
@@ -940,7 +941,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 120173827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.04, y: 0, z: 0}
+  m_LocalPosition: {x: 6.94, y: -0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 29402718}
@@ -958,14 +959,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neuesZielErstellen: 0
-  spielerEinfrieren: 0
+  spielerEinfrieren: 1
   idleSprite: {fileID: 21300000, guid: 85be9c17c01908f41b5ef90547d4ea45, type: 3}
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: RoboBoy
+    name: Dialog
     sentences:
-    - "Endlich Daheim. Ich muss mich auf den Weg machen, bevor es zu sp\xE4t ist."
+    - "Ich: \"Endlich habe ich es zur\xFCck in meine Zeit geschaft. Ich muss mich
+      beeilen die TMA wird jeden Moment angreifen.\""
   trigger: {fileID: 120173827}
 --- !u!61 &120173830
 BoxCollider2D:
