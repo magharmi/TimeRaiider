@@ -236,7 +236,7 @@ Transform:
   m_LocalScale: {x: -2.3362663, y: -16.919697, z: -1.235973}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &16810467
 GameObject:
@@ -5121,7 +5121,7 @@ Transform:
   - {fileID: 761582629}
   - {fileID: 514375381}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &55683416
 GameObject:
@@ -6111,84 +6111,8 @@ Transform:
   m_Children:
   - {fileID: 1705374229}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &197786262
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 197786263}
-  - component: {fileID: 197786265}
-  - component: {fileID: 197786264}
-  m_Layer: 0
-  m_Name: StartDialogTrigger (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &197786263
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 197786262}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 296.81, y: -4.13, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 641307658}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &197786264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 197786262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52b77283281094946b5cbcbb6e84c53f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  neuesZielErstellen: 0
-  spielerEinfrieren: 0
-  idleSprite: {fileID: 0}
-  altesZiel: {fileID: 0}
-  neuesZiel: {fileID: 0}
-  dialogue:
-    name: RoboBoy
-    sentences:
-    - Genug Steine werde ich nicht finden, um aus dieser Grube rrauszukommen.
-  trigger: {fileID: 197786262}
---- !u!61 &197786265
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 197786262}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -11.888481}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 24.776966}
-  m_EdgeRadius: 0
 --- !u!1 &214532274
 GameObject:
   m_ObjectHideFlags: 0
@@ -7102,7 +7026,7 @@ Transform:
   - {fileID: 1304931759}
   - {fileID: 655730312}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &370697041
 GameObject:
@@ -7868,11 +7792,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 381386458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 487, y: 40.68, z: 0}
+  m_LocalPosition: {x: 476.45, y: 40.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641307658}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &381386460
 MonoBehaviour:
@@ -7891,10 +7815,9 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: "Dorfw\xE4chter"
+    name: Dialog
     sentences:
-    - FEIND! FEIND! Waffe lassen fallen oder du tot!
-    - "***Dr\xFCcke F, um die Waffe fallen zu lassen***"
+    - "Ich: \"Ein Dorf? Vielleicht k\xF6nnen sie mir helfen\""
   trigger: {fileID: 381386458}
 --- !u!61 &381386461
 BoxCollider2D:
@@ -7968,10 +7891,10 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: RoboBoy
+    name: Dialog
     sentences:
-    - "So viel Gr\xFCnfl\xE4che habe ich schon lange nicht mehr gesehen. Ob das die
-      Zukunft ist?"
+    - "Ich: \"So viel Gr\xFCnfl\xE4che habe ich schon lange nicht mehr gesehen. Ob
+      das die Zukunft ist?\""
   trigger: {fileID: 385904097}
 --- !u!61 &385904100
 BoxCollider2D:
@@ -9312,7 +9235,7 @@ Transform:
   - {fileID: 1452955187}
   - {fileID: 741003195}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &566834482
 GameObject:
@@ -9749,7 +9672,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 526.6475, y: 25.309774}
+  m_Size: {x: 526.6475, y: 17.07437}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -9762,7 +9685,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 586031031}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.258, y: -9.74096, z: 15.06}
+  m_LocalPosition: {x: 7.258, y: -10.0762, z: 15.06}
   m_LocalScale: {x: 0.05663712, y: 0.08141024, z: 1}
   m_Children: []
   m_Father: {fileID: 1172290185}
@@ -9893,7 +9816,7 @@ Transform:
   - {fileID: 481695275}
   - {fileID: 529833951}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &605352670
 GameObject:
@@ -9964,7 +9887,7 @@ RectTransform:
   - {fileID: 1582954458}
   - {fileID: 35605029}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -10289,16 +10212,14 @@ Transform:
   - {fileID: 1155311874}
   - {fileID: 1863465432}
   - {fileID: 385904098}
-  - {fileID: 976026690}
-  - {fileID: 1428141047}
   - {fileID: 783848867}
   - {fileID: 925076863}
   - {fileID: 2049139023}
-  - {fileID: 197786263}
   - {fileID: 1832367867}
   - {fileID: 381386459}
+  - {fileID: 1787512794}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &643590732
 GameObject:
@@ -10676,7 +10597,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 654323431}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.12, y: -0.069999695, z: 0}
+  m_LocalPosition: {x: -4.79, y: -0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641307658}
@@ -10699,11 +10620,12 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: RoboBoy
+    name: Dialog
     sentences:
-    - "Die Zeitmaschine sieht nicht funktionst\xFCchtig aus. Ich hoffe ich befinde
-      mich in der Zukunft und kann schnell Ersatzteile besorgen."
-    - Am besten suche ich erstmal den Weg hier raus.
+    - "Ich: \"Die Zeitmaschine sieht nicht funktionst\xFCchtig aus. Sie scheint zu
+      wenig Energie zu haben.\""
+    - 'Ich: "Hoffentlich finde ich hier eine Energiezelle. Am besten suche ich erstmal
+      den Weg hier raus."'
   trigger: {fileID: 654323431}
 --- !u!61 &654323434
 BoxCollider2D:
@@ -11296,12 +11218,12 @@ Transform:
   m_Children:
   - {fileID: 966314454}
   - {fileID: 1905773173}
-  - {fileID: 237674003}
-  - {fileID: 1009680453}
   - {fileID: 974793512}
+  - {fileID: 1009680453}
+  - {fileID: 237674003}
   - {fileID: 1146192602}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &715454453
 GameObject:
@@ -11733,7 +11655,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641307658}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &783848868
 MonoBehaviour:
@@ -11752,9 +11674,9 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: RoboBoy
+    name: Dialog
     sentences:
-    - Ein Raptor?! Ich bin verloren...
+    - 'Ich: "Ein Raptor? Ich muss mich in der Steinzeit befinden!"'
     - '***Klicke auf die linke Maustaste, um Steine zu werfen***'
   trigger: {fileID: 783848866}
 --- !u!61 &783848869
@@ -12221,7 +12143,7 @@ Transform:
   - {fileID: 593570775}
   - {fileID: 573951764}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &867146960
 Prefab:
@@ -12423,7 +12345,7 @@ Transform:
   - {fileID: 1029368644}
   - {fileID: 28527936}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &875360456
 GameObject:
@@ -13292,7 +13214,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641307658}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &925076864
 MonoBehaviour:
@@ -13311,7 +13233,7 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: RoboBoy
+    name: Hinweis
     sentences:
     - "***Halte STRG gedr\xFCckt, um zu kriechen***"
   trigger: {fileID: 925076862}
@@ -13672,7 +13594,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4725176284770776, guid: 2467e375ca4059345955319796174d60, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4725176284770776, guid: 2467e375ca4059345955319796174d60, type: 2}
       propertyPath: m_LocalScale.x
@@ -13744,83 +13666,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4725176284770776, guid: 2467e375ca4059345955319796174d60,
     type: 2}
   m_PrefabInternal: {fileID: 974793511}
---- !u!1 &976026689
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 976026690}
-  - component: {fileID: 976026692}
-  - component: {fileID: 976026691}
-  m_Layer: 0
-  m_Name: StartDialogTrigger (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &976026690
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 976026689}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 54.96, y: 17.470001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 641307658}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &976026691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 976026689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52b77283281094946b5cbcbb6e84c53f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  neuesZielErstellen: 0
-  spielerEinfrieren: 0
-  idleSprite: {fileID: 0}
-  altesZiel: {fileID: 0}
-  neuesZiel: {fileID: 0}
-  dialogue:
-    name: RoboBoy
-    sentences:
-    - "Unbewaffnet und alleine im Nirgendo. Ich sollte die Steine mitnehmen. Man wei\xDF
-      ja nie..."
-  trigger: {fileID: 976026689}
---- !u!61 &976026692
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 976026689}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -3.720848}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 8.441696}
-  m_EdgeRadius: 0
 --- !u!1 &979292129
 GameObject:
   m_ObjectHideFlags: 0
@@ -14787,7 +14632,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4725176284770776, guid: 2467e375ca4059345955319796174d60, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4725176284770776, guid: 2467e375ca4059345955319796174d60, type: 2}
       propertyPath: m_LocalScale.x
@@ -15431,7 +15276,7 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: RoboBoy
+    name: Hinweis
     sentences:
     - "***Dr\xFCcke LEERTASTE, um zu springen***"
   trigger: {fileID: 1155311873}
@@ -15659,7 +15504,7 @@ Transform:
   - {fileID: 1552174601}
   - {fileID: 1069802118}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1176896663
 Prefab:
@@ -16807,7 +16652,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4725176284770776, guid: 2467e375ca4059345955319796174d60, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4725176284770776, guid: 2467e375ca4059345955319796174d60, type: 2}
       propertyPath: m_LocalScale.x
@@ -17096,7 +16941,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4725176284770776, guid: 2467e375ca4059345955319796174d60, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4725176284770776, guid: 2467e375ca4059345955319796174d60, type: 2}
       propertyPath: m_LocalScale.x
@@ -18119,82 +17964,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1421409402}
   m_CullTransparentMesh: 0
---- !u!1 &1428141046
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1428141047}
-  - component: {fileID: 1428141049}
-  - component: {fileID: 1428141048}
-  m_Layer: 0
-  m_Name: StartDialogTrigger (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1428141047
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1428141046}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 64.89, y: 17.470001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 641307658}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1428141048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1428141046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52b77283281094946b5cbcbb6e84c53f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  neuesZielErstellen: 0
-  spielerEinfrieren: 0
-  idleSprite: {fileID: 0}
-  altesZiel: {fileID: 0}
-  neuesZiel: {fileID: 0}
-  dialogue:
-    name: RoboBoy
-    sentences:
-    - "***Erkl\xE4rung zum Coin***"
-  trigger: {fileID: 1428141046}
---- !u!61 &1428141049
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1428141046}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -3.720848}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 8.441696}
-  m_EdgeRadius: 0
 --- !u!1001 &1440170294
 Prefab:
   m_ObjectHideFlags: 0
@@ -18232,7 +18001,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4725176284770776, guid: 2467e375ca4059345955319796174d60, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4725176284770776, guid: 2467e375ca4059345955319796174d60, type: 2}
       propertyPath: m_LocalScale.x
@@ -18330,7 +18099,7 @@ Transform:
   - {fileID: 852287977}
   - {fileID: 1762954477}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1452697822
 GameObject:
@@ -18932,7 +18701,7 @@ RectTransform:
   m_Children:
   - {fileID: 388396192}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -19087,7 +18856,7 @@ Transform:
   - {fileID: 1727379379}
   - {fileID: 1559507538}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1527198626
 GameObject:
@@ -19707,7 +19476,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1570008390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.97, y: -0.07, z: 0}
+  m_LocalPosition: {x: -7.19, y: -0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641307658}
@@ -19730,12 +19499,13 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: RoboBoy
+    name: Dialog
     sentences:
     - "***Klick auf die rechte Maustaste, um Dialoge fortzuf\xFChren***"
-    - Ich werd noch behindert. Wo bin ich hier? Was denkt sich mein Vater, mich in
-      die Zeitschmaschine zu schubsen?!
-    - "Ich sollte mich mal umsehen und so schnell wie m\xF6glich zur\xFCck."
+    - "Ich: \"Wo bin ich hier gelandet? Ich dachte Gro\xDFvaters Geschichten \xFCber
+      Zeitmaschinen seien erfunden.\""
+    - 'Ich: "Wie bediene ich denn die Zeitmaschine und in welcher Zeit bin ich wohl
+      gelandet?"'
     - '***Benutze W A S D, um dich zu bewegen.***'
   trigger: {fileID: 1570008390}
 --- !u!61 &1570008393
@@ -21690,6 +21460,84 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1763466940}
   m_CullTransparentMesh: 0
+--- !u!1 &1787512793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787512794}
+  - component: {fileID: 1787512796}
+  - component: {fileID: 1787512795}
+  m_Layer: 0
+  m_Name: StartDialogTrigger (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1787512794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1787512793}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 487, y: 40.68, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 641307658}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1787512795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1787512793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b77283281094946b5cbcbb6e84c53f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neuesZielErstellen: 0
+  spielerEinfrieren: 1
+  idleSprite: {fileID: 0}
+  altesZiel: {fileID: 0}
+  neuesZiel: {fileID: 0}
+  dialogue:
+    name: Dialog
+    sentences:
+    - 'Dorfbewohner: "ALARM! Wer du? Was tun?"'
+    - 'Ich: "Ich komme in Frieden! Ich nett!"'
+    - 'Dorfbewohner: "Dann rein kommen!"'
+  trigger: {fileID: 1787512793}
+--- !u!61 &1787512796
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1787512793}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -3.720848}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 8.441696}
+  m_EdgeRadius: 0
 --- !u!1 &1790799161
 GameObject:
   m_ObjectHideFlags: 0
@@ -21887,7 +21735,7 @@ Transform:
   - {fileID: 1254671895}
   - {fileID: 1264546591}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796139348
 GameObject:
@@ -22579,7 +22427,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641307658}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1832367868
 MonoBehaviour:
@@ -22598,9 +22446,9 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: RoboBoy
+    name: Dialog
     sentences:
-    - Ich darf auf keinen Fall hier runterfallen.
+    - 'Ich: "Das sieht sehr tief auf ich sollte aufpassen."'
   trigger: {fileID: 1832367866}
 --- !u!61 &1832367869
 BoxCollider2D:
@@ -22839,9 +22687,10 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: RoboBoy
+    name: Dialog
     sentences:
-    - Der Felsen ist riesig. Ich brauche etwas, um mich drauf zu stellen.
+    - "Ich: \"Der Felsen ist zu gro\xDF, da komme ich niemals hoch. Vielleicht finde
+      ich etwas wo ich mich draufstellen kann.\""
   trigger: {fileID: 1863465431}
 --- !u!61 &1863465434
 BoxCollider2D:
@@ -22855,7 +22704,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.44221115, y: -7.7584457}
+  m_Offset: {x: -1.8047829, y: -6.439827}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -22866,7 +22715,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8844223, y: 0.36650085}
+  m_Size: {x: 1.3569756, y: 3.0037384}
   m_EdgeRadius: 0
 --- !u!1 &1867576292
 GameObject:
@@ -24133,7 +23982,7 @@ Transform:
   m_Children:
   - {fileID: 272228743}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2036058483
 GameObject:
@@ -24356,7 +24205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641307658}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2049139024
 MonoBehaviour:
@@ -24375,9 +24224,9 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: RoboBoy
+    name: Dialog
     sentences:
-    - Der Baumstamm sieht nicht stabil aus.
+    - 'Ich: "Der Baumstamm sieht nicht sehr stabil aus."'
   trigger: {fileID: 2049139022}
 --- !u!61 &2049139025
 BoxCollider2D:
@@ -24640,7 +24489,7 @@ Transform:
   - {fileID: 2053859265}
   - {fileID: 73539969}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2082567558
 Prefab:
@@ -25432,7 +25281,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2125677533
 GameObject:
@@ -25532,11 +25381,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -59.29
+      value: -62.46
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -106.031
+      value: -105.95
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.z
@@ -25724,5 +25573,5 @@ Transform:
   - {fileID: 627972593}
   - {fileID: 2114347110}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
