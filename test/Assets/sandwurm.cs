@@ -11,6 +11,8 @@ public class sandwurm : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+        transform.Rotate(5,0,0);
+
 	}
 }
