@@ -596,7 +596,7 @@ RectTransform:
   m_Children:
   - {fileID: 1838598250}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -761,7 +761,7 @@ RectTransform:
   m_Children:
   - {fileID: 1671661755}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -944,16 +944,18 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 827946522}
   dialogue:
-    name: RoboBoy
+    name: Dialog
     sentences:
-    - "Ich habe den Kampf vom Turm aus beobachtet. Ohne dich h\xE4tten wir es niemals
-      geschafft. Vielen Dank."
-    - "Kein Problem! Mir rennt allerdings die Zeit davon. K\xF6nnen Sie mir jetzt
-      bei meinem Problem helfen?"
-    - Ich hoffe doch. Wir besitzen ein altes Pergament. Dieser leuchtende Gegenstand
-      wurde dem letzten Kaiser ins Grab beigelegt. Wir wissen nicht, was es ist. Die
-      Pyramide ist voller Fallen. Keiner traut sich dort hinein. Sie befindet sich
-      gleich westlich von hier.
+    - "B\xFCrgermeister: \"Ich habe den Kampf vom Turm aus beobachtet. Ohne dich h\xE4tten
+      wir es niemals geschafft. Vielen Dank.\""
+    - "Ich: \"Kein Problem! Eine Hand w\xE4scht die Andere. K\xF6nnen Sie mir jetzt
+      bei meinem Problem helfen?\""
+    - "B\xFCrgermeister: \"Wir besitzen ein altes Pergament. Auf diesem steht geschrieben
+      das ein leuchtender Gegenstand dem letzten Kaiser ins Grab beigelegt wurde.\""
+    - "B\xFCrgermeister: \" Wir wissen nicht, was es ist, doch es klingt als k\xF6nnte
+      es etws f\xFCr dich sein. Doch die Pyramide ist sehr gef\xE4hrlich. Sie befindet
+      sich gleich westlich von hier.\""
+    - "Ich: \"Ich werde mein Gl\xFCck versuchen.\""
   trigger: {fileID: 301649868}
 --- !u!61 &301649871
 BoxCollider2D:
@@ -1018,7 +1020,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &316702963
 GameObject:
@@ -1335,7 +1337,7 @@ Transform:
   m_Children:
   - {fileID: 301649869}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &428131658
 GameObject:
@@ -1366,7 +1368,7 @@ Transform:
   - {fileID: 899780708}
   - {fileID: 797013132}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &516113538
 GameObject:
@@ -1804,7 +1806,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &680345877
 GameObject:
@@ -2334,7 +2336,7 @@ Transform:
   - {fileID: 516113539}
   - {fileID: 523868327}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &970226351
 GameObject:
@@ -2417,7 +2419,7 @@ Transform:
   m_Children:
   - {fileID: 2101737623}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1029122266
 GameObject:
@@ -2515,7 +2517,7 @@ Transform:
   - {fileID: 61985173}
   - {fileID: 22711251}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1107316978
 GameObject:
@@ -3205,7 +3207,7 @@ Transform:
   - {fileID: 2133803332}
   - {fileID: 1883888870}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1416706914
 GameObject:
@@ -4748,7 +4750,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_TagString
