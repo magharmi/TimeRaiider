@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TransformersKampf : MonoBehaviour
 {
@@ -62,7 +63,7 @@ public class TransformersKampf : MonoBehaviour
         else if (russe.GetComponent<GegnerAI>().leben <= 0)
         {
             russe.GetComponent<GegnerAI>().enabled = false;
-            GameObject.Find("RusseEnde").GetComponent<BoxCollider2D>().enabled = true;
+            SceneManager.LoadScene("Abspann");
         }
 
         if (hochGeflogen == false)
