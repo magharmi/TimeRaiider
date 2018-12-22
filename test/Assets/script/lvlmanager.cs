@@ -9,9 +9,8 @@ public class lvlmanager : MonoBehaviour
 
     //checkpoint
     public GameObject currentCheckpoint;
-    public GameObject spieler;
+    private GameObject spieler;
     public GameObject GameOverUI;
-
     private DialogueManager dialogueManager;
     private bool gehitted = false;
 

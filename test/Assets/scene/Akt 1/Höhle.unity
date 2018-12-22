@@ -3389,8 +3389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCheckpoint: {fileID: 0}
-  spieler: {fileID: 0}
-  GameOverUI: {fileID: 0}
+  GameOverUI: {fileID: 1481416984}
 --- !u!4 &162873366
 Transform:
   m_ObjectHideFlags: 0
@@ -12512,11 +12511,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 222.3
+      value: 223.9
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -108.1
+      value: -109.64
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12710,7 +12709,8 @@ Prefab:
       propertyPath: geschlagenScreen
       value: 
       objectReference: {fileID: 1736286356}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114608402507825908, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &619535480
@@ -20002,7 +20002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletspawn: {fileID: 999320793}
-  bulletPrefab: {fileID: 50020589205098800, guid: a41063465c2bbc448bbde16217075daf,
+  bulletPrefab: {fileID: 50219311634563828, guid: 06f7dbebc23fac64dbd11bbff1f7f459,
     type: 2}
   bulletSpeed: 750
   player: {fileID: 1494403427}
@@ -21373,7 +21373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletspawn: {fileID: 1082496716}
-  bulletPrefab: {fileID: 50020589205098800, guid: a41063465c2bbc448bbde16217075daf,
+  bulletPrefab: {fileID: 50219311634563828, guid: 06f7dbebc23fac64dbd11bbff1f7f459,
     type: 2}
   bulletSpeed: 750
   player: {fileID: 20213762}
@@ -29081,7 +29081,7 @@ GameObject:
   - component: {fileID: 1481416986}
   m_Layer: 5
   m_Name: GameOverUI
-  m_TagString: Untagged
+  m_TagString: GameOverUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
