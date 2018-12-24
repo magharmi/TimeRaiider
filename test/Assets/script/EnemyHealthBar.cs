@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class EnemyHealthBar : MonoBehaviour {
     public float enemyMaxHealth;
+    public bool drops;
+    public GameObject lebenOderGeld;
     // public GameObject enemyDeathFX;
     //Animator enemyAnimator;
       public Slider enemySlider;
    // public Transform pos;
     //public GameObject blut;
-    float currentHealth;
+   private float currentHealth;
 
 	// Use this for initialization
 	void Start () {
@@ -43,6 +45,8 @@ public class EnemyHealthBar : MonoBehaviour {
      //   enemyAnimator.SetBool("isDead", true);
        
        Destroy(gameObject);
-     // Instantiate(enemyDeathFX, transform.position, transform.rotation);
+        // Instantiate(enemyDeathFX, transform.position, transform.rotation);
+        if (drops)
+            Instantiate(lebenOderGeld, transform.position, transform.rotation);
     }
 }

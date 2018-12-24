@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4907399299696948}
   - component: {fileID: 50264568634552570}
-  - component: {fileID: 114712329630044198}
   - component: {fileID: 114490177939494878}
   - component: {fileID: 114153274938435386}
+  - component: {fileID: 114438195838891210}
   m_Layer: 0
   m_Name: PfeilPos 1 1 (1)
   m_TagString: Untagged
@@ -169,7 +169,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d8e6fb213a720349abed363837a2d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponDamage: 10
+  damage: 5
+--- !u!114 &114438195838891210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1292246170674996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5f7132f38700c4ca122e2e6a22cbca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 2
 --- !u!114 &114490177939494878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,18 +194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfeilSpeed: 15
---- !u!114 &114712329630044198
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1292246170674996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae5f7132f38700c4ca122e2e6a22cbca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeTime: 2
 --- !u!114 &114880578770348058
 MonoBehaviour:
   m_ObjectHideFlags: 1

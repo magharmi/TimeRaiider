@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SteinHit : MonoBehaviour {
+   
+     //public int weaponDamage;
+    public int damage;
+    // projectileController myPc;
+    // public GameObject steinEffekt;
 
-     public float weaponDamage;
-  // projectileController myPc;
-  // public GameObject steinEffekt;
-	
-        void Awake()
+    void Awake()
     {
         //myPc = GetComponentInParent< projectileController >();
     }
@@ -29,12 +30,11 @@ public class SteinHit : MonoBehaviour {
         {
             // myPc.removeForce();
             //Instantiate(steinEffect, transform.position, transform.rotation);
-            //Destroy(gameObject);
-            if(other.tag == "Enemy")
-            {
-                EnemyHealthBar hurtEnemy = other.gameObject.GetComponent<EnemyHealthBar>();
-                hurtEnemy.addDamage(weaponDamage);
-            }
+            Destroy(gameObject);
+            EnemyHealthBar hurtEnemy = other.gameObject.GetComponent<EnemyHealthBar>();
+
+            hurtEnemy.GetComponent<EnemyHealthBar>().addDamage(damage);
+            
         }
     }
     void OnTriggerStay2D(Collider2D other)
@@ -43,11 +43,12 @@ public class SteinHit : MonoBehaviour {
         {
             // myPc.removeForce();
             //Instantiate(steinEffect, transform.position, transform.rotation);
-            //Destroy(gameObject);
+            Destroy(gameObject);
             if (other.tag == "Enemy")
             {
                 EnemyHealthBar hurtEnemy = other.gameObject.GetComponent<EnemyHealthBar>();
-                hurtEnemy.addDamage(weaponDamage);
+                //hurtEnemy.addDamage(weaponDamage);
+                hurtEnemy.GetComponent<EnemyHealthBar>().addDamage(damage);
             }
         }
     }

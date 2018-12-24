@@ -38,7 +38,7 @@ public class PlatformerCharacter : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-            // anim.SetTrigger("isArmbrust");
+             m_Anim.SetTrigger("isArm");
             Armbrust();
 
         }
