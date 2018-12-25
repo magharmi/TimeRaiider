@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spieler_Wierd_Verletzt : MonoBehaviour {
+public class Spieler_Wierd_Verletzt_Feind : MonoBehaviour {
+
     public float damage;
     public float damageRate;
     public float pushBackforce;
@@ -32,7 +33,8 @@ public class Spieler_Wierd_Verletzt : MonoBehaviour {
             Spieler_Leben spielerleben = other.gameObject.GetComponent<Spieler_Leben>();
             spielerleben.addDamage(damage);
             nextDamage = Time.time + damageRate;
-          
+            isAttack = true;
+            enemyAnimator.SetBool("isAttack", isAttack);
             PushBack(other.transform);
         }
     }
