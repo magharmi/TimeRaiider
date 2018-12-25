@@ -41,7 +41,8 @@ public class Kamikaze : MonoBehaviour
         }
         if (Vector2.Distance(transform.position, absturzPunkt) == 0)
         {
-            Destroy(gameObject);
+            
+             Destroy(gameObject);
         }
 
     }
@@ -60,7 +61,8 @@ public class Kamikaze : MonoBehaviour
 
     void OnCollisionEnter2D()
     {
+        
         Debug.Log("tot");
-        Destroy(gameObject);
+       Destroy(gameObject);
     }
 }

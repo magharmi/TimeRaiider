@@ -16,7 +16,7 @@ public class BrontoControll : MonoBehaviour
     float flipTime = 5f;
     float nextFlipChance = 0f;
 
-
+    Transform player;
 
     Vector3 localScale;
 
@@ -31,7 +31,8 @@ public class BrontoControll : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if ("Enemy" == null) return;
+        player = GameObject.FindGameObjectWithTag("spieler").transform;
+        
         localScale = transform.localScale;
 
         enemyAnimator = GetComponentInChildren<Animator>();
@@ -54,7 +55,7 @@ public class BrontoControll : MonoBehaviour
     {
         if (other.tag == "spieler")
         {
-            if (facingRight && other.transform.position.x < transform.position.x)
+            if (facingRight && other.transform.position.x < player.position.x)
             {
                 flipFacing();
             }
