@@ -31,7 +31,6 @@ public class BrontoControll : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
         if ("Enemy" == null) return;
         localScale = transform.localScale;
 
@@ -55,8 +54,7 @@ public class BrontoControll : MonoBehaviour
     {
         if (other.tag == "spieler")
         {
-          
-                if (facingRight && other.transform.position.x < transform.position.x)
+            if (facingRight && other.transform.position.x < transform.position.x)
             {
                 flipFacing();
             }
