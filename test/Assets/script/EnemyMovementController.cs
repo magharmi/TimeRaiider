@@ -57,7 +57,7 @@ public class EnemyMovementController : MonoBehaviour {
         
                 flipFacing();
         }
-            canFlip = false;
+          //  canFlip = false;
 
             charging = true;
             startChargeTime = Time.time + chargeTime;
@@ -70,12 +70,12 @@ public class EnemyMovementController : MonoBehaviour {
         if(other.tag == "spieler") {
            if(startChargeTime < Time.time){
                 if (!facingRight) enemyRB.AddForce(new Vector2(-1, 0) * enemySpeed);
-
+               
                 else enemyRB.AddForce(new Vector2(1, 0) * enemySpeed);
                enemyAnimator.SetBool("isFollow", charging);
-                
-               
-                  isAttack = true;
+                flipFacing();
+
+                isAttack = true;
                 enemyAnimator.SetBool("isAttack", isAttack);
             }
             
