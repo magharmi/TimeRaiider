@@ -11,10 +11,11 @@ public class GegnerAI : MonoBehaviour {
     public bool hit = true;
     public float weg = 6;
     public int leben = 100;
-    public Vector3 startPos;
-    public Vector3 newPos;
-    public Vector3 tempPos;
-    public SpriteRenderer sr;
+
+    private Vector3 startPos;
+    private Vector3 newPos;
+    private Vector3 tempPos;
+    private PolygonCollider2D pg;
 
     public Transform player;
 
@@ -24,7 +25,7 @@ public class GegnerAI : MonoBehaviour {
         Lvlmanager = FindObjectOfType<lvlmanager>();
         startPos = transform.position;
         newPos = startPos;
-        sr = gameObject.GetComponent<SpriteRenderer>();
+        pg = gameObject.GetComponent<PolygonCollider2D>();
     }
 
     // Update is called once per frame
@@ -38,12 +39,12 @@ public class GegnerAI : MonoBehaviour {
             //Bewegung positiv
             if (newPos.x > tempPos.x)
             {
-                sr.flipX = true;
+                transform.rotation = Quaternion.Euler(0, 180f, 0);
             }
             //Bewegung negativ
             else
             {
-                sr.flipX = false;
+                transform.rotation = Quaternion.Euler(0, 0, 0);
             }
 
             tempPos = newPos;
