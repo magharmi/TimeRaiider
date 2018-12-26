@@ -68,7 +68,7 @@ public class TransformersKampf : MonoBehaviour
 
         if (hochGeflogen == false)
         {
-            Debug.Log("FLIEG");
+            Debug.Log("Flieg nach oben");
             transformers.transform.position = Vector3.MoveTowards(transformers.transform.position, hochflugZiel, 10 * Time.deltaTime);
             if (Vector3.Distance(transformers.transform.position, hochflugZiel) == 0)
             {
@@ -79,6 +79,7 @@ public class TransformersKampf : MonoBehaviour
         }
         if (inMitte == false)
         {
+            Debug.Log("Flieg zur Mitte");
             transformers.transform.position = Vector3.MoveTowards(transformers.transform.position, new Vector3(115, transformers.transform.position.y, transformers.transform.position.z), 10 * Time.deltaTime);
             if (Vector3.Distance(transformers.transform.position, new Vector3(115, transformers.transform.position.y, transformers.transform.position.z)) == 0)
             {
@@ -89,6 +90,7 @@ public class TransformersKampf : MonoBehaviour
         }
         if (beiSpieler == false)
         {
+            Debug.Log("Fliege zur Spielerposition");
             transformers.transform.position = Vector3.MoveTowards(transformers.transform.position, spielerPosition, 15 * Time.deltaTime);
             if (Vector3.Distance(transformers.transform.position, spielerPosition) == 0)
             {
@@ -141,15 +143,20 @@ public class TransformersKampf : MonoBehaviour
     private void flugzielSetzen()
     {
         hochflugZiel = new Vector3(transformers.transform.position.x, transformers.transform.position.y + 12, 0.0f);
+        Debug.Log("Flugziel gesetzt");
     }
 
     private void spielerPositionSetzen()
     {
+        spieler.GetComponent<PlatformerUserControl>().enabled = false;
         spielerPosition = new Vector3(spieler.transform.position.x, (float)-51.5, spieler.transform.position.z);
+        spieler.GetComponent<PlatformerUserControl>().enabled = true;
+        Debug.Log("Spielerposition gesetzt");
     }
 
     IEnumerator warteSekundenDannSpielerAngriff(float sekunden)
     {
+        Debug.Log("Warte " + sekunden + " Sekunden, dann Angriff auf Spieler");
         yield return new WaitForSeconds(sekunden);
         spielerPositionSetzen();
         beiSpieler = false;
@@ -157,9 +164,10 @@ public class TransformersKampf : MonoBehaviour
 
     IEnumerator warteSekundenDannHoch(float sekunden)
     {
+        Debug.Log("Warte " + sekunden + " Sekunden, dann fliege hoch");
+        flugzielSetzen();
         yield return new WaitForSeconds(sekunden);
         hochGeflogen = false;
-        Debug.Log("wieder hoch");
     }
 
 }
