@@ -13,16 +13,25 @@ public class DrohneSchiesst : MonoBehaviour
 
     private Transform player;
     private Rigidbody2D clone;
+    private bool geschossen;
 
     // Use this for initialization
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("spieler").GetComponent<Transform>();
-        StartCoroutine(Attack());
+    }
+
+    private void Update()
+    {
+        while (geschossen == false)
+        {
+            StartCoroutine(Attack());
+        }
     }
 
     IEnumerator Attack()
     {
+        geschossen = true;
         yield return new WaitForSeconds(schussGeschwindigkeit);
         if (Vector3.Distance(player.transform.position, bulletspawn.transform.position) < 20)
         {
@@ -34,7 +43,7 @@ public class DrohneSchiesst : MonoBehaviour
             clone = Instantiate(bulletPrefab, bulletspawn.position, bulletspawn.rotation);
 
             clone.AddForce(bulletspawn.transform.right * bulletSpeed);
-            StartCoroutine(Attack());
         }
+        geschossen = false;
     }
 }

@@ -1184,6 +1184,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &102362499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 102362500}
+  - component: {fileID: 102362501}
+  m_Layer: 0
+  m_Name: Fallengeschoss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &102362500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 102362499}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.85, y: 3.61, z: 0.19975482}
+  m_LocalScale: {x: 3.0529692, y: 3.0529692, z: 3.0529692}
+  m_Children: []
+  m_Father: {fileID: 1282529845}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &102362501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 102362499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 102362500}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
 --- !u!1 &116570818
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,7 +2136,8 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114608402507825908, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &237654921 stripped
@@ -2887,7 +2933,6 @@ GameObject:
   m_Component:
   - component: {fileID: 352105425}
   - component: {fileID: 352105429}
-  - component: {fileID: 352105428}
   - component: {fileID: 352105427}
   - component: {fileID: 352105426}
   m_Layer: 0
@@ -2906,7 +2951,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 370.48, y: 4.4000015, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
-  m_Children: []
+  m_Children:
+  - {fileID: 453834282}
   m_Father: {fileID: 401959480}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3142,23 +3188,6 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
---- !u!114 &352105428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 352105424}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b81eee57ea79cc47ae323e0860eb9c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  radius: 10
-  startPos: {x: 0, y: 0, z: 0}
-  Lvlmanager: {fileID: 0}
-  player: {fileID: 0}
-  sr: {fileID: 0}
 --- !u!212 &352105429
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3214,7 +3243,6 @@ GameObject:
   m_Component:
   - component: {fileID: 361191652}
   - component: {fileID: 361191656}
-  - component: {fileID: 361191655}
   - component: {fileID: 361191654}
   - component: {fileID: 361191653}
   m_Layer: 0
@@ -3233,7 +3261,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 380.29, y: 5.049999, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
-  m_Children: []
+  m_Children:
+  - {fileID: 1919799597}
   m_Father: {fileID: 401959480}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3469,23 +3498,6 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
---- !u!114 &361191655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 361191651}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b81eee57ea79cc47ae323e0860eb9c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  radius: 10
-  startPos: {x: 0, y: 0, z: 0}
-  Lvlmanager: {fileID: 0}
-  player: {fileID: 0}
-  sr: {fileID: 0}
 --- !u!212 &361191656
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3766,6 +3778,51 @@ PolygonCollider2D:
       - {x: -0.955, y: -6.115}
       - {x: 0.955, y: -6.9849997}
       - {x: 0.955, y: -7.825}
+--- !u!1 &400885221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400885222}
+  - component: {fileID: 400885223}
+  m_Layer: 0
+  m_Name: Fallengeschoss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400885222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 400885221}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.42, y: 4.73, z: 0.19975482}
+  m_LocalScale: {x: 3.0529692, y: 3.0529692, z: 3.0529692}
+  m_Children: []
+  m_Father: {fileID: 550786866}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &400885223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 400885221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 400885222}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
 --- !u!1 &401959479
 GameObject:
   m_ObjectHideFlags: 0
@@ -4204,6 +4261,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &442612562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442612563}
+  - component: {fileID: 442612564}
+  m_Layer: 0
+  m_Name: Fallengeschoss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &442612563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 442612562}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.78, y: 3.67, z: 0.19975482}
+  m_LocalScale: {x: 3.0529692, y: 3.0529692, z: 3.0529692}
+  m_Children: []
+  m_Father: {fileID: 2016595049}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &442612564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 442612562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 442612563}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
 --- !u!1 &443294243
 GameObject:
   m_ObjectHideFlags: 0
@@ -4390,6 +4492,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &453834281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 453834282}
+  - component: {fileID: 453834283}
+  m_Layer: 0
+  m_Name: Fallengeschoss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &453834282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 453834281}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.7, y: 4.54, z: 0.19975482}
+  m_LocalScale: {x: 3.0529692, y: 3.0529692, z: 3.0529692}
+  m_Children: []
+  m_Father: {fileID: 352105425}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &453834283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 453834281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 453834282}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
 --- !u!1 &465060964
 GameObject:
   m_ObjectHideFlags: 0
@@ -4969,7 +5116,6 @@ GameObject:
   m_Component:
   - component: {fileID: 550786866}
   - component: {fileID: 550786870}
-  - component: {fileID: 550786869}
   - component: {fileID: 550786868}
   - component: {fileID: 550786867}
   m_Layer: 0
@@ -4988,7 +5134,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 376.27, y: 4.709999, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
-  m_Children: []
+  m_Children:
+  - {fileID: 400885222}
   m_Father: {fileID: 401959480}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5224,23 +5371,6 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
---- !u!114 &550786869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 550786865}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b81eee57ea79cc47ae323e0860eb9c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  radius: 10
-  startPos: {x: 0, y: 0, z: 0}
-  Lvlmanager: {fileID: 0}
-  player: {fileID: 0}
-  sr: {fileID: 0}
 --- !u!212 &550786870
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5730,6 +5860,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &630478888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 630478889}
+  - component: {fileID: 630478890}
+  m_Layer: 0
+  m_Name: Fallengeschoss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &630478889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 630478888}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2, y: 3.5, z: 0.19975482}
+  m_LocalScale: {x: 3.0529692, y: 3.0529692, z: 3.0529692}
+  m_Children: []
+  m_Father: {fileID: 804315181}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &630478890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 630478888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 630478889}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
 --- !u!1 &652854612
 GameObject:
   m_ObjectHideFlags: 0
@@ -6839,7 +7014,6 @@ GameObject:
   m_Component:
   - component: {fileID: 804315181}
   - component: {fileID: 804315185}
-  - component: {fileID: 804315184}
   - component: {fileID: 804315183}
   - component: {fileID: 804315182}
   m_Layer: 0
@@ -6858,7 +7032,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 333.82, y: 5.619999, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
-  m_Children: []
+  m_Children:
+  - {fileID: 630478889}
   m_Father: {fileID: 401959480}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7094,23 +7269,6 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
---- !u!114 &804315184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 804315180}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b81eee57ea79cc47ae323e0860eb9c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  radius: 10
-  startPos: {x: 0, y: 0, z: 0}
-  Lvlmanager: {fileID: 0}
-  player: {fileID: 0}
-  sr: {fileID: 0}
 --- !u!212 &804315185
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9586,7 +9744,6 @@ GameObject:
   m_Component:
   - component: {fileID: 996013257}
   - component: {fileID: 996013261}
-  - component: {fileID: 996013260}
   - component: {fileID: 996013259}
   - component: {fileID: 996013258}
   m_Layer: 0
@@ -9605,7 +9762,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 364.72, y: 4.799999, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
-  m_Children: []
+  m_Children:
+  - {fileID: 1507147910}
   m_Father: {fileID: 401959480}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9841,23 +9999,6 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
---- !u!114 &996013260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 996013256}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b81eee57ea79cc47ae323e0860eb9c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  radius: 10
-  startPos: {x: 0, y: 0, z: 0}
-  Lvlmanager: {fileID: 0}
-  player: {fileID: 0}
-  sr: {fileID: 0}
 --- !u!212 &996013261
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11544,7 +11685,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1282529845}
   - component: {fileID: 1282529849}
-  - component: {fileID: 1282529848}
   - component: {fileID: 1282529847}
   - component: {fileID: 1282529846}
   m_Layer: 0
@@ -11563,7 +11703,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 311.6, y: 4.959999, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
-  m_Children: []
+  m_Children:
+  - {fileID: 102362500}
   m_Father: {fileID: 401959480}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11799,23 +11940,6 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
---- !u!114 &1282529848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282529844}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b81eee57ea79cc47ae323e0860eb9c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  radius: 10
-  startPos: {x: 0, y: 0, z: 0}
-  Lvlmanager: {fileID: 0}
-  player: {fileID: 0}
-  sr: {fileID: 0}
 --- !u!212 &1282529849
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12615,7 +12739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCheckpoint: {fileID: 0}
-  GameOverUI: {fileID: 0}
+  GameOverUI: {fileID: 875237595}
 --- !u!4 &1339327444
 Transform:
   m_ObjectHideFlags: 0
@@ -13230,7 +13354,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1372815893}
   - component: {fileID: 1372815892}
-  - component: {fileID: 1372815891}
   - component: {fileID: 1372815890}
   - component: {fileID: 1372815894}
   m_Layer: 0
@@ -13246,7 +13369,7 @@ PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1372815889}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -13452,23 +13575,6 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
---- !u!114 &1372815891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1372815889}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b81eee57ea79cc47ae323e0860eb9c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  radius: 10
-  startPos: {x: 0, y: 0, z: 0}
-  Lvlmanager: {fileID: 0}
-  player: {fileID: 0}
-  sr: {fileID: 0}
 --- !u!212 &1372815892
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13535,7 +13641,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1372815889}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2f97ef9a362b2245a522d5e96088ec7, type: 3}
   m_Name: 
@@ -13543,7 +13649,7 @@ MonoBehaviour:
   speed: 5
   stoppingDistance: 0
   retreatDistance: 0
-  radius: 0
+  radius: 10
   Lvlmanager: {fileID: 0}
   hit: 1
   weg: 6
@@ -14753,6 +14859,51 @@ MonoBehaviour:
   damage: 20
   damageRate: 2
   pushBackforce: 0
+--- !u!1 &1507147909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1507147910}
+  - component: {fileID: 1507147911}
+  m_Layer: 0
+  m_Name: Fallengeschoss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1507147910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507147909}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.9, y: 3.6, z: 0.19975482}
+  m_LocalScale: {x: 3.0529692, y: 3.0529692, z: 3.0529692}
+  m_Children: []
+  m_Father: {fileID: 996013257}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507147911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507147909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 1507147910}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
 --- !u!1 &1513610966
 GameObject:
   m_ObjectHideFlags: 0
@@ -17570,6 +17721,51 @@ MonoBehaviour:
   damage: 20
   damageRate: 2
   pushBackforce: 0
+--- !u!1 &1919799596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1919799597}
+  - component: {fileID: 1919799598}
+  m_Layer: 0
+  m_Name: Fallengeschoss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1919799597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919799596}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -32.08, y: 1.69, z: 0.19975482}
+  m_LocalScale: {x: 3.0529692, y: 3.0529692, z: 3.0529692}
+  m_Children: []
+  m_Father: {fileID: 361191652}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1919799598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919799596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 1919799597}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
 --- !u!1 &1933148595
 GameObject:
   m_ObjectHideFlags: 0
@@ -18286,7 +18482,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2016595049}
   - component: {fileID: 2016595053}
-  - component: {fileID: 2016595052}
   - component: {fileID: 2016595051}
   - component: {fileID: 2016595050}
   m_Layer: 0
@@ -18305,7 +18500,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 325.71, y: 4.4000015, z: -5.2553167}
   m_LocalScale: {x: 0.32755, y: 0.32755, z: 0.32755}
-  m_Children: []
+  m_Children:
+  - {fileID: 442612563}
   m_Father: {fileID: 401959480}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18541,23 +18737,6 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
---- !u!114 &2016595052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2016595048}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b81eee57ea79cc47ae323e0860eb9c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  radius: 10
-  startPos: {x: 0, y: 0, z: 0}
-  Lvlmanager: {fileID: 0}
-  player: {fileID: 0}
-  sr: {fileID: 0}
 --- !u!212 &2016595053
 SpriteRenderer:
   m_ObjectHideFlags: 0

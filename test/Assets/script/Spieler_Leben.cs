@@ -34,6 +34,7 @@ public class Spieler_Leben : MonoBehaviour
         currentLeben = fullLeben;
         geschlagen = false;
         lvlmanager = GameObject.Find("lvlmanager").GetComponent<lvlmanager>();
+        geschlagenScreen = GameObject.Find("BlutFenster").GetComponent<Image>();
 
     }
 
