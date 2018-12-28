@@ -561,7 +561,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 50020589205098800, guid: 661b4a4633ca11648b66aa1eceeb1b4d,
     type: 2}
   bulletSpeed: 400
-  player: {fileID: 728837911}
   schussGeschwindigkeit: 3
 --- !u!1 &56076315
 GameObject:
@@ -973,10 +972,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &88130550
 BoxCollider2D:
@@ -1642,6 +1637,51 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 175620579}
   m_CullTransparentMesh: 0
+--- !u!1 &178197469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 178197470}
+  - component: {fileID: 178197471}
+  m_Layer: 0
+  m_Name: Fallengeschoss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &178197470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 178197469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.9, y: 3.62, z: 0.19975784}
+  m_LocalScale: {x: 3.0530155, y: 3.0530155, z: 3.0530155}
+  m_Children: []
+  m_Father: {fileID: 1372815893}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &178197471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 178197469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 178197470}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
 --- !u!1 &184072865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,10 +1906,6 @@ MonoBehaviour:
   hit: 1
   weg: 4
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &194851350
 BoxCollider2D:
@@ -2020,7 +2056,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -62.04
+      value: 207.6
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2893,10 +2929,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 100
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!60 &352105427
 PolygonCollider2D:
@@ -3224,10 +3256,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 100
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!60 &361191654
 PolygonCollider2D:
@@ -4983,10 +5011,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 100
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!60 &550786868
 PolygonCollider2D:
@@ -5348,10 +5372,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &582023041
 BoxCollider2D:
@@ -6699,10 +6719,6 @@ MonoBehaviour:
   hit: 1
   weg: 0
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &792232721
 BoxCollider2D:
@@ -6865,10 +6881,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 100
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!60 &804315183
 PolygonCollider2D:
@@ -7241,10 +7253,6 @@ MonoBehaviour:
   hit: 1
   weg: 7
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &818712820
 BoxCollider2D:
@@ -8338,7 +8346,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 50020589205098800, guid: 661b4a4633ca11648b66aa1eceeb1b4d,
     type: 2}
   bulletSpeed: 400
-  player: {fileID: 1379702638}
   schussGeschwindigkeit: 3
 --- !u!1 &925015728
 GameObject:
@@ -8764,10 +8771,6 @@ MonoBehaviour:
   hit: 1
   weg: 0
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &938950210
 BoxCollider2D:
@@ -9625,10 +9628,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 100
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!60 &996013259
 PolygonCollider2D:
@@ -10293,10 +10292,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &1062914645
 BoxCollider2D:
@@ -11407,7 +11402,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 50020589205098800, guid: 661b4a4633ca11648b66aa1eceeb1b4d,
     type: 2}
   bulletSpeed: 400
-  player: {fileID: 1954790279}
   schussGeschwindigkeit: 3
 --- !u!1 &1257016648
 GameObject:
@@ -11592,10 +11586,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 100
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!60 &1282529847
 PolygonCollider2D:
@@ -12625,7 +12615,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCheckpoint: {fileID: 0}
-  spieler: {fileID: 0}
   GameOverUI: {fileID: 0}
 --- !u!4 &1339327444
 Transform:
@@ -12693,10 +12682,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &1348894988
 BoxCollider2D:
@@ -12985,10 +12970,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &1355694454
 BoxCollider2D:
@@ -13265,7 +13246,7 @@ PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1372815889}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -13543,7 +13524,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 284.59, y: 4.799999, z: -5.2553167}
   m_LocalScale: {x: 0.32754502, y: 0.32754502, z: 0.32754502}
-  m_Children: []
+  m_Children:
+  - {fileID: 178197470}
   m_Father: {fileID: 401959480}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13553,7 +13535,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1372815889}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2f97ef9a362b2245a522d5e96088ec7, type: 3}
   m_Name: 
@@ -13566,10 +13548,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 100
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!1 &1372958450
 GameObject:
@@ -14304,10 +14282,6 @@ MonoBehaviour:
   hit: 1
   weg: 7
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &1462645299
 BoxCollider2D:
@@ -14553,7 +14527,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 50020589205098800, guid: 661b4a4633ca11648b66aa1eceeb1b4d,
     type: 2}
   bulletSpeed: 400
-  player: {fileID: 960979326}
   schussGeschwindigkeit: 3
 --- !u!1 &1487782520
 GameObject:
@@ -14669,10 +14642,6 @@ MonoBehaviour:
   hit: 1
   weg: 4
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &1493495964
 BoxCollider2D:
@@ -15279,7 +15248,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 50020589205098800, guid: 661b4a4633ca11648b66aa1eceeb1b4d,
     type: 2}
   bulletSpeed: 400
-  player: {fileID: 1513610967}
   schussGeschwindigkeit: 3
 --- !u!1 &1562389764
 GameObject:
@@ -15885,10 +15853,6 @@ MonoBehaviour:
   hit: 1
   weg: 0
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &1629461773
 BoxCollider2D:
@@ -17442,7 +17406,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 50020589205098800, guid: 661b4a4633ca11648b66aa1eceeb1b4d,
     type: 2}
   bulletSpeed: 400
-  player: {fileID: 1015185745}
   schussGeschwindigkeit: 3
 --- !u!1 &1906913246
 GameObject:
@@ -17496,10 +17459,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &1906913249
 BoxCollider2D:
@@ -18369,10 +18328,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 100
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!60 &2016595051
 PolygonCollider2D:
@@ -19159,10 +19114,6 @@ MonoBehaviour:
   hit: 1
   weg: 0
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &2080656614
 BoxCollider2D:
@@ -19326,10 +19277,6 @@ MonoBehaviour:
   hit: 1
   weg: 0
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &2100826046
 BoxCollider2D:
@@ -19783,10 +19730,6 @@ MonoBehaviour:
   hit: 1
   weg: 6
   leben: 50
-  startPos: {x: 0, y: 0, z: 0}
-  newPos: {x: 0, y: 0, z: 0}
-  tempPos: {x: 0, y: 0, z: 0}
-  sr: {fileID: 0}
   player: {fileID: 0}
 --- !u!61 &2141281831
 BoxCollider2D:
