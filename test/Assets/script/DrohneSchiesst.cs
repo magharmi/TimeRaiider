@@ -26,8 +26,6 @@ public class DrohneSchiesst : MonoBehaviour
         yield return new WaitForSeconds(schussGeschwindigkeit);
         if (Vector3.Distance(player.transform.position, bulletspawn.transform.position) < 20)
         {
-            /*Quaternion rotation = Quaternion.LookRotation(bulletspawn.transform.position - player.transform.position);
-            bulletspawn.rotation = rotation;*/
 
             Vector3 difference = player.position - bulletspawn.position;
             float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
