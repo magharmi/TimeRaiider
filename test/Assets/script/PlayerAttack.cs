@@ -41,7 +41,7 @@ public class PlayerAttack : MonoBehaviour {
             {
                 // camAnim.SetTrigger("shake");
                
-                anim.SetTrigger("isShoot");
+                anim.SetTrigger("isSpeer");
                 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange);
                 for (int i = 0; i < enemiesToDamage.Length; i++)

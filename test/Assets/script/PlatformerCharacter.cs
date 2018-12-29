@@ -40,11 +40,25 @@ public class PlatformerCharacter : MonoBehaviour
         {
              m_Anim.SetTrigger("isArm");
             Armbrust();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            m_Anim.SetTrigger("isShoot");
+            Armbrust();
+        }
+        //Nah Kampf
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            m_Anim.SetTrigger("isSchwertMongol");
+        }
 
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            m_Anim.SetTrigger("isKeule");
         }
 
     }
-
+ 
     private void FixedUpdate()
     {
 
