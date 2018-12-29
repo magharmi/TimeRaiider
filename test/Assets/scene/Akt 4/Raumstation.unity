@@ -875,6 +875,52 @@ PolygonCollider2D:
       - {x: 2.0449998, y: -2.77}
       - {x: 2.055, y: -2.75}
       - {x: 2.115, y: -2.51}
+--- !u!1 &84876648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 84876649}
+  - component: {fileID: 84876650}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &84876649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84876648}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -353.8, y: -0.9838451, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 938950208}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &84876650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84876648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 84876649}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &88130547
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,13 +947,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 88130547}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 79.09, y: 0.88899994, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 517016506}
   m_Father: {fileID: 815762175}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &88130549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,8 +967,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 13
+  retreatDistance: 11
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
@@ -990,7 +1037,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -1184,6 +1231,7 @@ MonoBehaviour:
     type: 2}
   bulletSpeed: 500
   schussGeschwindigkeit: 2
+  radius: 20
 --- !u!1 &116570818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,6 +1595,98 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 154845628}
   m_CullTransparentMesh: 0
+--- !u!1 &171329163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 171329164}
+  - component: {fileID: 171329165}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &171329164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 171329163}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.8, y: -1.6, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 1348894986}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &171329165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 171329163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 171329164}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
+--- !u!1 &171444513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 171444514}
+  - component: {fileID: 171444515}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &171444514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 171444513}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.1, y: -1.2969586, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 1906913247}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &171444515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 171444513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 171444514}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &175620579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,6 +1868,7 @@ MonoBehaviour:
     type: 2}
   bulletSpeed: 500
   schussGeschwindigkeit: 2
+  radius: 20
 --- !u!1 &184072865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,13 +2067,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 194851347}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 362.73, y: 0.90999985, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 1918575311}
   m_Father: {fileID: 815762175}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &194851349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1945,12 +2087,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 13
+  retreatDistance: 11
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
-  weg: 4
+  weg: 6
   leben: 50
   player: {fileID: 0}
 --- !u!61 &194851350
@@ -2015,7 +2157,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -2102,11 +2244,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 84.41
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -55.68
+      value: -54.32
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2146,6 +2288,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770,
     type: 2}
   m_PrefabInternal: {fileID: 237654919}
+--- !u!1 &256926823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 256926824}
+  - component: {fileID: 256926825}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &256926824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256926823}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.5, y: -1.600015, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 2100826044}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &256926825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256926823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 256926824}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &257612981
 GameObject:
   m_ObjectHideFlags: 0
@@ -3870,6 +4058,7 @@ MonoBehaviour:
     type: 2}
   bulletSpeed: 500
   schussGeschwindigkeit: 2
+  radius: 20
 --- !u!1 &401959479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3906,6 +4095,98 @@ Transform:
   m_Father: {fileID: 1594190586}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &406091347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 406091348}
+  - component: {fileID: 406091349}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &406091348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406091347}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.2, y: -1.2969586, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 1629461771}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &406091349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406091347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 406091348}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
+--- !u!1 &409659947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 409659948}
+  - component: {fileID: 409659949}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &409659948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 409659947}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.7, y: -0.9838451, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 792232719}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &409659949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 409659947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 409659948}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &413779008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4230,6 +4511,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &429078975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429078976}
+  - component: {fileID: 429078977}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &429078976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 429078975}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.9, y: -2.8121254, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 818712818}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &429078977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 429078975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 429078976}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &429418328
 GameObject:
   m_ObjectHideFlags: 0
@@ -4353,6 +4680,7 @@ MonoBehaviour:
     type: 2}
   bulletSpeed: 500
   schussGeschwindigkeit: 2
+  radius: 20
 --- !u!1 &443294243
 GameObject:
   m_ObjectHideFlags: 0
@@ -4584,6 +4912,7 @@ MonoBehaviour:
     type: 2}
   bulletSpeed: 500
   schussGeschwindigkeit: 2
+  radius: 20
 --- !u!1 &465060964
 GameObject:
   m_ObjectHideFlags: 0
@@ -5154,6 +5483,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &517016505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 517016506}
+  - component: {fileID: 517016507}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &517016506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 517016505}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.1, y: -1.2, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 88130548}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &517016507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 517016505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 517016506}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &550786865
 GameObject:
   m_ObjectHideFlags: 0
@@ -5464,6 +5839,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &559809174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 559809175}
+  - component: {fileID: 559809176}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &559809175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559809174}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -751.8, y: -1.8020399, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 2080656612}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &559809176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559809174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 559809175}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &570620588
 GameObject:
   m_ObjectHideFlags: 0
@@ -5523,13 +5944,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 582023038}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 131.67, y: 0.8899994, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 1883795401}
   m_Father: {fileID: 815762175}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &582023040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5542,8 +5964,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 15
+  retreatDistance: 13
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
@@ -5612,7 +6034,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -5952,6 +6374,53 @@ MonoBehaviour:
     type: 2}
   bulletSpeed: 500
   schussGeschwindigkeit: 2
+  radius: 20
+--- !u!1 &652231349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 652231350}
+  - component: {fileID: 652231351}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &652231350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 652231349}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1329.6, y: -0.89294744, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 1462645297}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &652231351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 652231349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 652231350}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &652854612
 GameObject:
   m_ObjectHideFlags: 0
@@ -7007,13 +7476,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 792232718}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 245.91, y: 0.88899994, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 409659948}
   m_Father: {fileID: 815762175}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &792232720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7026,12 +7496,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 15
+  retreatDistance: 13
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
-  weg: 0
+  weg: 6
   leben: 50
   player: {fileID: 0}
 --- !u!61 &792232721
@@ -7096,7 +7566,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -7524,13 +7994,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 818712817}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 372.95, y: 1.0699997, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 429078976}
   m_Father: {fileID: 815762175}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &818712819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7542,13 +8013,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f97ef9a362b2245a522d5e96088ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  stoppingDistance: 0
-  retreatDistance: 0
+  speed: 4
+  stoppingDistance: 15
+  retreatDistance: 13
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
-  weg: 7
+  weg: 6
   leben: 50
   player: {fileID: 0}
 --- !u!61 &818712820
@@ -7613,7 +8084,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -8530,6 +9001,52 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 886836780}
   m_CullTransparentMesh: 0
+--- !u!1 &906625614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906625615}
+  - component: {fileID: 906625616}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &906625615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906625614}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1224.5, y: -1.4989834, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 1493495962}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &906625616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906625614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 906625615}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &915621811
 GameObject:
   m_ObjectHideFlags: 0
@@ -8997,13 +9514,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 938950207}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 241.2, y: 0.88899994, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 84876649}
   m_Father: {fileID: 815762175}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &938950209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9016,12 +9534,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 15
+  retreatDistance: 13
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
-  weg: 0
+  weg: 6
   leben: 50
   player: {fileID: 0}
 --- !u!61 &938950210
@@ -9086,7 +9604,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -10489,7 +11007,7 @@ GameObject:
   - component: {fileID: 1062914648}
   - component: {fileID: 1062914647}
   m_Layer: 0
-  m_Name: Agent (4)
+  m_Name: Agent (15)
   m_TagString: AnubisMumien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10501,13 +11019,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1062914642}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 205.3, y: 0.91999817, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 1798576418}
   m_Father: {fileID: 815762175}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1062914644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10520,8 +11039,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 15
+  retreatDistance: 13
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
@@ -10590,7 +11109,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -12875,13 +13394,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348894985}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 83.46, y: 0.95000076, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 171329164}
   m_Father: {fileID: 815762175}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1348894987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12894,8 +13414,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 15
+  retreatDistance: 13
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
@@ -12964,7 +13484,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -13151,7 +13671,7 @@ GameObject:
   - component: {fileID: 1355694457}
   - component: {fileID: 1355694456}
   m_Layer: 0
-  m_Name: Agent (4)
+  m_Name: Agent (16)
   m_TagString: AnubisMumien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13163,13 +13683,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1355694451}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 359.58, y: 0.90999985, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 1466330305}
   m_Father: {fileID: 815762175}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1355694453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13182,8 +13703,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 15
+  retreatDistance: 13
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
@@ -13252,7 +13773,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -14457,13 +14978,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1462645296}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 379.1, y: 0.88000107, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 652231350}
   m_Father: {fileID: 815762175}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1462645298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14475,13 +14997,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f97ef9a362b2245a522d5e96088ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  stoppingDistance: 0
-  retreatDistance: 0
+  speed: 4
+  stoppingDistance: 10
+  retreatDistance: 7
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
-  weg: 7
+  weg: 6
   leben: 50
   player: {fileID: 0}
 --- !u!61 &1462645299
@@ -14546,7 +15068,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -14594,6 +15116,52 @@ MonoBehaviour:
   damage: 20
   damageRate: 2
   pushBackforce: 0
+--- !u!1 &1466330304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466330305}
+  - component: {fileID: 1466330306}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1466330305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466330304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.4, y: -1.1959654, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 1355694452}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1466330306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466330304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 1466330305}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &1472974970
 GameObject:
   m_ObjectHideFlags: 0
@@ -14772,13 +15340,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1493495961}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 336.22, y: 0.9399986, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 906625615}
   m_Father: {fileID: 815762175}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1493495963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14791,12 +15360,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 15
+  retreatDistance: 13
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
-  weg: 4
+  weg: 6
   leben: 50
   player: {fileID: 0}
 --- !u!61 &1493495964
@@ -14861,7 +15430,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -14954,6 +15523,7 @@ MonoBehaviour:
     type: 2}
   bulletSpeed: 500
   schussGeschwindigkeit: 2
+  radius: 20
 --- !u!1 &1513610966
 GameObject:
   m_ObjectHideFlags: 0
@@ -15983,13 +16553,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1629461770}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 250.69, y: 0.91999817, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 406091348}
   m_Father: {fileID: 815762175}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1629461772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16002,12 +16573,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 15
+  retreatDistance: 13
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
-  weg: 0
+  weg: 6
   leben: 50
   player: {fileID: 0}
 --- !u!61 &1629461773
@@ -16072,7 +16643,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -16836,6 +17407,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1726883937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1726883938}
+  - component: {fileID: 1726883939}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1726883938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726883937}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.3, y: -1.1959654, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 2141281829}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1726883939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726883937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 1726883938}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &1736781310
 GameObject:
   m_ObjectHideFlags: 0
@@ -17171,6 +17788,52 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1789393826}
   m_CullTransparentMesh: 0
+--- !u!1 &1798576417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1798576418}
+  - component: {fileID: 1798576419}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1798576418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1798576417}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.1, y: -1.2969586, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 1062914643}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1798576419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1798576417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 1798576418}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &1799869260
 GameObject:
   m_ObjectHideFlags: 0
@@ -17518,6 +18181,52 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1870009304}
   m_CullTransparentMesh: 0
+--- !u!1 &1883795400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1883795401}
+  - component: {fileID: 1883795402}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1883795401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1883795400}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1082.1, y: -0.9939406, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 582023039}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1883795402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1883795400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 1883795401}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &1906913246
 GameObject:
   m_ObjectHideFlags: 0
@@ -17544,13 +18253,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1906913246}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 127.67, y: 0.91999817, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 171444514}
   m_Father: {fileID: 815762175}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1906913248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17563,8 +18273,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 13
+  retreatDistance: 11
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
@@ -17633,7 +18343,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -17681,6 +18391,52 @@ MonoBehaviour:
   damage: 20
   damageRate: 2
   pushBackforce: 0
+--- !u!1 &1918575310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1918575311}
+  - component: {fileID: 1918575312}
+  m_Layer: 0
+  m_Name: Pistolenschuss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1918575311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1918575310}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1450.6, y: -1.1959654, z: 0.14177616}
+  m_LocalScale: {x: 9.5620575, y: 10.10101, z: 2.1668475}
+  m_Children: []
+  m_Father: {fileID: 194851348}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1918575312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1918575310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6a13a2989057b41b59905e2752e60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspawn: {fileID: 1918575311}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
+  bulletSpeed: 500
+  schussGeschwindigkeit: 2
+  radius: 15
 --- !u!1 &1919799596
 GameObject:
   m_ObjectHideFlags: 0
@@ -17726,6 +18482,7 @@ MonoBehaviour:
     type: 2}
   bulletSpeed: 500
   schussGeschwindigkeit: 2
+  radius: 20
 --- !u!1 &1933148595
 GameObject:
   m_ObjectHideFlags: 0
@@ -19273,13 +20030,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2080656611}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 209.22, y: 0.9700012, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 559809175}
   m_Father: {fileID: 815762175}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2080656613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19292,12 +20050,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 13
+  retreatDistance: 11
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
-  weg: 0
+  weg: 6
   leben: 50
   player: {fileID: 0}
 --- !u!61 &2080656614
@@ -19362,7 +20120,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -19436,13 +20194,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2100826043}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 212.15, y: 0.95000076, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 256926824}
   m_Father: {fileID: 815762175}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2100826045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19455,12 +20214,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 15
+  retreatDistance: 13
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
-  weg: 0
+  weg: 6
   leben: 50
   player: {fileID: 0}
 --- !u!61 &2100826046
@@ -19525,7 +20284,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}
@@ -19889,13 +20648,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2141281828}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 366.15, y: 0.90999985, z: -5.2553167}
   m_LocalScale: {x: 0.10458, y: 0.099, z: 0.4615}
-  m_Children: []
+  m_Children:
+  - {fileID: 1726883938}
   m_Father: {fileID: 815762175}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2141281830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19908,8 +20668,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  stoppingDistance: 0
-  retreatDistance: 0
+  stoppingDistance: 15
+  retreatDistance: 13
   radius: 15
   Lvlmanager: {fileID: 0}
   hit: 1
@@ -19978,7 +20738,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e07bdcbb67e3289489184079f082eecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 20.419998, y: 28.44}

@@ -12,10 +12,11 @@ public class GegnerAI : MonoBehaviour {
     public float weg = 6;
     public int leben = 100;
 
-    private Vector3 startPos;
-    private Vector3 newPos;
-    private Vector3 tempPos;
+    private Vector2 startPos;
+    private Vector2 newPos;
+    private Vector2 tempPos;
     private PolygonCollider2D pg;
+    private bool imRadius = true;
 
     public Transform player;
 
@@ -32,29 +33,43 @@ public class GegnerAI : MonoBehaviour {
     void Update() {
         if (Vector2.Distance(transform.position, player.position) > radius) {
             newPos = startPos;
-            newPos.x = newPos.x + Mathf.PingPong(Time.time * speed, weg) - 3;
-
-            transform.position = newPos;
-
-            //Bewegung positiv
-            if (newPos.x > tempPos.x)
+            if (imRadius == false)
             {
-                transform.rotation = Quaternion.Euler(0, 180f, 0);
+                transform.position = Vector2.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
+                if(Vector2.Distance(transform.position, newPos) == 0)
+                {
+                    imRadius = true;
+                }
             }
-            //Bewegung negativ
             else
             {
-                transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
+                
+                newPos.x = newPos.x + Mathf.PingPong(Time.time * speed, weg) - 3;
 
-            tempPos = newPos;
+                transform.position = newPos;
+
+
+                //Bewegung positiv
+                if (newPos.x > tempPos.x)
+                {
+                    transform.rotation = Quaternion.Euler(0, 180f, 0);
+                }
+                //Bewegung negativ
+                else
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+
+                tempPos = newPos;
+            }
         }
 
         else if (Vector2.Distance(transform.position, player.position) <= radius)
         {
+            imRadius = false;
             if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
             {
-                transform.position = Vector2.MoveTowards(transform.position, new Vector3(player.position.x, transform.position.y, player.position.z), speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), speed * Time.deltaTime);
             }
             else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
             {
@@ -62,8 +77,19 @@ public class GegnerAI : MonoBehaviour {
             }
             else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
             {
-                transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+                Vector2 ziel = new Vector2(player.position.x, transform.position.y);
+                transform.position = Vector2.MoveTowards(transform.position, ziel, -speed * Time.deltaTime);
+
+                if (transform.position.x < ziel.x)
+                {
+                    transform.rotation = Quaternion.Euler(0, 180f, 0);
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
             }
+
         }
         //startPos = transform.position;        Raptor wird zu Usain Bolt, wenn ich diesen Code einfüge
     }

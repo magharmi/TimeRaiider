@@ -34,7 +34,7 @@ public class LaserkanoneSchiesst : MonoBehaviour
     {
         geschossen = true;
         yield return new WaitForSeconds(schussGeschwindigkeit);
-        if (Vector3.Distance(player.transform.position, bulletspawn.transform.position) < 30)
+        if (Vector3.Distance(player.transform.position, bulletspawn.transform.position) < radius)
         {
 
             Vector3 difference = player.position - bulletspawn.position;

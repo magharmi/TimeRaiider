@@ -10,6 +10,7 @@ public class DrohneSchiesst : MonoBehaviour
     public Rigidbody2D bulletPrefab;
     public float bulletSpeed = 750;
     public float schussGeschwindigkeit;
+    public float radius = 20;
 
     private Transform player;
     private Rigidbody2D clone;
@@ -33,7 +34,7 @@ public class DrohneSchiesst : MonoBehaviour
     {
         geschossen = true;
         yield return new WaitForSeconds(schussGeschwindigkeit);
-        if (Vector3.Distance(player.transform.position, bulletspawn.transform.position) < 20)
+        if (Vector3.Distance(player.transform.position, bulletspawn.transform.position) < radius)
         {
 
             Vector3 difference = player.position - bulletspawn.position;
