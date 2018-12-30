@@ -13,9 +13,6 @@ public class GameControlScript : MonoBehaviour {
     Text epAnzeige;
 
     private GameObject slider;
-    public float levelEp;
-    private float currentLevel;
-    public float fullLevel;
 
 
     
@@ -37,11 +34,14 @@ public class GameControlScript : MonoBehaviour {
         sl.value    = 0;
 
         //currentLevel = fullLevel;
-        
 
 
         moneyAmount = PlayerPrefs.GetInt ("MoneyAmount");
 		isRifleSold = PlayerPrefs.GetInt ("IsRifleSold");
+        sl.value = PlayerPrefs.GetFloat("EPValue");
+        epAnzeige.text = PlayerPrefs.GetInt("SpielerLevel").ToString();
+
+        
 
 		if (isRifleSold == 1)
 			rifle.SetActive (true);
@@ -57,13 +57,20 @@ public class GameControlScript : MonoBehaviour {
 	public void gotoShop()
 	{
 		PlayerPrefs.SetInt ("MoneyAmount", moneyAmount);
+        PlayerPrefs.SetFloat("EPValue", sl.value);
+        PlayerPrefs.SetInt("SpielerLevel", int.Parse(epAnzeige.text));
 		SceneManager.LoadScene ("ShopStoneAge");
 	}
 
     public void addEP(float epAmount)
     {
-        currentLevel += epAmount;
-        if (currentLevel > fullLevel) currentLevel = fullLevel;
-        sl.value = currentLevel;
+        sl.value += epAmount;
+        if (sl.value >= sl.maxValue)
+        {
+            sl.value = 0;
+            int level = int.Parse(epAnzeige.GetComponent<Text>().text);
+            int levelUp = level + 1;
+            epAnzeige.GetComponent<Text>().text = levelUp.ToString();
+        }
     }
 }
