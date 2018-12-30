@@ -22,7 +22,7 @@ public class ShopControlScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		moneyAmountText.text = "Money: " + moneyAmount.ToString() + "$";
+		moneyAmountText.text = "Gold: " + moneyAmount.ToString() + "Gold";
 
 		isRifleSold = PlayerPrefs.GetInt ("IsRifleSold");
 
@@ -50,7 +50,7 @@ public class ShopControlScript : MonoBehaviour {
 	{
 		moneyAmount = 0;
 		buyButton.gameObject.SetActive (true);
-		riflePrice.text = "Preis: 5$";
+		riflePrice.text = "Preis: 5 Gold";
 		PlayerPrefs.DeleteAll ();
 	}
 
