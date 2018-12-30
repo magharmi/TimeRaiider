@@ -31,12 +31,12 @@ public class GameControlScript : MonoBehaviour {
 
         sl = slider.GetComponent<Slider>();
 
-        currentLevel = fullLevel;
+        //currentLevel = fullLevel;
         
-        sl.maxValue = currentLevel;
-        sl.value    = currentLevel;
+        sl.maxValue = 100;
+        sl.value    = 0;
 
-        currentLevel = fullLevel;
+        //currentLevel = fullLevel;
         
 
 
@@ -62,7 +62,7 @@ public class GameControlScript : MonoBehaviour {
 
     public void addEP(float epAmount)
     {
-        currentLevel -= epAmount;
+        currentLevel += epAmount;
         if (currentLevel > fullLevel) currentLevel = fullLevel;
         sl.value = currentLevel;
     }
