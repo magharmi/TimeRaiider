@@ -4,9 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class EnemyHealthBar : MonoBehaviour {
+    GameControlScript sl;
     public float enemyMaxHealth;
     public bool drops;
     public GameObject lebenOderGeld;
+    public static  float epp;
+    int gibLeben = 50;
+    
     // public GameObject enemyDeathFX;
     //Animator enemyAnimator;
       public Slider enemySlider;
@@ -41,12 +45,15 @@ public class EnemyHealthBar : MonoBehaviour {
 
     void makeDead()
     {
-      
-     //   enemyAnimator.SetBool("isDead", true);
+
+        //   enemyAnimator.SetBool("isDead", true);
        
        Destroy(gameObject);
+
         // Instantiate(enemyDeathFX, transform.position, transform.rotation);
         if (drops)
             Instantiate(lebenOderGeld, transform.position, transform.rotation);
+       
     }
+   
 }

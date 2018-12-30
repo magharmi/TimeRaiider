@@ -7086,8 +7086,8 @@ Transform:
   m_LocalPosition: {x: 0.27500126, y: 0.2849997, z: 0}
   m_LocalScale: {x: 0.107041836, y: 0.10844022, z: 0.621118}
   m_Children: []
-  m_Father: {fileID: 612663402}
-  m_RootOrder: 2
+  m_Father: {fileID: 1890786189}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 42.585003}
 --- !u!212 &161911593
 SpriteRenderer:
@@ -9852,10 +9852,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4820b4ea59b803d4ea4c7f1276cc42f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullLeben: 100
-  currentLeben: 100
   deathFX: {fileID: 1624883000596224, guid: 0204359ac1e2392468ecf49a64e8e3e9, type: 2}
   sl: {fileID: 1555574872}
+  fullLeben: 100
+  currentLeben: 100
   geschlagenScreen: {fileID: 786433883}
 --- !u!114 &345209167
 MonoBehaviour:
@@ -11373,8 +11373,8 @@ Transform:
   m_LocalPosition: {x: 0.12999901, y: -0.058999557, z: 0}
   m_LocalScale: {x: 0.14490516, y: 0.096063055, z: 0.621118}
   m_Children: []
-  m_Father: {fileID: 612663402}
-  m_RootOrder: 1
+  m_Father: {fileID: 1890786189}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 36.734}
 --- !u!212 &433064257
 SpriteRenderer:
@@ -12236,10 +12236,10 @@ Transform:
   m_GameObject: {fileID: 469539778}
   m_LocalRotation: {x: -0, y: -0, z: 0.5361785, w: 0.84410465}
   m_LocalPosition: {x: 0.10700374, y: 0.111000784, z: 0}
-  m_LocalScale: {x: 0.088502616, y: 0.10880972, z: 0.621118}
+  m_LocalScale: {x: 0.08850264, y: 0.10880974, z: 0.621118}
   m_Children: []
-  m_Father: {fileID: 612663402}
-  m_RootOrder: 4
+  m_Father: {fileID: 1890786189}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 64.848}
 --- !u!212 &469539780
 SpriteRenderer:
@@ -14332,12 +14332,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1505677868}
-  - {fileID: 433064256}
-  - {fileID: 161911592}
-  - {fileID: 1599777511}
-  - {fileID: 469539779}
+  m_Children: []
   m_Father: {fileID: 1890786189}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27637,10 +27632,10 @@ Transform:
   m_GameObject: {fileID: 1505677867}
   m_LocalRotation: {x: -0, y: -0, z: 0.017724777, w: 0.99984294}
   m_LocalPosition: {x: 0.18200055, y: -0.067, z: 0}
-  m_LocalScale: {x: 0.09578288, y: 0.13722533, z: 0.621118}
+  m_LocalScale: {x: 0.095782876, y: 0.13722531, z: 0.621118}
   m_Children: []
-  m_Father: {fileID: 612663402}
-  m_RootOrder: 0
+  m_Father: {fileID: 1890786189}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.0310001}
 --- !u!212 &1505677869
 SpriteRenderer:
@@ -28499,7 +28494,7 @@ GameObject:
   - component: {fileID: 1568730246}
   - component: {fileID: 1568730247}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SliderEP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29263,8 +29258,8 @@ Transform:
   m_LocalPosition: {x: 0.08037662, y: -0.14211543, z: 0}
   m_LocalScale: {x: 0.091124624, y: 0.102333136, z: 0.621118}
   m_Children: []
-  m_Father: {fileID: 612663402}
-  m_RootOrder: 3
+  m_Father: {fileID: 1890786189}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4.057}
 --- !u!212 &1599777512
 SpriteRenderer:
@@ -33645,6 +33640,11 @@ Transform:
   - {fileID: 2119785841}
   - {fileID: 1114962926}
   - {fileID: 1554630066}
+  - {fileID: 1505677868}
+  - {fileID: 433064256}
+  - {fileID: 161911592}
+  - {fileID: 1599777511}
+  - {fileID: 469539779}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -35894,6 +35894,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7fdc5cfacd58e42ba3db622b3bf95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sl: {fileID: 1568730247}
+  epAnzeige: {fileID: 767520845}
+  levelEp: 100
+  fullLevel: 100
   moneyText: {fileID: 1327395423}
   rifle: {fileID: 1599777510}
 --- !u!1 &2036058483

@@ -13,7 +13,7 @@ public class BrontoControll : MonoBehaviour
     public GameObject enemyGraphic;
     bool canFlip = true;
     bool facingRight = false;
-    float flipTime = 5f;
+    float flipTime = 3f;
     float nextFlipChance = 0f;
 
 
@@ -31,7 +31,7 @@ public class BrontoControll : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if ("Enemy" == null) return;
+        
         localScale = transform.localScale;
 
         enemyAnimator = GetComponentInChildren<Animator>();
@@ -81,14 +81,16 @@ public class BrontoControll : MonoBehaviour
                 if (!facingRight) enemyRB.AddForce(new Vector2(-1, 0) * enemySpeed);
 
                 else enemyRB.AddForce(new Vector2(1, 0) * enemySpeed);
-                enemyAnimator.SetBool("isRun", charging);
+          
+                    enemyAnimator.SetBool("isRun", charging);
 
 
-                isAttack = true;
-                enemyAnimator.SetBool("isRun", isAttack);
+                    isAttack = true;
+                    enemyAnimator.SetBool("isRun", isAttack);
+                
+              
+
             }
-        
-
         }
     }
 
@@ -100,10 +102,10 @@ public class BrontoControll : MonoBehaviour
             charging = false;
             isAttack = false;
             enemyRB.velocity = new Vector2(0f, 0f);
+            if(gameObject!=null)
             enemyAnimator.SetBool("isRun", charging);
-            enemyAnimator.SetBool("isAttack", isAttack);
+           enemyAnimator.SetBool("isAttack", isAttack);
         }
-      
     }
 
 

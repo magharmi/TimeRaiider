@@ -5,14 +5,11 @@ using UnityEngine.UI;
 public class Spieler_Leben : MonoBehaviour
 {
 
-
-
-    public float fullLeben;
-    public float currentLeben;
     public GameObject deathFX;
     [SerializeField]
     public Slider sl;
-
+    public float fullLeben;
+    public float currentLeben;
     Spieler_Leben sp;
 
     public Image geschlagenScreen;
@@ -26,12 +23,21 @@ public class Spieler_Leben : MonoBehaviour
     void Start()
     {
         slider = GameObject.Find("Slider");
+       
         sl = slider.GetComponent<Slider>();
+       
         currentLeben = fullLeben;
+      
+
+        
         sp = GetComponent<Spieler_Leben>();
+
         sl.maxValue = fullLeben;
         sl.value = fullLeben;
+
+     
         currentLeben = fullLeben;
+       
         geschlagen = false;
         lvlmanager = GameObject.Find("lvlmanager").GetComponent<lvlmanager>();
         geschlagenScreen = GameObject.Find("BlutFenster").GetComponent<Image>();
