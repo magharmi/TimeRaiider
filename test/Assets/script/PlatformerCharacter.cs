@@ -22,8 +22,10 @@ public class PlatformerCharacter : MonoBehaviour
     private Animator m_Anim;            // Reference to the player's animator component.
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
-                                        //public Inventory inventory;
-
+                                 //public Inventory inventory;
+    //Waffe Wechseln mit animation
+    
+    public int selectedWeapon = 0;
     private void Awake()
     {
 
@@ -35,27 +37,32 @@ public class PlatformerCharacter : MonoBehaviour
     }
     private void Update()
     {
-
+   
+            if(Input.GetKeyDown(KeyCode.Z)){
+                m_Anim.SetTrigger("isShoot");
+                Armbrust();
+             }
         if (Input.GetKeyDown(KeyCode.V))
         {
-             m_Anim.SetTrigger("isArm");
+            m_Anim.SetTrigger("isArm");
             Armbrust();
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.K))
+            {
+                m_Anim.SetTrigger("isKeule");
+            }
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+              
+                m_Anim.SetTrigger("isSpeer");
+            }
+        if (Input.GetKeyDown(KeyCode.M))
         {
-            m_Anim.SetTrigger("isShoot");
-            Armbrust();
-        }
-        //Nah Kampf
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
+
             m_Anim.SetTrigger("isSchwertMongol");
         }
 
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            m_Anim.SetTrigger("isKeule");
-        }
+
 
     }
  
@@ -169,4 +176,5 @@ public class PlatformerCharacter : MonoBehaviour
             }
         }
     }
+  
 }
