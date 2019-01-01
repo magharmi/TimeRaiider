@@ -6,7 +6,7 @@ using UnityEngine;
 public class BossHit : MonoBehaviour
 {
 
-    public int damage;
+    public int damage=10;
     public float speed;
    // public GameObject explosion;
    // public GameObject explosionTwo;
