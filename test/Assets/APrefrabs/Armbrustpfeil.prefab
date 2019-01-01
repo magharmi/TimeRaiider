@@ -21,9 +21,8 @@ GameObject:
   - component: {fileID: 4013863336008946}
   - component: {fileID: 212631290729911074}
   - component: {fileID: 50219311634563828}
-  - component: {fileID: 114835861491419462}
-  - component: {fileID: 114297203262885762}
   - component: {fileID: 60325623602459158}
+  - component: {fileID: 114641792633836282}
   m_Layer: 0
   m_Name: Armbrustpfeil
   m_TagString: Untagged
@@ -38,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1884327567491406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.28039, y: -133.19356, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 454.69058, y: -155.50943, z: 0}
+  m_LocalScale: {x: 1.35, y: 0.387594, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,7 +99,7 @@ PolygonCollider2D:
       - {x: 0.84999996, y: -0.035}
       - {x: 0.84999996, y: 0.055}
       - {x: 0.14999999, y: 0.49499997}
---- !u!114 &114297203262885762
+--- !u!114 &114641792633836282
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,21 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  damageRate: 2
-  pushBackforce: 0
---- !u!114 &114835861491419462
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1884327567491406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 564cc9adc438b4c45b3c030b423d2319, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeSpan: 2
+  damage: 5
+  damageRate: 0.5
+  pushBackforce: 1
 --- !u!212 &212631290729911074
 SpriteRenderer:
   m_ObjectHideFlags: 1

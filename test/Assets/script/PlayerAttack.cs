@@ -15,7 +15,7 @@ public class PlayerAttack : MonoBehaviour {
     public Transform attackPos;
     
     public float attackRange;
-    public int damage;
+    public int damage=10;
    
     //GameObjects
    
