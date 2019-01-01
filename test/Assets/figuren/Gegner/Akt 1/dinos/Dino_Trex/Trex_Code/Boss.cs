@@ -9,9 +9,9 @@ public class Boss : MonoBehaviour
     public int health;
     public int damage;
     private float timeBtwDamage = 1.5f;
+    private Shake shake;
 
-
-   // public Animator camAnim;
+   //public Animator camAnim;
     public Slider healthBar;
     private Animator anim;
     public bool isDead;
@@ -19,6 +19,7 @@ public class Boss : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }
 
     private void Update()
@@ -50,7 +51,8 @@ public class Boss : MonoBehaviour
         {
             if (timeBtwDamage <= 0)
             {
-                //camAnim.SetTrigger("shake");
+                // camAnim.SetTrigger("shake");
+                shake.CamShake();
                 anim.SetTrigger("attack");
                 other.GetComponent<Spieler_Leben>().addDamage(damage);
             }
