@@ -6,18 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameControlScript : MonoBehaviour {
 
-    [SerializeField]
-    public Slider sl;
-
-    [SerializeField]
-    Text epAnzeige;
-
+    private Slider sl;
+    private Text epAnzeige;
     private GameObject slider;
-
-
-    
-
-    public Text moneyText;
+    private Text moneyText;
 	public static int moneyAmount;
 	int isRifleSold;
 	public GameObject rifle;
@@ -25,11 +17,13 @@ public class GameControlScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         slider = GameObject.Find("SliderEP");
+        sl = GameObject.Find("Slider").GetComponent<Slider>();
+        moneyText = GameObject.Find("GoldZaehler").GetComponent<Text>();
+        epAnzeige = GameObject.Find("EP").GetComponent<Text>();
 
-        sl = slider.GetComponent<Slider>();
 
         //currentLevel = fullLevel;
-        
+
         sl.maxValue = 100;
         sl.value    = 0;
 
