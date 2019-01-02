@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameControlScript : MonoBehaviour {
 
     private Slider sl;
-    private Text epAnzeige;
+    private Text levelAnzeige;
     private GameObject slider;
     private Text moneyText;
 	public static int moneyAmount;
@@ -16,10 +16,10 @@ public class GameControlScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        slider = GameObject.Find("SliderEP");
-        sl = GameObject.Find("Slider").GetComponent<Slider>();
+        slider = GameObject.Find("Slider");
+        sl = GameObject.Find("SliderEP").GetComponent<Slider>();
         moneyText = GameObject.Find("GoldZaehler").GetComponent<Text>();
-        epAnzeige = GameObject.Find("EP").GetComponent<Text>();
+        levelAnzeige = GameObject.Find("LvlAnzeige").GetComponent<Text>();
 
 
         //currentLevel = fullLevel;
@@ -33,7 +33,7 @@ public class GameControlScript : MonoBehaviour {
         moneyAmount = PlayerPrefs.GetInt ("MoneyAmount");
 		isRifleSold = PlayerPrefs.GetInt ("IsRifleSold");
         sl.value = PlayerPrefs.GetFloat("EPValue");
-        epAnzeige.text = PlayerPrefs.GetInt("SpielerLevel").ToString();
+        levelAnzeige.text = PlayerPrefs.GetInt("SpielerLevel").ToString();
 
         
 
@@ -52,7 +52,7 @@ public class GameControlScript : MonoBehaviour {
 	{
 		PlayerPrefs.SetInt ("MoneyAmount", moneyAmount);
         PlayerPrefs.SetFloat("EPValue", sl.value);
-        PlayerPrefs.SetInt("SpielerLevel", int.Parse(epAnzeige.text));
+        PlayerPrefs.SetInt("SpielerLevel", int.Parse(levelAnzeige.text));
 		SceneManager.LoadScene ("ShopStoneAge");
 	}
 
@@ -62,9 +62,9 @@ public class GameControlScript : MonoBehaviour {
         if (sl.value >= sl.maxValue)
         {
             sl.value = 0;
-            int level = int.Parse(epAnzeige.GetComponent<Text>().text);
+            int level = int.Parse(levelAnzeige.GetComponent<Text>().text);
             int levelUp = level + 1;
-            epAnzeige.GetComponent<Text>().text = levelUp.ToString();
+            levelAnzeige.GetComponent<Text>().text = levelUp.ToString();
         }
     }
 }
