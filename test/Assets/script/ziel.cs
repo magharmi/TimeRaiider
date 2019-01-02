@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 public class ziel : MonoBehaviour
 {
     public string level;
-    public int LevelToUnlock = 2;
+    public int LevelToUnlock;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "spieler")
         {
             Debug.Log("ziel erreicht");
-            SceneManager.LoadScene(level);
             PlayerPrefs.SetInt("levelReached", LevelToUnlock);
             PlayerPrefs.SetString("letzteScene", level);
+            SceneManager.LoadScene(level);
         }
     }
 
