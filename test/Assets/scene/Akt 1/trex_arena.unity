@@ -3463,10 +3463,10 @@ Transform:
   m_LocalPosition: {x: -54.39192, y: -99.13462, z: 2.3984375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 913954498}
   - {fileID: 1570008391}
+  - {fileID: 913954498}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &665602966
 GameObject:
@@ -4509,7 +4509,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641307658}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &913954499
 MonoBehaviour:
@@ -4528,8 +4528,9 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: 
-    sentences: []
+    name: Dialog
+    sentences:
+    - 'Ich: "Da ist Sie, mit der Energiezelle kann ich die Zeitmaschine wieder benutzen."'
   trigger: {fileID: 0}
 --- !u!61 &913954500
 BoxCollider2D:
@@ -6748,7 +6749,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1290604925
 GameObject:
@@ -7654,11 +7655,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1570008390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 519.3, y: -49.69, z: 0}
+  m_LocalPosition: {x: 512.9, y: -49.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641307658}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1570008392
 MonoBehaviour:
@@ -7677,8 +7678,10 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: 
-    sentences: []
+    name: Dialog
+    sentences:
+    - 'Ich: "Hier liegen viele Knochen rum wie die Dorfbewohner beschrieben haben."'
+    - 'Ich: "Jetzt muss ich nur noch die Energiezelle finden!"'
   trigger: {fileID: 0}
 --- !u!61 &1570008393
 BoxCollider2D:
@@ -7820,7 +7823,7 @@ Prefab:
     - target: {fileID: 224491227125908090, guid: 010885f78837b394998cef3d31bbd824,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224491227125908090, guid: 010885f78837b394998cef3d31bbd824,
         type: 2}
@@ -7860,7 +7863,7 @@ Prefab:
     - target: {fileID: 224491227125908090, guid: 010885f78837b394998cef3d31bbd824,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224491227125908090, guid: 010885f78837b394998cef3d31bbd824,
         type: 2}
