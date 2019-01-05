@@ -6,6 +6,7 @@ public class PickUp : MonoBehaviour {
 
     private Inventory inventory;
     public GameObject itemButton;
+
     // Use this for initialization
     void Start()
     {
@@ -20,14 +21,9 @@ public class PickUp : MonoBehaviour {
             {
                 if (inventory.isFull[i] == false)
                 {
-
-
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slots[i].transform, false);
-
-                   
                     Destroy(gameObject);
-                    
                     break;
                 }
             }

@@ -12,6 +12,7 @@ public class GameControlScript : MonoBehaviour {
     private Text moneyText;
 	public static int moneyAmount;
 	int isRifleSold;
+    public string shopSzene;
 	public GameObject rifle;
 
 	// Use this for initialization
@@ -20,32 +21,20 @@ public class GameControlScript : MonoBehaviour {
         sl = GameObject.Find("SliderEP").GetComponent<Slider>();
         moneyText = GameObject.Find("GoldZaehler").GetComponent<Text>();
         levelAnzeige = GameObject.Find("LvlAnzeige").GetComponent<Text>();
-
-
-        //currentLevel = fullLevel;
+        moneyText.text = "Gold: " + moneyAmount.ToString();
 
         sl.maxValue = 100;
         sl.value    = 0;
-
-        //currentLevel = fullLevel;
-
 
         moneyAmount = PlayerPrefs.GetInt ("MoneyAmount");
 		isRifleSold = PlayerPrefs.GetInt ("IsRifleSold");
         sl.value = PlayerPrefs.GetFloat("EPValue");
         levelAnzeige.text = PlayerPrefs.GetInt("SpielerLevel").ToString();
 
-        
-
 		if (isRifleSold == 1)
 			rifle.SetActive (true);
 		else
 			rifle.SetActive (false);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		moneyText.text = "Gold: " + moneyAmount.ToString() + "$";
 	}
 
 	public void gotoShop()
@@ -53,7 +42,7 @@ public class GameControlScript : MonoBehaviour {
 		PlayerPrefs.SetInt ("MoneyAmount", moneyAmount);
         PlayerPrefs.SetFloat("EPValue", sl.value);
         PlayerPrefs.SetInt("SpielerLevel", int.Parse(levelAnzeige.text));
-		SceneManager.LoadScene ("ShopStoneAge");
+		SceneManager.LoadScene (shopSzene);
 	}
 
     public void addEP(float epAmount)
