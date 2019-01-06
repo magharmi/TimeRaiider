@@ -5,9 +5,9 @@ using UnityEngine;
 public class Parallaxing : MonoBehaviour {
 
     public Transform[] backgrounds;
-    private float[] parallaxScales;
     public float smoothing = 1f;
 
+    private float[] parallaxScales;
     private Transform cam;
     private Vector3 previousCamPos;
 
@@ -39,8 +39,6 @@ public class Parallaxing : MonoBehaviour {
 
             backgrounds[i].position = Vector3.Lerp(backgrounds[i].position, backgroundTargetPos, smoothing * Time.deltaTime);
         }
-
         previousCamPos = cam.position;
-		
 	}
 }

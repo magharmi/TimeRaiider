@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameControlScript : MonoBehaviour {
 
-    private Slider sl;
-    private Text levelAnzeige;
+    public Slider sl;
+    public Text levelAnzeige;
     private GameObject slider;
     private Text moneyText;
 	public static int moneyAmount;

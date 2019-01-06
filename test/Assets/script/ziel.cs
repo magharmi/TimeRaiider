@@ -11,6 +11,15 @@ public class ziel : MonoBehaviour
     private static int moneyAmount;
     private Slider sl;
     private Text levelAnzeige;
+    private Text moneyText;
+
+    private GameControlScript spielerWerte;
+
+    private void Start()
+    {
+        spielerWerte = GameObject.Find("lvlmanager").GetComponent<GameControlScript>();
+        moneyAmount = PlayerPrefs.GetInt("MoneyAmount");
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,10 +29,9 @@ public class ziel : MonoBehaviour
             PlayerPrefs.SetInt("levelReached", LevelToUnlock);
             PlayerPrefs.SetString("letzteScene", level);
             PlayerPrefs.SetInt("MoneyAmount", moneyAmount);
-            PlayerPrefs.SetFloat("EPValue", sl.value);
-            PlayerPrefs.SetInt("SpielerLevel", int.Parse(levelAnzeige.text));
+            PlayerPrefs.SetFloat("EPValue", spielerWerte.sl.value);
+            PlayerPrefs.SetInt("SpielerLevel", int.Parse(spielerWerte.levelAnzeige.text));
             SceneManager.LoadScene(level);
         }
     }
-
 }
