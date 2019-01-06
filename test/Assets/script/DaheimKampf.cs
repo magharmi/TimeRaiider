@@ -8,6 +8,7 @@ public class DaheimKampf : MonoBehaviour
 
     private GameObject kampfKamera, mainCamera, unsichtbareWand, helikopter, beiZeitmaschine, grossvater, nächstesZiel;
     private GameObject[] agenten, raumschiffAgenten;
+    private bool heliLandet;
 
     // Use this for initialization
     void Start()
@@ -44,11 +45,15 @@ public class DaheimKampf : MonoBehaviour
         }
         if (agentenNummer == 0)
         {
-            Debug.Log("Alle Tot aus erster Welle");
-            beiZeitmaschine.SetActive(false);
-            helikopter.GetComponent<Rigidbody2D>().isKinematic = false;
-            yield return new WaitForSeconds(3);
-            helikopter.GetComponent<Rigidbody2D>().isKinematic = true;
+            if (heliLandet == false)
+            {
+                Debug.Log("Alle Tot aus erster Welle");
+                beiZeitmaschine.SetActive(false);
+                helikopter.GetComponent<Rigidbody2D>().isKinematic = false;
+                yield return new WaitForSeconds(3);
+                helikopter.GetComponent<Rigidbody2D>().isKinematic = true;
+                heliLandet = true;
+            }
             yield return new WaitForSeconds(2);
             raumschiffAgentenSpawnenAufruf();
         }
