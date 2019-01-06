@@ -3463,10 +3463,10 @@ Transform:
   m_LocalPosition: {x: -54.39192, y: -99.13462, z: 2.3984375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 913954498}
   - {fileID: 1570008391}
+  - {fileID: 913954498}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &665602966
 GameObject:
@@ -4509,7 +4509,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641307658}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &913954499
 MonoBehaviour:
@@ -4523,14 +4523,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neuesZielErstellen: 0
-  spielerEinfrieren: 0
-  idleSprite: {fileID: 0}
+  spielerEinfrieren: 1
+  idleSprite: {fileID: 21300000, guid: d7f4c7d7ce88e074d8f72e65b9f145d5, type: 3}
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: Dialog
+    sentences:
+    - 'Ich: "Da ist Sie, mit der Energiezelle kann ich die Zeitmaschine wieder benutzen."'
+  trigger: {fileID: 913954497}
 --- !u!61 &913954500
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6732,11 +6733,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 591246bf59b24a944aed55539555dd67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  dialogueText: {fileID: 0}
+  nameText: {fileID: 475007125}
+  dialogueText: {fileID: 24649876}
   GegnerAIVorhanden: 0
   LandwirtRenntWegVorhanden: 0
-  animator: {fileID: 0}
+  animator: {fileID: 1140586023}
 --- !u!4 &1269756790
 Transform:
   m_ObjectHideFlags: 0
@@ -6748,7 +6749,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1290604925
 GameObject:
@@ -7654,11 +7655,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1570008390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 519.3, y: -49.69, z: 0}
+  m_LocalPosition: {x: 512.9, y: -49.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641307658}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1570008392
 MonoBehaviour:
@@ -7677,9 +7678,11 @@ MonoBehaviour:
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
   dialogue:
-    name: 
-    sentences: []
-  trigger: {fileID: 0}
+    name: Dialog
+    sentences:
+    - 'Ich: "Hier liegen viele Knochen rum wie die Dorfbewohner beschrieben haben."'
+    - 'Ich: "Jetzt muss ich nur noch die Energiezelle finden!"'
+  trigger: {fileID: 1570008390}
 --- !u!61 &1570008393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7820,7 +7823,7 @@ Prefab:
     - target: {fileID: 224491227125908090, guid: 010885f78837b394998cef3d31bbd824,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224491227125908090, guid: 010885f78837b394998cef3d31bbd824,
         type: 2}
@@ -7860,7 +7863,7 @@ Prefab:
     - target: {fileID: 224491227125908090, guid: 010885f78837b394998cef3d31bbd824,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224491227125908090, guid: 010885f78837b394998cef3d31bbd824,
         type: 2}
@@ -7916,6 +7919,11 @@ Prefab:
       propertyPath: m_Name
       value: CanvasLeben (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 224000312363716442, guid: 010885f78837b394998cef3d31bbd824,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 180.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 010885f78837b394998cef3d31bbd824, type: 2}
   m_IsPrefabAsset: 0
@@ -7960,7 +7968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f53fa00a9979f46a05b41814479ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "n\xE4chstesLevel": 
+  "n\xE4chstesLevel": A2B1
 --- !u!60 &1582381517
 PolygonCollider2D:
   m_ObjectHideFlags: 0

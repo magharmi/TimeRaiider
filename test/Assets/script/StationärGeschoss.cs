@@ -10,14 +10,15 @@ public class StationärGeschoss : MonoBehaviour
     public Rigidbody2D bulletPrefab;
     public float bulletSpeed = 300f;
     public float schussGeschwindigkeit;
+    public char richtung;
 
-    private Transform player;
+    
     private Rigidbody2D clone;
 
     // Use this for initialization
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("spieler").GetComponent<Transform>();
+       // player = GameObject.FindGameObjectWithTag("spieler").GetComponent<Transform>();
         StartCoroutine(Attack());
     }
 
@@ -26,7 +27,7 @@ public class StationärGeschoss : MonoBehaviour
     IEnumerator Attack()
     {
         yield return new WaitForSeconds(schussGeschwindigkeit);
-        if (bulletspawn.position.x > player.position.x)
+        if (richtung=='r')
         {
             clone = Instantiate(bulletPrefab, bulletspawn.position, bulletspawn.rotation);
             //rechts werfen
