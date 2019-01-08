@@ -8,7 +8,6 @@ public class Freundlicher_Patrol : MonoBehaviour {
     public float starteWarteZeit;
     bool isFacingRight;
     public Transform zielPunkt;
-    private Transform zielPunkt2=zielPunkt;
     public float minX;
     public float maxX;
     public float minY;
@@ -19,8 +18,7 @@ public class Freundlicher_Patrol : MonoBehaviour {
 	void Start () {
         warteZeit = starteWarteZeit;
         anim = GetComponent<Animator>();
-        neuePosition(zielPunkt);
-      
+        zielPunkt.position = new Vector2(Random.Range(minX,maxX), Random.Range(minY, maxY));
 	}
 	
 	// Update is called once per frame
@@ -31,10 +29,7 @@ public class Freundlicher_Patrol : MonoBehaviour {
         {
             if (warteZeit <= 0)
             {
-                if (zielPunkt > zielPunkt2)
-                {
-                    Flip();
-                }
+                Flip();
                 anim.SetBool("isRun", true);
                 zielPunkt.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
                 warteZeit = starteWarteZeit;
@@ -47,13 +42,6 @@ public class Freundlicher_Patrol : MonoBehaviour {
         }
 
         }
-
-    protected void neuePosition(Transform zielpunkt)
-    {
-      
-        zielpunkt.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-
-    }
 
     protected void Flip()
     {
