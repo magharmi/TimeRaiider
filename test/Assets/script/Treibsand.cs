@@ -9,24 +9,17 @@ public class Treibsand : MonoBehaviour {
     private PlatformerCharacter2D script2D;
     private PlatformerCharacter script;
 
-	// Use this for initialization
 	void Start () {
         script2D = GameObject.FindGameObjectWithTag("spieler").GetComponent<PlatformerCharacter2D>();
         if(script2D == null){
             script = GameObject.FindGameObjectWithTag("spieler").GetComponent<PlatformerCharacter>();
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "spieler");
         {
-            Debug.Log("Betrittt Treibsand");  
             if(script2D == null){
                 script.spielerGeschwindigkeit(5f); 
             }
@@ -39,8 +32,7 @@ public class Treibsand : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D other)
     {
         if(other.tag == "spieler")
-        {
-            Debug.Log("Verlässt Treibsand");  
+        { 
             if(script2D == null){
                 script.spielerGeschwindigkeit(10f); 
             }
@@ -48,6 +40,5 @@ public class Treibsand : MonoBehaviour {
                 script2D.spielerGeschwindigkeit(10f);
             } 
         }
-        
     }
 }

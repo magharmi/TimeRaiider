@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class DrohneSchiesst : MonoBehaviour
 {
-
-    //spawn finden
     public Transform bulletspawn;
     public Rigidbody2D bulletPrefab;
     public float bulletSpeed = 750;
@@ -16,7 +14,6 @@ public class DrohneSchiesst : MonoBehaviour
     private Rigidbody2D clone;
     private bool geschossen;
 
-    // Use this for initialization
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("spieler").GetComponent<Transform>();
