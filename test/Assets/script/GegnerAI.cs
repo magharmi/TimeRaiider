@@ -44,7 +44,17 @@ public class GegnerAI : MonoBehaviour {
             if (imRadius == false)
             {
                 transform.position = Vector2.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
-                if(Vector2.Distance(transform.position, newPos) == 0)
+                if (newPos.x > player.position.x)
+                {
+
+                    transform.rotation = Quaternion.Euler(0, 180f, 0);
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+
+                }
+                if (Vector2.Distance(transform.position, newPos) == 0)
                 {
                     imRadius = true;
                 
@@ -81,7 +91,19 @@ public class GegnerAI : MonoBehaviour {
 
         else if (Vector2.Distance(transform.position, player.position) <= radius)
         {
+            if (newPos.x < player.position.x)
+            {
+
+                transform.rotation = Quaternion.Euler(0, 180f, 0);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+
+            }
+
             imRadius = false;
+
             if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
             {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), speed * Time.deltaTime);

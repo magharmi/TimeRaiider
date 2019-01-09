@@ -24,7 +24,7 @@ public class ShopControlScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		moneyAmountText.text = "Gold: " + moneyAmount.ToString() + "Gold";
+		moneyAmountText.text = "Gold: " + moneyAmount.ToString();
 
 		isRifleSold = PlayerPrefs.GetInt ("IsRifleSold");
 
