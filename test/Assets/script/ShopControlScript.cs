@@ -11,12 +11,14 @@ public class ShopControlScript : MonoBehaviour {
 
 	public Text moneyAmountText;
 	public Text riflePrice;
-
 	public Button buyButton;
+
+    private Scene aktuelleScene;
 
 	// Use this for initialization
 	void Start () {
 		moneyAmount = PlayerPrefs.GetInt ("MoneyAmount");
+        aktuelleScene = SceneManager.GetActiveScene();
 	}
 	
 	// Update is called once per frame
@@ -43,8 +45,23 @@ public class ShopControlScript : MonoBehaviour {
 	public void exitShop()
 	{
 		PlayerPrefs.SetInt ("MoneyAmount", moneyAmount);
-		SceneManager.LoadScene ("test");
-	}
+        if (aktuelleScene.name == "ShopStoneAge")
+        {
+            SceneManager.LoadScene("dorf");
+        }
+        else if (aktuelleScene.name == "ShopWueste")
+        {
+            SceneManager.LoadScene("Stadt");
+        }
+        else if (aktuelleScene.name == "ShopRom")
+        {
+            SceneManager.LoadScene("Rom");
+        }
+        else if (aktuelleScene.name == "ShopZukunft")
+        {
+            SceneManager.LoadScene("Haus");
+        }
+    }
 
 	public void resetPlayerPrefs()
 	{
