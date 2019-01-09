@@ -60,6 +60,11 @@ public class PauseMenu : MonoBehaviour {
 
     public void QuitGame()
     {
-        Application.Quit();
+        //PlayerPrefs.DeleteAll();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+                Application.Quit();
+#endif
     }
 }

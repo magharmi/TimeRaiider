@@ -4,22 +4,24 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelSelector : MonoBehaviour {
+public class LevelSelectorA3 : MonoBehaviour
+{
 
     public string sceneToLoad;
     public Button[] levelButtons;
-    
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start()
+    {
         int levelReached = PlayerPrefs.GetInt("levelReached", 1);
-        for (int i = 0; i < levelButtons.Length; i++)
+        for (int i = 14; i < levelButtons.Length + 14; i++)
         {
             if (i + 1 > levelReached)
             {
-                levelButtons[i].interactable = false;
+                levelButtons[i - 14].interactable = false;
             }
         }
-	}
+    }
 
     public void LoadLevel()
     {

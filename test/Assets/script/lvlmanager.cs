@@ -19,17 +19,6 @@ public class lvlmanager : MonoBehaviour
         spieler = GameObject.FindGameObjectWithTag("spieler");
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            //spiel beenden 
-            Debug.Log("Spiel beenden");
-            Application.Quit();
-        }
-    }
-
-
     public void RespawnSpieler()
     {
 
