@@ -12,15 +12,10 @@ public class checkpoint : MonoBehaviour {
         Lvlmanager = FindObjectOfType<lvlmanager>();
         
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "spieler");
+        if (other.tag == "spieler")
         {
             Debug.Log("checkpoint");
             //neuen checkpoint abspeichern
@@ -28,7 +23,4 @@ public class checkpoint : MonoBehaviour {
             
         }
     }
-
-
-
 }
