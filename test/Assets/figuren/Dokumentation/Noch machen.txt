@@ -1,4 +1,5 @@
--heißt noch machen
+- heißt noch machen
+~ unwichtigerer Task
 x heißt ist fertig
 
 
@@ -19,43 +20,56 @@ Akt1, test:
 	- Kisten nach Sprungpart durchlaufbar
 	- Dimetrodron fehlt Animation
 		- Dimetrodron fehlt Lebensbalken
-		- wenn man Dimetrodron angreift passiert nichts
-		- springt man über den Dimetrodron ist man im Dialog gefangen während dieser einen angreift
+		- Wenn man Dimetrodron angreift passiert nichts
+		- Springt man über den Dimetrodron ist man im Dialog gefangen während dieser einen angreift
 	- Skelett unter der Erde ist oben abgeschnitten
 
 Akt1, dorf:
-	x Shop einbinden
-	x Leute fehlen
+	- Hintergrund fehlt
+	- Leute fehlen(da ist nur einer der Moonwalked, dann ist der task nicht abgeschlossen xD)
+	- Dialog/Erklärung wieso man zur Höhle kommt fehlt komplett
+	- Feuer im Dorf brennt nicht(wenn wir das einmal haben brauchen wir das immer)
+	- Shop, Feuer wird von Untergrund überdeckt
 
 Akt1, Höhle:
-	x Falle schießt Blutträne statt Pfeil
-	x KastenSpitzen sind nur noch pinke Rechtecke
-	x Gegner haben keine Animation
-	- Links fehlt Item um die Steine zu zerstören (Armin: Scripte hab ich erstellt, kp ob es funktioniert. Pfeile machen keinen dmg)
-	x Sich bewegende Plattformen sind pink statt Brettern
-	x Gegner haben kein Gehirn
+	- Da stehen zwei Warnschilder in einander(vor dem Sprung wo man auf den Stacheln landet)
+	- Vielleicht Warnschild vor den runterfallenden Dingern
+	- Steine fallen nicht mehr runter und versperren nicht den Weg
+	- Gegner greifen einen nicht an, stehen nur rum https://gyazo.com/000ddc5b7d815d814c11ed2af34bd00f
+		- Machen dementsprechend auch keinen Schaden
+	- Links fehlt Item um die Steine zu zerstören (Armin: Scripte hab ich erstellt, kp ob es funktioniert. Pfeile machen keinen dmg[was für Pfeile?])
+	- Links steht riesiger Pfeil https://gyazo.com/cd28e138ad8d0fc83432d187c5a70cfc
+	- Lava macht keinen Schaden
+	- Brückt hängt komisch in der Erde
+	~ Schiebt man die Gegner unter die Zerstampfer hängt sich das Spiel auf, sollte aber nicht auftreten wenn die Gegner gefixt werden
+	- Hauptcharakter Collider buggt beim ducken rum. So kann man die Zerstampfer in der Höhle nicht überleben
 
 Akt1, HöhlenDorf
-	x kein respawn
-	x du bist tot bild kommt nicht
-	x Gegner Animation fehlt
-	x Fallen schießen nicht (Armin: Sollen die überhaupt schießen? Sind ja im Dorf
-				Sulfikar:ja eigentlich schon die beschützen ja das dorf
-				Armin: Ock)
-	- Miniboss hat noch keine Animation und keinen Kampf
-	x Verbindung zur TRexArena fehlt
-	x Fallen zu sehr im Vordergrund clippen durch Char hindurch
+	- Links keine Begrenzung
+	- Gegner Animation fehlt
+		- Wird man von Gegner berüht wird man direkt respawnt
+	- Man kann keine Pfeile schießen
+	- Miniboss hat noch keine Animation und keinen Kampf(einfach nur stärker machen)
+	- Verbindung zum weg_zum_trex fehlt(Wer hackt das ab? Werde nach test teleportiert und nicht zum Weg)
 
 Akt1, Weg_Zum_Trex:
-	x Gegner Animation fehlt
-	x Zu wenige Gegner
-	x bekommt keinen Schaden, weder Gegner, Lava, Fallen, Vulkan etc
-	x Falle schießt Blutträne statt Pfeil
+	- Kann eine Träne beim ducken abfeuern
+	- Kann keine Pfeile verschießen
+	- Dimetrodon, siehe test
+	- Raptor fehlt Lebensbalken
+		~ Angriffsradius der Raptoren zu klein
+	- Kisten sind durchlaufbar
+	- Vulkan macht keinen Schaden
+		~ Wenn wir Feuer animiert haben müssen die runterfallenden Dinger eigentlich auch
+	- Fallen schießen rechts durch Erdwand durch, während man auf den Brettern hochfährt
+		- Fallen schießen unregelmäßig
+		- Wie soll das schaffbar sein? Man hat gar keinen Platz um die Dinger zu überspringen
 
 Akt1, trexarena:
-	x Bosskampf fehlt
-	x Vielleicht noch Selbstgespräch das erklärt was das Item ist nach Bosskampf(Energiezelle für die Zeitmaschine)
-	x Hintergrund fehlt
+	- Links keine Levelbegrenzung
+	- Trex rennt zu früh los, man ist noch gar nicht in der Arena
+	- Man kann den Trex einfach überspringen
+	~ Lebensbalken des Trex ist rot
 
 Akt2, A2B1:
 	x Rote Schrift im Level
@@ -178,11 +192,14 @@ allgemein:
 	x Speichern(nach beenden des Spiels wieder im gleichen akt starten)
 	x Quest bzw. Erfahrung einbauen
 	- Herzen im Inventar lassen sich nicht benutzen
-	- Hauptcharakter Collider buggt beim ducken rum. So kann man die Zerstampfer in der Höhle nicht überleben
 	- zu wenig Dialoge oft ganze Level ohne, einer zu Beginn jedes Levels wäre gut der kurz erklärt wo man gerade ist.
 		Aber auch mehr in den Level, guckt euch test an, das wirkt viel lebendiger dadurch
+	- zu wenige Checkpoints in allen Leveln, zB
 	- Dokumentation
 	- Unnötige Szenen entfernen
+	- überall werden Exceptions geworfen, die sollten am besten weg
+	- Shops haben nicht die richtigen Items zu verkaufen
+	- Man könnte den größeren Feuern auch noch dmg geben
 
 Zum 24.1:
 	-Poster
