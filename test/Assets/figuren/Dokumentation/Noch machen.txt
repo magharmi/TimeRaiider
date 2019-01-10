@@ -6,17 +6,16 @@ x heißt ist fertig
 
 Akt1, test:
 	x Schrott steht am Eingang rum
-	- Steinschleuder-Typ bewegt sich viel zu schnell, wenn man ihm näher kommt da er immer den 	Mindestabstand halten will
-	- Steinschleuder-Typ buggt im Stein rum, wenn man ihn da reindrückt https://gyazo.com/91b7b8202b8f12cb57521b00cb840f5e
-	- Steinschleuder-Typ macht keinen Schaden
+	- Steinschleuder-Typ bewegt sich viel zu schnell, wenn man ihm näher kommt da er immer den Mindestabstand halten will
+		- Steinschleuder-Typ buggt im Stein rum, wenn man ihn da reindrückt https://gyazo.com/91b7b8202b8f12cb57521b00cb840f5e
+		- Steinschleuder-Typ macht keinen Schaden
 		- Der verfolgt einen ewig, also auch wenn man schon längst außer Reichweit sein sollte
 	- Hintergrund mit den grünen Hügeln fehlt
 	x Wieso steht da ein freundlicher Höhlenmensch der Moonwalked? https://gyazo.com/56615ce6bc79143be1d5bfeed8e3838e
 	- Wenn der Baum ein Mal runtergefallen ist kommt man nicht mehr über die Schlucht
 	x Totenkopf unter der Erde ist abgeschnitten
 	- Vor dem feindlichen Dorf liegen noch 5 Goldnuggets rum
-	-gold zähler geht nicht
-	- raptor droppt 3 herzen
+	- Goldzähler klappt nicht
 	x Beim Sprungpart sieht man Erde im Hintergrund, es gibt auch einen Hintergrund ohne das
 	- Läuft man nach dem Sprungpart nach links hängt man im Baum fest
 	- Kisten nach Sprungpart durchlaufbar
@@ -55,8 +54,6 @@ Akt1, HöhlenDorf
 	- Verbindung zum weg_zum_trex fehlt(Wer hackt das ab? Werde nach test teleportiert und nicht zum Weg)
 
 Akt1, Weg_Zum_Trex:
-	- Kann eine Träne beim ducken abfeuern
-	- Kann keine Pfeile verschießen
 	- Dimetrodon, siehe test
 	- Raptor fehlt Lebensbalken
 		~ Angriffsradius der Raptoren zu klein
@@ -74,62 +71,70 @@ Akt1, trexarena:
 	~ Lebensbalken des Trex ist rot
 
 Akt2, A2B1:
-	x Rote Schrift im Level
-	x Gegner fehlen(linke Hälfte)
-	x noch freundliche Leute der Karawane fehlen
-	x Untergrund verschiedene Helligkeiten
-	x Kakteen teils durchlaufbar
-	x Gegner teils tot und durchlaufbars
-	x Spawnpunkt falsch gesetzt
-	- Mega Sprünge? Wenn das wieder nur bei mir ist ignorieren(Sulf: die sind überall!?)
+	- Kisten immer noch umwerfbar und dann unschaffbar
+	- Charakter redet von Schild obwohl keins da ist
+	- Dialoge einheitlich machen, Leerzeichen nach : also Ich:"ss" -> Ich: "ss"
+	- Strecke die man Kisten schieben muss zu lang oder mehr Gegner da
+	- Kisten/Karren durchlaufbar
+	~ Rechts andere Begrenzung, Haus deutet eher was spannendes an als ein Ende
+	- Kaktus blockiert Kisten https://gyazo.com/abe8305163bb4ca60608fbf798a420f3
+	~ Kisten zu schwer dauert ja Jahre, auch einzelne https://gyazo.com/a51da9a9ad2fcfb60116412bdeae52e0
+	~ Beim Schieben der Kiste kann man schweben wenn man gegen die springt
+	- Erster Sandwurm links landet nicht in seinem Loch
+	- noch freundliche Leute der Karawane fehlen
+	~ Sandsturm im Himmel sinnlos
 
 Akt2, Stadt:
-	x Hinter/Untergrund fehlt
-	x Shop einbauen
-	x Mehr Einwohner, Stadt sieht so ausgestorben aus
-	x Rote Schrift in Stadt
+	~ Bürgermeister umbenennen passt irgendwie nicht zu der Zeit(auch in Dialogen und StadtNachAngriff)
+	~ Bürgermeister ist ein Liliputaner(wenn geändert auch in StadtNachAngriff)
+	- Hinter/Untergrund fehlt
+	- Mehr Einwohner, Stadt sieht so ausgestorben aus
+	- Links keine Begrenzung
+	- wieso gibt es zwei Ziele, geht man aus der KarawanenAngriff Szene hier hin zurück ohne alle zu töten ist das falsche aktiviert
 
 Akt2, KarawanenAngriff:
 	- GegnerAnimation fehlt
-	x Hinter/Untergrund fehlt
-	x Wird überprüft ob man alle getötet hat? Oder kann man auch direkt in die Stadt zurück laufen? (Armin: Wenn der letzte Händler (4) stirbt, dann ist das 														"Ziel"erfüllt)
-	x Weg zwischen Stadt und Karawane zu groß
+	- Untergrund zu hochman sieht den über dem Boden
+	~ Rechts kein Ende
+	- Weg zur Karawane ist jetzt kurz, aber soll die Karawane sich teleportiert haben? Sollte hier und bei A2B1 einheitlich gemacht werden
+	- Falsche Gegner, da ist noch 50cent unterwegs
+	x Wird überprüft ob man alle getötet hat? Oder kann man auch direkt in die Stadt zurück laufen? (Armin: Wenn der letzte Händler (4) stirbt, dann ist das)
+		kann das nicht überprüfen daher lasse ich es drinnen, erst nach Gegnertausch testen!
 
 Akt2, StadtNachAngriff:
-	x Hinter/Untergrund fehlt
-	x Shop einbauen (falscher shop verlinkt)
+	- Läuft man nach rechts kommt man zur Karawane, muss diese jedoch erneut töten um wieder hier her zu kommen,
+			vielleicht einfach den Weg mit ner unsichtbaren Wand blockieren ist am wenigstens Arbeit
 	- Mehr Einwohner, Stadt sieht so ausgestorben aus
-	x Rote Schrift in Stadt
-	x Verlinkt direkt zur Pyramide nicht zum WegZurPyramide
-	x gold gold
-	x untergrund
+	- Geht man in den Shop kommt man in die Szene Stadt nicht StadtNachAngriff, brauchen also zwei Shopszenen oder
+			vielleicht ist der Shop vor dem Angriff noch nicht offen weil die uns nicht kennen
+
 Akt2, WegZurPyramide:
-	x Kakteen/Gegner machen keinen Schaden
-	x Gegner haben keine Animation
-	x Hintergrund eingefügt
+	~ Läuft man nach rechts kommt man zum falschen Ende der Stadt
+	- Skorpione kein Lebensbalken
+		- Skorpione keine Animation
+	~ Kakteen/Skropione im Vergleich zu A2B1 winzig
+	~ Herz ganz links wird nicht richtig aufgesammelt
 
 Akt2, Pyramide:
-	x Hinter/Untergrund fehlt
-	x Fallen machen keinen Schaden
-	x Gegner greifen nicht an(kein Ai und keine Animation)
-	x Pinke Plattformen(da wo man zu den Mumien runterfällt)
-	x keine Verbindung zur Grabkammer am Ende
-	- schießt noch Träne
-	x rotes Herz wo man zu den Mumien runterfällt nicht einsammelnbar
+	- Spawnpunkt mitten im Level
+	- Schießt Pfeil aber auch Tränen
+	- Von Mumie gedroptes Herz nicht aufsammelbar
+	- Entgegenkommende Kugel viel zu schnell
+	- Wenn man bei entgegenkommender Kugel 
+	~ SchwingFallen machen noch 1hit während man auf der Kugel ist
+	- Herz wo man zu den Mumien runterfällt nicht einsammelnbar, also das was oben liegt
+	~ Die Fallen sind doch niemals schaffbar, will sehen wie du da durch kommst Sulf
 
 Akt2, Grabkammer:
-	x Hinter/Untergrund fehlt
-	x Gegner greifen nicht an(kein Ai und keine Animation)
 	- Anubis Animation fehlt
-	x Und macht keinen Schaden
 	- Verschießt Tränen beim Ducken
-	x Keine Verbindung zum nächsten Level
+	x Keine Verbindung zum nächsten Level(Kann ich nicht testen, da Char nicht schießt)
 
 Akt3, Feld:
 	- Sklaven fehlt Animation
 	- Boss Animation fehlt
 	- Sklaven nehmen keinen Schaden
-	- Karren und Kisten durchlaufbar(sulf:das ist doch deko oder net?)
+	- Karren und Kisten durchlaufbar
 	- Hintergrund passt nicht beim Bosskampf(einfach nochmal blau darüber?)
 	- Spieler wird bei Bosskampf nicht entfroren, also kann sich nicht bewegen
 
@@ -191,8 +196,11 @@ Akt4, Finale:
 	x Ende fehlt noch
 
 allgemein:
+	- Kann eine Träne beim Ducken/Klicken abfeuern(in vielen Szenen)
+	- Kann keine Pfeile verschießen(in vielen Szenen)
+
 	x Speichern(nach beenden des Spiels wieder im gleichen akt starten)
-	x Quest bzw. Erfahrung einbauen
+		noch testen, wird auch Gold, Xp, Items und freigeschaltete Level(für Levelauswahl) gespeichert?
 	- Herzen im Inventar lassen sich nicht benutzen
 	- zu wenig Dialoge oft ganze Level ohne, einer zu Beginn jedes Levels wäre gut der kurz erklärt wo man gerade ist.
 		Aber auch mehr in den Level, guckt euch test an, das wirkt viel lebendiger dadurch
@@ -200,8 +208,9 @@ allgemein:
 	- Dokumentation
 	- Unnötige Szenen entfernen
 	- überall werden Exceptions geworfen, die sollten am besten weg
-	- Shops haben nicht die richtigen Items zu verkaufen
+	- Shops haben nicht die richtigen Items zu verkaufen und noch den Reset Button
 	- Man könnte den größeren Feuern auch noch dmg geben
+	- Alle Dialoge, Rechtschreibung kontrollieren schien Rainer Boy wichtig zu sein
 
 Zum 24.1:
 	-Poster
