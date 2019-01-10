@@ -3145,11 +3145,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 221922583}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 10
+  damageRate: 2
+  pushBackforce: 0
 --- !u!68 &221922586
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -3494,11 +3495,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 246920273}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 10
+  damageRate: 2
+  pushBackforce: 0
 --- !u!68 &246920276
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -5270,11 +5272,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 358269891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 10
+  damageRate: 2
+  pushBackforce: 0
 --- !u!68 &358269894
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -5878,7 +5881,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  resetObjekt:
+  - {fileID: 1342956472}
 --- !u!1 &382240216
 GameObject:
   m_ObjectHideFlags: 0
@@ -6266,11 +6270,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 27.6
+      value: -64.06
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -53.6
+      value: -55.6
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6344,11 +6348,11 @@ Prefab:
       objectReference: {fileID: 1493150122}
     - target: {fileID: 4252048499074954, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4927654948805606, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4556176323003738, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_RootOrder
@@ -22898,11 +22902,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1847836772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88077f7e517a2cc46aec9fda0266c5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 227b178f50b8832499bea53e81a40761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lvlmanager: {fileID: 0}
-  resetObjekt: []
+  damage: 10
+  damageRate: 2
+  pushBackforce: 0
 --- !u!68 &1847836775
 EdgeCollider2D:
   m_ObjectHideFlags: 0
