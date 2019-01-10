@@ -3056,16 +3056,15 @@ MonoBehaviour:
   dialogue:
     name: Opa
     sentences:
-    - "Wir sind zu sp\xE4t. Die TMA war bereits hier. Sie haben deine Gro\xDFmutter
-      mitgenommen und wollen mich wahrscheinlich dorthin locken."
-    - TMA? Wer ist das?
-    - "Das wirst du sehen, wenn du Gro\xDFmutter rettest. Ich schaffe das nicht. Die
-      TMA hat eine geheime Raumstation. Du musst sofort dahin!"
-    - "Alleine schaff ich das nicht, Gro\xDFvater."
-    - Nimm diesen Gegenstand. Damit wirst du sie besiegen.
-    - Ich gebe mein Bestes.
-    - Geh weiter zur Zeitmaschine nach rechts. Die Koordinaten zur Raumstation sind
-      eingespeichert.
+    - "Grossvater: \"Wir sind zu sp\xE4t. Die TMA war bereits hier. Sie haben deine
+      Gro\xDFmutter mitgenommen und wollen mich wahrscheinlich dorthin locken.\""
+    - 'Ich: "Die TMA? Wer ist das?"'
+    - "Grossvater: \"Das wirst du sehen, wenn du Gro\xDFmutter rettest. Ich schaffe
+      das nicht. Die TMA hat eine geheime Raumstation.\""
+    - 'Grossvater: "Guck dich zuerst in der Werkstatt um, da habe ich noch ein paar
+      Waffen rumliegen."'
+    - "Grossvater: \"Aber beeil dich, ich bereite schon mal die Zeitmaschine f\xFCr
+      den Teleport zur Raumstation vor!\""
   trigger: {fileID: 807512852}
 --- !u!61 &807512855
 BoxCollider2D:
@@ -3582,7 +3581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neuesZielErstellen: 0
-  spielerEinfrieren: 0
+  spielerEinfrieren: 1
   idleSprite: {fileID: 21300000, guid: 85be9c17c01908f41b5ef90547d4ea45, type: 3}
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
