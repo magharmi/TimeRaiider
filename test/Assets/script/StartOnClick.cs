@@ -9,12 +9,13 @@ public class StartOnClick : MonoBehaviour {
     public void StartLevel()
     {
         string lastScene = PlayerPrefs.GetString("letzteScene");
-        if (lastScene == null)
+        if (lastScene == "null")
         {
             SceneManager.LoadScene("test");
         }
         else
         {
+            Debug.Log(lastScene);
             SceneManager.LoadScene(lastScene);
         }
     }
