@@ -111,6 +111,7 @@ public class AnubisKampf : MonoBehaviour {
     IEnumerator mumienSpawnenFunc(int mumienNummer)
     {
         mumien[mumienNummer].GetComponent<SpriteRenderer>().enabled = true;
+        mumien[mumienNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
         mumien[mumienNummer].GetComponent<GegnerAI>().enabled = true;
         yield return new WaitForSeconds(2);
         if(mumienNummer <= 8)
@@ -137,6 +138,7 @@ public class AnubisKampf : MonoBehaviour {
     IEnumerator mumienSpawnenFunc2(int mumienNummer, int steinNummer)
     {
         mumien2[mumienNummer].GetComponent<SpriteRenderer>().enabled = true;
+        mumien2[mumienNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
         mumien2[mumienNummer].GetComponent<GegnerAI>().enabled = true;
         steine[steinNummer].GetComponent<SpriteRenderer>().enabled = true;
         steine[steinNummer].GetComponent<PolygonCollider2D>().enabled = true;
