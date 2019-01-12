@@ -32,6 +32,7 @@ public class DaheimKampf : MonoBehaviour
     IEnumerator agentenSpawnenFunc(int agentenNummer)
     {
         agenten[agentenNummer].GetComponent<SpriteRenderer>().enabled = true;
+        agenten[agentenNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
         agenten[agentenNummer].GetComponent<GegnerAI>().enabled = true;
         yield return new WaitForSeconds(2);
         if (agentenNummer <= 8)
@@ -67,6 +68,7 @@ public class DaheimKampf : MonoBehaviour
     IEnumerator raumschiffAgentenSpawnen(int raumschiffAgentenNummer)
     {
         raumschiffAgenten[raumschiffAgentenNummer].GetComponent<SpriteRenderer>().enabled = true;
+        raumschiffAgenten[raumschiffAgentenNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
         raumschiffAgenten[raumschiffAgentenNummer].GetComponent<GegnerAI>().enabled = true;
         yield return new WaitForSeconds(2);
         if (raumschiffAgentenNummer <= 8)
