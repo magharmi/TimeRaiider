@@ -37,6 +37,7 @@ public class KolosseumKampf : MonoBehaviour
     IEnumerator sklavenSpawnenFunc(int sklavenNummer)
     {
         sklaven[sklavenNummer].GetComponent<SpriteRenderer>().enabled = true;
+        sklaven[sklavenNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
         sklaven[sklavenNummer].GetComponent<GegnerAI>().enabled = true;
         yield return new WaitForSeconds(2);
         if (sklavenNummer <= 8)
@@ -64,6 +65,7 @@ public class KolosseumKampf : MonoBehaviour
     IEnumerator loewenTigerSpawnen(int loewenTigerNummer)
     {
         loewenTiger[loewenTigerNummer].GetComponent<SpriteRenderer>().enabled = true;
+        loewenTiger[loewenTigerNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
         loewenTiger[loewenTigerNummer].GetComponent<GegnerAI>().enabled = true;
         yield return new WaitForSeconds(2);
         if (loewenTigerNummer <= 8)

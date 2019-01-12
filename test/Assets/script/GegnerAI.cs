@@ -91,7 +91,7 @@ public class GegnerAI : MonoBehaviour {
 
         else if (Vector2.Distance(transform.position, player.position) <= radius)
         {
-            if (newPos.x < player.position.x)
+            if (transform.position.x < player.position.x)
             {
 
                 transform.rotation = Quaternion.Euler(0, 180f, 0);
