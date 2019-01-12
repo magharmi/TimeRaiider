@@ -11,8 +11,9 @@ public class SteineZerstoerbar : MonoBehaviour {
         {
             for(int i = 0; i < steine.Length; i++)
             {
-                steine[i].GetComponent<Gegner>().enabled = true;
+                steine[i].layer = 11;
             }
+            Destroy(gameObject);
         }
     }
 }
