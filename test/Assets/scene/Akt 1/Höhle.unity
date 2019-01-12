@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 11490269}
   - component: {fileID: 11490273}
   m_Layer: 0
-  m_Name: spitze
+  m_Name: Axt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -494,7 +494,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.99, y: 1.7}
+    oldSize: {x: 9.49, y: 23.95}
     newSize: {x: 0.99, y: 1.7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -550,7 +550,7 @@ SpriteRenderer:
   m_SortingLayerID: 1072735969
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: c08d88d31ab614e479fcd3123dacfa87, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a9d4bf04ba73954297b579a2429eb2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -567,13 +567,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 11490268}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -247.95, y: -132.03, z: 0}
-  m_LocalScale: {x: 1.978, y: 1.978, z: 1.978}
+  m_LocalRotation: {x: 0, y: 0, z: 0.29095262, w: 0.95673746}
+  m_LocalPosition: {x: -247.98, y: -134.02, z: 0}
+  m_LocalScale: {x: 0.08541045, y: 0.08541045, z: 0.08541045}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 32
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.83}
 --- !u!114 &11490273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12510,6 +12510,83 @@ Transform:
   m_Father: {fileID: 853051600}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &608489107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 608489108}
+  - component: {fileID: 608489110}
+  - component: {fileID: 608489109}
+  m_Layer: 0
+  m_Name: DialogBeiAxt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &608489108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 608489107}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -191.62, y: -29.76, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 641307658}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &608489109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 608489107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b77283281094946b5cbcbb6e84c53f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neuesZielErstellen: 0
+  spielerEinfrieren: 0
+  idleSprite: {fileID: 0}
+  altesZiel: {fileID: 0}
+  neuesZiel: {fileID: 0}
+  dialogue:
+    name: Dialog
+    sentences:
+    - "Ich: \"Eine Sackgasse. Ich sollte mit dieser Axt versuchen die Steine zu zerst\xF6ren,
+      die mir den Weg versperren und einen Weg weiter nach unten finden.\""
+  trigger: {fileID: 608489107}
+--- !u!61 &608489110
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 608489107}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -3.720848}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 8.441696}
+  m_EdgeRadius: 0
 --- !u!1 &610265251
 GameObject:
   m_ObjectHideFlags: 0
@@ -12892,11 +12969,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -32.4
+      value: 223.6
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -133.4
+      value: -109.6
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13075,7 +13152,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4045714199295956, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4927654948805606, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_RootOrder
@@ -13083,7 +13160,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4556176323003738, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114285182828340250, guid: 87a2357765801c34292d6718d8b4d770,
         type: 2}
@@ -13142,6 +13219,7 @@ Transform:
   m_Children:
   - {fileID: 1570008391}
   - {fileID: 12571114}
+  - {fileID: 608489108}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
