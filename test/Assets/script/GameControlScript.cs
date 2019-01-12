@@ -17,6 +17,8 @@ public class GameControlScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        moneyAmount = PlayerPrefs.GetInt("MoneyAmount");
+        isRifleSold = PlayerPrefs.GetInt("IsRifleSold");
         slider = GameObject.Find("Slider");
         sl = GameObject.Find("SliderEP").GetComponent<Slider>();
         moneyText = GameObject.Find("GoldZaehler").GetComponent<Text>();
@@ -26,8 +28,6 @@ public class GameControlScript : MonoBehaviour {
         sl.maxValue = 100;
         sl.value    = 0;
 
-        moneyAmount = PlayerPrefs.GetInt ("MoneyAmount");
-		isRifleSold = PlayerPrefs.GetInt ("IsRifleSold");
         sl.value = PlayerPrefs.GetFloat("EPValue");
         levelAnzeige.text = PlayerPrefs.GetInt("SpielerLevel").ToString();
 
@@ -55,5 +55,10 @@ public class GameControlScript : MonoBehaviour {
             int levelUp = level + 1;
             levelAnzeige.GetComponent<Text>().text = levelUp.ToString();
         }
+    }
+
+    public void addGold(int goldAmount)
+    {
+        moneyText.text = "Gold: " + (moneyAmount + goldAmount).ToString();
     }
 }

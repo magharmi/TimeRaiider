@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour {
 
+    public int gold = 1;
+
     private GameControlScript control;
 
     public void Start()
@@ -13,8 +15,11 @@ public class CoinScript : MonoBehaviour {
 
     void OnTriggerEnter2D (Collider2D col)
 	{
-		GameControlScript.moneyAmount += 1;
-        control.addEP(10);
-		Destroy (gameObject);
+        if (col.tag == "spieler")
+        {
+            control.addGold(gold);
+            Debug.Log(gold + " Gold hinzugefügt");
+            Destroy(gameObject);
+        }
 	}
 }
