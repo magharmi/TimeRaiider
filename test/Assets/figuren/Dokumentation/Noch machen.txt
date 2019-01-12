@@ -5,67 +5,38 @@ x heißt ist fertig
 
 
 Akt1, test:
-	x Schrott steht am Eingang rum
 	- Steinschleuder-Typ bewegt sich viel zu schnell, wenn man ihm näher kommt da er immer den Mindestabstand halten will
 	(suf:selbes script wie agent geben. kein sinn ein neues skript zu nehmen)
 		- Steinschleuder-Typ buggt im Stein rum, wenn man ihn da reindrückt https://gyazo.com/91b7b8202b8f12cb57521b00cb840f5e
 		- Steinschleuder-Typ macht keinen Schaden
 		- Der verfolgt einen ewig, also auch wenn man schon längst außer Reichweit sein sollte
 	- Hintergrund mit den grünen Hügeln fehlt
-	x Wieso steht da ein freundlicher Höhlenmensch der Moonwalked? https://gyazo.com/56615ce6bc79143be1d5bfeed8e3838e
-	x Wenn der Baum ein Mal runtergefallen ist kommt man nicht mehr über die Schlucht
-	x Totenkopf unter der Erde ist abgeschnitten
 	- Vor dem feindlichen Dorf liegen noch 5 Goldnuggets rum
 	- Goldzähler klappt nicht
-	x Beim Sprungpart sieht man Erde im Hintergrund, es gibt auch einen Hintergrund ohne das
-	x Läuft man nach dem Sprungpart nach links hängt man im Baum fest
-	x Kisten nach Sprungpart durchlaufbar
 	- Dimetrodron fehlt Animation
 		- Dimetrodron fehlt Lebensbalken
 		- Wenn man Dimetrodron angreift passiert nichts
-		x Springt man über den Dimetrodron ist man im Dialog gefangen während dieser einen angreift (Armin: Wo amk?)
 	- Skelett unter der Erde ist oben abgeschnitten (Armin: Wo amk?)
 
 Akt1, dorf:
-	x Hintergrund fehlt
-	x Leute fehlen(da ist nur einer der Moonwalked, dann ist der task nicht abgeschlossen xD)
 	-animationen von den leuten sind da aber müssen eingefügt werden
-	x Dialog/Erklärung wieso man zur Höhle kommt fehlt komplett
-	x Feuer im Dorf brennt nicht(wenn wir das einmal haben brauchen wir das immer)
-	x Shop, Feuer wird von Untergrund überdeckt (Armin: Wo amk?)
 
 Akt1, Höhle:
-	x Da stehen zwei Warnschilder in einander(vor dem Sprung wo man auf den Stacheln landet)
-	x Vielleicht Warnschild vor den runterfallenden Dingern
-	x Steine fallen nicht mehr runter und versperren nicht den Weg
-	x Gegner greifen einen nicht an, stehen nur rum https://gyazo.com/000ddc5b7d815d814c11ed2af34bd00f
-		x Machen dementsprechend auch keinen Schaden
 	- Links fehlt Item um die Steine zu zerstören (Armin: Scripte hab ich erstellt, kp ob es funktioniert. Pfeile machen keinen dmg[was für Pfeile?] <= Die man mit V 																				abschiesst)
 	- Links steht riesiger Pfeil https://gyazo.com/cd28e138ad8d0fc83432d187c5a70cfc (Armin: Das soll das Item sein, dass die Steine zerstören kann)
-	x Lava macht keinen Schaden
-	x Brückt hängt komisch in der Erde
 	~ Schiebt man die Gegner unter die Zerstampfer hängt sich das Spiel auf, sollte aber nicht auftreten wenn die Gegner gefixt werden
-	x Hauptcharakter Collider buggt beim ducken rum. So kann man die Zerstampfer in der Höhle nicht überleben
-	(sulf:Löcher tiefer kann jetzt auch im stehen überleben)
 Akt1, HöhlenDorf
-	x Links keine Begrenzung
 	- Gegner Animation fehlt
-		x Wird man von Gegner berüht wird man direkt respawnt
 	- Man kann keine Pfeile schießen
 	- Miniboss hat noch keine Animation
-	x und keinen Kampf(einfach nur stärker machen)
-	x Verbindung zum weg_zum_trex fehlt(Wer hackt das ab? Werde nach test teleportiert und nicht zum Weg)
 
 Akt1, Weg_Zum_Trex:
 	- Dimetrodon, siehe test
 	- Raptor fehlt Lebensbalken
 		~ Angriffsradius der Raptoren zu klein
-	x Kisten sind durchlaufbar
 	- Vulkan macht keinen Schaden
 		~ Wenn wir Feuer animiert haben müssen die runterfallenden Dinger eigentlich auch
-	x Fallen schießen rechts durch Erdwand durch, während man auf den Brettern hochfährt
 		- Fallen schießen unregelmäßig
-		x Wie soll das schaffbar sein? Man hat gar keinen Platz um die Dinger zu überspringen
 
 Akt1, trexarena:
 	- Links keine Levelbegrenzung
@@ -74,43 +45,23 @@ Akt1, trexarena:
 	~ Lebensbalken des Trex ist rot
 
 Akt2, A2B1:
-	x Schild was nach rechts zeigt
 	- Kisten immer noch umwerfbar und dann unschaffbar
-	x Charakter redet von Schild obwohl keins da ist
-	x Dialoge einheitlich machen, Leerzeichen nach : also Ich:"ss" -> Ich: "ss"
 	- Strecke die man Kisten schieben muss zu lang oder mehr Gegner da
-	x Kisten/Karren durchlaufbar
 	~ Rechts andere Begrenzung, Haus deutet eher was spannendes an als ein Ende
-	x Kaktus blockiert Kisten https://gyazo.com/abe8305163bb4ca60608fbf798a420f3
 	~ Kisten zu schwer dauert ja Jahre, auch einzelne https://gyazo.com/a51da9a9ad2fcfb60116412bdeae52e0
 	~ Beim Schieben der Kiste kann man schweben wenn man gegen die springt
-	x Erster Sandwurm links landet nicht in seinem Loch
 	- noch freundliche Leute der Karawane fehlen
-	x Sandsturm im Himmel sinnlos
 
 Akt2, Stadt:
-	x Bürgermeister umbenennen passt irgendwie nicht zu der Zeit(auch in Dialogen und StadtNachAngriff)
-	x Bürgermeister ist ein Liliputaner(wenn geändert auch in StadtNachAngriff)
-	x Hinter/Untergrund fehlt
 	- Mehr Einwohner, Stadt sieht so ausgestorben aus
-	x Links keine Begrenzung
-	x wieso gibt es zwei Ziele, geht man aus der KarawanenAngriff Szene hier hin zurück ohne alle zu töten ist das falsche aktiviert
 
 Akt2, KarawanenAngriff:
 	- GegnerAnimation fehlt
-	x Untergrund zu hochman sieht den über dem Boden
-	x Rechts kein Ende
 	- Weg zur Karawane ist jetzt kurz, aber soll die Karawane sich teleportiert haben? Sollte hier und bei A2B1 einheitlich gemacht werden
 	- Falsche Gegner, da ist noch 50cent unterwegs
-	x Wird überprüft ob man alle getötet hat? Oder kann man auch direkt in die Stadt zurück laufen? (Armin: Wenn der letzte Händler (4) stirbt, dann ist das)
-		kann das nicht überprüfen daher lasse ich es drinnen, erst nach Gegnertausch testen!
 
 Akt2, StadtNachAngriff:
-	x Läuft man nach rechts kommt man zur Karawane, muss diese jedoch erneut töten um wieder hier her zu kommen,
-			vielleicht einfach den Weg mit ner unsichtbaren Wand blockieren ist am wenigstens Arbeit
 	- Mehr Einwohner, Stadt sieht so ausgestorben aus
-	x Geht man in den Shop kommt man in die Szene Stadt nicht StadtNachAngriff, brauchen also zwei Shopszenen oder
-			vielleicht ist der Shop vor dem Angriff noch nicht offen weil die uns nicht kennen
 
 Akt2, WegZurPyramide:
 	~ Läuft man nach rechts kommt man zum falschen Ende der Stadt
@@ -120,38 +71,26 @@ Akt2, WegZurPyramide:
 	~ Herz ganz links wird nicht richtig aufgesammelt
 
 Akt2, Pyramide:
-	x Spawnpunkt mitten im Level
 	- Schießt Pfeil aber auch Tränen
 	- Von Mumie gedroptes Herz nicht aufsammelbar
 	- Entgegenkommende Kugel viel zu schnell
 	- Wenn man bei entgegenkommender Kugel 
-	x SchwingFallen machen noch 1hit während man auf der Kugel ist
 	- Herz wo man zu den Mumien runterfällt nicht einsammelnbar, also das was oben liegt
 	~ Die Fallen sind doch niemals schaffbar, will sehen wie du da durch kommst Sulf
-	x Wenn man bei Kugel in Spitzen fällt, respawnt die Kugel nicht
 
 Akt2, Grabkammer:
 	- Anubis Animation fehlt
 	- Verschießt Tränen beim Ducken
-	x Keine Verbindung zum nächsten Level(Kann ich nicht testen, da Char nicht schießt)
 
 Akt3, Feld:
 	- Sklaven fehlt Animation
 	- Boss Animation fehlt
-	x Sklaven nehmen keinen Schaden
-	x Karren und Kisten durchlaufbar
-	x Hintergrund passt nicht beim Bosskampf(einfach nochmal blau darüber?)
-	x Spieler wird bei Bosskampf nicht entfroren, also kann sich nicht bewegen (Armin: kp warum das so ist, hab das frieren einfach weg gemacht)
 	~ Lebensanzeige wie bei Trex für Bosskampf wäre nice
 
 Akt3, WegNachRom:
-	x Links keine Begrenzung
 	- Soldaten Animation fehlt
-	x Soldaten haben keinen Lebensbalken und können nicht angegriffen werden (Armin: eingefügt, aber kann ich nicht testen, da keine Attacke)
 	~ Man kann einen Kilometer hoch springen, wenn manso halb gegen ne Falle springt
 	- Hintergrund hat ADHS, ist zu schnell (Armin: müsst ihr einstellen, sieht bei mir eigentlich normal aus)
-		x Hintergrund nicht hoch genug wenn man von nem Karren aus springt zum Beipsiel
-		x Hintergrund zu kurz, könnte sich von alleine fixen wenn die Geschwindigkeit stimmt
 
 Akt3, Rom:
 	~ Man ist riesig im Vergleich zur Stadt
@@ -162,7 +101,6 @@ Akt3, Rom:
 Akt3, Kolosseum:
 	~ Neue Stadtbewohner auch ins Kolosseum als Zuschauer einfügen
 	- Sklaven fehlt Animation(wie bei Feld)
-	x Sklaven haben Lebensbalken
 	- Tiger fehlt Animation
 	- Gladiator fehlt Animation
 	~ Lebensanzeige wie bei Trex für den Kampf gegen den Gladiator wäre nice
@@ -181,7 +119,6 @@ Akt4, Haus:
 		und dann beim Verlassen des Shops zur Raumstation kommt. Das wäre schöner als das jetzige
 
 Akt4, Raumstation:
-	- Irgendwas unsichtbares schießt einen am Anfang ab
 	- Agenten fehlt Animation
 	- Drohnen fehlt Animation
 	- Selbstschussanlagen fehlt Animation
@@ -197,9 +134,6 @@ Akt4, Finale:
 allgemein:
 	- Kann eine Träne beim Ducken/Klicken abfeuern(in vielen Szenen)
 	- Kann keine Pfeile verschießen(in vielen Szenen)
-
-	x Speichern(nach beenden des Spiels wieder im gleichen akt starten)
-		noch testen, wird auch Gold, Xp, Items und freigeschaltete Level(für Levelauswahl) gespeichert? (Armin: Ja sollte eigentlich. Speichern tut der aber nur wenn 															man ein Ziel erreicht, oder den Shop betritt. Also 															nicht über Quit-Button. War so geplant oder?
 	- Herzen im Inventar lassen sich nicht benutzen
 	- Zu wenig Dialoge oft ganze Level ohne, einer zu Beginn jedes Levels wäre gut der kurz erklärt wo man gerade ist.
 		Aber auch mehr in den Level, guckt euch test an, das wirkt viel lebendiger dadurch
