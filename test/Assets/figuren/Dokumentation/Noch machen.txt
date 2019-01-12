@@ -2,8 +2,6 @@
 ~ unwichtigerer Task
 x heißt ist fertig
 
-
-
 Akt1, test:
 	-spawnpunkt falsch gesetzt
 	- Steinschleuder-Typ bewegt sich viel zu schnell, wenn man ihm näher kommt da er immer den Mindestabstand halten will
@@ -12,20 +10,18 @@ Akt1, test:
 		- Steinschleuder-Typ macht keinen Schaden
 		- Der verfolgt einen ewig, also auch wenn man schon längst außer Reichweit sein sollte
 	- Hintergrund mit den grünen Hügeln fehlt
-	x Goldzähler klappt nicht
 	- Dimetrodron fehlt Animation
 		- Dimetrodron fehlt Lebensbalken
 		- Wenn man Dimetrodron angreift passiert nichts
-	- Skelett unter der Erde ist oben abgeschnitten (Armin: Wo amk?)
+	x Skelett unter der Erde ist oben abgeschnitten (Armin: Wo amk?, Vincent: Da sind doch nur 2-3 Skelette im Level)
+		Vincent: Ist gefixed, aber hier wars https://gyazo.com/e6bf68a99d3bb492b4887a6a46bb82ac
 
 Akt1, dorf:
 	-animationen von den leuten sind da aber müssen eingefügt werden
 
 Akt1, Höhle:
-	x Links fehlt Item um die Steine zu zerstören (Armin: Scripte hab ich erstellt, kp ob es funktioniert. Pfeile machen keinen dmg[was für Pfeile?] <= Die man mit V 																				abschiesst)
-	x Links steht riesiger Pfeil https://gyazo.com/cd28e138ad8d0fc83432d187c5a70cfc (Armin: Das soll das Item sein, dass die Steine zerstören kann)
-	x sperre einfach raus nehmen ? (Vincent: Nein amk)
 	~ Schiebt man die Gegner unter die Zerstampfer hängt sich das Spiel auf, sollte aber nicht auftreten wenn die Gegner gefixt werden
+
 Akt1, HöhlenDorf
 	- Gegner Animation fehlt
 	- Man kann keine Pfeile schießen
@@ -35,17 +31,12 @@ Akt1, Weg_Zum_Trex:
 	- Dimetrodon, siehe test
 	- Raptor fehlt Lebensbalken
 		~ Angriffsradius der Raptoren zu klein
-	x Vulkan macht keinen Schaden
-		x Wenn wir Feuer animiert haben müssen die runterfallenden Dinger eigentlich auch
 
 Akt1, trexarena:
-	x Links keine Levelbegrenzung
 	- Trex rennt zu früh los, man ist noch gar nicht in der Arena
-	x Man kann den Trex einfach überspringen
 	~ Lebensbalken des Trex ist rot
 
 Akt2, A2B1:
-	x Kisten immer noch umwerfbar und dann unschaffbar
 	- Strecke die man Kisten schieben muss zu lang oder mehr Gegner da(sulf:finde das ok eigentlich)
 	~ Rechts andere Begrenzung, Haus deutet eher was spannendes an als ein Ende
 	~ Kisten zu schwer dauert ja Jahre, auch einzelne https://gyazo.com/a51da9a9ad2fcfb60116412bdeae52e0
@@ -60,7 +51,6 @@ Akt2, Stadt:
 
 Akt2, KarawanenAngriff:
 	- GegnerAnimation fehlt
-	x Weg zur Karawane ist jetzt kurz, aber soll die Karawane sich teleportiert haben? Sollte hier und bei A2B1 einheitlich gemacht werden
 	- Falsche Gegner, da ist noch 50cent unterwegs
 
 Akt2, StadtNachAngriff:
@@ -68,8 +58,7 @@ Akt2, StadtNachAngriff:
 
 Akt2, WegZurPyramide:
 	~ Läuft man nach rechts kommt man zum falschen Ende der Stadt
-	x Skorpione kein Lebensbalken
-		- Skorpione keine Animation
+	- Skorpione keine Animation
 	~ Kakteen/Skropione im Vergleich zu A2B1 winzig
 	~ Herz ganz links wird nicht richtig aufgesammelt
 
@@ -95,8 +84,6 @@ Akt3, WegNachRom:
 	- Soldaten Animation fehlt
 	~ Man kann einen Kilometer hoch springen, wenn manso halb gegen ne Falle springt
 	- Hintergrund hat ADHS, ist zu schnell (Armin: müsst ihr einstellen, sieht bei mir eigentlich normal aus)
-		x Hintergrund nicht hoch genug wenn man von nem Karren aus springt zum Beipsiel
-		x Hintergrund zu kurz, könnte sich von alleine fixen wenn die Geschwindigkeit stimmt
 
 Akt3, Rom:
 	~ Man ist riesig im Vergleich zur Stadt
@@ -116,7 +103,7 @@ Akt3, Kolosseum:
 
 Akt4, Daheim:
 	- Agenten fehlt Animation
-	- Erster Agent steht bereits während Gespräch da rum (Armin: War eigentlich gewollt)
+	- Erster Agent steht bereits während Gespräch da rum (Armin: War eigentlich gewollt, Vincent: Dann muss das Gespräch angepasst werden)
 	~ Dauert zu lange nach dem der Heli gelandet ist bis Leute raus kommen
 
 Akt4, Haus:
@@ -143,8 +130,6 @@ allgemein:
 	- Kann eine Träne beim Ducken/Klicken abfeuern(in vielen Szenen)
 	- Kann keine Pfeile verschießen(in vielen Szenen)
 
-	x Speichern(nach beenden des Spiels wieder im gleichen akt starten)
-		noch testen, wird auch Gold, Xp, Items und freigeschaltete Level(für Levelauswahl) gespeichert? (Armin: Ja sollte eigentlich. Speichern tut der aber nur wenn 															man ein Ziel erreicht, oder den Shop betritt. Also 															nicht über Quit-Button. War so geplant oder?
 	- Herzen im Inventar lassen sich nicht benutzen
 	- Zu wenig Dialoge oft ganze Level ohne, einer zu Beginn jedes Levels wäre gut der kurz erklärt wo man gerade ist.
 		Aber auch mehr in den Level, guckt euch test an, das wirkt viel lebendiger dadurch
@@ -152,10 +137,10 @@ allgemein:
 	- Unnötige Szenen entfernen
 	- Überall werden Exceptions geworfen, die sollte man sich mal angucken
 	- Shops haben nicht die richtigen Items zu verkaufen und noch den Reset Button
-	- Man könnte den größeren Feuern auch noch dmg geben
+	~ Man könnte den größeren Feuern auch noch dmg geben
 	- Alle Dialoge, Rechtschreibung kontrollieren schien Rainer Boy wichtig zu sein
 	- Pflichtenheft durchgehen und Punkte kontrollieren
-	- Dokumentation
+	- Dokumentation Icon austauschen
 
 Zum 24.1:
 	- Poster schon ausgedruckt, also früher
