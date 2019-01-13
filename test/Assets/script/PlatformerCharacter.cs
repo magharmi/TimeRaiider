@@ -31,7 +31,7 @@ public class PlatformerCharacter : MonoBehaviour
     //AKT1 bool
     bool speer,knochen1,knochen2,axt,keule1;
     //Akt2 bool
-    bool isAkt2_Schwert, isAkt2_Schwert1, isAkt2_Schwert3;
+    bool isAkt2_Schwert, isAkt2_Schwert1, isAkt2_Schwert3, isAkt2_Schwert4;
     //Akt3 bool
     bool isAkt3_Schwert,isAkt3_Axt, isAkt2_Schwert2,isAkt3_Keule, isSchwertMongol;
     //Akt4
@@ -52,7 +52,7 @@ public class PlatformerCharacter : MonoBehaviour
     private void Update()
     {
         HanldeInputAKt1();
-
+        HanldeInputAKt2();
 
         if (Input.GetKeyDown(KeyCode.V))
         {
@@ -60,22 +60,6 @@ public class PlatformerCharacter : MonoBehaviour
             Armbrust();
         }
    
-       
-        /*
-        
-        
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            m_Anim.SetTrigger("isAkt4_Ak");
-            Ak();
-           // SoundManagerScript.PlaySound("Ak");
-        }
-        if (Input.GetKeyDown(KeyCode.Mouse2))
-        {
-            m_Anim.SetTrigger("isAkt4_Pistol");
-            Ak();
-        }
-        */
     }
 
     private void FixedUpdate()
@@ -178,8 +162,72 @@ public class PlatformerCharacter : MonoBehaviour
             axt = true;
             HanldeInputAKt1();
         }
+        //==============================================AKT1===ENDE=======================================================================//
+        //==============================================AKT2================================================================================//
+        // isAkt2_Schwert, isAkt2_Schwert1, isAkt2_Schwert3
+        if (collision.gameObject.CompareTag("Schwert1"))
+        {
+            isAkt2_Schwert = true;
+            HanldeInputAKt2();
+        }
+        if (collision.gameObject.CompareTag("Schwert2"))
+        {
+            isAkt2_Schwert1 = true;
+            HanldeInputAKt2();
+        }
+        if (collision.gameObject.CompareTag("Schwert3"))
+        {
+            isAkt2_Schwert3 = true;
+            HanldeInputAKt2();
+        }
+
+        if (collision.gameObject.CompareTag("Schwert4"))
+        {
+            isAkt2_Schwert4 = true;
+            HanldeInputAKt2();
+        }
+        //==============================================AKT3===============================================================================//
+        //isAkt3_Schwert,isAkt3_Axt,isAkt3_Keule, isSchwertMongol
+        if (collision.gameObject.CompareTag("SchwertRom"))
+        {
+            isAkt3_Schwert = true;
+            HanldeInputAKt3();
+        }
+        if (collision.gameObject.CompareTag("AxtRom"))
+        {
+            isAkt3_Axt = true;
+            HanldeInputAKt3();
+        }
+        if (collision.gameObject.CompareTag("KeuleRom"))
+        {
+            isAkt3_Keule = true;
+            HanldeInputAKt3();
+        }
+        //Muss noch als pickup installiert werden
+        if (collision.gameObject.CompareTag("isSchwertMongol"))
+        {
+            isSchwertMongol = true;
+            HanldeInputAKt3();
+        }
+        //==============================================AKT3====ENDE========================================================================//
+        //==============================================AKT4================================================================================//
+        if (collision.gameObject.CompareTag("AK"))
+        {
+            isAkt4_Ak = true;
+            HanldeInputAKt4();
+        }
+        if (collision.gameObject.CompareTag("Pistole"))
+        {
+            isAkt4_Pistol = true;
+            HanldeInputAKt4();
+        }
+        if (collision.gameObject.CompareTag("pumpgun"))
+        {
+            isShoot = true;
+            HanldeInputAKt4();
+        }
     }
-    //==============================================AKT1==============================================================================//
+    //==============================================AKT1====================================================================================//
     void HanldeInputAKt1()
     {
         if (keule1)
@@ -256,6 +304,15 @@ public class PlatformerCharacter : MonoBehaviour
             {
 
                 m_Anim.SetTrigger("isAkt2_Schwert3");
+            }
+        }
+        
+              if (isAkt2_Schwert4)
+        {
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                //Muss suchen
+                m_Anim.SetTrigger("");
             }
         }
     }
