@@ -78,12 +78,23 @@ public class PlatformerCharacter : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
-
-            m_Anim.SetTrigger("isAkt2_Schwert");
+           m_Anim.SetTrigger("isAkt2_Schwert");
+        }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            m_Anim.SetTrigger("isAkt2_Schwert1");
+        }
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            m_Anim.SetTrigger("isAkt2_Schwert2");
+        }
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            m_Anim.SetTrigger("isAkt2_Schwert3");
         }
 
     }
- 
+
     private void FixedUpdate()
     {
 
