@@ -7,6 +7,8 @@ public class EnemyHealthBar : MonoBehaviour {
     GameControlScript sl;
     public float enemyMaxHealth;
     public bool drops;
+    public bool gibtEp = true;
+    public int ep = 10;
     public GameObject lebenOderGeld;
     public static  float epp;
     int gibLeben = 50;
@@ -20,17 +22,12 @@ public class EnemyHealthBar : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        sl = GameObject.Find("lvlmanager").GetComponent<GameControlScript>();
       //  enemyAnimator = GetComponentInChildren<Animator>();
         currentHealth = enemyMaxHealth;
         enemySlider.maxValue = currentHealth;
         enemySlider.value = currentHealth;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-      
-	}
-
 
     public void addDamage(float damage)
     {
@@ -53,6 +50,11 @@ public class EnemyHealthBar : MonoBehaviour {
         // Instantiate(enemyDeathFX, transform.position, transform.rotation);
         if (drops)
             Instantiate(lebenOderGeld, transform.position, transform.rotation);
+        if (gibtEp)
+        {
+            sl.addEP(ep);
+            Debug.Log("Ep hinzugefügt");
+        }
        
     }
    
