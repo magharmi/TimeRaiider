@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 1940437}
   - component: {fileID: 1940436}
   - component: {fileID: 1940435}
+  - component: {fileID: 1940439}
   m_Layer: 11
   m_Name: "R\xF6mer (15)"
   m_TagString: Untagged
@@ -162,6 +163,7 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: da7958a6f80b65348824a2145d6552d7,
     type: 2}
   enemySlider: {fileID: 646171339}
+  currentHealth: 0
 --- !u!114 &1940436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +255,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1940439
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1940433}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2613658
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,6 +358,7 @@ GameObject:
   - component: {fileID: 8435682}
   - component: {fileID: 8435681}
   - component: {fileID: 8435680}
+  - component: {fileID: 8435684}
   m_Layer: 11
   m_Name: "R\xF6mer (18)"
   m_TagString: Untagged
@@ -375,6 +396,7 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: da7958a6f80b65348824a2145d6552d7,
     type: 2}
   enemySlider: {fileID: 375900298}
+  currentHealth: 0
 --- !u!114 &8435681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,6 +488,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8435684
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 8435678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &21888608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,6 +2207,7 @@ GameObject:
   - component: {fileID: 241401345}
   - component: {fileID: 241401344}
   - component: {fileID: 241401343}
+  - component: {fileID: 241401347}
   m_Layer: 11
   m_Name: "R\xF6mer (21)"
   m_TagString: Untagged
@@ -2204,6 +2245,7 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: da7958a6f80b65348824a2145d6552d7,
     type: 2}
   enemySlider: {fileID: 842351658}
+  currentHealth: 0
 --- !u!114 &241401344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2295,6 +2337,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &241401347
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 241401341}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &296695657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2949,6 +3009,7 @@ GameObject:
   - component: {fileID: 403427864}
   - component: {fileID: 403427863}
   - component: {fileID: 403427862}
+  - component: {fileID: 403427866}
   m_Layer: 11
   m_Name: "R\xF6mer (16)"
   m_TagString: Untagged
@@ -2986,6 +3047,7 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: da7958a6f80b65348824a2145d6552d7,
     type: 2}
   enemySlider: {fileID: 1491447627}
+  currentHealth: 0
 --- !u!114 &403427863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3077,6 +3139,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &403427866
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 403427860}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &428870770
 GameObject:
   m_ObjectHideFlags: 0
@@ -5780,6 +5860,7 @@ GameObject:
   - component: {fileID: 720861022}
   - component: {fileID: 720861021}
   - component: {fileID: 720861024}
+  - component: {fileID: 720861025}
   m_Layer: 11
   m_Name: "R\xF6mer"
   m_TagString: Untagged
@@ -5908,6 +5989,25 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: da7958a6f80b65348824a2145d6552d7,
     type: 2}
   enemySlider: {fileID: 1981586457}
+  currentHealth: 0
+--- !u!95 &720861025
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 720861019}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &727302022
 GameObject:
   m_ObjectHideFlags: 0
@@ -7760,6 +7860,7 @@ GameObject:
   - component: {fileID: 935601702}
   - component: {fileID: 935601701}
   - component: {fileID: 935601700}
+  - component: {fileID: 935601704}
   m_Layer: 11
   m_Name: "R\xF6mer (22)"
   m_TagString: Untagged
@@ -7797,6 +7898,7 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: da7958a6f80b65348824a2145d6552d7,
     type: 2}
   enemySlider: {fileID: 778632570}
+  currentHealth: 0
 --- !u!114 &935601701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7888,6 +7990,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &935601704
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935601698}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &935739844
 GameObject:
   m_ObjectHideFlags: 0
@@ -7975,6 +8095,7 @@ GameObject:
   - component: {fileID: 954927463}
   - component: {fileID: 954927462}
   - component: {fileID: 954927461}
+  - component: {fileID: 954927465}
   m_Layer: 11
   m_Name: "R\xF6mer (14)"
   m_TagString: Untagged
@@ -8012,6 +8133,7 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: da7958a6f80b65348824a2145d6552d7,
     type: 2}
   enemySlider: {fileID: 1786767289}
+  currentHealth: 0
 --- !u!114 &954927462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8103,6 +8225,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &954927465
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 954927459}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &959113125
 GameObject:
   m_ObjectHideFlags: 0
@@ -8317,6 +8457,7 @@ GameObject:
   - component: {fileID: 998489600}
   - component: {fileID: 998489599}
   - component: {fileID: 998489598}
+  - component: {fileID: 998489602}
   m_Layer: 11
   m_Name: "R\xF6mer (20)"
   m_TagString: Untagged
@@ -8354,6 +8495,7 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: da7958a6f80b65348824a2145d6552d7,
     type: 2}
   enemySlider: {fileID: 1139310214}
+  currentHealth: 0
 --- !u!114 &998489599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8445,6 +8587,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &998489602
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 998489596}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &999462397
 GameObject:
   m_ObjectHideFlags: 0
@@ -9387,6 +9547,7 @@ GameObject:
   - component: {fileID: 1166669741}
   - component: {fileID: 1166669740}
   - component: {fileID: 1166669739}
+  - component: {fileID: 1166669743}
   m_Layer: 11
   m_Name: "R\xF6mer (19)"
   m_TagString: Untagged
@@ -9424,6 +9585,7 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: da7958a6f80b65348824a2145d6552d7,
     type: 2}
   enemySlider: {fileID: 654823402}
+  currentHealth: 0
 --- !u!114 &1166669740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9515,6 +9677,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1166669743
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1166669737}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1227588407
 GameObject:
   m_ObjectHideFlags: 0
@@ -9557,6 +9737,7 @@ GameObject:
   - component: {fileID: 1282326402}
   - component: {fileID: 1282326401}
   - component: {fileID: 1282326400}
+  - component: {fileID: 1282326404}
   m_Layer: 11
   m_Name: "R\xF6mer (12)"
   m_TagString: Untagged
@@ -9594,6 +9775,7 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: da7958a6f80b65348824a2145d6552d7,
     type: 2}
   enemySlider: {fileID: 1289695379}
+  currentHealth: 0
 --- !u!114 &1282326401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9685,6 +9867,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1282326404
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1282326398}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1289695377
 GameObject:
   m_ObjectHideFlags: 0
@@ -11055,6 +11255,7 @@ GameObject:
   - component: {fileID: 1497256958}
   - component: {fileID: 1497256957}
   - component: {fileID: 1497256956}
+  - component: {fileID: 1497256960}
   m_Layer: 11
   m_Name: "R\xF6mer (17)"
   m_TagString: Untagged
@@ -11092,6 +11293,7 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: da7958a6f80b65348824a2145d6552d7,
     type: 2}
   enemySlider: {fileID: 751729234}
+  currentHealth: 0
 --- !u!114 &1497256957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11183,6 +11385,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1497256960
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497256954}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1557407382
 GameObject:
   m_ObjectHideFlags: 0
@@ -13940,6 +14160,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfeilPos: {fileID: 0}
   pfeil: {fileID: 0}
+  akPos: {fileID: 0}
+  pistolPos: {fileID: 0}
+  shootPos: {fileID: 0}
+  akGeschoss: {fileID: 0}
   m_MaxSpeed: 10
   m_JumpForce: 800
   m_CrouchSpeed: 0.36
@@ -15089,6 +15313,7 @@ GameObject:
   - component: {fileID: 2041488053}
   - component: {fileID: 2041488052}
   - component: {fileID: 2041488051}
+  - component: {fileID: 2041488055}
   m_Layer: 11
   m_Name: "R\xF6mer (13)"
   m_TagString: Untagged
@@ -15126,6 +15351,7 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: da7958a6f80b65348824a2145d6552d7,
     type: 2}
   enemySlider: {fileID: 1418000699}
+  currentHealth: 0
 --- !u!114 &2041488052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15217,6 +15443,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2041488055
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041488049}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2044295366
 GameObject:
   m_ObjectHideFlags: 0
