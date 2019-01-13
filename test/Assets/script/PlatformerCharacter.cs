@@ -76,6 +76,11 @@ public class PlatformerCharacter : MonoBehaviour
 
             m_Anim.SetTrigger("isAxtAngriff");
         }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+
+            m_Anim.SetTrigger("isAkt2_Schwert");
+        }
 
     }
  
