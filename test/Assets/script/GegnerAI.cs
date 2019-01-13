@@ -74,7 +74,7 @@ public class GegnerAI : MonoBehaviour {
                   
                     transform.rotation = Quaternion.Euler(0, 180f, 0);
                     //Hasan 8.1.2019
-                   // enemyAnimator.SetBool("isRun", true);
+                   enemyAnimator.SetBool("isRun", true);
                     //ENDE
 
                 }
@@ -144,7 +144,7 @@ public class GegnerAI : MonoBehaviour {
         {
 
             //Hasan 8.1.2019
-           // enemyAnimator.SetBool("isAttack", true);
+            enemyAnimator.SetBool("isAttack", true);
            //ENDE
             
             GameObject.FindGameObjectWithTag("spieler").GetComponent<Spieler_Leben>().addDamage(20);
