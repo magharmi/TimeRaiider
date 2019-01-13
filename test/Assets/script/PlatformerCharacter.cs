@@ -71,7 +71,11 @@ public class PlatformerCharacter : MonoBehaviour
 
             m_Anim.SetTrigger("isKnochen1");
         }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
 
+            m_Anim.SetTrigger("isAxtAngriff");
+        }
 
     }
  
