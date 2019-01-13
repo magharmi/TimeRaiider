@@ -23,7 +23,7 @@ public class KolosseumKampf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(champion.GetComponent<GegnerAI>().leben == 0)
+        if(champion.GetComponent<EnemyHealthBar>().currentHealth <= 20)
         {
             zielItem.GetComponent<SpriteRenderer>().enabled = true;
             zielItem.GetComponent<PolygonCollider2D>().enabled = true;
@@ -39,7 +39,7 @@ public class KolosseumKampf : MonoBehaviour
     {
         sklaven[sklavenNummer].GetComponent<SpriteRenderer>().enabled = true;
         sklaven[sklavenNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
-        sklaven[sklavenNummer].GetComponents<BoxCollider2D>();
+        myColliders = sklaven[sklavenNummer].GetComponents<BoxCollider2D>();
         foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         sklaven[sklavenNummer].GetComponent<GegnerAI>().enabled = true;
         yield return new WaitForSeconds(2);
@@ -69,7 +69,7 @@ public class KolosseumKampf : MonoBehaviour
     {
         loewenTiger[loewenTigerNummer].GetComponent<SpriteRenderer>().enabled = true;
         loewenTiger[loewenTigerNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
-        loewenTiger[loewenTigerNummer].GetComponents<BoxCollider2D>();
+        myColliders = loewenTiger[loewenTigerNummer].GetComponents<BoxCollider2D>();
         foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         loewenTiger[loewenTigerNummer].GetComponent<GegnerAI>().enabled = true;
         yield return new WaitForSeconds(2);
@@ -93,7 +93,8 @@ public class KolosseumKampf : MonoBehaviour
     void championSpawnen()
     {
         champion.GetComponent<SpriteRenderer>().enabled = true;
-        champion.GetComponent<BoxCollider2D>().enabled = true;
+        myColliders = champion.GetComponents<BoxCollider2D>();
+        foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         champion.GetComponent<GegnerAI>().enabled = true;
     }
 
