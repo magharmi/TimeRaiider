@@ -106,6 +106,7 @@ public class PlatformerCharacter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             m_Anim.SetTrigger("isAkt4_Ak");
+            Armbrust();
             SoundManagerScript.PlaySound("Ak");
         }
         if (Input.GetKeyDown(KeyCode.Mouse2))
