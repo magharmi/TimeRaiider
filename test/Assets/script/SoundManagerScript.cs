@@ -5,13 +5,13 @@ using UnityEngine;
 public class SoundManagerScript : MonoBehaviour
 {
 
-    public static AudioClip messer_A;
+    public static AudioClip messer_A,Ak;
     static AudioSource audioSrc;
     // Use this for initialization
     void Start()
     {
         messer_A = Resources.Load<AudioClip>("messer");
-       
+        Ak       = Resources.Load<AudioClip>("Ak");
         audioSrc = GetComponent<AudioSource>();
     }
 
@@ -28,7 +28,10 @@ public class SoundManagerScript : MonoBehaviour
             case "messer":
                 audioSrc.PlayOneShot(messer_A);
                 break;
-         
+            case "Ak":
+                audioSrc.PlayOneShot(Ak);
+                break;
+
         }
     }
 }

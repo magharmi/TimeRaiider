@@ -103,7 +103,15 @@ public class PlatformerCharacter : MonoBehaviour
         {
             m_Anim.SetTrigger("isAkt3_Keule");
         }
-
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            m_Anim.SetTrigger("isAkt4_Ak");
+            SoundManagerScript.PlaySound("Ak");
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse2))
+        {
+            m_Anim.SetTrigger("isAkt4_Pistol");
+        }
     }
 
     private void FixedUpdate()
