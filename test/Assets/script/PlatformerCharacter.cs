@@ -47,7 +47,7 @@ public class PlatformerCharacter : MonoBehaviour
             m_Anim.SetTrigger("isArm");
             Armbrust();
         }
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.I))
             {
                 m_Anim.SetTrigger("isKeule");
             }
@@ -65,6 +65,11 @@ public class PlatformerCharacter : MonoBehaviour
         {
 
             m_Anim.SetTrigger("isKnochen");
+        }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+
+            m_Anim.SetTrigger("isKnochen1");
         }
 
 
