@@ -12,12 +12,11 @@ public class Landwirtkampf : MonoBehaviour
         landwirt = GameObject.Find("Landwirt (1)");
     }
 
-
-    public void OnCollisionEnter2D(Collision2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.collider.tag == "spieler")
-        {
+        if (other.CompareTag("spieler")) {
             landwirt.GetComponent<GegnerAI>().enabled = true;
+            Debug.Log("Starte Kampf");
         }
     }
 }

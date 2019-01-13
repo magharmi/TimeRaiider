@@ -19,7 +19,7 @@ public class LandwirtTot : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D other)
     {
-        if (gameObject.GetComponent<GegnerAI>().leben <= 0)
+        if (gameObject.GetComponent<EnemyHealthBar>().currentHealth <= 10)
         {
             MainCamera.SetActive(true);
             Destroy(BosskampfKamera);

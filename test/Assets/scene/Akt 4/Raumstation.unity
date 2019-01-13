@@ -1044,6 +1044,7 @@ GameObject:
   - component: {fileID: 88130553}
   - component: {fileID: 88130552}
   - component: {fileID: 88130554}
+  - component: {fileID: 88130555}
   m_Layer: 11
   m_Name: Agent (1)
   m_TagString: AnubisMumien
@@ -1211,6 +1212,25 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 362910578}
+  currentHealth: 0
+--- !u!95 &88130555
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 88130547}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &98895147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2674,6 +2694,7 @@ GameObject:
   - component: {fileID: 194851353}
   - component: {fileID: 194851352}
   - component: {fileID: 194851354}
+  - component: {fileID: 194851355}
   m_Layer: 11
   m_Name: Agent (7)
   m_TagString: AnubisMumien
@@ -2842,6 +2863,25 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: 71adefbf7d87e004e906c043540c1f47,
     type: 2}
   enemySlider: {fileID: 1580509139}
+  currentHealth: 0
+--- !u!95 &194851355
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 194851347}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &203103973
 GameObject:
   m_ObjectHideFlags: 0
@@ -3964,6 +4004,7 @@ GameObject:
   - component: {fileID: 352105429}
   - component: {fileID: 352105427}
   - component: {fileID: 352105426}
+  - component: {fileID: 352105428}
   m_Layer: 0
   m_Name: Drohne (9)
   m_TagString: Untagged
@@ -4217,6 +4258,24 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
+--- !u!95 &352105428
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 352105424}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &352105429
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4274,6 +4333,7 @@ GameObject:
   - component: {fileID: 361191656}
   - component: {fileID: 361191654}
   - component: {fileID: 361191653}
+  - component: {fileID: 361191655}
   m_Layer: 0
   m_Name: Drohne (7)
   m_TagString: Untagged
@@ -4527,6 +4587,24 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
+--- !u!95 &361191655
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 361191651}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &361191656
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7077,6 +7155,7 @@ GameObject:
   - component: {fileID: 550786870}
   - component: {fileID: 550786868}
   - component: {fileID: 550786867}
+  - component: {fileID: 550786869}
   m_Layer: 0
   m_Name: Drohne (8)
   m_TagString: Untagged
@@ -7330,6 +7409,24 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
+--- !u!95 &550786869
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 550786865}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &550786870
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7505,6 +7602,7 @@ GameObject:
   - component: {fileID: 582023044}
   - component: {fileID: 582023043}
   - component: {fileID: 582023045}
+  - component: {fileID: 582023046}
   m_Layer: 11
   m_Name: Agent (9)
   m_TagString: AnubisMumien
@@ -7673,6 +7771,25 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: b31208ba51fe2e1498ddeb95df7f75d5,
     type: 2}
   enemySlider: {fileID: 1568352670}
+  currentHealth: 0
+--- !u!95 &582023046
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 582023038}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &588695991
 GameObject:
   m_ObjectHideFlags: 0
@@ -9641,6 +9758,7 @@ GameObject:
   - component: {fileID: 792232724}
   - component: {fileID: 792232723}
   - component: {fileID: 792232725}
+  - component: {fileID: 792232726}
   m_Layer: 11
   m_Name: Agent (11)
   m_TagString: AnubisMumien
@@ -9808,6 +9926,25 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1380762980}
+  currentHealth: 0
+--- !u!95 &792232726
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 792232718}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &793684164
 GameObject:
   m_ObjectHideFlags: 0
@@ -9913,6 +10050,7 @@ GameObject:
   - component: {fileID: 804315185}
   - component: {fileID: 804315183}
   - component: {fileID: 804315182}
+  - component: {fileID: 804315184}
   m_Layer: 0
   m_Name: Drohne (4)
   m_TagString: Untagged
@@ -10166,6 +10304,24 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
+--- !u!95 &804315184
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 804315180}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &804315185
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10270,6 +10426,7 @@ GameObject:
   - component: {fileID: 818712823}
   - component: {fileID: 818712822}
   - component: {fileID: 818712824}
+  - component: {fileID: 818712825}
   m_Layer: 11
   m_Name: Agent (14)
   m_TagString: AnubisMumien
@@ -10438,6 +10595,25 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: 277e8f33637cecc4fb807b2994459d94,
     type: 2}
   enemySlider: {fileID: 1238603707}
+  currentHealth: 0
+--- !u!95 &818712825
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 818712817}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &822281408
 GameObject:
   m_ObjectHideFlags: 0
@@ -12196,6 +12372,7 @@ GameObject:
   - component: {fileID: 938950213}
   - component: {fileID: 938950212}
   - component: {fileID: 938950214}
+  - component: {fileID: 938950215}
   m_Layer: 11
   m_Name: Agent (5)
   m_TagString: AnubisMumien
@@ -12363,6 +12540,25 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1282173395}
+  currentHealth: 0
+--- !u!95 &938950215
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 938950207}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &944487749
 GameObject:
   m_ObjectHideFlags: 0
@@ -13030,6 +13226,7 @@ GameObject:
   - component: {fileID: 996013261}
   - component: {fileID: 996013259}
   - component: {fileID: 996013258}
+  - component: {fileID: 996013260}
   m_Layer: 0
   m_Name: Drohne (5)
   m_TagString: Untagged
@@ -13283,6 +13480,24 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
+--- !u!95 &996013260
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996013256}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &996013261
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13784,6 +13999,7 @@ GameObject:
   - component: {fileID: 1062914648}
   - component: {fileID: 1062914647}
   - component: {fileID: 1062914649}
+  - component: {fileID: 1062914650}
   m_Layer: 11
   m_Name: Agent (15)
   m_TagString: AnubisMumien
@@ -13951,6 +14167,25 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1422265053}
+  currentHealth: 0
+--- !u!95 &1062914650
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1062914642}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1071356240
 GameObject:
   m_ObjectHideFlags: 0
@@ -15737,6 +15972,7 @@ GameObject:
   - component: {fileID: 1282529849}
   - component: {fileID: 1282529847}
   - component: {fileID: 1282529846}
+  - component: {fileID: 1282529848}
   m_Layer: 0
   m_Name: Drohne (1)
   m_TagString: Untagged
@@ -15990,6 +16226,24 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
+--- !u!95 &1282529848
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1282529844}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1282529849
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16862,6 +17116,7 @@ GameObject:
   - component: {fileID: 1348894991}
   - component: {fileID: 1348894990}
   - component: {fileID: 1348894992}
+  - component: {fileID: 1348894993}
   m_Layer: 11
   m_Name: Agent (2)
   m_TagString: AnubisMumien
@@ -17030,6 +17285,25 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: da7958a6f80b65348824a2145d6552d7,
     type: 2}
   enemySlider: {fileID: 774790244}
+  currentHealth: 0
+--- !u!95 &1348894993
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1348894985}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1355633156
 GameObject:
   m_ObjectHideFlags: 0
@@ -17169,6 +17443,7 @@ GameObject:
   - component: {fileID: 1355694457}
   - component: {fileID: 1355694456}
   - component: {fileID: 1355694458}
+  - component: {fileID: 1355694459}
   m_Layer: 11
   m_Name: Agent (16)
   m_TagString: AnubisMumien
@@ -17336,6 +17611,25 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 392524937}
+  currentHealth: 0
+--- !u!95 &1355694459
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1355694451}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1356502755
 GameObject:
   m_ObjectHideFlags: 0
@@ -17560,6 +17854,7 @@ GameObject:
   - component: {fileID: 1372815892}
   - component: {fileID: 1372815890}
   - component: {fileID: 1372815894}
+  - component: {fileID: 1372815891}
   m_Layer: 0
   m_Name: Drohne
   m_TagString: Untagged
@@ -17779,6 +18074,24 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
+--- !u!95 &1372815891
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372815889}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1372815892
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19059,6 +19372,7 @@ GameObject:
   - component: {fileID: 1462645302}
   - component: {fileID: 1462645301}
   - component: {fileID: 1462645303}
+  - component: {fileID: 1462645304}
   m_Layer: 11
   m_Name: Agent (8)
   m_TagString: AnubisMumien
@@ -19226,6 +19540,25 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1673696036}
+  currentHealth: 0
+--- !u!95 &1462645304
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1462645296}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1466330304
 GameObject:
   m_ObjectHideFlags: 0
@@ -19513,6 +19846,7 @@ GameObject:
   - component: {fileID: 1493495967}
   - component: {fileID: 1493495966}
   - component: {fileID: 1493495968}
+  - component: {fileID: 1493495969}
   m_Layer: 11
   m_Name: Agent (6)
   m_TagString: AnubisMumien
@@ -19680,6 +20014,25 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1772207395}
+  currentHealth: 0
+--- !u!95 &1493495969
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1493495961}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1507147909
 GameObject:
   m_ObjectHideFlags: 0
@@ -21287,6 +21640,7 @@ GameObject:
   - component: {fileID: 1629461776}
   - component: {fileID: 1629461775}
   - component: {fileID: 1629461777}
+  - component: {fileID: 1629461778}
   m_Layer: 11
   m_Name: Agent (12)
   m_TagString: AnubisMumien
@@ -21455,6 +21809,25 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1948166736003490, guid: 2659c23919538294aa9595267351df49,
     type: 2}
   enemySlider: {fileID: 1340383013}
+  currentHealth: 0
+--- !u!95 &1629461778
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629461770}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1634961918
 GameObject:
   m_ObjectHideFlags: 0
@@ -23986,6 +24359,7 @@ GameObject:
   - component: {fileID: 1906913252}
   - component: {fileID: 1906913251}
   - component: {fileID: 1906913253}
+  - component: {fileID: 1906913254}
   m_Layer: 11
   m_Name: Agent (3)
   m_TagString: AnubisMumien
@@ -24153,6 +24527,25 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1229355195}
+  currentHealth: 0
+--- !u!95 &1906913254
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1906913246}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1911828922
 GameObject:
   m_ObjectHideFlags: 0
@@ -25413,6 +25806,7 @@ GameObject:
   - component: {fileID: 2016595053}
   - component: {fileID: 2016595051}
   - component: {fileID: 2016595050}
+  - component: {fileID: 2016595052}
   m_Layer: 0
   m_Name: Drohne (3)
   m_TagString: Untagged
@@ -25666,6 +26060,24 @@ PolygonCollider2D:
       - {x: -1.9599999, y: 3.475}
       - {x: -1.87, y: 3.485}
       - {x: -1.87, y: 3.745}
+--- !u!95 &2016595052
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2016595048}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &2016595053
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26296,6 +26708,7 @@ GameObject:
   - component: {fileID: 2080656617}
   - component: {fileID: 2080656616}
   - component: {fileID: 2080656618}
+  - component: {fileID: 2080656619}
   m_Layer: 11
   m_Name: Agent (4)
   m_TagString: AnubisMumien
@@ -26464,6 +26877,25 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1671680133435360, guid: 71adefbf7d87e004e906c043540c1f47,
     type: 2}
   enemySlider: {fileID: 1037324999}
+  currentHealth: 0
+--- !u!95 &2080656619
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2080656611}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2090201730
 GameObject:
   m_ObjectHideFlags: 0
@@ -26514,6 +26946,7 @@ GameObject:
   - component: {fileID: 2100826049}
   - component: {fileID: 2100826048}
   - component: {fileID: 2100826050}
+  - component: {fileID: 2100826051}
   m_Layer: 11
   m_Name: Agent (10)
   m_TagString: AnubisMumien
@@ -26681,6 +27114,25 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 104802490}
+  currentHealth: 0
+--- !u!95 &2100826051
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2100826043}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2100973783
 GameObject:
   m_ObjectHideFlags: 0
@@ -27021,6 +27473,7 @@ GameObject:
   - component: {fileID: 2141281834}
   - component: {fileID: 2141281833}
   - component: {fileID: 2141281835}
+  - component: {fileID: 2141281836}
   m_Layer: 11
   m_Name: Agent (13)
   m_TagString: AnubisMumien
@@ -27189,6 +27642,25 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 1948166736003490, guid: 2659c23919538294aa9595267351df49,
     type: 2}
   enemySlider: {fileID: 1162296217}
+  currentHealth: 0
+--- !u!95 &2141281836
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2141281828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2147437217
 GameObject:
   m_ObjectHideFlags: 0

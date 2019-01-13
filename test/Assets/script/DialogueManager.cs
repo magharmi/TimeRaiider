@@ -76,8 +76,11 @@ public class DialogueManager : MonoBehaviour
         {
             if(GegnerAIVorhanden)
                 gegner[i].GetComponent<GegnerAI>().enabled = true;
-            if(LandwirtRenntWegVorhanden)
+            if (LandwirtRenntWegVorhanden)
+            {
                 gegner[i].GetComponent<LandwirtRenntWeg>().enabled = true;
+                gameObject.GetComponent<DialogueManager>().LandwirtRenntWegVorhanden = false;
+            }
         }
         spieler.GetComponent<Animator>().enabled = true;
         spieler.GetComponent<PlatformerUserControl>().enabled = true;
