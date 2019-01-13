@@ -15,7 +15,7 @@ public class TransformersKampf : MonoBehaviour
     private bool inMitte = true;
     private bool beiSpieler = true;
     private GameObject[] drohnen;
-    private Vector3 hochflugZiel, spielerPosition;
+    private Vector3 hochflugZiel, spielerPosition, mitteZiel;
 
     // Use this for initialization
     void Start()
@@ -79,9 +79,10 @@ public class TransformersKampf : MonoBehaviour
         }
         if (inMitte == false)
         {
+            mitteSetzen();
             Debug.Log("Flieg zur Mitte");
-            transformers.transform.position = Vector3.MoveTowards(transformers.transform.position, new Vector3(115, transformers.transform.position.y, transformers.transform.position.z), 10 * Time.deltaTime);
-            if (Vector3.Distance(transformers.transform.position, new Vector3(115, transformers.transform.position.y, transformers.transform.position.z)) == 0)
+            transformers.transform.position = Vector3.MoveTowards(transformers.transform.position, mitteZiel, 10 * Time.deltaTime);
+            if (Vector3.Distance(transformers.transform.position, mitteZiel) == 0)
             {
                 inMitte = true;
                 Debug.Log("In Mitte angekommen");
@@ -144,6 +145,12 @@ public class TransformersKampf : MonoBehaviour
     {
         hochflugZiel = new Vector3(transformers.transform.position.x, transformers.transform.position.y + 12, 0.0f);
         Debug.Log("Flugziel gesetzt");
+    }
+
+    private void mitteSetzen()
+    {
+        mitteZiel = new Vector3(115, transformers.transform.position.y, transformers.transform.position.z);
+        Debug.Log("Mitte gesetzt");
     }
 
     private void spielerPositionSetzen()
