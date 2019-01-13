@@ -8,6 +8,11 @@ public class PlatformerCharacter : MonoBehaviour
     float nextFire, fireRate;
     [SerializeField] Transform pfeilPos;
     [SerializeField] GameObject pfeil;
+    [SerializeField] Transform akPos;
+    [SerializeField] Transform pistolPos;
+    [SerializeField] Transform shootPos;
+    [SerializeField] GameObject akGeschoss;
+    
     [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
     [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
     [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -39,7 +44,7 @@ public class PlatformerCharacter : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Z)){
                 m_Anim.SetTrigger("isShoot");
-                Armbrust();
+            Shoot();
         }
         if (Input.GetKeyDown(KeyCode.V))
         {
@@ -106,12 +111,13 @@ public class PlatformerCharacter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             m_Anim.SetTrigger("isAkt4_Ak");
-            Armbrust();
-            SoundManagerScript.PlaySound("Ak");
+            Ak();
+           // SoundManagerScript.PlaySound("Ak");
         }
         if (Input.GetKeyDown(KeyCode.Mouse2))
         {
             m_Anim.SetTrigger("isAkt4_Pistol");
+            Ak();
         }
     }
 
@@ -225,5 +231,58 @@ public class PlatformerCharacter : MonoBehaviour
             }
         }
     }
-  
+    public void Ak()
+    {
+        if (Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            if (m_FacingRight)
+            {
+
+                Instantiate(akGeschoss, akPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            }
+            else if (!m_FacingRight)
+            {
+
+                Instantiate(akGeschoss, akPos.position, Quaternion.Euler(new Vector3(0, 0, 180f)));
+            }
+        }
+    }
+    public void Pistol()
+    {
+        if (Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            if (m_FacingRight)
+            {
+
+                Instantiate(akGeschoss, pistolPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+                
+            }
+            else if (!m_FacingRight)
+            {
+
+                Instantiate(akGeschoss, pistolPos.position, Quaternion.Euler(new Vector3(0, 0, 180f)));
+              
+            }
+        }
+    }
+    public void Shoot()
+    {
+        if (Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            if (m_FacingRight)
+            {
+
+                Instantiate(akGeschoss, shootPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            }
+            else if (!m_FacingRight)
+            {
+
+                Instantiate(akGeschoss, shootPos.position, Quaternion.Euler(new Vector3(0, 0, 180f)));
+            }
+        }
+    }
+
 }
