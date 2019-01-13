@@ -14,6 +14,7 @@ public class AnubisKampf : MonoBehaviour {
     private bool leben200 = false;
     private bool leben0 = false;
     private GameObject[] mumien, mumien2, steine;
+    private BoxCollider2D[] myColliders;
 
     // Use this for initialization
     void Start () {
@@ -35,7 +36,8 @@ public class AnubisKampf : MonoBehaviour {
             {
                 if (anubisZurück == false)
                 {
-                    anubis.GetComponent<BoxCollider2D>().enabled = false;
+                    myColliders = anubis.GetComponents<BoxCollider2D>();
+                    foreach (BoxCollider2D bc in myColliders) bc.enabled = false;
                     anubis.GetComponent<GegnerAI>().speed = 0;
                     anubis.transform.position = Vector2.MoveTowards(anubis.transform.position, startPosition, 7 * Time.deltaTime);
                     if (anubis.transform.position == startPosition)
@@ -62,7 +64,8 @@ public class AnubisKampf : MonoBehaviour {
             {
                 if (anubisZurück == false)
                 {
-                    anubis.GetComponent<BoxCollider2D>().enabled = false;
+                    myColliders = anubis.GetComponents<BoxCollider2D>();
+                    foreach (BoxCollider2D bc in myColliders) bc.enabled = false;
                     anubis.GetComponent<GegnerAI>().speed = 0;
                     anubis.transform.position = Vector2.MoveTowards(anubis.transform.position, startPosition, 7 * Time.deltaTime);
                     if (anubis.transform.position == startPosition)
@@ -98,8 +101,9 @@ public class AnubisKampf : MonoBehaviour {
 
     public void AnubisAngriff()
     {
+        myColliders = anubis.GetComponents<BoxCollider2D>();
+        foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         anubisZurück = false;
-        anubis.GetComponent<BoxCollider2D>().enabled = true;
         anubis.GetComponent<GegnerAI>().speed = 5;
     }
 
@@ -113,6 +117,8 @@ public class AnubisKampf : MonoBehaviour {
         mumien[mumienNummer].GetComponent<SpriteRenderer>().enabled = true;
         mumien[mumienNummer].GetComponent<BoxCollider2D>().enabled = true;
         mumien[mumienNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
+        myColliders = mumien[mumienNummer].GetComponents<BoxCollider2D>();
+        foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         mumien[mumienNummer].GetComponent<GegnerAI>().enabled = true;
         yield return new WaitForSeconds(2);
         if(mumienNummer <= 8)
@@ -140,6 +146,8 @@ public class AnubisKampf : MonoBehaviour {
     {
         mumien2[mumienNummer].GetComponent<SpriteRenderer>().enabled = true;
         mumien2[mumienNummer].GetComponent<BoxCollider2D>().enabled = true;
+        myColliders = mumien2[mumienNummer].GetComponents<BoxCollider2D>();
+        foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         mumien2[mumienNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
         mumien2[mumienNummer].GetComponent<GegnerAI>().enabled = true;
         steine[steinNummer].GetComponent<SpriteRenderer>().enabled = true;

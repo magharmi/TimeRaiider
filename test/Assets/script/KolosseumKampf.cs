@@ -8,6 +8,7 @@ public class KolosseumKampf : MonoBehaviour
 
     private GameObject champion, kampfKamera, mainCamera, unsichtbareWand;
     private GameObject[] sklaven, loewenTiger;
+    private BoxCollider2D[] myColliders;
 
     // Use this for initialization
     void Start()
@@ -38,6 +39,8 @@ public class KolosseumKampf : MonoBehaviour
     {
         sklaven[sklavenNummer].GetComponent<SpriteRenderer>().enabled = true;
         sklaven[sklavenNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
+        sklaven[sklavenNummer].GetComponents<BoxCollider2D>();
+        foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         sklaven[sklavenNummer].GetComponent<GegnerAI>().enabled = true;
         yield return new WaitForSeconds(2);
         if (sklavenNummer <= 8)
@@ -66,6 +69,8 @@ public class KolosseumKampf : MonoBehaviour
     {
         loewenTiger[loewenTigerNummer].GetComponent<SpriteRenderer>().enabled = true;
         loewenTiger[loewenTigerNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
+        loewenTiger[loewenTigerNummer].GetComponents<BoxCollider2D>();
+        foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         loewenTiger[loewenTigerNummer].GetComponent<GegnerAI>().enabled = true;
         yield return new WaitForSeconds(2);
         if (loewenTigerNummer <= 8)
@@ -88,6 +93,7 @@ public class KolosseumKampf : MonoBehaviour
     void championSpawnen()
     {
         champion.GetComponent<SpriteRenderer>().enabled = true;
+        champion.GetComponent<BoxCollider2D>().enabled = true;
         champion.GetComponent<GegnerAI>().enabled = true;
     }
 

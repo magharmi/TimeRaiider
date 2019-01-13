@@ -4,16 +4,6 @@ using UnityEngine;
 
 public class AnubisSteineSchaden : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     private void OnCollisionEnter2D(Collision2D boden)
     {
         gameObject.GetComponent<Spieler_Wierd_Verletzt>().damage = 0;

@@ -202,7 +202,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 29086943}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -321,6 +321,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 146844743}
+  currentHealth: 0
 --- !u!1 &31719985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,7 +1407,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 113334077}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1490,7 +1491,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 113334077}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1543,7 +1544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &132303986
 Transform:
   m_ObjectHideFlags: 0
@@ -1584,7 +1585,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 132303985}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1703,6 +1704,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1241202596}
+  currentHealth: 0
 --- !u!1 &135815426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,7 +1947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &146116182
 Transform:
   m_ObjectHideFlags: 0
@@ -1986,7 +1988,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 146116181}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -2105,6 +2107,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 135815428}
+  currentHealth: 0
 --- !u!1 &146735122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,6 +2800,135 @@ RectTransform:
   m_AnchoredPosition: {x: -1.68, y: 0}
   m_SizeDelta: {x: -3.36, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &172088898
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -101.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -55.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114433223985970602, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: backgrounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114433223985970602, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: backgrounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114433223985970602, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: backgrounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114800323748436844, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: sl
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114800323748436844, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: geschlagenScreen
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114938739993213088, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: slots.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114938739993213088, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: slots.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114938739993213088, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: slots.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114938739993213088, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: slots.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: pfeil
+      value: 
+      objectReference: {fileID: 1292246170674996, guid: 328e0a6acab1e8c4db803a5dd96cbc73,
+        type: 2}
+    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: akPos
+      value: 
+      objectReference: {fileID: 1344007685}
+    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: akGeschoss
+      value: 
+      objectReference: {fileID: 1252091811311448, guid: 25b335e393f8ac341a822a173d64665e,
+        type: 2}
+    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: pistolPos
+      value: 
+      objectReference: {fileID: 300542318}
+    - target: {fileID: 4150516674923800, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.117736645
+      objectReference: {fileID: 0}
+    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: shootPos
+      value: 
+      objectReference: {fileID: 366904923}
+    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: sparks
+      value: 
+      objectReference: {fileID: 1398539723617354, guid: 4e455920753c449498e39e189407e1b2,
+        type: 2}
+    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: sparksPos
+      value: 
+      objectReference: {fileID: 787959252}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &175185004
 GameObject:
   m_ObjectHideFlags: 0
@@ -3758,7 +3890,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 258015769}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -3877,6 +4009,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1225482262}
+  currentHealth: 0
 --- !u!1 &259787519
 GameObject:
   m_ObjectHideFlags: 0
@@ -4131,6 +4264,34 @@ Canvas:
   m_SortingLayerID: 1072735969
   m_SortingOrder: 2
   m_TargetDisplay: 0
+--- !u!1 &300542317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 300542318}
+  m_Layer: 8
+  m_Name: pistolPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &300542318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300542317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.248, y: 0.027, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1073751662}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &307882130
 GameObject:
   m_ObjectHideFlags: 0
@@ -4402,7 +4563,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 316520081}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -4521,6 +4682,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 227871611}
+  currentHealth: 0
 --- !u!1 &323995241
 GameObject:
   m_ObjectHideFlags: 0
@@ -4720,6 +4882,34 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 343862411}
   m_CullTransparentMesh: 0
+--- !u!1 &366904922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 366904923}
+  m_Layer: 8
+  m_Name: shootPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &366904923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 366904922}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.545, y: -0.076, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1073751662}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &367123279
 GameObject:
   m_ObjectHideFlags: 0
@@ -4868,7 +5058,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 388455723}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -4987,6 +5177,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1699366555}
+  currentHealth: 0
 --- !u!1 &395509044
 GameObject:
   m_ObjectHideFlags: 0
@@ -5162,7 +5353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8238cc53530b64fbb7828c3d3bb591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1073751662}
   damping: 0
   lookAheadFactor: 0
   lookAheadReturnSpeed: 0
@@ -5313,7 +5504,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 435251808}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -5432,6 +5623,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 933219373}
+  currentHealth: 0
 --- !u!1 &439609588
 GameObject:
   m_ObjectHideFlags: 0
@@ -6161,241 +6353,6 @@ Canvas:
   m_SortingLayerID: 1072735969
   m_SortingOrder: 2
   m_TargetDisplay: 0
---- !u!1001 &475440093
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -101
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -55.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.865156
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2.865156
-      objectReference: {fileID: 0}
-    - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1072735969
-      objectReference: {fileID: 0}
-    - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_SortingOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: fackel
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_TagString
-      value: spieler
-      objectReference: {fileID: 0}
-    - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_SpriteSortPoint
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5fc43f0c4b413534ba12c51c0e5e5f6f, type: 2}
-    - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: d7f4c7d7ce88e074d8f72e65b9f145d5,
-        type: 3}
-    - target: {fileID: 5800000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_Offset.y
-      value: -0.3986295
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_Radius
-      value: 0.07303583
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_Offset.x
-      value: -0.02805492
-      objectReference: {fileID: 0}
-    - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_Size.x
-      value: 0.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_Size.y
-      value: 0.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 0.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 0.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_DrawMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_SpriteTilingProperty.drawMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_MaskInteraction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: pfeilPos
-      value: 
-      objectReference: {fileID: 1541963490}
-    - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: attackPos
-      value: 
-      objectReference: {fileID: 742220125}
-    - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: startTimeBtwAttack
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: attackRange
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: damage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: pfeil
-      value: 
-      objectReference: {fileID: 1728758738741704, guid: 4b178f5ea90845244be02780cecaec21,
-        type: 2}
-    - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: whatIsEnemies.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 114285182828340250, guid: 87a2357765801c34292d6718d8b4d770,
-        type: 2}
-      propertyPath: sl
-      value: 
-      objectReference: {fileID: 2047548677}
-    - target: {fileID: 114285182828340250, guid: 87a2357765801c34292d6718d8b4d770,
-        type: 2}
-      propertyPath: geschlagenScreen
-      value: 
-      objectReference: {fileID: 703233418}
-    m_RemovedComponents:
-    - {fileID: 114608402507825908, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-  m_SourcePrefab: {fileID: 100100000, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
-  m_IsPrefabAsset: 0
---- !u!1 &475440094 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100002, guid: 87a2357765801c34292d6718d8b4d770,
-    type: 2}
-  m_PrefabInternal: {fileID: 475440093}
---- !u!4 &475440095 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770,
-    type: 2}
-  m_PrefabInternal: {fileID: 475440093}
---- !u!114 &475440096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 475440094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26d8ed752200c4c43b4e3b191370b65f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTimeBtwAttack: 0
-  whatIsEnemies:
-    serializedVersion: 2
-    m_Bits: 0
-  attackPos: {fileID: 742220125}
-  attackRange: 0.15
-  damage: 0
---- !u!114 &475440097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 475440094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4820b4ea59b803d4ea4c7f1276cc42f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 0}
-  sl: {fileID: 0}
-  fullLeben: 100
-  currentLeben: 0
-  geschlagenScreen: {fileID: 0}
 --- !u!1 &486495935
 GameObject:
   m_ObjectHideFlags: 0
@@ -7038,7 +6995,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 542399209}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -7157,6 +7114,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 2103591822}
+  currentHealth: 0
 --- !u!1 &560146786
 GameObject:
   m_ObjectHideFlags: 0
@@ -7276,7 +7234,7 @@ Transform:
   m_LocalScale: {x: 1.6124994, y: 1.2875001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560842771
 GameObject:
@@ -8823,7 +8781,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 686241939}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -8942,6 +8900,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1858185703}
+  currentHealth: 0
 --- !u!1 &689839062
 GameObject:
   m_ObjectHideFlags: 0
@@ -9051,12 +9010,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &703233418 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114997212147111434, guid: 010885f78837b394998cef3d31bbd824,
-    type: 2}
-  m_PrefabInternal: {fileID: 933058328}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &706759025
 GameObject:
   m_ObjectHideFlags: 0
@@ -9598,34 +9551,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &742220124
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 742220125}
-  m_Layer: 0
-  m_Name: SpeerPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &742220125
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 742220124}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24, y: -0.11, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 475440095}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &754618786
 GameObject:
   m_ObjectHideFlags: 0
@@ -9723,7 +9648,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 761797551}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -9842,6 +9767,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1941747222}
+  currentHealth: 0
 --- !u!1 &781637047
 GameObject:
   m_ObjectHideFlags: 0
@@ -10005,6 +9931,34 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 785939040}
   m_CullTransparentMesh: 0
+--- !u!1 &787959251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 787959252}
+  m_Layer: 8
+  m_Name: sparksPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &787959252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 787959251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.322, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1073751662}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &788099897
 GameObject:
   m_ObjectHideFlags: 0
@@ -11360,7 +11314,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 946623969}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -11479,6 +11433,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1035720844}
+  currentHealth: 0
 --- !u!1 &948602038
 GameObject:
   m_ObjectHideFlags: 0
@@ -11540,7 +11495,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 948602038}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -11659,6 +11614,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1033050686}
+  currentHealth: 0
 --- !u!1 &950265012
 GameObject:
   m_ObjectHideFlags: 0
@@ -11986,7 +11942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &983624349
 Transform:
   m_ObjectHideFlags: 0
@@ -12027,7 +11983,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 983624348}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -12146,6 +12102,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1189934096}
+  currentHealth: 0
 --- !u!1 &998713256
 GameObject:
   m_ObjectHideFlags: 0
@@ -12431,7 +12388,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1023747721}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -12550,6 +12507,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 314644592}
+  currentHealth: 0
 --- !u!1 &1027970099
 GameObject:
   m_ObjectHideFlags: 0
@@ -13144,7 +13102,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1055179865}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -13263,6 +13221,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1643432492}
+  currentHealth: 0
 --- !u!1 &1063392678
 GameObject:
   m_ObjectHideFlags: 0
@@ -13425,6 +13384,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &1073751662 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+    type: 2}
+  m_PrefabInternal: {fileID: 172088898}
 --- !u!1 &1082018976
 GameObject:
   m_ObjectHideFlags: 0
@@ -14410,7 +14374,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1157565233}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -14529,6 +14493,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 446666645}
+  currentHealth: 0
 --- !u!1 &1158321285
 GameObject:
   m_ObjectHideFlags: 0
@@ -15296,7 +15261,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1201456136}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -15415,6 +15380,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 307882132}
+  currentHealth: 0
 --- !u!1 &1217419095
 GameObject:
   m_ObjectHideFlags: 0
@@ -15562,7 +15528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1223143052
 Transform:
   m_ObjectHideFlags: 0
@@ -15603,7 +15569,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1223143051}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -15722,6 +15688,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1039305425}
+  currentHealth: 0
 --- !u!1 &1225482260
 GameObject:
   m_ObjectHideFlags: 0
@@ -16322,7 +16289,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1261126872}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -16441,6 +16408,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1278175863}
+  currentHealth: 0
 --- !u!1 &1264298171
 GameObject:
   m_ObjectHideFlags: 0
@@ -17212,7 +17180,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1304346995}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -17331,6 +17299,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 658099158}
+  currentHealth: 0
 --- !u!1 &1310855197
 GameObject:
   m_ObjectHideFlags: 0
@@ -17661,6 +17630,34 @@ Transform:
   m_Father: {fileID: 404730307}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1344007684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1344007685}
+  m_Layer: 8
+  m_Name: Akpos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1344007685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1344007684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.429, y: 0.045, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1073751662}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1352868358
 GameObject:
   m_ObjectHideFlags: 0
@@ -17722,7 +17719,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352868358}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -17841,6 +17838,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 231940260}
+  currentHealth: 0
 --- !u!1 &1363009445
 GameObject:
   m_ObjectHideFlags: 0
@@ -18041,7 +18039,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1397708645}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -18160,6 +18158,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1537083233}
+  currentHealth: 0
 --- !u!1 &1404699011
 GameObject:
   m_ObjectHideFlags: 0
@@ -18333,7 +18332,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412420838}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -18452,6 +18451,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 367123281}
+  currentHealth: 0
 --- !u!1 &1416000743
 GameObject:
   m_ObjectHideFlags: 0
@@ -18869,7 +18869,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1454268360}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -18988,6 +18988,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 462513865}
+  currentHealth: 0
 --- !u!1 &1461180545
 GameObject:
   m_ObjectHideFlags: 0
@@ -19662,7 +19663,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1500999824}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -19781,6 +19782,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 854610972}
+  currentHealth: 0
 --- !u!1 &1505521461
 GameObject:
   m_ObjectHideFlags: 0
@@ -20117,7 +20119,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1524701862}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -20236,6 +20238,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1771895853}
+  currentHealth: 0
 --- !u!1 &1528072953
 GameObject:
   m_ObjectHideFlags: 0
@@ -20653,34 +20656,6 @@ Canvas:
   m_SortingLayerID: 1072735969
   m_SortingOrder: 2
   m_TargetDisplay: 0
---- !u!1 &1541963489
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1541963490}
-  m_Layer: 0
-  m_Name: PfeilPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1541963490
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1541963489}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.213, y: -0.116, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 475440095}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1549644787
 GameObject:
   m_ObjectHideFlags: 0
@@ -21222,7 +21197,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1603141838}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -21341,6 +21316,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1327945667}
+  currentHealth: 0
 --- !u!1 &1607701408
 GameObject:
   m_ObjectHideFlags: 0
@@ -22197,7 +22173,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1663753178}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -22316,6 +22292,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1614118513}
+  currentHealth: 0
 --- !u!1 &1667502083
 GameObject:
   m_ObjectHideFlags: 0
@@ -22372,7 +22349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1683284303
 Transform:
   m_ObjectHideFlags: 0
@@ -22413,7 +22390,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1683284302}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -22532,6 +22509,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1217419097}
+  currentHealth: 0
 --- !u!1 &1684994289
 GameObject:
   m_ObjectHideFlags: 0
@@ -22851,7 +22829,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1701665167}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -22970,6 +22948,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 84640126}
+  currentHealth: 0
 --- !u!1 &1710455411
 GameObject:
   m_ObjectHideFlags: 0
@@ -23289,7 +23268,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1724417683}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -23408,6 +23387,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1941327642}
+  currentHealth: 0
 --- !u!1 &1740274966
 GameObject:
   m_ObjectHideFlags: 0
@@ -23615,7 +23595,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1755327448}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -23734,6 +23714,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 735278019}
+  currentHealth: 0
 --- !u!1 &1771895851
 GameObject:
   m_ObjectHideFlags: 0
@@ -24079,7 +24060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1820612325
 Transform:
   m_ObjectHideFlags: 0
@@ -24120,7 +24101,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1820612324}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -24239,6 +24220,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1977821535}
+  currentHealth: 0
 --- !u!1 &1820839720
 GameObject:
   m_ObjectHideFlags: 0
@@ -25764,7 +25746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1960685974
 Transform:
   m_ObjectHideFlags: 0
@@ -25805,7 +25787,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1960685973}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -25924,6 +25906,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1466158786}
+  currentHealth: 0
 --- !u!1 &1966117039
 GameObject:
   m_ObjectHideFlags: 0
@@ -26317,7 +26300,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2002795877}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -26436,6 +26419,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1918080854}
+  currentHealth: 0
 --- !u!1 &2007112021
 GameObject:
   m_ObjectHideFlags: 0
@@ -26800,12 +26784,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2032373994}
   m_CullTransparentMesh: 0
---- !u!114 &2047548677 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114517132652365484, guid: 010885f78837b394998cef3d31bbd824,
-    type: 2}
-  m_PrefabInternal: {fileID: 933058328}
-  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &2054159002
 GameObject:
   m_ObjectHideFlags: 0
@@ -27376,7 +27354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2131626691
 Transform:
   m_ObjectHideFlags: 0
@@ -27417,7 +27395,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2131626690}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -27536,6 +27514,7 @@ MonoBehaviour:
   drops: 0
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 977085549}
+  currentHealth: 0
 --- !u!1 &2134430134
 GameObject:
   m_ObjectHideFlags: 0
