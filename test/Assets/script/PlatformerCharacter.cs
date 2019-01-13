@@ -61,7 +61,11 @@ public class PlatformerCharacter : MonoBehaviour
 
             m_Anim.SetTrigger("isSchwertMongol");
         }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
 
+            m_Anim.SetTrigger("isKnochen");
+        }
 
 
     }
