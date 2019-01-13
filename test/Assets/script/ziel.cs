@@ -28,7 +28,7 @@ public class ziel : MonoBehaviour
             Debug.Log("ziel erreicht");
             PlayerPrefs.SetInt("levelReached", LevelToUnlock);
             PlayerPrefs.SetString("letzteScene", level);
-            PlayerPrefs.SetInt("MoneyAmount", moneyAmount);
+            PlayerPrefs.SetInt("MoneyAmount", spielerWerte.getGold());
             PlayerPrefs.SetFloat("EPValue", spielerWerte.sl.value);
             PlayerPrefs.SetInt("SpielerLevel", int.Parse(spielerWerte.levelAnzeige.text));
             SceneManager.LoadScene(level);

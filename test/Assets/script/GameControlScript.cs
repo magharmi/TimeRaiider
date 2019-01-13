@@ -59,6 +59,12 @@ public class GameControlScript : MonoBehaviour {
 
     public void addGold(int goldAmount)
     {
-        moneyText.text = "Gold: " + (moneyAmount + goldAmount).ToString();
+        moneyAmount += goldAmount;
+        moneyText.text = "Gold: " + moneyAmount.ToString();
+    }
+    
+    public int getGold()
+    {
+        return moneyAmount;
     }
 }
