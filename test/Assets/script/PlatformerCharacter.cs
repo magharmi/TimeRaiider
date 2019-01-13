@@ -37,25 +37,24 @@ public class PlatformerCharacter : MonoBehaviour
     }
     private void Update()
     {
-   
-            if(Input.GetKeyDown(KeyCode.Z)){
+        if(Input.GetKeyDown(KeyCode.Z)){
                 m_Anim.SetTrigger("isShoot");
                 Armbrust();
-             }
+        }
         if (Input.GetKeyDown(KeyCode.V))
         {
             m_Anim.SetTrigger("isArm");
             Armbrust();
         }
         if (Input.GetKeyDown(KeyCode.I))
-            {
+        {
                 m_Anim.SetTrigger("isKeule");
-            }
-            if (Input.GetKeyDown(KeyCode.T))
-            {
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
               
                 m_Anim.SetTrigger("isSpeer");
-            }
+        }
         if (Input.GetKeyDown(KeyCode.M))
         {
 
@@ -91,6 +90,18 @@ public class PlatformerCharacter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H))
         {
             m_Anim.SetTrigger("isAkt2_Schwert3");
+        }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            m_Anim.SetTrigger("isAkt3_Schwert");
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            m_Anim.SetTrigger("isAkt3_Axt");
+        }
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            m_Anim.SetTrigger("isAkt3_Keule");
         }
 
     }
