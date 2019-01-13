@@ -53,6 +53,8 @@ public class PlatformerCharacter : MonoBehaviour
     {
         HanldeInputAKt1();
         HanldeInputAKt2();
+        HanldeInputAKt3();
+        HanldeInputAKt3();
 
         if (Input.GetKeyDown(KeyCode.V))
         {
@@ -177,13 +179,13 @@ public class PlatformerCharacter : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Schwert3"))
         {
-            isAkt2_Schwert3 = true;
+            isAkt2_Schwert2 = true;
             HanldeInputAKt2();
         }
 
         if (collision.gameObject.CompareTag("Schwert4"))
         {
-            isAkt2_Schwert4 = true;
+            isAkt2_Schwert3 = true;
             HanldeInputAKt2();
         }
         //==============================================AKT3===============================================================================//
@@ -304,15 +306,6 @@ public class PlatformerCharacter : MonoBehaviour
             {
 
                 m_Anim.SetTrigger("isAkt2_Schwert3");
-            }
-        }
-        
-              if (isAkt2_Schwert4)
-        {
-            if (Input.GetKeyDown(KeyCode.J))
-            {
-                //Muss suchen
-                m_Anim.SetTrigger("");
             }
         }
     }
