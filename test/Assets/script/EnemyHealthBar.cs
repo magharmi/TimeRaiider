@@ -16,7 +16,7 @@ public class EnemyHealthBar : MonoBehaviour {
       public Slider enemySlider;
    // public Transform pos;
     //public GameObject blut;
-   private float currentHealth;
+   public float currentHealth;
 
 	// Use this for initialization
 	void Start () {

@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class TransformersKampfTrigger : MonoBehaviour {
 
-    private TransformersKampf controller;
+    public float sekunde = 1;
 
-	// Use this for initialization
-	void Start () {
+    private TransformersKampf controller;
+    private bool kampfAktiviert = false;
+
+    // Use this for initialization
+    void Start () {
         controller = GameObject.Find("Transformers Kampf Controller").GetComponent<TransformersKampf>();
 	}
 
@@ -15,6 +18,16 @@ public class TransformersKampfTrigger : MonoBehaviour {
     {
         if(other.tag == "spieler")
         {
+            StartCoroutine(warteSekunde(sekunde));
+        }
+    }
+
+    IEnumerator warteSekunde(float sekunde)
+    {
+        yield return new WaitForSeconds(sekunde);
+        if (kampfAktiviert == false)
+        {
+            kampfAktiviert = true;
             controller.TransformersAngriff();
         }
     }
