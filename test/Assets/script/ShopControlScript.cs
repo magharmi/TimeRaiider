@@ -59,7 +59,7 @@ public class ShopControlScript : MonoBehaviour {
         }
         else if (aktuelleScene.name == "ShopZukunft")
         {
-            SceneManager.LoadScene("Haus");
+            SceneManager.LoadScene("Raumstation");
         }
     }
 
