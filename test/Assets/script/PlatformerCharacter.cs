@@ -27,9 +27,18 @@ public class PlatformerCharacter : MonoBehaviour
     private Animator m_Anim;            // Reference to the player's animator component.
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
-                                 //public Inventory inventory;
+
+    //AKT1 bool
+    bool speer,knochen1,knochen2,axt,keule1;
+    //Akt2 bool
+    bool isAkt2_Schwert, isAkt2_Schwert1, isAkt2_Schwert3;
+    //Akt3 bool
+    bool isAkt3_Schwert,isAkt3_Axt, isAkt2_Schwert2,isAkt3_Keule, isSchwertMongol;
+    //Akt4
+    bool isAkt4_Ak, isAkt4_Pistol, isShoot;
+    //public Inventory inventory;
     //Waffe Wechseln mit animation
-    
+
     public int selectedWeapon = 0;
     private void Awake()
     {
@@ -42,72 +51,19 @@ public class PlatformerCharacter : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z)){
-                m_Anim.SetTrigger("isShoot");
-            Shoot();
-        }
+        HanldeInputAKt1();
+
+
         if (Input.GetKeyDown(KeyCode.V))
         {
             m_Anim.SetTrigger("isArm");
             Armbrust();
         }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-                m_Anim.SetTrigger("isKeule");
-        }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-              
-                m_Anim.SetTrigger("isSpeer");
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-
-            m_Anim.SetTrigger("isSchwertMongol");
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-
-            m_Anim.SetTrigger("isKnochen");
-        }
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-
-            m_Anim.SetTrigger("isKnochen1");
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-
-            m_Anim.SetTrigger("isAxtAngriff");
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-           m_Anim.SetTrigger("isAkt2_Schwert");
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            m_Anim.SetTrigger("isAkt2_Schwert1");
-        }
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            m_Anim.SetTrigger("isAkt2_Schwert2");
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            m_Anim.SetTrigger("isAkt2_Schwert3");
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            m_Anim.SetTrigger("isAkt3_Schwert");
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            m_Anim.SetTrigger("isAkt3_Axt");
-        }
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            m_Anim.SetTrigger("isAkt3_Keule");
-        }
+   
+       
+        /*
+        
+        
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             m_Anim.SetTrigger("isAkt4_Ak");
@@ -119,6 +75,7 @@ public class PlatformerCharacter : MonoBehaviour
             m_Anim.SetTrigger("isAkt4_Pistol");
             Ak();
         }
+        */
     }
 
     private void FixedUpdate()
@@ -192,7 +149,185 @@ public class PlatformerCharacter : MonoBehaviour
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
         }
     }
+    //==============================================AKT1=AKT2=AKT3=AKT4=====================================================================//
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("keule"))
+        {
+            keule1 = true;
+            HanldeInputAKt1();
+        }
+        if (collision.gameObject.CompareTag("speer"))
+        {
+            speer = true;
+            HanldeInputAKt1();
+        }
+        if (collision.gameObject.CompareTag("KnochenKeule1"))
+        {
+            knochen1 = true;
+            HanldeInputAKt1();
+        }
+      
+        if (collision.gameObject.CompareTag("KnochenKeule2"))
+        {
+            knochen2 = true;
+            HanldeInputAKt1();
+        }
+        if (collision.gameObject.CompareTag("SteinZeitAxt"))
+        {
+            axt = true;
+            HanldeInputAKt1();
+        }
+    }
+    //==============================================AKT1==============================================================================//
+    void HanldeInputAKt1()
+    {
+        if (keule1)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                m_Anim.SetTrigger("isKeule");
+               
+            }
+        }
+        if (speer)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse2))
+            {
+                m_Anim.SetTrigger("isSpeer");
+            }
+        }
+        if (knochen1)
+        {
+            if (Input.GetKeyDown(KeyCode.K))
+            {
 
+                m_Anim.SetTrigger("isKnochen");
+            }
+        }
+        if (knochen2)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+
+                m_Anim.SetTrigger("isKnochen1");
+            }
+        }
+        if (axt)
+        {
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+               
+                m_Anim.SetTrigger(" isAxtAngriff");
+            }
+        }
+    }
+    //==============================================AKT1====ENDE========================================================================//
+    //
+    //==============================================AKT2================================================================================//
+    void HanldeInputAKt2()
+    {
+        if (isAkt2_Schwert)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                m_Anim.SetTrigger("isAkt2_Schwert");
+
+            }
+        }
+        if (isAkt2_Schwert1)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse2))
+            {
+                m_Anim.SetTrigger("isAkt2_Schwert1");
+            }
+        }
+        if (isAkt2_Schwert2)
+        {
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+
+                m_Anim.SetTrigger("isAkt2_Schwert2");
+            }
+        }
+        if (isAkt2_Schwert3)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+
+                m_Anim.SetTrigger("isAkt2_Schwert3");
+            }
+        }
+    }
+    //==============================================AKT2===ENDE==========================================================================//
+    //isAkt3_Schwert,isAkt3_Axt, isAkt3_Keule, isSchwertMongol
+    //==============================================AKT3===Start=========================================================================//
+    void HanldeInputAKt3()
+    {
+        if (isAkt3_Schwert)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                m_Anim.SetTrigger("isAkt3_Schwert");
+
+            }
+        }
+        if (isAkt3_Axt)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse2))
+            {
+                m_Anim.SetTrigger("isAkt3_Axt");
+            }
+        }
+        if (isAkt3_Keule)
+        {
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+
+                m_Anim.SetTrigger("isAkt3_Keule");
+            }
+        }
+        if (isSchwertMongol)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+
+                m_Anim.SetTrigger("isSchwertMongol");
+            }
+        }
+    }
+    //==============================================AKT3===ENDE==========================================================================//
+    //isAkt4_Ak, isAkt4_Pistol;
+    //==============================================AKT4===Start=========================================================================//
+    void HanldeInputAKt4()
+    {
+        if (isAkt4_Ak)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                m_Anim.SetTrigger("isAkt4_Ak");
+                Ak();
+            }
+        }
+        if (isAkt4_Pistol)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse2))
+            {
+                m_Anim.SetTrigger("isAkt4_Pistol");
+                Ak();
+            }
+        }
+        if (isShoot)
+        {
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+
+                m_Anim.SetTrigger("isShoot");
+            }
+        }
+       
+    }
+    //==============================================AKT4===ENDE=========================================================================//
     private void Flip()
     {
         // Switch the way the player is labelled as facing.
@@ -204,9 +339,6 @@ public class PlatformerCharacter : MonoBehaviour
         transform.localScale = theScale;
     }
 
-   
-
-   
 
     public void spielerGeschwindigkeit(float maxSpeed)
     {
