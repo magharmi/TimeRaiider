@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour {
 
-    private Inventory inventory;
     public GameObject itemButton;
+    public float lebenAnzahl;
+
+    private Inventory inventory;
+    private float leben;
 
     // Use this for initialization
     void Start()
@@ -17,16 +20,9 @@ public class PickUp : MonoBehaviour {
     {
         if (other.CompareTag("spieler"))
         {
-            for (int i = 0; i < inventory.slots.Length; i++)
-            {
-                if (inventory.isFull[i] == false)
-                {
-                    inventory.isFull[i] = true;
-                    Instantiate(itemButton, inventory.slots[i].transform, false);
-                    Destroy(gameObject);
-                    break;
-                }
-            }
+            GameObject.Find("CharacterRobotBoy").GetComponent<Spieler_Leben>().addHealth(lebenAnzahl);
+            Debug.Log("Spieler geheilt");
+            Destroy(gameObject);
         }
     }
 }
