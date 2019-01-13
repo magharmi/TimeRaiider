@@ -31,7 +31,7 @@ public class AnubisKampf : MonoBehaviour {
 	void Update () {
         if(leben350 == true)
         {
-            if (anubis.GetComponent<GegnerAI>().leben == 350)
+            if (anubis.GetComponent<EnemyHealthBar>().currentHealth == 350)
             {
                 if (anubisZurück == false)
                 {
@@ -43,7 +43,7 @@ public class AnubisKampf : MonoBehaviour {
                         Debug.Log("Anubis zurück");
                         anubisZurück = true;
                         mumienSpawnen = true;
-                        anubis.GetComponent<GegnerAI>().leben = 350;
+                        anubis.GetComponent<EnemyHealthBar>().currentHealth = 350;
                     }
                 }
                 else if (mumienSpawnen == true)
@@ -58,7 +58,7 @@ public class AnubisKampf : MonoBehaviour {
         }
         else if(leben200 == true)
         {
-            if (anubis.GetComponent<GegnerAI>().leben == 200)
+            if (anubis.GetComponent<EnemyHealthBar>().currentHealth== 200)
             {
                 if (anubisZurück == false)
                 {
@@ -70,7 +70,7 @@ public class AnubisKampf : MonoBehaviour {
                         Debug.Log("Anubis zurück");
                         anubisZurück = true;
                         mumienSpawnen = true;
-                        anubis.GetComponent<GegnerAI>().leben = 200;
+                        anubis.GetComponent<EnemyHealthBar>().currentHealth = 200;
                     }
                 }
                 else if (mumienSpawnen == true)
@@ -85,7 +85,7 @@ public class AnubisKampf : MonoBehaviour {
         }
         else if(leben0 == true)
         {
-            if (anubis.GetComponent<GegnerAI>().leben == 0)
+            if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 20)
             {
                 zielItem.GetComponent<SpriteRenderer>().enabled = true;
                 kampfKamera.GetComponent<Camera>().enabled = false;
@@ -111,6 +111,7 @@ public class AnubisKampf : MonoBehaviour {
     IEnumerator mumienSpawnenFunc(int mumienNummer)
     {
         mumien[mumienNummer].GetComponent<SpriteRenderer>().enabled = true;
+        mumien[mumienNummer].GetComponent<BoxCollider2D>().enabled = true;
         mumien[mumienNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
         mumien[mumienNummer].GetComponent<GegnerAI>().enabled = true;
         yield return new WaitForSeconds(2);
@@ -138,6 +139,7 @@ public class AnubisKampf : MonoBehaviour {
     IEnumerator mumienSpawnenFunc2(int mumienNummer, int steinNummer)
     {
         mumien2[mumienNummer].GetComponent<SpriteRenderer>().enabled = true;
+        mumien2[mumienNummer].GetComponent<BoxCollider2D>().enabled = true;
         mumien2[mumienNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
         mumien2[mumienNummer].GetComponent<GegnerAI>().enabled = true;
         steine[steinNummer].GetComponent<SpriteRenderer>().enabled = true;
