@@ -9,6 +9,7 @@ public class DaheimKampf : MonoBehaviour
     private GameObject kampfKamera, mainCamera, unsichtbareWand, helikopter, beiZeitmaschine, grossvater, nächstesZiel;
     private GameObject[] agenten, raumschiffAgenten;
     private bool heliLandet;
+    private BoxCollider2D[] myColliders;
 
     // Use this for initialization
     void Start()
@@ -33,6 +34,8 @@ public class DaheimKampf : MonoBehaviour
     {
         agenten[agentenNummer].GetComponent<SpriteRenderer>().enabled = true;
         agenten[agentenNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
+        myColliders = agenten[agentenNummer].GetComponents<BoxCollider2D>();
+        foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         agenten[agentenNummer].GetComponent<GegnerAI>().enabled = true;
         yield return new WaitForSeconds(2);
         if (agentenNummer <= 8)
@@ -70,6 +73,8 @@ public class DaheimKampf : MonoBehaviour
         raumschiffAgenten[raumschiffAgentenNummer].GetComponent<SpriteRenderer>().enabled = true;
         raumschiffAgenten[raumschiffAgentenNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
         raumschiffAgenten[raumschiffAgentenNummer].GetComponent<GegnerAI>().enabled = true;
+        myColliders = raumschiffAgenten[raumschiffAgentenNummer].GetComponents<BoxCollider2D>();
+        foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         yield return new WaitForSeconds(2);
         if (raumschiffAgentenNummer <= 8)
         {
