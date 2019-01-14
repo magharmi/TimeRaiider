@@ -11,7 +11,7 @@ public class GegnerAI : MonoBehaviour {
     public bool hit = true;
     public float weg = 6;
     public int leben = 100;
-
+    bool attack=true;
     private Vector2 startPos;
     private Vector2 newPos;
     private Vector2 tempPos;
@@ -74,7 +74,8 @@ public class GegnerAI : MonoBehaviour {
                   
                     transform.rotation = Quaternion.Euler(0, 180f, 0);
                     //Hasan 8.1.2019
-                   enemyAnimator.SetBool("isRun", true);
+                    
+                    enemyAnimator.SetBool("isRun", true);
                     //ENDE
 
                 }
@@ -82,7 +83,7 @@ public class GegnerAI : MonoBehaviour {
                 else
                 {
                     transform.rotation = Quaternion.Euler(0, 0, 0);
-               
+                    enemyAnimator.SetBool("isAttack", false);
                 }
               
                 tempPos = newPos;
@@ -144,9 +145,10 @@ public class GegnerAI : MonoBehaviour {
         {
 
             //Hasan 8.1.2019
-            enemyAnimator.SetBool("isAttack", true);
-           //ENDE
-            
+            // enemyAnimator.SetBool("isAttack", true);
+            //ENDE
+            enemyAnimator.SetTrigger("isAttack");
+        
             GameObject.FindGameObjectWithTag("spieler").GetComponent<Spieler_Leben>().addDamage(20);
             //Lvlmanager.RespawnSpieler();
             Debug.Log("geht nicht mehr");
