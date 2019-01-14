@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 60661568345697208}
   - component: {fileID: 58581273334768132}
   - component: {fileID: 114156207676928470}
+  - component: {fileID: 114882777776039780}
   m_Layer: 11
   m_Name: Sklave_Inda
   m_TagString: Enemy
@@ -736,6 +737,20 @@ MonoBehaviour:
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 114442846086850138}
   currentHealth: 0
+--- !u!114 &114882777776039780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1940659854094976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1897eb6a36a7ed248aee5302229c723c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
+  damageRate: 1
+  pushBackforce: 1
 --- !u!212 &212614717486070220
 SpriteRenderer:
   m_ObjectHideFlags: 1
