@@ -20,9 +20,26 @@ public class PickUp : MonoBehaviour {
     {
         if (other.CompareTag("spieler"))
         {
-            GameObject.Find("CharacterRobotBoy").GetComponent<Spieler_Leben>().addHealth(lebenAnzahl);
-            Debug.Log("Spieler geheilt");
-            Destroy(gameObject);
+            if (leben != 0)
+            {
+                GameObject.Find("CharacterRobotBoy").GetComponent<Spieler_Leben>().addHealth(lebenAnzahl);
+                Debug.Log("Spieler geheilt");
+                Destroy(gameObject);
+            }
+            else
+            {
+                for (int i = 0; i < inventory.slots.Length; i++)
+                {
+                    if (inventory.isFull[i] == false)
+                    {
+                        Debug.Log("aufheben");
+                        inventory.isFull[i] = true;
+                        Instantiate(itemButton, inventory.slots[i].transform, false);
+                        Destroy(gameObject);
+                        break;
+                    }
+                }
+            }
         }
     }
 }
