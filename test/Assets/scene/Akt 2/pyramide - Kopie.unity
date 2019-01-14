@@ -5772,6 +5772,7 @@ GameObject:
   - component: {fileID: 374577027}
   - component: {fileID: 374577030}
   - component: {fileID: 374577029}
+  - component: {fileID: 374577031}
   m_Layer: 0
   m_Name: spitze
   m_TagString: Untagged
@@ -5847,7 +5848,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -7.328888, y: 0}
@@ -5877,6 +5878,20 @@ MonoBehaviour:
   Lvlmanager: {fileID: 0}
   resetObjekt:
   - {fileID: 1342956472}
+--- !u!114 &374577031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 374577026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1897eb6a36a7ed248aee5302229c723c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
+  damageRate: 1
+  pushBackforce: 1
 --- !u!1 &382240216
 GameObject:
   m_ObjectHideFlags: 0
@@ -20386,6 +20401,7 @@ GameObject:
   - component: {fileID: 1622093528}
   - component: {fileID: 1622093527}
   - component: {fileID: 1622093526}
+  - component: {fileID: 1622093530}
   m_Layer: 0
   m_Name: spitze (3)
   m_TagString: Untagged
@@ -20490,6 +20506,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 196
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1622093530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1622093525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1897eb6a36a7ed248aee5302229c723c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
+  damageRate: 1
+  pushBackforce: 1
 --- !u!1 &1627256626
 GameObject:
   m_ObjectHideFlags: 0
@@ -22500,6 +22530,7 @@ GameObject:
   - component: {fileID: 1849183152}
   - component: {fileID: 1849183155}
   - component: {fileID: 1849183154}
+  - component: {fileID: 1849183156}
   m_Layer: 0
   m_Name: spitze (1)
   m_TagString: Untagged
@@ -22575,7 +22606,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.37968445, y: 0}
@@ -22604,6 +22635,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lvlmanager: {fileID: 0}
   resetObjekt: []
+--- !u!114 &1849183156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1849183151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1897eb6a36a7ed248aee5302229c723c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
+  damageRate: 1
+  pushBackforce: 1
 --- !u!1 &1850654298
 GameObject:
   m_ObjectHideFlags: 0
