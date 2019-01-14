@@ -90,6 +90,51 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1185516809744174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4106927772412756}
+  m_Layer: 8
+  m_Name: sparksPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1230704235495396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4709724920450040}
+  m_Layer: 8
+  m_Name: pistolPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1233222713079036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4106022054944008}
+  m_Layer: 8
+  m_Name: shootPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1284960013148056
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +397,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1847675233688402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4505802260662960}
+  m_Layer: 8
+  m_Name: Akpos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1884130641056468
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +489,32 @@ Transform:
   m_Father: {fileID: 4719239247170980}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 42.585003}
+--- !u!4 &4106022054944008
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1233222713079036}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.545, y: -0.076, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4719239247170980}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4106927772412756
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1185516809744174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.322, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4719239247170980}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4143769805800672
 Transform:
   m_ObjectHideFlags: 1
@@ -572,6 +658,19 @@ Transform:
   m_Father: {fileID: 4719239247170980}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4505802260662960
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847675233688402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.429, y: 0.045, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4719239247170980}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4577749811575598
 Transform:
   m_ObjectHideFlags: 1
@@ -598,15 +697,28 @@ Transform:
   m_Father: {fileID: 4719239247170980}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 80.892006}
+--- !u!4 &4709724920450040
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1230704235495396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.248, y: 0.027, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4719239247170980}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4719239247170980
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1774105671571868}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -69.12, y: -105.91, z: 0}
-  m_LocalScale: {x: 3.14263, y: 2.322069, z: 1.61}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 224.1, y: -109.89, z: 0}
+  m_LocalScale: {x: 3.4126763, y: 2.5216043, z: 1.7483474}
   m_Children:
   - {fileID: 4412917589148374}
   - {fileID: 4774972060562782}
@@ -632,6 +744,10 @@ Transform:
   - {fileID: 4158899825090216}
   - {fileID: 4615481585511936}
   - {fileID: 4150516674923800}
+  - {fileID: 4505802260662960}
+  - {fileID: 4709724920450040}
+  - {fileID: 4106022054944008}
+  - {fileID: 4106927772412756}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -797,9 +913,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02805492, y: -0.3986295}
+  m_Offset: {x: 0.0013413099, y: -0.32991433}
   serializedVersion: 2
-  m_Radius: 0.07303583
+  m_Radius: 0.12113666
 --- !u!61 &61441327758256206
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -815,8 +931,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.53}
-    oldSize: {x: 0.42, y: 0.91}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.47777778, y: 1.0111111}
     newSize: {x: 0.42, y: 0.91}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -879,6 +995,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfeilPos: {fileID: 4415355186110170}
   pfeil: {fileID: 1292246170674996, guid: 328e0a6acab1e8c4db803a5dd96cbc73, type: 2}
+  akPos: {fileID: 4505802260662960}
+  pistolPos: {fileID: 4709724920450040}
+  shootPos: {fileID: 4106022054944008}
+  akGeschoss: {fileID: 1252091811311448, guid: 25b335e393f8ac341a822a173d64665e, type: 2}
   m_MaxSpeed: 10
   m_JumpForce: 800
   m_CrouchSpeed: 0.36
@@ -1035,7 +1155,7 @@ SpriteRenderer:
   m_SortingLayerID: 1072735969
   m_SortingLayer: 2
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: d7f4c7d7ce88e074d8f72e65b9f145d5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 325c88240f6a65443bc27ec64c440fcc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

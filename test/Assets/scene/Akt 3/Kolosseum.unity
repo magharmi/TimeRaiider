@@ -320,6 +320,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 146844743}
   currentHealth: 0
@@ -1646,6 +1648,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 100
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 91900043}
   currentHealth: 0
@@ -1846,6 +1850,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1241202596}
   currentHealth: 0
@@ -2268,6 +2274,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 135815428}
   currentHealth: 0
@@ -2668,7 +2676,7 @@ Prefab:
     - target: {fileID: 224523367859326538, guid: 95727a2586b18164fabbd78036e45b0b,
         type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 224523367859326538, guid: 95727a2586b18164fabbd78036e45b0b,
         type: 2}
@@ -2981,135 +2989,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.68, y: 0}
   m_SizeDelta: {x: -3.36, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &172088898
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -101.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -55.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114433223985970602, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: backgrounds.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114433223985970602, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: backgrounds.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114433223985970602, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: backgrounds.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114800323748436844, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: sl
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114800323748436844, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: geschlagenScreen
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114938739993213088, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: slots.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114938739993213088, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: slots.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114938739993213088, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: slots.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114938739993213088, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: slots.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: pfeil
-      value: 
-      objectReference: {fileID: 1292246170674996, guid: 328e0a6acab1e8c4db803a5dd96cbc73,
-        type: 2}
-    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: akPos
-      value: 
-      objectReference: {fileID: 1344007685}
-    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: akGeschoss
-      value: 
-      objectReference: {fileID: 1252091811311448, guid: 25b335e393f8ac341a822a173d64665e,
-        type: 2}
-    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: pistolPos
-      value: 
-      objectReference: {fileID: 300542318}
-    - target: {fileID: 4150516674923800, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.117736645
-      objectReference: {fileID: 0}
-    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: shootPos
-      value: 
-      objectReference: {fileID: 366904923}
-    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: sparks
-      value: 
-      objectReference: {fileID: 1398539723617354, guid: 4e455920753c449498e39e189407e1b2,
-        type: 2}
-    - target: {fileID: 114395799134717330, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-        type: 2}
-      propertyPath: sparksPos
-      value: 
-      objectReference: {fileID: 787959252}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &175185004
 GameObject:
   m_ObjectHideFlags: 0
@@ -4189,6 +4068,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1225482262}
   currentHealth: 0
@@ -4464,34 +4345,6 @@ Canvas:
   m_SortingLayerID: 1072735969
   m_SortingOrder: 2
   m_TargetDisplay: 0
---- !u!1 &300542317
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 300542318}
-  m_Layer: 8
-  m_Name: pistolPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &300542318
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 300542317}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.248, y: 0.027, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1073751662}
-  m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &307882130
 GameObject:
   m_ObjectHideFlags: 0
@@ -4881,6 +4734,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 227871611}
   currentHealth: 0
@@ -5101,34 +4956,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 343862411}
   m_CullTransparentMesh: 0
---- !u!1 &366904922
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 366904923}
-  m_Layer: 8
-  m_Name: shootPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &366904923
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 366904922}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.545, y: -0.076, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1073751662}
-  m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &367123279
 GameObject:
   m_ObjectHideFlags: 0
@@ -5216,6 +5043,53 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1001 &386675500
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -101.47033
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -55.462086
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114433223985970602, guid: 2ef6fe001f6998241b29ec9c991f8bce,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &388455723
 GameObject:
   m_ObjectHideFlags: 0
@@ -5395,6 +5269,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1699366555}
   currentHealth: 0
@@ -5591,7 +5467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8238cc53530b64fbb7828c3d3bb591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1073751662}
+  target: {fileID: 0}
   damping: 0
   lookAheadFactor: 0
   lookAheadReturnSpeed: 0
@@ -5860,6 +5736,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 933219373}
   currentHealth: 0
@@ -7370,6 +7248,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 2103591822}
   currentHealth: 0
@@ -7510,7 +7390,7 @@ Transform:
   m_LocalScale: {x: 1.6124994, y: 1.2875001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560842771
 GameObject:
@@ -9211,6 +9091,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1858185703}
   currentHealth: 0
@@ -10209,6 +10091,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1941747222}
   currentHealth: 0
@@ -10393,34 +10277,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 785939040}
   m_CullTransparentMesh: 0
---- !u!1 &787959251
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 787959252}
-  m_Layer: 8
-  m_Name: sparksPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &787959252
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 787959251}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.322, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1073751662}
-  m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &788099897
 GameObject:
   m_ObjectHideFlags: 0
@@ -11471,7 +11327,7 @@ Prefab:
     - target: {fileID: 224491227125908090, guid: 010885f78837b394998cef3d31bbd824,
         type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 224491227125908090, guid: 010885f78837b394998cef3d31bbd824,
         type: 2}
@@ -11894,6 +11750,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1035720844}
   currentHealth: 0
@@ -12094,6 +11952,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1033050686}
   currentHealth: 0
@@ -12601,6 +12461,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1189934096}
   currentHealth: 0
@@ -13025,6 +12887,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 314644592}
   currentHealth: 0
@@ -13758,6 +13622,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1643432492}
   currentHealth: 0
@@ -13941,11 +13807,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!4 &1073751662 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4719239247170980, guid: 2ef6fe001f6998241b29ec9c991f8bce,
-    type: 2}
-  m_PrefabInternal: {fileID: 172088898}
 --- !u!1 &1082018976
 GameObject:
   m_ObjectHideFlags: 0
@@ -15049,6 +14910,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 446666645}
   currentHealth: 0
@@ -15955,6 +15818,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 307882132}
   currentHealth: 0
@@ -16282,6 +16147,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1039305425}
   currentHealth: 0
@@ -17021,6 +16888,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1278175863}
   currentHealth: 0
@@ -17931,6 +17800,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 658099158}
   currentHealth: 0
@@ -18282,34 +18153,6 @@ Transform:
   m_Father: {fileID: 404730307}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1344007684
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1344007685}
-  m_Layer: 8
-  m_Name: Akpos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1344007685
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1344007684}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.429, y: 0.045, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1073751662}
-  m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1352868358
 GameObject:
   m_ObjectHideFlags: 0
@@ -18489,6 +18332,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 231940260}
   currentHealth: 0
@@ -18901,6 +18746,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1537083233}
   currentHealth: 0
@@ -19213,6 +19060,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 367123281}
   currentHealth: 0
@@ -19769,6 +19618,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 462513865}
   currentHealth: 0
@@ -20582,6 +20433,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 854610972}
   currentHealth: 0
@@ -21057,6 +20910,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1771895853}
   currentHealth: 0
@@ -22154,6 +22009,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1327945667}
   currentHealth: 0
@@ -23149,6 +23006,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1614118513}
   currentHealth: 0
@@ -23385,6 +23244,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1217419097}
   currentHealth: 0
@@ -23843,6 +23704,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 84640126}
   currentHealth: 0
@@ -24301,6 +24164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1941327642}
   currentHealth: 0
@@ -24647,6 +24512,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 735278019}
   currentHealth: 0
@@ -25245,6 +25112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1977821535}
   currentHealth: 0
@@ -26950,6 +26819,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1466158786}
   currentHealth: 0
@@ -27482,6 +27353,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 50
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 1918080854}
   currentHealth: 0
@@ -28596,6 +28469,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 60
   drops: 0
+  gibtEp: 1
+  ep: 10
   lebenOderGeld: {fileID: 0}
   enemySlider: {fileID: 977085549}
   currentHealth: 0
