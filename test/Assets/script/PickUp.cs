@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickUp : MonoBehaviour {
 
     public GameObject itemButton;
-    public float lebenAnzahl;
+    public float lebenAnzahl = 20;
 
     private Inventory inventory;
     private float leben;
