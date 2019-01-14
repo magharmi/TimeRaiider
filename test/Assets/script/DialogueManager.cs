@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     private GameObject[] gegner;
     private GameObject spieler;
+    private BoxCollider2D[] myColliders;
 
     // Use this for initialization
     void Start()
@@ -74,8 +75,13 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", false);
         for(int i = 0; i < gegner.Length; i++)
         {
-            if(GegnerAIVorhanden)
+            if (GegnerAIVorhanden)
+            {
                 gegner[i].GetComponent<GegnerAI>().enabled = true;
+                gegner[i].GetComponent<EnemyHealthBar>().enabled = true;
+                myColliders = gegner[i].GetComponents<BoxCollider2D>();
+                foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
+            }
             if (LandwirtRenntWegVorhanden)
             {
                 gegner[i].GetComponent<LandwirtRenntWeg>().enabled = true;
