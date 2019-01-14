@@ -16,7 +16,7 @@ public class BossHit : MonoBehaviour
     {
     //    transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
-/*
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // deal the boss some damage + spawn particle effects + screen shake
@@ -30,5 +30,5 @@ public class BossHit : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    */
+    
 }
