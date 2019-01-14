@@ -5,10 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ShopControlScript : MonoBehaviour {
-
+    int waffe1;
 	int moneyAmount;
 	int isRifleSold;
-
+    Inventory i;
 	public Text moneyAmountText;
 	public Text riflePrice;
 	public Button buyButton;
@@ -19,7 +19,9 @@ public class ShopControlScript : MonoBehaviour {
 	void Start () {
 		moneyAmount = PlayerPrefs.GetInt ("MoneyAmount");
         aktuelleScene = SceneManager.GetActiveScene();
-	}
+        i = GameObject.FindGameObjectWithTag("spieler").GetComponent<Inventory>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -45,6 +47,7 @@ public class ShopControlScript : MonoBehaviour {
 	public void exitShop()
 	{
 		PlayerPrefs.SetInt ("MoneyAmount", moneyAmount);
+     
         if (aktuelleScene.name == "ShopStoneAge")
         {
             SceneManager.LoadScene("dorf");
@@ -61,6 +64,8 @@ public class ShopControlScript : MonoBehaviour {
         {
             SceneManager.LoadScene("Raumstation");
         }
+      
+
     }
 
 	public void resetPlayerPrefs()
