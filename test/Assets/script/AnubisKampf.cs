@@ -26,7 +26,10 @@ public class AnubisKampf : MonoBehaviour {
         mainCamera = GameObject.Find("Main Camera");
         unsichtbareWand = GameObject.Find("Ende Arena");
         startPosition = anubis.transform.position;
-}
+        myColliders = anubis.GetComponents<BoxCollider2D>();
+        foreach (BoxCollider2D bc in myColliders) bc.enabled = false;
+        anubis.GetComponent<GegnerAI>().speed = 0;
+    }
 	
 	// Update is called once per frame
 	void Update () {
