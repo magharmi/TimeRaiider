@@ -73,9 +73,14 @@ public class PlatformerCharacter : MonoBehaviour
     {
         int previousSelectedWeapon = selectedWeapon;
 
-      
 
-       //Waffewchseln();
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            
+                m_Anim.SetTrigger("isShoot");
+            Ak();
+        }
+        //Waffewchseln();
         if (previousSelectedWeapon != selectedWeapon)
         {
             SelectWeapon();

@@ -8,10 +8,10 @@ public class ShopControlScript : MonoBehaviour {
     int waffe1;
 	int moneyAmount;
 	int isRifleSold;
-    Inventory i;
+    
 	public Text moneyAmountText;
 	public Text riflePrice;
-	public Button buyButton;
+	public Button buyButton1,buyButton2,buyButtob3;
 
     private Scene aktuelleScene;
 
@@ -19,7 +19,7 @@ public class ShopControlScript : MonoBehaviour {
 	void Start () {
 		moneyAmount = PlayerPrefs.GetInt ("MoneyAmount");
         aktuelleScene = SceneManager.GetActiveScene();
-        i = GameObject.FindGameObjectWithTag("spieler").GetComponent<Inventory>();
+       
 
     }
 	
@@ -31,10 +31,10 @@ public class ShopControlScript : MonoBehaviour {
 		isRifleSold = PlayerPrefs.GetInt ("IsRifleSold");
 
 		if (moneyAmount >= 5 && isRifleSold == 0)
-			buyButton.interactable = true;
+			buyButton1.interactable = true;
             
 		else
-			buyButton.interactable = false;	
+			buyButton1.interactable = false;	
 	}
 
 	public void buyRifle()
@@ -42,7 +42,7 @@ public class ShopControlScript : MonoBehaviour {
 		moneyAmount -= 5;
 		PlayerPrefs.SetInt ("IsRifleSold", 1);
 		riflePrice.text = "Verkauft!";
-		buyButton.gameObject.SetActive (false);
+		buyButton1.gameObject.SetActive (false);
 	}
 
 	public void exitShop()
@@ -72,7 +72,7 @@ public class ShopControlScript : MonoBehaviour {
 	public void resetPlayerPrefs()
 	{
 		moneyAmount = 0;
-		buyButton.gameObject.SetActive (true);
+		buyButton1.gameObject.SetActive (true);
 		riflePrice.text = "Preis: 5 Gold";
 		PlayerPrefs.DeleteAll ();
 	}

@@ -13,12 +13,15 @@ public class GameControlScript : MonoBehaviour {
 	public static int moneyAmount;
 	int isRifleSold;
     public string shopSzene;
-	public GameObject rifle;
-
-	// Use this for initialization
-	void Start () {
+	public GameObject inventarbild1;
+    public GameObject inventarbild2;
+    public GameObject inventarbild3;
+   
+    // Use this for initialization
+    void Start () {
         moneyAmount = PlayerPrefs.GetInt("MoneyAmount");
         isRifleSold = PlayerPrefs.GetInt("IsRifleSold");
+
         slider = GameObject.Find("Slider");
         sl = GameObject.Find("SliderEP").GetComponent<Slider>();
         moneyText = GameObject.Find("GoldZaehler").GetComponent<Text>();
@@ -30,13 +33,15 @@ public class GameControlScript : MonoBehaviour {
 
         sl.value = PlayerPrefs.GetFloat("EPValue");
         levelAnzeige.text = PlayerPrefs.GetInt("SpielerLevel").ToString();
-        /*
+        
 		if (isRifleSold == 1)
-			rifle.SetActive (true);
+			inventarbild1.SetActive (true);
 		else
-			rifle.SetActive (false);
-            */
-	}
+			inventarbild1.SetActive (false);
+
+    
+
+    }
 
 	public void gotoShop()
 	{
