@@ -8,7 +8,6 @@ public class PickUp : MonoBehaviour {
     public float lebenAnzahl = 20;
 
     private Inventory inventory;
-    private float leben;
 
     // Use this for initialization
     void Start()
@@ -20,7 +19,7 @@ public class PickUp : MonoBehaviour {
     {
         if (other.CompareTag("spieler"))
         {
-            if (leben != 0)
+            if (lebenAnzahl != 0)
             {
                 GameObject.Find("CharacterRobotBoy").GetComponent<Spieler_Leben>().addHealth(lebenAnzahl);
                 Debug.Log("Spieler geheilt");
