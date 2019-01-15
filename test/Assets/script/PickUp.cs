@@ -6,19 +6,8 @@ public class PickUp : MonoBehaviour {
 
     private Inventory inventory;
     public GameObject itemButton;
-    //public float lebenAnzahl = 20;
-    //private float leben;
-    /*   
-    if (leben != 0)
-            {
-                GameObject.Find("CharacterRobotBoy").GetComponent<Spieler_Leben>().addHealth(lebenAnzahl);
-                 Debug.Log("Spieler geheilt");
-                Destroy(gameObject);
-}
-            else
-            {
-            */
-    // Use this for initialization
+    public float lebenAnzahl = 20;
+
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("spieler").GetComponent<Inventory>();
@@ -28,8 +17,16 @@ public class PickUp : MonoBehaviour {
     {
         if (other.CompareTag("spieler"))
         {
-         
-                for (int i = 0; i < inventory.slots.Length; i++)
+
+            for (int i = 0; i < inventory.slots.Length; i++)
+            {
+                if (lebenAnzahl != 0)
+                {
+                    GameObject.Find("CharacterRobotBoy").GetComponent<Spieler_Leben>().addHealth(lebenAnzahl);
+                    Debug.Log("Spieler geheilt");
+                    Destroy(gameObject);
+                }
+                else
                 {
                     if (inventory.isFull[i] == false)
                     {
@@ -42,5 +39,5 @@ public class PickUp : MonoBehaviour {
                 }
             }
         }
-    
+    }
 }
