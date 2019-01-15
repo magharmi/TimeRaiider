@@ -11,7 +11,7 @@ public class GameControlScript : MonoBehaviour {
     private GameObject slider;
     private Text moneyText;
 	public static int moneyAmount;
-	int isRifleSold;
+	int isRifleSold,isRifleSold2, isRifleSold3;
     public string shopSzene;
 	public GameObject inventarbild1;
     public GameObject inventarbild2;
@@ -19,8 +19,10 @@ public class GameControlScript : MonoBehaviour {
    
     // Use this for initialization
     void Start () {
-        moneyAmount = PlayerPrefs.GetInt("MoneyAmount");
-        isRifleSold = PlayerPrefs.GetInt("IsRifleSold");
+        moneyAmount  = PlayerPrefs.GetInt("MoneyAmount");
+        isRifleSold  = PlayerPrefs.GetInt("IsRifleSold");
+        isRifleSold2 = PlayerPrefs.GetInt("IsRifleSold2");
+        isRifleSold3 = PlayerPrefs.GetInt("IsRifleSold3");
 
         slider = GameObject.Find("Slider");
         sl = GameObject.Find("SliderEP").GetComponent<Slider>();
@@ -39,7 +41,16 @@ public class GameControlScript : MonoBehaviour {
 		else
 			inventarbild1.SetActive (false);
 
-    
+        if (isRifleSold2 == 1)
+            inventarbild2.SetActive(true);
+        else
+            inventarbild2.SetActive(false);
+
+        if (isRifleSold3 == 1)
+            inventarbild3.SetActive(true);
+        else
+            inventarbild3.SetActive(false);
+
 
     }
 
