@@ -17,6 +17,7 @@ public class TransformersKampf : MonoBehaviour
     private GameObject[] drohnen;
     private Vector3 hochflugZiel, spielerPosition, mitteZiel;
     private BoxCollider2D[] myColliders;
+    private bool wenigerAls350;
 
     // Use this for initialization
     void Start()
@@ -38,7 +39,7 @@ public class TransformersKampf : MonoBehaviour
             SceneManager.LoadScene("Abspann");
         }
 
-        else if (transformers.GetComponent<EnemyHealthBar>().currentHealth == 350)
+        else if (transformers.GetComponent<EnemyHealthBar>().currentHealth <= 350 && wenigerAls350 == false)
         {
             myColliders = transformers.GetComponents<BoxCollider2D>();
             foreach (BoxCollider2D bc in myColliders) bc.enabled = false;
@@ -62,6 +63,7 @@ public class TransformersKampf : MonoBehaviour
                 Debug.Log("Drohnen spawnen");
                 TransformersLaserSchiessen();
                 Debug.Log("Schießt Laser");
+                wenigerAls350 = true;
             }
         }
 
