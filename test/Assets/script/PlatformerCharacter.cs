@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlatformerCharacter : MonoBehaviour
 {
-
+    //Waffen bild wechseln
+    public GameObject Inventarbild1;
+    public int selectedWeapon = 0;
+    //
     float nextFire, fireRate;
     [SerializeField] Transform pfeilPos;
     [SerializeField] GameObject pfeil;
@@ -39,10 +42,10 @@ public class PlatformerCharacter : MonoBehaviour
     //public Inventory inventory;
     //Waffe Wechseln mit animation
 
-    public int selectedWeapon = 0;
+   
     private void Awake()
     {
-
+        SelectWeapon();
         // Setting up references.
         m_GroundCheck = transform.Find("GroundCheck");
         m_CeilingCheck = transform.Find("CeilingCheck");
@@ -51,17 +54,24 @@ public class PlatformerCharacter : MonoBehaviour
     }
     private void Update()
     {
+        int previousSelectedWeapon = selectedWeapon;
         HanldeInputAKt1();
         HanldeInputAKt2();
         HanldeInputAKt3();
         HanldeInputAKt3();
 
+       //Waffewchseln();
+        if (previousSelectedWeapon != selectedWeapon)
+        {
+            SelectWeapon();
+        }
+        /*
         if (Input.GetKeyDown(KeyCode.V))
         {
             m_Anim.SetTrigger("isArm");
             Armbrust();
         }
-   
+        */
     }
 
     private void FixedUpdate()
@@ -146,12 +156,12 @@ public class PlatformerCharacter : MonoBehaviour
         if (collision.gameObject.CompareTag("speer"))
         {
             speer = true;
-            HanldeInputAKt1();
+           HanldeInputAKt1();
         }
         if (collision.gameObject.CompareTag("KnochenKeule1"))
         {
             knochen1 = true;
-            HanldeInputAKt1();
+          HanldeInputAKt1();
         }
       
         if (collision.gameObject.CompareTag("KnochenKeule2"))
@@ -229,8 +239,9 @@ public class PlatformerCharacter : MonoBehaviour
             HanldeInputAKt4();
         }
     }
-    //==============================================AKT1====================================================================================//
-    void HanldeInputAKt1()
+  
+//==============================================AKT1====================================================================================//
+void HanldeInputAKt1()
     {
         if (keule1)
         {
@@ -351,6 +362,7 @@ public class PlatformerCharacter : MonoBehaviour
     //==============================================AKT4===Start=========================================================================//
     void HanldeInputAKt4()
     {
+     
         if (isAkt4_Ak)
         {
             if (Input.GetKeyDown(KeyCode.Mouse1))
@@ -367,6 +379,7 @@ public class PlatformerCharacter : MonoBehaviour
                 Ak();
             }
         }
+
         if (isShoot)
         {
             if (Input.GetKeyDown(KeyCode.K))
@@ -464,6 +477,19 @@ public class PlatformerCharacter : MonoBehaviour
 
                 Instantiate(akGeschoss, shootPos.position, Quaternion.Euler(new Vector3(0, 0, 180f)));
             }
+        }
+    }
+    //Waffewchseln
+    void SelectWeapon()
+    {
+        int i = 0;
+        foreach (Transform weapon in transform)
+        {
+            if (i == selectedWeapon)
+                weapon.gameObject.SetActive(true);
+            else
+                weapon.gameObject.SetActive(false);
+            i++;
         }
     }
 

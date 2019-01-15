@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WaffeWechseln : MonoBehaviour {
-    public int selectedWeapon = 0;
-    private Animator anim;
+   public int selectedWeapon = 0;
+   //public GameObject shootgun;
+   //public GameObject Inventarbild1;
+    // private Animator anim;
     // Use this for initialization
     void Start () {
-        anim = GetComponent<Animator>();
+       // anim = GetComponent<Animator>();
         SelectWeapon();
 	}
 	
@@ -35,6 +37,8 @@ public class WaffeWechseln : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             selectedWeapon = 0;
+           // shootgun.SetActive(true);
+          //  Inventarbild1.SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2)&&transform.childCount>=2)
         {
@@ -47,10 +51,7 @@ public class WaffeWechseln : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Alpha4) && transform.childCount >= 4)
         {
             selectedWeapon = 3;
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                anim.SetTrigger("isSpeer");
-            }
+           
         }
         if (Input.GetKeyDown(KeyCode.Alpha5) && transform.childCount >= 5)
         {

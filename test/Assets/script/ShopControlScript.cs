@@ -32,6 +32,7 @@ public class ShopControlScript : MonoBehaviour {
 
 		if (moneyAmount >= 5 && isRifleSold == 0)
 			buyButton.interactable = true;
+            
 		else
 			buyButton.interactable = false;	
 	}
@@ -47,7 +48,7 @@ public class ShopControlScript : MonoBehaviour {
 	public void exitShop()
 	{
 		PlayerPrefs.SetInt ("MoneyAmount", moneyAmount);
-     
+        
         if (aktuelleScene.name == "ShopStoneAge")
         {
             SceneManager.LoadScene("dorf");
