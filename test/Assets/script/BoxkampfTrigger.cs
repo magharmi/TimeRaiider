@@ -12,7 +12,7 @@ public class BoxkampfTrigger : MonoBehaviour {
         MainCamera = GameObject.Find("Main Camera");
         BosskampfKamera = GameObject.Find("Bosskampf Kamera");
         BosskampfWand = GameObject.Find("Bosskampf Wand");
-        Landwirt = GameObject.Find("Landwirt (1)");
+        Landwirt = GameObject.Find("Landwirt (2)");
 	}
 	
 

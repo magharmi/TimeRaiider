@@ -9,7 +9,7 @@ public class Landwirtkampf : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        landwirt = GameObject.Find("Landwirt (1)");
+        landwirt = GameObject.Find("Landwirt (2)");
     }
 
     public void OnTriggerEnter2D(Collider2D other)

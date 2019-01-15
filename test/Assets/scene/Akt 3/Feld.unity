@@ -3604,7 +3604,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 516008468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 270.48, y: -48.25, z: -0.091796875}
+  m_LocalPosition: {x: 176.4, y: -48.25, z: -0.091796875}
   m_LocalScale: {x: -2.3362663, y: -16.919697, z: -1.235973}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8010,7 +8010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neuesZielErstellen: 0
-  spielerEinfrieren: 0
+  spielerEinfrieren: 1
   idleSprite: {fileID: 21300000, guid: d7f4c7d7ce88e074d8f72e65b9f145d5, type: 3}
   altesZiel: {fileID: 0}
   neuesZiel: {fileID: 0}
@@ -9174,6 +9174,34 @@ Prefab:
     - target: {fileID: 1930553106421400, guid: 4adcb99b9d0937f4b9035dc992f926a2, type: 2}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 212454710665407008, guid: 4adcb99b9d0937f4b9035dc992f926a2,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212454710665407008, guid: 4adcb99b9d0937f4b9035dc992f926a2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888784684195474, guid: 4adcb99b9d0937f4b9035dc992f926a2, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888784684195474, guid: 4adcb99b9d0937f4b9035dc992f926a2, type: 2}
+      propertyPath: m_Name
+      value: Landwirt (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114904443596109952, guid: 4adcb99b9d0937f4b9035dc992f926a2,
+        type: 2}
+      propertyPath: damageRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114566289700331990, guid: 4adcb99b9d0937f4b9035dc992f926a2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4adcb99b9d0937f4b9035dc992f926a2, type: 2}
@@ -12571,7 +12599,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1917649110}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e32d49cf5d2800d49ad502d119cff6ca, type: 3}
   m_Name: 
@@ -13235,7 +13263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2074726847
 Transform:
   m_ObjectHideFlags: 0
