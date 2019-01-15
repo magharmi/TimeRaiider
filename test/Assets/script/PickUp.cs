@@ -26,7 +26,7 @@ public class PickUp : MonoBehaviour {
                     Debug.Log("Spieler geheilt");
                     Destroy(gameObject);
                 }
-                else
+                /*else
                 {
                     if (inventory.isFull[i] == false)
                     {
@@ -37,6 +37,7 @@ public class PickUp : MonoBehaviour {
                         break;
                     }
                 }
+                */
             }
         }
     }
