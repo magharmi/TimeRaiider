@@ -5,11 +5,12 @@ using UnityEngine;
 public class Inventory : MonoBehaviour {
     public bool[] isFull;
     public GameObject[] slots;
-    public string[] gespeicherteWaffen;
-    private GameObject waffe;
-
+   // public string[] gespeicherteWaffen;
+   // private GameObject waffe;
+   
     private void Start()
     {
+        /*
         for (int i = 0; i < 4; i++)
         {
             slots[i] = GameObject.Find("Slot" + (i + 1));
@@ -26,7 +27,7 @@ public class Inventory : MonoBehaviour {
                 Instantiate(waffe, slots[i].transform, false);
             }
         }
+        */
     }
-
 
 }

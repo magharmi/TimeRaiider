@@ -30,11 +30,12 @@ public class GameControlScript : MonoBehaviour {
 
         sl.value = PlayerPrefs.GetFloat("EPValue");
         levelAnzeige.text = PlayerPrefs.GetInt("SpielerLevel").ToString();
-
+        /*
 		if (isRifleSold == 1)
 			rifle.SetActive (true);
 		else
 			rifle.SetActive (false);
+            */
 	}
 
 	public void gotoShop()

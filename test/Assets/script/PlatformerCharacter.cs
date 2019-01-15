@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformerCharacter : MonoBehaviour
 {
     //Waffen bild wechseln
-    public GameObject Inventarbild1;
+    public GameObject Inventarbild1, Inventarbild2, Inventarbild3;
     public int selectedWeapon = 0;
     //
     float nextFire, fireRate;
@@ -45,7 +45,12 @@ public class PlatformerCharacter : MonoBehaviour
    
     private void Awake()
     {
+        isAkt4_Ak = false;
+        isAkt4_Pistol = false;
+        isShoot = false;
+
         SelectWeapon();
+        akGeschoss.SetActive(false);
         // Setting up references.
         m_GroundCheck = transform.Find("GroundCheck");
         m_CeilingCheck = transform.Find("CeilingCheck");
@@ -55,16 +60,17 @@ public class PlatformerCharacter : MonoBehaviour
     private void Update()
     {
         int previousSelectedWeapon = selectedWeapon;
-        HanldeInputAKt1();
-        HanldeInputAKt2();
-        HanldeInputAKt3();
-        HanldeInputAKt3();
+
+      
 
        //Waffewchseln();
         if (previousSelectedWeapon != selectedWeapon)
         {
             SelectWeapon();
         }
+       
+        
+        
         /*
         if (Input.GetKeyDown(KeyCode.V))
         {
@@ -135,6 +141,64 @@ public class PlatformerCharacter : MonoBehaviour
                 // ... flip the player.
                 Flip();
             }
+            //Ak
+           //Inventar 1
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                isShoot = false;
+                isAkt4_Ak = false;
+                Inventarbild1.SetActive(true);
+                Inventarbild2.SetActive(false);
+                Inventarbild3.SetActive(false);
+                isAkt4_Pistol = true;
+                akGeschoss.SetActive(true);
+              
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                if (isAkt4_Pistol == true)
+
+                    m_Anim.SetTrigger("isAkt4_Pistol");
+                Ak();
+            }
+            //Inventar 2
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                Inventarbild1.SetActive(false);
+                Inventarbild3.SetActive(false);
+                isShoot = false;
+                isAkt4_Pistol = false;
+
+                Inventarbild2.SetActive(true);
+                akGeschoss.SetActive(true);
+                isAkt4_Ak = true;
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                if (isAkt4_Ak == true)
+
+                    m_Anim.SetTrigger("isAkt4_Ak");
+                Ak();
+            }
+            //Inventar 3
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                Inventarbild1.SetActive(false);
+                Inventarbild2.SetActive(false);
+                isAkt4_Pistol = false;
+                isAkt4_Ak     = false;
+
+                Inventarbild3.SetActive(true);
+                akGeschoss.SetActive(true);
+                isShoot = true;
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                if (isShoot == true)
+                    m_Anim.SetTrigger("isShoot");
+                Ak();
+            }
+
         }
         // If the player should jump...
         if (m_Grounded && jump && m_Anim.GetBool("Ground"))
@@ -145,251 +209,11 @@ public class PlatformerCharacter : MonoBehaviour
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
         }
     }
-    //==============================================AKT1=AKT2=AKT3=AKT4=====================================================================//
-    private void OnTriggerEnter2D(Collider2D collision)
+    void resetAnim()
     {
-        if (collision.gameObject.CompareTag("keule"))
-        {
-            keule1 = true;
-            HanldeInputAKt1();
-        }
-        if (collision.gameObject.CompareTag("speer"))
-        {
-            speer = true;
-           HanldeInputAKt1();
-        }
-        if (collision.gameObject.CompareTag("KnochenKeule1"))
-        {
-            knochen1 = true;
-          HanldeInputAKt1();
-        }
-      
-        if (collision.gameObject.CompareTag("KnochenKeule2"))
-        {
-            knochen2 = true;
-            HanldeInputAKt1();
-        }
-        if (collision.gameObject.CompareTag("SteinZeitAxt"))
-        {
-            axt = true;
-            HanldeInputAKt1();
-        }
-        //==============================================AKT1===ENDE=======================================================================//
-        //==============================================AKT2================================================================================//
-        // isAkt2_Schwert, isAkt2_Schwert1, isAkt2_Schwert3
-        if (collision.gameObject.CompareTag("Schwert1"))
-        {
-            isAkt2_Schwert = true;
-            HanldeInputAKt2();
-        }
-        if (collision.gameObject.CompareTag("Schwert2"))
-        {
-            isAkt2_Schwert1 = true;
-            HanldeInputAKt2();
-        }
-        if (collision.gameObject.CompareTag("Schwert3"))
-        {
-            isAkt2_Schwert2 = true;
-            HanldeInputAKt2();
-        }
-
-        if (collision.gameObject.CompareTag("Schwert4"))
-        {
-            isAkt2_Schwert3 = true;
-            HanldeInputAKt2();
-        }
-        //==============================================AKT3===============================================================================//
-        //isAkt3_Schwert,isAkt3_Axt,isAkt3_Keule, isSchwertMongol
-        if (collision.gameObject.CompareTag("SchwertRom"))
-        {
-            isAkt3_Schwert = true;
-            HanldeInputAKt3();
-        }
-        if (collision.gameObject.CompareTag("AxtRom"))
-        {
-            isAkt3_Axt = true;
-            HanldeInputAKt3();
-        }
-        if (collision.gameObject.CompareTag("KeuleRom"))
-        {
-            isAkt3_Keule = true;
-            HanldeInputAKt3();
-        }
-        //Muss noch als pickup installiert werden
-        if (collision.gameObject.CompareTag("isSchwertMongol"))
-        {
-            isSchwertMongol = true;
-            HanldeInputAKt3();
-        }
-        //==============================================AKT3====ENDE========================================================================//
-        //==============================================AKT4================================================================================//
-        if (collision.gameObject.CompareTag("AK"))
-        {
-            isAkt4_Ak = true;
-            HanldeInputAKt4();
-        }
-        if (collision.gameObject.CompareTag("Pistole"))
-        {
-            isAkt4_Pistol = true;
-            HanldeInputAKt4();
-        }
-        if (collision.gameObject.CompareTag("pumpgun"))
-        {
-            isShoot = true;
-            HanldeInputAKt4();
-        }
+        isAkt4_Ak = false;
     }
-  
-//==============================================AKT1====================================================================================//
-void HanldeInputAKt1()
-    {
-        if (keule1)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse1))
-            {
-                m_Anim.SetTrigger("isKeule");
-               
-            }
-        }
-        if (speer)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse2))
-            {
-                m_Anim.SetTrigger("isSpeer");
-            }
-        }
-        if (knochen1)
-        {
-            if (Input.GetKeyDown(KeyCode.K))
-            {
 
-                m_Anim.SetTrigger("isKnochen");
-            }
-        }
-        if (knochen2)
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-
-                m_Anim.SetTrigger("isKnochen1");
-            }
-        }
-        if (axt)
-        {
-            if (Input.GetKeyDown(KeyCode.O))
-            {
-               
-                m_Anim.SetTrigger(" isAxtAngriff");
-            }
-        }
-    }
-    //==============================================AKT1====ENDE========================================================================//
-    //
-    //==============================================AKT2================================================================================//
-    void HanldeInputAKt2()
-    {
-        if (isAkt2_Schwert)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse1))
-            {
-                m_Anim.SetTrigger("isAkt2_Schwert");
-
-            }
-        }
-        if (isAkt2_Schwert1)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse2))
-            {
-                m_Anim.SetTrigger("isAkt2_Schwert1");
-            }
-        }
-        if (isAkt2_Schwert2)
-        {
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-
-                m_Anim.SetTrigger("isAkt2_Schwert2");
-            }
-        }
-        if (isAkt2_Schwert3)
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-
-                m_Anim.SetTrigger("isAkt2_Schwert3");
-            }
-        }
-    }
-    //==============================================AKT2===ENDE==========================================================================//
-    //isAkt3_Schwert,isAkt3_Axt, isAkt3_Keule, isSchwertMongol
-    //==============================================AKT3===Start=========================================================================//
-    void HanldeInputAKt3()
-    {
-        if (isAkt3_Schwert)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse1))
-            {
-                m_Anim.SetTrigger("isAkt3_Schwert");
-
-            }
-        }
-        if (isAkt3_Axt)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse2))
-            {
-                m_Anim.SetTrigger("isAkt3_Axt");
-            }
-        }
-        if (isAkt3_Keule)
-        {
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-
-                m_Anim.SetTrigger("isAkt3_Keule");
-            }
-        }
-        if (isSchwertMongol)
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-
-                m_Anim.SetTrigger("isSchwertMongol");
-            }
-        }
-    }
-    //==============================================AKT3===ENDE==========================================================================//
-    //isAkt4_Ak, isAkt4_Pistol;
-    //==============================================AKT4===Start=========================================================================//
-    void HanldeInputAKt4()
-    {
-     
-        if (isAkt4_Ak)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse1))
-            {
-                m_Anim.SetTrigger("isAkt4_Ak");
-                Ak();
-            }
-        }
-        if (isAkt4_Pistol)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse2))
-            {
-                m_Anim.SetTrigger("isAkt4_Pistol");
-                Ak();
-            }
-        }
-
-        if (isShoot)
-        {
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-
-                m_Anim.SetTrigger("isShoot");
-            }
-        }
-       
-    }
     //==============================================AKT4===ENDE=========================================================================//
     private void Flip()
     {
@@ -492,5 +316,6 @@ void HanldeInputAKt1()
             i++;
         }
     }
+   
 
 }
