@@ -155,7 +155,60 @@ public class PlatformerCharacter : MonoBehaviour
             }
 
 
-            //Steinzeit  isAkt2_Schwert, isAkt2_Schwert1, isAkt2_Schwert3
+            //isAkt3_Schwert,isAkt3_Axt, isAkt2_Schwert2,isAkt3_Keule
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                isAkt3_Schwert  = true;
+                isAkt3_Axt      = false;
+                isAkt3_Keule    = false;
+                // Inventarbild1.SetActive(true);
+                // Inventarbild2.SetActive(false);
+                // Inventarbild3.SetActive(false);
+            }
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (isAkt3_Schwert == true)
+
+                    m_Anim.SetTrigger("isSchwertMongol");
+            }
+
+            ///////////////////////////////////////
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                isAkt3_Axt     = true;
+                isAkt3_Schwert = false;
+                isAkt3_Keule   = false;
+                // Inventarbild1.SetActive(true);
+                // Inventarbild2.SetActive(false);
+                // Inventarbild3.SetActive(false);
+            }
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (isAkt3_Axt == true)
+
+                    m_Anim.SetTrigger("isAkt3_Axt");
+            }
+
+            ////////////////////////////////////
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                isAkt3_Keule   = true;
+                isAkt3_Axt     = false;
+                isAkt3_Schwert = false;
+                // Inventarbild1.SetActive(true);
+                // Inventarbild2.SetActive(false);
+                // Inventarbild3.SetActive(false);
+            }
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (isAkt3_Keule == true)
+
+                    m_Anim.SetTrigger("isAkt3_Keule");
+            }
+
+
+
+            /*
             //Inventar1 
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
@@ -189,7 +242,7 @@ public class PlatformerCharacter : MonoBehaviour
 
                     m_Anim.SetTrigger("isAkt2_Schwert1");
             }
-
+            */
 
             /*
             //Steinzeit  speer,knochen1,knochen2,axt
