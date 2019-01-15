@@ -72,29 +72,17 @@ public class PlatformerCharacter : MonoBehaviour
     private void Update()
     {
         int previousSelectedWeapon = selectedWeapon;
-
-
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            
-                m_Anim.SetTrigger("isShoot");
-            Ak();
-        }
         //Waffewchseln();
         if (previousSelectedWeapon != selectedWeapon)
         {
             SelectWeapon();
         }
-       
-        
-        
-        /*
         if (Input.GetKeyDown(KeyCode.V))
         {
             m_Anim.SetTrigger("isArm");
             Armbrust();
         }
-        */
+        
     }
 
     private void FixedUpdate()
