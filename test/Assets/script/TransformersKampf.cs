@@ -16,6 +16,7 @@ public class TransformersKampf : MonoBehaviour
     private bool beiSpieler = true;
     private GameObject[] drohnen;
     private Vector3 hochflugZiel, spielerPosition, mitteZiel;
+    private BoxCollider2D[] myColliders;
 
     // Use this for initialization
     void Start()
@@ -39,7 +40,8 @@ public class TransformersKampf : MonoBehaviour
 
         else if (transformers.GetComponent<EnemyHealthBar>().currentHealth == 350)
         {
-            transformers.GetComponent<BoxCollider2D>().enabled = false;
+            myColliders = transformers.GetComponents<BoxCollider2D>();
+            foreach (BoxCollider2D bc in myColliders) bc.enabled = false;
             transformers.GetComponent<EnemyHealthBar>().currentHealth = 350;
             Debug.Log("Beine kaputt");
             hochGeflogen = true;
@@ -47,12 +49,15 @@ public class TransformersKampf : MonoBehaviour
             beiSpieler = true;
             if (Vector3.Distance(transformers.transform.position, startPosition) != 0)
             {
+                myColliders = transformers.GetComponents<BoxCollider2D>();
+                foreach (BoxCollider2D bc in myColliders) bc.enabled = false;
                 Debug.Log("Fliege zurück");
                 transformers.transform.position = Vector2.MoveTowards(transformers.transform.position, startPosition, 7 * Time.deltaTime);
             }
             else
             {
-                transformers.GetComponent<BoxCollider2D>().enabled = true;
+                myColliders = transformers.GetComponents<BoxCollider2D>();
+                foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
                 drohnenSpawnenAufruf();
                 Debug.Log("Drohnen spawnen");
                 TransformersLaserSchiessen();
@@ -66,7 +71,8 @@ public class TransformersKampf : MonoBehaviour
             russe.transform.GetChild(0).GetComponent<Canvas>().enabled = true;
             russe.GetComponent<SpriteRenderer>().enabled = true;
             russe.GetComponent<GegnerAI>().enabled = true;
-            russe.GetComponent<BoxCollider2D>().enabled = true;
+            myColliders = russe.GetComponents<BoxCollider2D>();
+            foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
             leben200 = false;
         }
 
