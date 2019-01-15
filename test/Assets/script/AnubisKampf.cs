@@ -15,6 +15,8 @@ public class AnubisKampf : MonoBehaviour {
     private bool leben0 = false;
     private GameObject[] mumien, mumien2, steine;
     private BoxCollider2D[] myColliders;
+    private bool wenigerAls350, wenigerAls200;
+
 
     // Use this for initialization
     void Start () {
@@ -35,7 +37,7 @@ public class AnubisKampf : MonoBehaviour {
 	void Update () {
         if(leben350 == true)
         {
-            if (anubis.GetComponent<EnemyHealthBar>().currentHealth == 350)
+            if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 350 && wenigerAls350 == false)
             {
                 if (anubisZurück == false)
                 {
@@ -58,12 +60,14 @@ public class AnubisKampf : MonoBehaviour {
                     mumienSpawnen = false;
                     leben350 = false;
                     leben200 = true;
+                    wenigerAls350 = true;
                 }
             }
         }
         else if(leben200 == true)
         {
-            if (anubis.GetComponent<EnemyHealthBar>().currentHealth== 200)
+            wenigerAls200 = true;
+            if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 200 && wenigerAls200 == true)
             {
                 if (anubisZurück == false)
                 {
@@ -85,6 +89,7 @@ public class AnubisKampf : MonoBehaviour {
                     Debug.Log("Mumien spawnen");
                     mumienSpawnen = false;
                     leben200 = false;
+                    wenigerAls200 = false;
                     leben0 = true;
                 }
             }
