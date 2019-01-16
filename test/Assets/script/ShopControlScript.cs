@@ -20,7 +20,8 @@ public class ShopControlScript : MonoBehaviour {
 	void Start () {
 		moneyAmount = PlayerPrefs.GetInt ("MoneyAmount");
         aktuelleScene = SceneManager.GetActiveScene();
-       
+
+        Debug.Log(buyButton1.ToString());
 
     }
 	
@@ -54,11 +55,41 @@ public class ShopControlScript : MonoBehaviour {
             buyButton3.interactable = false;
     }
 
+    public int vergleicheWaffe()
+    {
+        Debug.Log("Starte Vergleich");
+        Debug.Log(buyButton1.ToString());
+        if (buyButton1.ToString() == "KnochenKeule1_Button (UnityEngine.UI.Button)")
+        {
+            Debug.Log("Vergleich 1");
+            return 1;
+        }
+        else if (buyButton2.ToString() == "KnochenKeule2_Button (UnityEngine.UI.Button)")
+        {
+            Debug.Log("Vergleich 2");
+            return 2;
+        }
+        else if (buyButton3.ToString() == "Axt_Button (UnityEngine.UI.Button)")
+        {
+            Debug.Log("Vergleich 3");
+            return 3;
+        }
+        else
+        {
+            Debug.Log("Vergleich 0");
+            return 0;
+        }
+    }
+
 	public void buyRifle()
 	{
         if (moneyAmount >= preis1 == true)
         {
-            moneyAmount -= 5;
+            PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
+            buyButton2 = null;
+            buyButton3 = null;
+            Debug.Log(vergleicheWaffe());
+            moneyAmount -= preis1;
             PlayerPrefs.SetInt("IsRifleSold", 1);
             riflePrice.text = "Verkauft!";
             buyButton1.gameObject.SetActive(false);
@@ -68,7 +99,10 @@ public class ShopControlScript : MonoBehaviour {
     {
         if (moneyAmount >= preis2 == true)
         {
-            moneyAmount -= preis1;
+            PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
+            buyButton1 = null;
+            buyButton3 = null;
+            moneyAmount -= preis2;
             PlayerPrefs.SetInt("IsRifleSold2", 1);
             riflePrice2.text = "Verkauft!";
             buyButton2.gameObject.SetActive(false);
@@ -78,7 +112,10 @@ public class ShopControlScript : MonoBehaviour {
     {
         if (moneyAmount >= preis3 == true)
         {
-            moneyAmount -= 15;
+            PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
+            buyButton1 = null;
+            buyButton2 = null;
+            moneyAmount -= preis3;
             PlayerPrefs.SetInt("IsRifleSold3", 1);
             riflePrice3.text = "Verkauft!";
             buyButton3.gameObject.SetActive(false);

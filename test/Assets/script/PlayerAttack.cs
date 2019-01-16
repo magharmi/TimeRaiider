@@ -16,6 +16,7 @@ public class PlayerAttack : MonoBehaviour {
     
     public float attackRange;
     public int damage=10;
+    private int waffennummer;
    
     //GameObjects
    
@@ -26,8 +27,8 @@ public class PlayerAttack : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-      
-       
+        waffennummer = PlayerPrefs.GetInt("Waffennummer");
+        Debug.Log(waffennummer);
         anim = GetComponent<Animator>();
     }
 
@@ -40,9 +41,24 @@ public class PlayerAttack : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.T))
             {
                 // camAnim.SetTrigger("shake");
-               
-                anim.SetTrigger("isSpeer");
-                
+                if (waffennummer == 1)
+                {
+                    anim.SetTrigger("isAxtAngriff");
+                }
+                else if (waffennummer == 2)
+                {
+                    anim.SetTrigger("isKnochen");
+                }
+                else if (waffennummer == 3)
+                {
+                    anim.SetTrigger("isKnochen1");
+                }
+                else if (waffennummer == 0)
+                {
+                    anim.SetTrigger("isSpeer");
+                }
+
+
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
