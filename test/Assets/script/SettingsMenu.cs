@@ -19,6 +19,12 @@ public class SettingsMenu : MonoBehaviour {
 
     public void setMusic(float volume)
     {
-        setVolume(volume);
+        if (volume == 1)
+        {
+            AudioListener.pause = true;
+        }
+        else
+            AudioListener.pause = false;
+        //setVolume(volume);
     }
 }
