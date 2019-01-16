@@ -13,6 +13,9 @@ public class ShopControlScript : MonoBehaviour {
 	public Text riflePrice,riflePrice2,riflePrice3;
     public int preis1, preis2, preis3;
 	public Button buyButton1,buyButton2,buyButton3;
+    private int waffe2 = 0;
+    private int waffe3 = 1;
+    private int waffe4 = 2;
 
     private Scene aktuelleScene;
 
@@ -55,10 +58,10 @@ public class ShopControlScript : MonoBehaviour {
             buyButton3.interactable = false;
     }
 
+    /*
     public int vergleicheWaffe()
     {
         Debug.Log("Starte Vergleich");
-        Debug.Log(buyButton1.ToString());
         if (buyButton1.ToString() == "KnochenKeule1_Button (UnityEngine.UI.Button)")
         {
             Debug.Log("Vergleich 1");
@@ -80,15 +83,51 @@ public class ShopControlScript : MonoBehaviour {
             return 0;
         }
     }
+    */
 
-	public void buyRifle()
+    public void setWaffenIDs()
+    {
+
+        if (aktuelleScene.name == "ShopStoneAge")
+        {
+            waffe2 = 0;
+            waffe3 = 1;
+            waffe4 = 2;
+        }
+        else if (aktuelleScene.name == "ShopWueste")
+        {
+            waffe2 = 3;
+            waffe3 = 4;
+            waffe4 = 5;
+        }
+        else if (aktuelleScene.name == "ShopRom")
+        {
+            waffe2 = 6;
+            waffe3 = 7;
+            waffe4 = 8;
+        }
+        else if (aktuelleScene.name == "ShopZukunft")
+        {
+            waffe2 = 9;
+            waffe3 = 10;
+            waffe4 = 11;
+        }
+
+
+    }
+
+    public void buyRifle()
 	{
         if (moneyAmount >= preis1 == true)
         {
-            PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
+            /*
             buyButton2 = null;
             buyButton3 = null;
+            PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
             Debug.Log(vergleicheWaffe());
+            */
+            waffe2 = 0;
+            PlayerPrefs.SetInt("Waffennummer", waffe2);
             moneyAmount -= preis1;
             PlayerPrefs.SetInt("IsRifleSold", 1);
             riflePrice.text = "Verkauft!";
@@ -99,9 +138,12 @@ public class ShopControlScript : MonoBehaviour {
     {
         if (moneyAmount >= preis2 == true)
         {
-            PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
-            buyButton1 = null;
+            /*buyButton1 = null;
             buyButton3 = null;
+            PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
+            */
+            waffe3 = 1;
+            PlayerPrefs.SetInt("Waffennummer", waffe3);
             moneyAmount -= preis2;
             PlayerPrefs.SetInt("IsRifleSold2", 1);
             riflePrice2.text = "Verkauft!";
@@ -112,9 +154,12 @@ public class ShopControlScript : MonoBehaviour {
     {
         if (moneyAmount >= preis3 == true)
         {
-            PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
-            buyButton1 = null;
+            /*buyButton1 = null;
             buyButton2 = null;
+            PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
+            */
+            PlayerPrefs.SetInt("Waffennummer", waffe4);
+            waffe4 = 2;
             moneyAmount -= preis3;
             PlayerPrefs.SetInt("IsRifleSold3", 1);
             riflePrice3.text = "Verkauft!";
