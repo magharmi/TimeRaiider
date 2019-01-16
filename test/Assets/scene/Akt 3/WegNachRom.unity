@@ -266,7 +266,7 @@ Animator:
   m_GameObject: {fileID: 1940433}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -535,7 +535,7 @@ Animator:
   m_GameObject: {fileID: 8435678}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -627,6 +627,8 @@ GameObject:
   - component: {fileID: 36651903}
   - component: {fileID: 36651905}
   - component: {fileID: 36651904}
+  - component: {fileID: 36651907}
+  - component: {fileID: 36651906}
   m_Layer: 0
   m_Name: "R\xF6mer (19)"
   m_TagString: Untagged
@@ -718,6 +720,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &36651906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 36651902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f97ef9a362b2245a522d5e96088ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  stoppingDistance: 0
+  retreatDistance: 0
+  radius: 0
+  Lvlmanager: {fileID: 0}
+  hit: 1
+  weg: 0
+  leben: 100
+  player: {fileID: 0}
+--- !u!95 &36651907
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 36651902}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &39772004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,6 +1538,8 @@ GameObject:
   - component: {fileID: 161547718}
   - component: {fileID: 161547720}
   - component: {fileID: 161547719}
+  - component: {fileID: 161547722}
+  - component: {fileID: 161547721}
   m_Layer: 0
   m_Name: "R\xF6mer (14)"
   m_TagString: Untagged
@@ -1589,6 +1631,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &161547721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 161547717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f97ef9a362b2245a522d5e96088ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  stoppingDistance: 0
+  retreatDistance: 0
+  radius: 0
+  Lvlmanager: {fileID: 0}
+  hit: 1
+  weg: 0
+  leben: 100
+  player: {fileID: 0}
+--- !u!95 &161547722
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 161547717}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &170411124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2226,7 +2306,7 @@ Animator:
   m_GameObject: {fileID: 241401341}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3086,7 +3166,7 @@ Animator:
   m_GameObject: {fileID: 403427860}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3396,6 +3476,8 @@ GameObject:
   - component: {fileID: 444001637}
   - component: {fileID: 444001639}
   - component: {fileID: 444001638}
+  - component: {fileID: 444001641}
+  - component: {fileID: 444001640}
   m_Layer: 0
   m_Name: "R\xF6mer (13)"
   m_TagString: Untagged
@@ -3487,6 +3569,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &444001640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444001636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f97ef9a362b2245a522d5e96088ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  stoppingDistance: 0
+  retreatDistance: 0
+  radius: 0
+  Lvlmanager: {fileID: 0}
+  hit: 1
+  weg: 0
+  leben: 100
+  player: {fileID: 0}
+--- !u!95 &444001641
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444001636}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &456128931
 GameObject:
   m_ObjectHideFlags: 0
@@ -5375,6 +5495,8 @@ GameObject:
   - component: {fileID: 656617429}
   - component: {fileID: 656617431}
   - component: {fileID: 656617430}
+  - component: {fileID: 656617433}
+  - component: {fileID: 656617432}
   m_Layer: 0
   m_Name: "R\xF6mer (12)"
   m_TagString: Untagged
@@ -5466,6 +5588,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &656617432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 656617428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f97ef9a362b2245a522d5e96088ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  stoppingDistance: 0
+  retreatDistance: 0
+  radius: 0
+  Lvlmanager: {fileID: 0}
+  hit: 1
+  weg: 0
+  leben: 100
+  player: {fileID: 0}
+--- !u!95 &656617433
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 656617428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &685290900
 GameObject:
   m_ObjectHideFlags: 0
@@ -6046,7 +6206,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 15f62095f15e20b4bbe0abd265994a1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 18.37, y: 28.560001}
@@ -6083,7 +6243,7 @@ Animator:
   m_GameObject: {fileID: 720861019}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8635,7 +8795,7 @@ Animator:
   m_GameObject: {fileID: 935601698}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9051,7 +9211,7 @@ Animator:
   m_GameObject: {fileID: 954927459}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9283,7 +9443,7 @@ Animator:
   m_GameObject: {fileID: 998489596}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9797,6 +9957,8 @@ GameObject:
   - component: {fileID: 1028703595}
   - component: {fileID: 1028703597}
   - component: {fileID: 1028703596}
+  - component: {fileID: 1028703599}
+  - component: {fileID: 1028703598}
   m_Layer: 0
   m_Name: "R\xF6mer (16)"
   m_TagString: Untagged
@@ -9888,6 +10050,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1028703598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1028703594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f97ef9a362b2245a522d5e96088ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  stoppingDistance: 0
+  retreatDistance: 0
+  radius: 0
+  Lvlmanager: {fileID: 0}
+  hit: 1
+  weg: 0
+  leben: 100
+  player: {fileID: 0}
+--- !u!95 &1028703599
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1028703594}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1037926266
 GameObject:
   m_ObjectHideFlags: 0
@@ -10922,7 +11122,7 @@ Animator:
   m_GameObject: {fileID: 1166669737}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11194,7 +11394,7 @@ Animator:
   m_GameObject: {fileID: 1282326398}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11300,6 +11500,8 @@ GameObject:
   - component: {fileID: 1304501864}
   - component: {fileID: 1304501866}
   - component: {fileID: 1304501865}
+  - component: {fileID: 1304501868}
+  - component: {fileID: 1304501867}
   m_Layer: 0
   m_Name: "R\xF6mer (20)"
   m_TagString: Untagged
@@ -11391,6 +11593,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1304501867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1304501863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f97ef9a362b2245a522d5e96088ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  stoppingDistance: 0
+  retreatDistance: 0
+  radius: 0
+  Lvlmanager: {fileID: 0}
+  hit: 1
+  weg: 0
+  leben: 100
+  player: {fileID: 0}
+--- !u!95 &1304501868
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1304501863}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1309269724
 GameObject:
   m_ObjectHideFlags: 0
@@ -12609,7 +12849,7 @@ Animator:
   m_GameObject: {fileID: 1497256954}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -14912,6 +15152,8 @@ GameObject:
   - component: {fileID: 1877746578}
   - component: {fileID: 1877746580}
   - component: {fileID: 1877746579}
+  - component: {fileID: 1877746582}
+  - component: {fileID: 1877746581}
   m_Layer: 0
   m_Name: "R\xF6mer (17)"
   m_TagString: Untagged
@@ -15003,6 +15245,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1877746581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1877746577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f97ef9a362b2245a522d5e96088ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  stoppingDistance: 0
+  retreatDistance: 0
+  radius: 0
+  Lvlmanager: {fileID: 0}
+  hit: 1
+  weg: 0
+  leben: 100
+  player: {fileID: 0}
+--- !u!95 &1877746582
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1877746577}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1881464909
 GameObject:
   m_ObjectHideFlags: 0
@@ -15672,6 +15952,8 @@ GameObject:
   - component: {fileID: 1944100322}
   - component: {fileID: 1944100324}
   - component: {fileID: 1944100323}
+  - component: {fileID: 1944100326}
+  - component: {fileID: 1944100325}
   m_Layer: 0
   m_Name: "R\xF6mer (15)"
   m_TagString: Untagged
@@ -15763,6 +16045,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1944100325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1944100321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f97ef9a362b2245a522d5e96088ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  stoppingDistance: 0
+  retreatDistance: 0
+  radius: 0
+  Lvlmanager: {fileID: 0}
+  hit: 1
+  weg: 0
+  leben: 100
+  player: {fileID: 0}
+--- !u!95 &1944100326
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1944100321}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1945080653
 GameObject:
   m_ObjectHideFlags: 0
@@ -16516,7 +16836,7 @@ Animator:
   m_GameObject: {fileID: 2041488049}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69cc861e421ea1249990136ed5517d40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
