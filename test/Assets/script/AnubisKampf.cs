@@ -124,6 +124,8 @@ public class AnubisKampf : MonoBehaviour {
     {
         mumien[mumienNummer].GetComponent<SpriteRenderer>().enabled = true;
         mumien[mumienNummer].GetComponent<BoxCollider2D>().enabled = true;
+        mumien[mumienNummer].GetComponent<GegnerAI>().radius = 100;
+        mumien[mumienNummer].GetComponent<EnemyHealthBar>().enabled = true;
         mumien[mumienNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
         myColliders = mumien[mumienNummer].GetComponents<BoxCollider2D>();
         foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
@@ -154,6 +156,8 @@ public class AnubisKampf : MonoBehaviour {
     {
         mumien2[mumienNummer].GetComponent<SpriteRenderer>().enabled = true;
         mumien2[mumienNummer].GetComponent<BoxCollider2D>().enabled = true;
+        mumien2[mumienNummer].GetComponent<GegnerAI>().radius = 100;
+        mumien2[mumienNummer].GetComponent<EnemyHealthBar>().enabled = true;
         myColliders = mumien2[mumienNummer].GetComponents<BoxCollider2D>();
         foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         mumien2[mumienNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
