@@ -36,14 +36,15 @@ public class WaffeWechseln : MonoBehaviour {
         //Waffe wechseln mit tastatur
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            selectedWeapon = 0;
-           // shootgun.SetActive(true);
+              selectedWeapon = 0;
+          //  shootgun.SetActive(true);
           //  Inventarbild1.SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2)&&transform.childCount>=2)
         {
             selectedWeapon = 1;
         }
+
         if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3)
         {
             selectedWeapon = 2;
