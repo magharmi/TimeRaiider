@@ -11,6 +11,7 @@ public class ShopControlScript : MonoBehaviour {
     
 	public Text moneyAmountText;
 	public Text riflePrice,riflePrice2,riflePrice3;
+    public int preis1, preis2, preis3;
 	public Button buyButton1,buyButton2,buyButton3;
 
     private Scene aktuelleScene;
@@ -32,21 +33,21 @@ public class ShopControlScript : MonoBehaviour {
         isRifleSold2 = PlayerPrefs.GetInt ("IsRifleSold2");
         isRifleSold3 = PlayerPrefs.GetInt ("IsRifleSold3");
 
-        if (moneyAmount >= 5 && isRifleSold == 0)
+        if (moneyAmount >= preis1 && isRifleSold == 0)
 			buyButton1.interactable = true;
             
 		else
 			buyButton1.interactable = false;
 
 
-        if (moneyAmount >= 5 && isRifleSold2 == 0)
+        if (moneyAmount >= preis2 && isRifleSold2 == 0)
             buyButton2.interactable = true;
 
         else
             buyButton2.interactable = false;
 
 
-        if (moneyAmount >= 5 && isRifleSold3 == 0)
+        if (moneyAmount >= preis3 && isRifleSold3 == 0)
             buyButton3.interactable = true;
 
         else
@@ -55,24 +56,33 @@ public class ShopControlScript : MonoBehaviour {
 
 	public void buyRifle()
 	{
-		moneyAmount -= 5;
-		PlayerPrefs.SetInt ("IsRifleSold", 1);
-		riflePrice.text = "Verkauft!";
-		buyButton1.gameObject.SetActive (false);
+        if (moneyAmount >= preis1 == true)
+        {
+            moneyAmount -= 5;
+            PlayerPrefs.SetInt("IsRifleSold", 1);
+            riflePrice.text = "Verkauft!";
+            buyButton1.gameObject.SetActive(false);
+        }
 	}
     public void buyRifle1()
     {
-        moneyAmount -= 10;
-        PlayerPrefs.SetInt("IsRifleSold2", 1);
-        riflePrice2.text = "Verkauft!";
-        buyButton2.gameObject.SetActive(false);
+        if (moneyAmount >= preis2 == true)
+        {
+            moneyAmount -= preis1;
+            PlayerPrefs.SetInt("IsRifleSold2", 1);
+            riflePrice2.text = "Verkauft!";
+            buyButton2.gameObject.SetActive(false);
+        }
     }
     public void buyRifle2()
     {
-        moneyAmount -= 15;
-        PlayerPrefs.SetInt("IsRifleSold3", 1);
-        riflePrice3.text = "Verkauft!";
-        buyButton3.gameObject.SetActive(false);
+        if (moneyAmount >= preis3 == true)
+        {
+            moneyAmount -= 15;
+            PlayerPrefs.SetInt("IsRifleSold3", 1);
+            riflePrice3.text = "Verkauft!";
+            buyButton3.gameObject.SetActive(false);
+        }
     }
 
     public void exitShop()
