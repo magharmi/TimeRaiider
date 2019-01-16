@@ -73,6 +73,7 @@ public class TransformersKampf : MonoBehaviour
             russe.transform.GetChild(0).GetComponent<Canvas>().enabled = true;
             russe.GetComponent<SpriteRenderer>().enabled = true;
             russe.GetComponent<GegnerAI>().enabled = true;
+            russe.transform.GetChild(1).GetComponent<DrohneSchiesst>().enabled = true;
             myColliders = russe.GetComponents<BoxCollider2D>();
             foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
             leben200 = false;
