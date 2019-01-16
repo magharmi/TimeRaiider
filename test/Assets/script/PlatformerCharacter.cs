@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformerCharacter : MonoBehaviour
 {
     //Waffen bild wechseln
-    public GameObject Inventarbild1, Inventarbild2, Inventarbild3;
+   // public GameObject Inventarbild1, Inventarbild2, Inventarbild3;
     public int selectedWeapon = 0;
     //
     float nextFire, fireRate;
@@ -47,7 +47,7 @@ public class PlatformerCharacter : MonoBehaviour
     private void Awake()
     {
         //Akt 1
-        scene1 = false;
+        scene1   = true;
         knochen1 = false;
         knochen2 = false;
         axt      = false;
@@ -147,7 +147,7 @@ public class PlatformerCharacter : MonoBehaviour
                 Flip();
             }
 
-
+            /*
             //isAkt3_Schwert,isAkt3_Axt, isAkt2_Schwert2,isAkt3_Keule
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
@@ -181,7 +181,7 @@ public class PlatformerCharacter : MonoBehaviour
 
                     m_Anim.SetTrigger("isAkt3_Axt");
             }
-
+            
             ////////////////////////////////////
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
@@ -199,9 +199,60 @@ public class PlatformerCharacter : MonoBehaviour
                     m_Anim.SetTrigger("isAkt3_Keule");
             }
 
+        */
 
 
+
+
+            //Steinzeit  speer,knochen1,knochen2,axt
+            //Inventar1 
             /*
+            if (scene1)
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    axt = false;
+                    knochen1 = false;
+
+                    knochen1 = true;
+                }
+                if (Input.GetKeyDown(KeyCode.T))
+                {
+                    if (knochen1 == true)
+
+                        m_Anim.SetTrigger("isKnochen");
+                }
+               
+                if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+
+                    axt = false;
+                    knochen1 = false;
+                    knochen2 = true;
+                }
+                if (Input.GetKeyDown(KeyCode.T))
+                {
+                    if (knochen2 == true)
+
+                        m_Anim.SetTrigger("isKnochen1");
+                }
+                
+                //Axt
+                if (Input.GetKeyDown(KeyCode.Alpha3))
+                {
+
+                    knochen1 = false;
+                    knochen2 = false;
+                    axt = true;
+                }
+                if (Input.GetKeyDown(KeyCode.T))
+                {
+                    if (axt == true)
+
+                        m_Anim.SetTrigger("isAxtAngriff");
+                }
+            }
+             */
             //Inventar1 
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
@@ -219,8 +270,9 @@ public class PlatformerCharacter : MonoBehaviour
 
                     m_Anim.SetTrigger("isAkt2_Schwert");
             }
-            //Inventar1 
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+           
+            //Inventar2 
+            if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 isAkt2_Schwert1 = true;
                 isAkt2_Schwert  = false;
@@ -235,60 +287,24 @@ public class PlatformerCharacter : MonoBehaviour
 
                     m_Anim.SetTrigger("isAkt2_Schwert1");
             }
-            */
 
-            /*
-            //Steinzeit  speer,knochen1,knochen2,axt
-            //Inventar1 
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                axt = false;
-                knochen1 = false;
-                Inventarbild1.SetActive(true);
-               // Inventarbild2.SetActive(false);
-               // Inventarbild3.SetActive(false);
-                knochen1 = true;
-            }
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (knochen1 == true)
-
-                    m_Anim.SetTrigger("isKnochen");
-            }
-            //Knochen
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                Inventarbild1.SetActive(true);
-                // Inventarbild2.SetActive(false);
-                // Inventarbild3.SetActive(false);
-                axt      = false;
-                knochen1 = false;
-                knochen2 = true;
-            }
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (knochen2 == true)
-
-                    m_Anim.SetTrigger("isKnochen1");
-            }
-
-            //Axt
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                Inventarbild1.SetActive(true);
+                isAkt2_Schwert3 = true;
+                isAkt2_Schwert = false;
+                isAkt2_Schwert1 = false;
+                // Inventarbild1.SetActive(true);
                 // Inventarbild2.SetActive(false);
                 // Inventarbild3.SetActive(false);
-                knochen1 = false;
-                knochen2 = false;
-                axt      = true;
             }
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (axt == true)
+                if (isAkt2_Schwert3 == true)
 
-                    m_Anim.SetTrigger("isAxtAngriff");
+                    m_Anim.SetTrigger("isAkt2_Schwert3");
             }
-            */
+
+
             /*
              //Ak
              //Inventar 1
@@ -363,6 +379,12 @@ public class PlatformerCharacter : MonoBehaviour
         isAkt4_Ak = false;
     }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+      if(collision.tag=="zielitem"){
+            scene1 = false;
+        }
+    }
     //==============================================AKT4===ENDE=========================================================================//
     private void Flip()
     {
