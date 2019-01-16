@@ -20,7 +20,7 @@ public class BoxkampfTrigger : MonoBehaviour {
     {
         if(other.collider.tag == "spieler")
         {
-            Landwirt.GetComponent<SpriteRenderer>().enabled = true;
+            //Landwirt.GetComponent<SpriteRenderer>().enabled = true;
             MainCamera.SetActive(false);
             BosskampfKamera.GetComponent<Camera>().enabled = true;
             BosskampfWand.GetComponent<BoxCollider2D>().enabled = true;

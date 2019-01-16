@@ -17,7 +17,7 @@ public class LandwirtTot : MonoBehaviour
     }
 
 
-    public void OnCollisionEnter2D(Collision2D other)
+    public void Update()
     {
         if (gameObject.GetComponent<EnemyHealthBar>().currentHealth <= 10)
         {

@@ -18,6 +18,7 @@ public class KolosseumKampf : MonoBehaviour
         loewenTiger = GameObject.FindGameObjectsWithTag("AnubisMumien2");
         kampfKamera = GameObject.Find("Kampf Kamera");
         mainCamera = GameObject.Find("Main Camera");
+        champion.GetComponent<EnemyHealthBar>().enabled = false;
     }
 
     // Update is called once per frame
@@ -41,7 +42,8 @@ public class KolosseumKampf : MonoBehaviour
         sklaven[sklavenNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
         myColliders = sklaven[sklavenNummer].GetComponents<BoxCollider2D>();
         foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
-        sklaven[sklavenNummer].GetComponent<GegnerAI>().enabled = true;
+        sklaven[sklavenNummer].GetComponent<GegnerAI>().radius = 100;
+        sklaven[sklavenNummer].GetComponent<EnemyHealthBar>().enabled = true;
         yield return new WaitForSeconds(2);
         if (sklavenNummer <= 8)
         {
@@ -71,7 +73,8 @@ public class KolosseumKampf : MonoBehaviour
         loewenTiger[loewenTigerNummer].transform.GetChild(0).GetComponent<Canvas>().enabled = true;
         myColliders = loewenTiger[loewenTigerNummer].GetComponents<BoxCollider2D>();
         foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
-        loewenTiger[loewenTigerNummer].GetComponent<GegnerAI>().enabled = true;
+        loewenTiger[loewenTigerNummer].GetComponent<GegnerAI>().radius = 100;
+        loewenTiger[loewenTigerNummer].GetComponent<EnemyHealthBar>().enabled = true;
         yield return new WaitForSeconds(2);
         if (loewenTigerNummer <= 8)
         {
@@ -93,6 +96,8 @@ public class KolosseumKampf : MonoBehaviour
     void championSpawnen()
     {
         champion.GetComponent<SpriteRenderer>().enabled = true;
+        champion.GetComponent<EnemyHealthBar>().enabled = true;
+        champion.GetComponent<GegnerAI>().radius = 100;
         myColliders = champion.GetComponents<BoxCollider2D>();
         foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         champion.GetComponent<GegnerAI>().enabled = true;
