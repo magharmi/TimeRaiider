@@ -5,14 +5,16 @@ using UnityEngine;
 public class SoundManagerScript : MonoBehaviour
 {
 
-    public static AudioClip messer_A,Ak;
+    public static AudioClip messer_A,Ak, crossbow;
     static AudioSource audioSrc;
     // Use this for initialization
     void Start()
     {
         messer_A = Resources.Load<AudioClip>("messer");
         Ak       = Resources.Load<AudioClip>("Ak");
+        crossbow = Resources.Load<AudioClip>("crossbow");
         audioSrc = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -31,7 +33,9 @@ public class SoundManagerScript : MonoBehaviour
             case "Ak":
                 audioSrc.PlayOneShot(Ak);
                 break;
-
+            case "crossbow":
+                audioSrc.PlayOneShot(crossbow);
+                break;
         }
     }
 }

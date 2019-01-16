@@ -80,6 +80,7 @@ public class PlatformerCharacter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V))
         {
             m_Anim.SetTrigger("isArm");
+            SoundManagerScript.PlaySound("crossbow");
             Armbrust();
         }
         
