@@ -80,7 +80,6 @@ public class PlatformerCharacter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V))
         {
             m_Anim.SetTrigger("isArm");
-            SoundManagerScript.PlaySound("crossbow");
             Armbrust();
         }
         
@@ -465,7 +464,7 @@ public class PlatformerCharacter : MonoBehaviour
             nextFire = Time.time + fireRate;
             if (m_FacingRight)
             {
-
+                SoundManagerScript.PlaySound("crossbow");
                 Instantiate(akGeschoss, shootPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
             }
             else if (!m_FacingRight)
