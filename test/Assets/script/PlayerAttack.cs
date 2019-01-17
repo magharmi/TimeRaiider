@@ -48,7 +48,7 @@ public class PlayerAttack : MonoBehaviour {
                 }
                 else if (waffennummer == 1)
                 {
-                    anim.SetTrigger("isKnochen");
+                    anim.SetTrigger("isKnochen1");
                 }
                 else if (waffennummer == 2)
                 {
@@ -74,11 +74,11 @@ public class PlayerAttack : MonoBehaviour {
                 }
                 else if (waffennummer == 7)
                 {
-                    anim.SetTrigger("isAkt3_Schwert");
+                    anim.SetTrigger("isAkt3_Keule");
                 }
                 else if (waffennummer == 8)
                 {
-                    anim.SetTrigger("isAkt3_Keule");
+                    anim.SetTrigger("isAkt3_Schwert");
                 }
                 //Akt4
                 else if (waffennummer == 9)
