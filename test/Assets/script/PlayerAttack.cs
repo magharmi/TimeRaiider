@@ -2,27 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour {
-  
-    
+public class PlayerAttack : MonoBehaviour
+{
+    [SerializeField] Transform akPos;
+    [SerializeField] GameObject akGeschoss;
+    float nextFire, fireRate;
+    private bool m_FacingRight = true;
     private float timeBtwAttack;
     public float startTimeBtwAttack;
     public LayerMask whatIsEnemies;
-  
-   // public float spielerSpeed;
+
+    // public float spielerSpeed;
     //public Animator camAnim;
     private Animator anim;
     public Transform attackPos;
-    
+
     public float attackRange;
-    public int damage=10;
+    public int damage = 10;
     private int waffennummer;
-   
+
     //GameObjects
-   
+
     Rigidbody2D m_Rigidbody2D;
- 
-   
+
+
 
     // Use this for initialization
     void Start()
@@ -37,7 +40,7 @@ public class PlayerAttack : MonoBehaviour {
     {
         if (startTimeBtwAttack <= 0)
         {
-           
+
             if (Input.GetKeyDown(KeyCode.F))
             {
                 // camAnim.SetTrigger("shake");
@@ -48,7 +51,7 @@ public class PlayerAttack : MonoBehaviour {
                 }
                 else if (waffennummer == 1)
                 {
-                    anim.SetTrigger("isKnochen1");
+                    anim.SetTrigger("isKnochen");
                 }
                 else if (waffennummer == 2)
                 {
@@ -74,11 +77,11 @@ public class PlayerAttack : MonoBehaviour {
                 }
                 else if (waffennummer == 7)
                 {
-                    anim.SetTrigger("isAkt3_Keule");
+                    anim.SetTrigger("isAkt3_Schwert");
                 }
                 else if (waffennummer == 8)
                 {
-                    anim.SetTrigger("isAkt3_Schwert");
+                    anim.SetTrigger("isAkt3_Keule");
                 }
                 //Akt4
                 else if (waffennummer == 9)
@@ -98,8 +101,8 @@ public class PlayerAttack : MonoBehaviour {
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
-                   
-                   enemiesToDamage[i].GetComponent<EnemyHealthBar>().addDamage(damage);
+
+                    enemiesToDamage[i].GetComponent<EnemyHealthBar>().addDamage(damage);
                 }
             }
             timeBtwAttack = startTimeBtwAttack;
@@ -109,20 +112,36 @@ public class PlayerAttack : MonoBehaviour {
             timeBtwAttack -= Time.deltaTime;
         }
     }
-  
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
-  
-  
-    
-   
 
-    
+    public void Ak()
+    {
+        if (Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            if (m_FacingRight)
+            {
 
-  
+                Instantiate(akGeschoss, akPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            }
+            else if (!m_FacingRight)
+            {
+
+                Instantiate(akGeschoss, akPos.position, Quaternion.Euler(new Vector3(0, 0, 180f)));
+            }
+        }
+    }
+
+
+
+
+
+
 
 }
 

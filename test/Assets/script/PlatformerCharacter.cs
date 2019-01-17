@@ -11,7 +11,7 @@ public class PlatformerCharacter : MonoBehaviour
     float nextFire, fireRate;
     [SerializeField] Transform pfeilPos;
     [SerializeField] GameObject pfeil;
-    [SerializeField] Transform akPos;
+   
     [SerializeField] Transform pistolPos;
     [SerializeField] Transform shootPos;
     [SerializeField] GameObject akGeschoss;
@@ -220,23 +220,7 @@ public class PlatformerCharacter : MonoBehaviour
             }
         }
     }
-    public void Ak()
-    {
-        if (Time.time > nextFire)
-        {
-            nextFire = Time.time + fireRate;
-            if (m_FacingRight)
-            {
-
-                Instantiate(akGeschoss, akPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-            }
-            else if (!m_FacingRight)
-            {
-
-                Instantiate(akGeschoss, akPos.position, Quaternion.Euler(new Vector3(0, 0, 180f)));
-            }
-        }
-    }
+ 
     public void Pistol()
     {
         if (Time.time > nextFire)
