@@ -132,6 +132,7 @@ public class ShopControlScript : MonoBehaviour {
             PlayerPrefs.SetInt("IsRifleSold", 1);
             riflePrice.text = "Verkauft!";
             buyButton1.gameObject.SetActive(false);
+            Debug.Log("GekaufteWaffennummer: " + waffe2);
         }
 	}
     public void buyRifle1()
@@ -148,6 +149,7 @@ public class ShopControlScript : MonoBehaviour {
             PlayerPrefs.SetInt("IsRifleSold2", 1);
             riflePrice2.text = "Verkauft!";
             buyButton2.gameObject.SetActive(false);
+            Debug.Log("GekaufteWaffennummer: " + waffe3);
         }
     }
     public void buyRifle2()
@@ -164,6 +166,7 @@ public class ShopControlScript : MonoBehaviour {
             PlayerPrefs.SetInt("IsRifleSold3", 1);
             riflePrice3.text = "Verkauft!";
             buyButton3.gameObject.SetActive(false);
+            Debug.Log("GekaufteWaffennummer: " + waffe4);
         }
     }
 

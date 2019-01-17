@@ -28,7 +28,7 @@ public class PlayerAttack : MonoBehaviour {
     void Start()
     {
         waffennummer = PlayerPrefs.GetInt("Waffennummer");
-        Debug.Log(waffennummer);
+        Debug.Log("Waffennummer: " + waffennummer);
         anim = GetComponent<Animator>();
     }
 
@@ -41,21 +41,57 @@ public class PlayerAttack : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.F))
             {
                 // camAnim.SetTrigger("shake");
-                if (waffennummer == 1)
-                {
-                    anim.SetTrigger("isAxtAngriff");
-                }
-                else if (waffennummer == 2)
+                //Akt1
+                if (waffennummer == 0)
                 {
                     anim.SetTrigger("isKnochen");
                 }
+                else if (waffennummer == 1)
+                {
+                    anim.SetTrigger("isKnochen");
+                }
+                else if (waffennummer == 2)
+                {
+                    anim.SetTrigger("isAxtAngriff");
+                }
+                //Akt2
                 else if (waffennummer == 3)
                 {
-                    anim.SetTrigger("isKnochen1");
+                    anim.SetTrigger("isAkt2_Schwert");
                 }
-                else if (waffennummer == 0)
+                else if (waffennummer == 4)
                 {
-                    anim.SetTrigger("isSpeer");
+                    anim.SetTrigger("isAkt2_Schwert1");
+                }
+                else if (waffennummer == 5)
+                {
+                    anim.SetTrigger("isAkt2_Schwert3");
+                }
+                //Akt3
+                else if (waffennummer == 6)
+                {
+                    anim.SetTrigger("isAkt3_Axt");
+                }
+                else if (waffennummer == 7)
+                {
+                    anim.SetTrigger("isAkt3_Schwert");
+                }
+                else if (waffennummer == 8)
+                {
+                    anim.SetTrigger("isAkt3_Keule");
+                }
+                //Akt4
+                else if (waffennummer == 9)
+                {
+                    anim.SetTrigger("isShoot");
+                }
+                else if (waffennummer == 10)
+                {
+                    anim.SetTrigger("isAkt4_Ak");
+                }
+                else if (waffennummer == 11)
+                {
+                    anim.SetTrigger("isAkt4_Pistol");
                 }
 
 
