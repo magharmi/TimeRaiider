@@ -97,7 +97,11 @@ public class PlayerAttack : MonoBehaviour
                     anim.SetTrigger("isAkt4_Pistol");
                 }
 
-
+                if (Input.GetMouseButtonDown(0))
+                {
+                  
+                    Ak();
+                }
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
