@@ -13,10 +13,11 @@ public class GameControlScript : MonoBehaviour {
 	public static int moneyAmount;
 	int isRifleSold,isRifleSold2, isRifleSold3;
     public string shopSzene;
-	public GameObject inventarbild1;
+    /*
+    public GameObject inventarbild1;
     public GameObject inventarbild2;
     public GameObject inventarbild3;
-   
+   */
     // Use this for initialization
     void Start () {
         moneyAmount  = PlayerPrefs.GetInt("MoneyAmount");
@@ -35,7 +36,8 @@ public class GameControlScript : MonoBehaviour {
 
         sl.value = PlayerPrefs.GetFloat("EPValue");
         levelAnzeige.text = PlayerPrefs.GetInt("SpielerLevel").ToString();
-        
+        /*
+         
 		if (isRifleSold == 1)
 			inventarbild1.SetActive (true);
 		else
@@ -50,7 +52,7 @@ public class GameControlScript : MonoBehaviour {
             inventarbild3.SetActive(true);
         else
             inventarbild3.SetActive(false);
-
+            */
 
     }
 

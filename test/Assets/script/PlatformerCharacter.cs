@@ -82,7 +82,22 @@ public class PlatformerCharacter : MonoBehaviour
             m_Anim.SetTrigger("isArm");
             Armbrust();
         }
-        
+        /*
+       if (Input.GetMouseButtonDown(0))
+        {
+            if (isShoot == true)
+                m_Anim.SetTrigger("isShoot");
+            Ak();
+        }
+
+       if (Input.GetKeyDown(KeyCode.Mouse1))
+       {
+       if (isAkt4_Pistol == true)
+
+         m_Anim.SetTrigger("isAkt4_Pistol");
+        Ak();
+       }
+        */
     }
 
     private void FixedUpdate()
@@ -147,223 +162,7 @@ public class PlatformerCharacter : MonoBehaviour
                 Flip();
             }
 
-            /*
-            //isAkt3_Schwert,isAkt3_Axt, isAkt2_Schwert2,isAkt3_Keule
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                isAkt3_Schwert  = true;
-                isAkt3_Axt      = false;
-                isAkt3_Keule    = false;
-                // Inventarbild1.SetActive(true);
-                // Inventarbild2.SetActive(false);
-                // Inventarbild3.SetActive(false);
-            }
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (isAkt3_Schwert == true)
-
-                    m_Anim.SetTrigger("isSchwertMongol");
-            }
-
-            ///////////////////////////////////////
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                isAkt3_Axt     = true;
-                isAkt3_Schwert = false;
-                isAkt3_Keule   = false;
-                // Inventarbild1.SetActive(true);
-                // Inventarbild2.SetActive(false);
-                // Inventarbild3.SetActive(false);
-            }
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (isAkt3_Axt == true)
-
-                    m_Anim.SetTrigger("isAkt3_Axt");
-            }
-            
-            ////////////////////////////////////
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                isAkt3_Keule   = true;
-                isAkt3_Axt     = false;
-                isAkt3_Schwert = false;
-                // Inventarbild1.SetActive(true);
-                // Inventarbild2.SetActive(false);
-                // Inventarbild3.SetActive(false);
-            }
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (isAkt3_Keule == true)
-
-                    m_Anim.SetTrigger("isAkt3_Keule");
-            }
-
-        */
-
-
-
-
-            //Steinzeit  speer,knochen1,knochen2,axt
-            //Inventar1 
-            /*
-            if (scene1)
-            {
-                if (Input.GetKeyDown(KeyCode.Alpha1))
-                {
-                    axt = false;
-                    knochen1 = false;
-
-                    knochen1 = true;
-                }
-                if (Input.GetKeyDown(KeyCode.T))
-                {
-                    if (knochen1 == true)
-
-                        m_Anim.SetTrigger("isKnochen");
-                }
-               
-                if (Input.GetKeyDown(KeyCode.Alpha2))
-                {
-
-                    axt = false;
-                    knochen1 = false;
-                    knochen2 = true;
-                }
-                if (Input.GetKeyDown(KeyCode.T))
-                {
-                    if (knochen2 == true)
-
-                        m_Anim.SetTrigger("isKnochen1");
-                }
-                
-                //Axt
-                if (Input.GetKeyDown(KeyCode.Alpha3))
-                {
-
-                    knochen1 = false;
-                    knochen2 = false;
-                    axt = true;
-                }
-                if (Input.GetKeyDown(KeyCode.T))
-                {
-                    if (axt == true)
-
-                        m_Anim.SetTrigger("isAxtAngriff");
-                }
-            }
-             */
-            //Inventar1 
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                isAkt2_Schwert  = true;
-                isAkt2_Schwert1 = false;
-                isAkt2_Schwert3 = false;
-                // Inventarbild1.SetActive(true);
-                // Inventarbild2.SetActive(false);
-                // Inventarbild3.SetActive(false);
-
-            }
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (isAkt2_Schwert == true)
-
-                    m_Anim.SetTrigger("isAkt2_Schwert");
-            }
-           
-            //Inventar2 
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                isAkt2_Schwert1 = true;
-                isAkt2_Schwert  = false;
-                isAkt2_Schwert3 = false;
-                // Inventarbild1.SetActive(true);
-                // Inventarbild2.SetActive(false);
-                // Inventarbild3.SetActive(false);
-            }
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (isAkt2_Schwert1 == true)
-
-                    m_Anim.SetTrigger("isAkt2_Schwert1");
-            }
-
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                isAkt2_Schwert3 = true;
-                isAkt2_Schwert = false;
-                isAkt2_Schwert1 = false;
-                // Inventarbild1.SetActive(true);
-                // Inventarbild2.SetActive(false);
-                // Inventarbild3.SetActive(false);
-            }
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (isAkt2_Schwert3 == true)
-
-                    m_Anim.SetTrigger("isAkt2_Schwert3");
-            }
-
-
-            /*
-             //Ak
-             //Inventar 1
-             if (Input.GetKeyDown(KeyCode.Alpha1))
-             {
-                 isShoot = false;
-                 isAkt4_Ak = false;
-                 Inventarbild1.SetActive(true);
-                 Inventarbild2.SetActive(false);
-                 Inventarbild3.SetActive(false);
-                 isAkt4_Pistol = true;
-                 akGeschoss.SetActive(true);
-
-             }
-             if (Input.GetKeyDown(KeyCode.Mouse1))
-             {
-                 if (isAkt4_Pistol == true)
-
-                     m_Anim.SetTrigger("isAkt4_Pistol");
-                 Ak();
-             }
-             //Inventar 2
-             if (Input.GetKeyDown(KeyCode.Alpha2))
-             {
-                 Inventarbild1.SetActive(false);
-                 Inventarbild3.SetActive(false);
-                 isShoot = false;
-                 isAkt4_Pistol = false;
-
-                 Inventarbild2.SetActive(true);
-                 akGeschoss.SetActive(true);
-                 isAkt4_Ak = true;
-             }
-             if (Input.GetKeyDown(KeyCode.Mouse1))
-             {
-                 if (isAkt4_Ak == true)
-
-                     m_Anim.SetTrigger("isAkt4_Ak");
-                 Ak();
-             }
-             //Inventar 3
-             if (Input.GetKeyDown(KeyCode.Alpha3))
-             {
-                 Inventarbild1.SetActive(false);
-                 Inventarbild2.SetActive(false);
-                 isAkt4_Pistol = false;
-                 isAkt4_Ak     = false;
-
-                 Inventarbild3.SetActive(true);
-                 akGeschoss.SetActive(true);
-                 isShoot = true;
-             }
-             if (Input.GetKeyDown(KeyCode.Mouse1))
-             {
-                 if (isShoot == true)
-                     m_Anim.SetTrigger("isShoot");
-                 Ak();
-             }
-             */
+          
         }
         // If the player should jump...
         if (m_Grounded && jump && m_Anim.GetBool("Ground"))
@@ -490,3 +289,218 @@ public class PlatformerCharacter : MonoBehaviour
    
 
 }
+/*
+          //isAkt3_Schwert,isAkt3_Axt, isAkt2_Schwert2,isAkt3_Keule
+          if (Input.GetKeyDown(KeyCode.Alpha1))
+          {
+              isAkt3_Schwert  = true;
+              isAkt3_Axt      = false;
+              isAkt3_Keule    = false;
+              // Inventarbild1.SetActive(true);
+              // Inventarbild2.SetActive(false);
+              // Inventarbild3.SetActive(false);
+          }
+          if (Input.GetKeyDown(KeyCode.F))
+          {
+              if (isAkt3_Schwert == true)
+
+                  m_Anim.SetTrigger("isSchwertMongol");
+          }
+
+          ///////////////////////////////////////
+          if (Input.GetKeyDown(KeyCode.Alpha2))
+          {
+              isAkt3_Axt     = true;
+              isAkt3_Schwert = false;
+              isAkt3_Keule   = false;
+              // Inventarbild1.SetActive(true);
+              // Inventarbild2.SetActive(false);
+              // Inventarbild3.SetActive(false);
+          }
+          if (Input.GetKeyDown(KeyCode.F))
+          {
+              if (isAkt3_Axt == true)
+
+                  m_Anim.SetTrigger("isAkt3_Axt");
+          }
+
+          ////////////////////////////////////
+          if (Input.GetKeyDown(KeyCode.Alpha3))
+          {
+              isAkt3_Keule   = true;
+              isAkt3_Axt     = false;
+              isAkt3_Schwert = false;
+              // Inventarbild1.SetActive(true);
+              // Inventarbild2.SetActive(false);
+              // Inventarbild3.SetActive(false);
+          }
+          if (Input.GetKeyDown(KeyCode.F))
+          {
+              if (isAkt3_Keule == true)
+
+                  m_Anim.SetTrigger("isAkt3_Keule");
+          }
+
+      */
+
+
+
+
+//Steinzeit  speer,knochen1,knochen2,axt
+//Inventar1 
+/*
+if (scene1)
+{
+    if (Input.GetKeyDown(KeyCode.Alpha1))
+    {
+        axt = false;
+        knochen1 = false;
+
+        knochen1 = true;
+    }
+    if (Input.GetKeyDown(KeyCode.T))
+    {
+        if (knochen1 == true)
+
+            m_Anim.SetTrigger("isKnochen");
+    }
+
+    if (Input.GetKeyDown(KeyCode.Alpha2))
+    {
+
+        axt = false;
+        knochen1 = false;
+        knochen2 = true;
+    }
+    if (Input.GetKeyDown(KeyCode.T))
+    {
+        if (knochen2 == true)
+
+            m_Anim.SetTrigger("isKnochen1");
+    }
+
+    //Axt
+    if (Input.GetKeyDown(KeyCode.Alpha3))
+    {
+
+        knochen1 = false;
+        knochen2 = false;
+        axt = true;
+    }
+    if (Input.GetKeyDown(KeyCode.T))
+    {
+        if (axt == true)
+
+            m_Anim.SetTrigger("isAxtAngriff");
+    }
+}
+
+//Inventar1 
+if (Input.GetKeyDown(KeyCode.Alpha1))
+{
+    isAkt2_Schwert  = true;
+    isAkt2_Schwert1 = false;
+    isAkt2_Schwert3 = false;
+    // Inventarbild1.SetActive(true);
+    // Inventarbild2.SetActive(false);
+    // Inventarbild3.SetActive(false);
+
+}
+if (Input.GetKeyDown(KeyCode.F))
+{
+    if (isAkt2_Schwert == true)
+
+        m_Anim.SetTrigger("isAkt2_Schwert");
+}
+
+//Inventar2 
+if (Input.GetKeyDown(KeyCode.Alpha2))
+{
+    isAkt2_Schwert1 = true;
+    isAkt2_Schwert  = false;
+    isAkt2_Schwert3 = false;
+    // Inventarbild1.SetActive(true);
+    // Inventarbild2.SetActive(false);
+    // Inventarbild3.SetActive(false);
+}
+if (Input.GetKeyDown(KeyCode.F))
+{
+    if (isAkt2_Schwert1 == true)
+
+        m_Anim.SetTrigger("isAkt2_Schwert1");
+}
+
+if (Input.GetKeyDown(KeyCode.Alpha3))
+{
+    isAkt2_Schwert3 = true;
+    isAkt2_Schwert = false;
+    isAkt2_Schwert1 = false;
+    // Inventarbild1.SetActive(true);
+    // Inventarbild2.SetActive(false);
+    // Inventarbild3.SetActive(false);
+}
+if (Input.GetKeyDown(KeyCode.F))
+{
+    if (isAkt2_Schwert3 == true)
+
+        m_Anim.SetTrigger("isAkt2_Schwert3");
+}
+/*
+ //Ak
+ //Inventar 1
+ if (Input.GetKeyDown(KeyCode.Alpha1))
+ {
+     isShoot = false;
+     isAkt4_Ak = false;
+     Inventarbild1.SetActive(true);
+     Inventarbild2.SetActive(false);
+     Inventarbild3.SetActive(false);
+     isAkt4_Pistol = true;
+     akGeschoss.SetActive(true);
+
+ }
+ if (Input.GetKeyDown(KeyCode.Mouse1))
+ {
+     if (isAkt4_Pistol == true)
+
+         m_Anim.SetTrigger("isAkt4_Pistol");
+     Ak();
+ }
+ //Inventar 2
+ if (Input.GetKeyDown(KeyCode.Alpha2))
+ {
+     Inventarbild1.SetActive(false);
+     Inventarbild3.SetActive(false);
+     isShoot = false;
+     isAkt4_Pistol = false;
+
+     Inventarbild2.SetActive(true);
+     akGeschoss.SetActive(true);
+     isAkt4_Ak = true;
+ }
+ if (Input.GetKeyDown(KeyCode.Mouse1))
+ {
+     if (isAkt4_Ak == true)
+
+         m_Anim.SetTrigger("isAkt4_Ak");
+     Ak();
+ }
+ //Inventar 3
+ if (Input.GetKeyDown(KeyCode.Alpha3))
+ {
+     Inventarbild1.SetActive(false);
+     Inventarbild2.SetActive(false);
+     isAkt4_Pistol = false;
+     isAkt4_Ak     = false;
+
+     Inventarbild3.SetActive(true);
+     akGeschoss.SetActive(true);
+     isShoot = true;
+ }
+ if (Input.GetKeyDown(KeyCode.Mouse1))
+ {
+     if (isShoot == true)
+         m_Anim.SetTrigger("isShoot");
+     Ak();
+ }
+*/
