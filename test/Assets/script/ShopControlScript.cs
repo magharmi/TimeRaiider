@@ -126,7 +126,7 @@ public class ShopControlScript : MonoBehaviour {
             PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
             Debug.Log(vergleicheWaffe());
             */
-            waffe2 = 0;
+            setWaffenIDs();
             PlayerPrefs.SetInt("Waffennummer", waffe2);
             moneyAmount -= preis1;
             PlayerPrefs.SetInt("IsRifleSold", 1);
@@ -142,7 +142,7 @@ public class ShopControlScript : MonoBehaviour {
             buyButton3 = null;
             PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
             */
-            waffe3 = 1;
+            setWaffenIDs();
             PlayerPrefs.SetInt("Waffennummer", waffe3);
             moneyAmount -= preis2;
             PlayerPrefs.SetInt("IsRifleSold2", 1);
@@ -158,8 +158,8 @@ public class ShopControlScript : MonoBehaviour {
             buyButton2 = null;
             PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
             */
+            setWaffenIDs();
             PlayerPrefs.SetInt("Waffennummer", waffe4);
-            waffe4 = 2;
             moneyAmount -= preis3;
             PlayerPrefs.SetInt("IsRifleSold3", 1);
             riflePrice3.text = "Verkauft!";
