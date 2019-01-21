@@ -11,7 +11,7 @@ public class LevelSelectorA4 : MonoBehaviour
     public Button[] levelButtons;
 
     // Use this for initialization
-/*   void Start()
+    void Start()
     {
         int levelReached = PlayerPrefs.GetInt("levelReached", 1);
         for (int i = 17; i < levelButtons.Length + 17; i++)
@@ -22,7 +22,7 @@ public class LevelSelectorA4 : MonoBehaviour
             }
         }
     }
-*/
+
     public void LoadLevel()
     {
         // ausgewähltes Level laden

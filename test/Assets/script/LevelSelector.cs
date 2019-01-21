@@ -10,7 +10,7 @@ public class LevelSelector : MonoBehaviour {
     public Button[] levelButtons;
     
 	// Use this for initialization
-/*	void Start () {
+	void Start () {
         int levelReached = PlayerPrefs.GetInt("levelReached", 1);
         for (int i = 0; i < levelButtons.Length; i++)
         {
@@ -20,7 +20,6 @@ public class LevelSelector : MonoBehaviour {
             }
         }
 	}
-*/
 
     public void LoadLevel()
     {
