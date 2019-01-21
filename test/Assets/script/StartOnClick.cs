@@ -11,7 +11,7 @@ public class StartOnClick : MonoBehaviour {
         string lastScene = PlayerPrefs.GetString("letzteScene");
         if (lastScene == "null")
         {
-            SceneManager.LoadScene("Storybilder");
+            SceneManager.LoadScene("Feld");
         }
         else
         {
