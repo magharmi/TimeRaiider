@@ -23,6 +23,12 @@ public class Spieler_Leben : MonoBehaviour
     void Start()
     {
         slider = GameObject.Find("Slider");
+        fullLeben = PlayerPrefs.GetInt("SpielerLevel") * 10 + 100;
+        
+        if(fullLeben == 0)
+        {
+            fullLeben = 100;
+        }
        
         sl = slider.GetComponent<Slider>();
        
