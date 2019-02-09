@@ -37,7 +37,7 @@ public class AnubisKampf : MonoBehaviour {
 	void Update () {
         if(leben350 == true)
         {
-            if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 350 && wenigerAls350 == false)
+            if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 550 && wenigerAls350 == false)
             {
                 if (anubisZurück == false)
                 {
@@ -50,7 +50,7 @@ public class AnubisKampf : MonoBehaviour {
                         Debug.Log("Anubis zurück");
                         anubisZurück = true;
                         mumienSpawnen = true;
-                        anubis.GetComponent<EnemyHealthBar>().currentHealth = 350;
+                        anubis.GetComponent<EnemyHealthBar>().currentHealth = 550;
                     }
                 }
                 else if (mumienSpawnen == true)
