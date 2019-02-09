@@ -24,7 +24,7 @@ public class KolosseumKampf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(champion.GetComponent<EnemyHealthBar>().currentHealth <= 20)
+        if(champion.GetComponent<EnemyHealthBar>().currentHealth <= 55)
         {
             zielItem.GetComponent<SpriteRenderer>().enabled = true;
             zielItem.GetComponent<PolygonCollider2D>().enabled = true;

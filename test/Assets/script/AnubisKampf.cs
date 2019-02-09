@@ -37,7 +37,7 @@ public class AnubisKampf : MonoBehaviour {
 	void Update () {
         if(leben350 == true)
         {
-            if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 550 && wenigerAls350 == false)
+            if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 800 && wenigerAls350 == false)
             {
                 if (anubisZurück == false)
                 {
@@ -50,7 +50,7 @@ public class AnubisKampf : MonoBehaviour {
                         Debug.Log("Anubis zurück");
                         anubisZurück = true;
                         mumienSpawnen = true;
-                        anubis.GetComponent<EnemyHealthBar>().currentHealth = 550;
+                        anubis.GetComponent<EnemyHealthBar>().currentHealth = 800;
                     }
                 }
                 else if (mumienSpawnen == true)
@@ -67,7 +67,7 @@ public class AnubisKampf : MonoBehaviour {
         else if(leben200 == true)
         {
             wenigerAls200 = true;
-            if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 200 && wenigerAls200 == true)
+            if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 400 && wenigerAls200 == true)
             {
                 if (anubisZurück == false)
                 {
@@ -80,7 +80,7 @@ public class AnubisKampf : MonoBehaviour {
                         Debug.Log("Anubis zurück");
                         anubisZurück = true;
                         mumienSpawnen = true;
-                        anubis.GetComponent<EnemyHealthBar>().currentHealth = 200;
+                        anubis.GetComponent<EnemyHealthBar>().currentHealth = 400;
                     }
                 }
                 else if (mumienSpawnen == true)
