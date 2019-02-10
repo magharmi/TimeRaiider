@@ -86,7 +86,7 @@ public class PlatformerCharacter : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.V))
         {
-            if(waffennummer == null)
+            if(waffennummer == 0)
             {
                 m_Anim.SetTrigger("isArm");
                 Armbrust();
