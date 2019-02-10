@@ -14,7 +14,7 @@ public class PlatformerCharacter : MonoBehaviour
    
     [SerializeField] Transform pistolPos;
     [SerializeField] Transform shootPos;
-    [SerializeField] GameObject akGeschoss;
+    [SerializeField] GameObject akGeschoss, shootGeschoss, pistolGeschoss;
     
     [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
     [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
@@ -69,7 +69,7 @@ public class PlatformerCharacter : MonoBehaviour
 
 
         SelectWeapon();
-        akGeschoss.SetActive(false);
+        //akGeschoss.SetActive(false);
         // Setting up references.
         m_GroundCheck = transform.Find("GroundCheck");
         m_CeilingCheck = transform.Find("CeilingCheck");
@@ -89,20 +89,23 @@ public class PlatformerCharacter : MonoBehaviour
             if(waffennummer == null)
             {
                 m_Anim.SetTrigger("isArm");
+                Armbrust();
             }
             else if (waffennummer == 9)
             {
                 m_Anim.SetTrigger("isShoot");
+                Shoot();
             }
             else if (waffennummer == 10)
             {
                 m_Anim.SetTrigger("isAkt4_Ak");
+                Ak();
             }
             else if (waffennummer == 11)
             {
                 m_Anim.SetTrigger("isAkt4_Pistol");
+                Pistol();
             }
-            Armbrust();
         }
         /*
        if (Input.GetMouseButtonDown(0))
@@ -262,6 +265,24 @@ public class PlatformerCharacter : MonoBehaviour
             }
         }
     }
+    public void Ak()
+    {
+        if (Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            if (m_FacingRight)
+            {
+                //SoundManagerScript.PlaySound("crossbow");
+                Instantiate(akGeschoss, shootPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            }
+            else if (!m_FacingRight)
+            {
+
+                Instantiate(akGeschoss, shootPos.position, Quaternion.Euler(new Vector3(0, 0, 180f)));
+            }
+        }
+    }
+
     public void Shoot()
     {
         if (Time.time > nextFire)
@@ -269,7 +290,7 @@ public class PlatformerCharacter : MonoBehaviour
             nextFire = Time.time + fireRate;
             if (m_FacingRight)
             {
-                SoundManagerScript.PlaySound("crossbow");
+                //SoundManagerScript.PlaySound("crossbow");
                 Instantiate(akGeschoss, shootPos.position, Quaternion.Euler(new Vector3(0, 0, 0)));
             }
             else if (!m_FacingRight)
