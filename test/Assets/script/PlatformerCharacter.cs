@@ -42,8 +42,15 @@ public class PlatformerCharacter : MonoBehaviour
     bool isAkt4_Ak, isAkt4_Pistol, isShoot;
     //public Inventory inventory;
     //Waffe Wechseln mit animation
+    private int waffennummer;
 
-   
+
+    private void Start()
+    {
+        waffennummer = PlayerPrefs.GetInt("FernkampfWaffennummer");
+        Debug.Log("FernkampfWaffennummer: " + waffennummer);
+    }
+
     private void Awake()
     {
         //Akt 1
@@ -79,7 +86,22 @@ public class PlatformerCharacter : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.V))
         {
-            m_Anim.SetTrigger("isArm");
+            if(waffennummer == null)
+            {
+                m_Anim.SetTrigger("isArm");
+            }
+            else if (waffennummer == 9)
+            {
+                m_Anim.SetTrigger("isShoot");
+            }
+            else if (waffennummer == 10)
+            {
+                m_Anim.SetTrigger("isAkt4_Ak");
+            }
+            else if (waffennummer == 11)
+            {
+                m_Anim.SetTrigger("isAkt4_Pistol");
+            }
             Armbrust();
         }
         /*

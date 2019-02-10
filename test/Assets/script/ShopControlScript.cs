@@ -127,7 +127,12 @@ public class ShopControlScript : MonoBehaviour {
             Debug.Log(vergleicheWaffe());
             */
             setWaffenIDs();
-            PlayerPrefs.SetInt("Waffennummer", waffe2);
+            if(aktuelleScene.name == "ShopZukunft")
+            {
+                PlayerPrefs.SetInt("FernkampfWaffennummer", waffe2);
+            }
+            else
+                PlayerPrefs.SetInt("Waffennummer", waffe2);
             moneyAmount -= preis1;
             PlayerPrefs.SetInt("IsRifleSold", 1);
             riflePrice.text = "Verkauft!";
@@ -144,7 +149,12 @@ public class ShopControlScript : MonoBehaviour {
             PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
             */
             setWaffenIDs();
-            PlayerPrefs.SetInt("Waffennummer", waffe3);
+            if (aktuelleScene.name == "ShopZukunft")
+            {
+                PlayerPrefs.SetInt("FernkampfWaffennummer", waffe3);
+            }
+            else
+                PlayerPrefs.SetInt("Waffennummer", waffe3);
             moneyAmount -= preis2;
             PlayerPrefs.SetInt("IsRifleSold2", 1);
             riflePrice2.text = "Verkauft!";
@@ -161,7 +171,14 @@ public class ShopControlScript : MonoBehaviour {
             PlayerPrefs.SetInt("Waffennummer", vergleicheWaffe());
             */
             setWaffenIDs();
-            PlayerPrefs.SetInt("Waffennummer", waffe4);
+            if (aktuelleScene.name == "ShopZukunft")
+            {
+                PlayerPrefs.SetInt("FernkampfWaffennummer", waffe4);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("Waffennummer", waffe4);
+            }
             moneyAmount -= preis3;
             PlayerPrefs.SetInt("IsRifleSold3", 1);
             riflePrice3.text = "Verkauft!";

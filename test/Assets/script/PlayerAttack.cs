@@ -93,7 +93,7 @@ public class PlayerAttack : MonoBehaviour
                     damage = 55;
                 }
                 //Akt4
-                else if (waffennummer == 9)
+                /*else if (waffennummer == 9)
                 {
                     anim.SetTrigger("isShoot");
                     damage = 60;
@@ -108,7 +108,7 @@ public class PlayerAttack : MonoBehaviour
                     anim.SetTrigger("isAkt4_Pistol");
                     damage = 65;
                 }
-
+                */
                 if (Input.GetMouseButtonDown(0))
                 {
                   
