@@ -23,7 +23,7 @@ public class Spieler_Leben : MonoBehaviour
     void Start()
     {
         slider = GameObject.Find("Slider");
-        fullLeben = PlayerPrefs.GetInt("SpielerLevel") * 10 + 100;
+        fullLeben = PlayerPrefs.GetInt("SpielerLevel") * 1 + 100;
         
         if(fullLeben == 0)
         {
