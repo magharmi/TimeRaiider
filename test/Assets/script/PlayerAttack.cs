@@ -41,9 +41,8 @@ public class PlayerAttack : MonoBehaviour
         if (startTimeBtwAttack <= 0)
         {
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetButtonDown("NahkampfButton"))
             {
-                // camAnim.SetTrigger("shake");
                 //Akt1
                 if (waffennummer == 0)
                 {
@@ -93,7 +92,8 @@ public class PlayerAttack : MonoBehaviour
                     damage = 55;
                 }
                 //Akt4
-                /*else if (waffennummer == 9)
+                /* Stattdessen in PlatformerCharacter
+                else if (waffennummer == 9)
                 {
                     anim.SetTrigger("isShoot");
                     damage = 60;
@@ -109,7 +109,7 @@ public class PlayerAttack : MonoBehaviour
                     damage = 65;
                 }
                 */
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0)) //Sinn?
                 {
                   
                     Ak();

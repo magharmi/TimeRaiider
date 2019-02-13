@@ -84,7 +84,7 @@ public class PlatformerCharacter : MonoBehaviour
         {
             SelectWeapon();
         }
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetButtonDown("FernkampfButton"))
         {
             if(waffennummer == 0)
             {
