@@ -912,21 +912,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 434ed33ccaf68d0408334f4a533fe819, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &67065543 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1275769688797038, guid: 434ed33ccaf68d0408334f4a533fe819,
-    type: 2}
-  m_PrefabInternal: {fileID: 67065542}
---- !u!1 &67065544 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1543116869383106, guid: 434ed33ccaf68d0408334f4a533fe819,
-    type: 2}
-  m_PrefabInternal: {fileID: 67065542}
---- !u!1 &67065545 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1861618356607522, guid: 434ed33ccaf68d0408334f4a533fe819,
-    type: 2}
-  m_PrefabInternal: {fileID: 67065542}
 --- !u!1 &74719897
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,7 +2692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91b6abe95f5bb614986ac301e693ddb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMaxHealth: 510
+  enemyMaxHealth: 10000
   drops: 0
   gibtEp: 1
   ep: 10
@@ -19698,9 +19683,6 @@ MonoBehaviour:
   sl: {fileID: 0}
   levelAnzeige: {fileID: 0}
   shopSzene: 
-  inventarbild1: {fileID: 67065545}
-  inventarbild2: {fileID: 67065544}
-  inventarbild3: {fileID: 67065543}
 --- !u!114 &1727087622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20529,8 +20511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  stoppingDistance: 5
-  retreatDistance: 4
+  stoppingDistance: 8
+  retreatDistance: 7
   radius: 100
   Lvlmanager: {fileID: 0}
   hit: 1
@@ -20648,7 +20630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91b6abe95f5bb614986ac301e693ddb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMaxHealth: 200
+  enemyMaxHealth: 5000
   drops: 0
   gibtEp: 1
   ep: 10

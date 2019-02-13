@@ -33,17 +33,17 @@ public class TransformersKampf : MonoBehaviour
     void Update()
     {
 
-        if (russe.GetComponent<EnemyHealthBar>().currentHealth <= 30)
+        if (russe.GetComponent<EnemyHealthBar>().currentHealth <= 200)
         {
             russe.GetComponent<GegnerAI>().enabled = false;
             SceneManager.LoadScene("Abspann");
         }
 
-        else if (transformers.GetComponent<EnemyHealthBar>().currentHealth <= 350 && wenigerAls350 == false)
+        else if (transformers.GetComponent<EnemyHealthBar>().currentHealth <= 5000 && wenigerAls350 == false)
         {
             myColliders = transformers.GetComponents<BoxCollider2D>();
             foreach (BoxCollider2D bc in myColliders) bc.enabled = false;
-            transformers.GetComponent<EnemyHealthBar>().currentHealth = 350;
+            transformers.GetComponent<EnemyHealthBar>().currentHealth = 5000;
             Debug.Log("Beine kaputt");
             hochGeflogen = true;
             inMitte = true;
