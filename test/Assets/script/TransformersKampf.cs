@@ -67,6 +67,16 @@ public class TransformersKampf : MonoBehaviour
             }
         }
 
+        else if (transformers.GetComponent<EnemyHealthBar>().currentHealth < 300)
+        {
+            myColliders = transformers.GetComponents<BoxCollider2D>();
+            foreach (BoxCollider2D bc in myColliders) bc.enabled = false;
+            transformers.GetComponent<EnemyHealthBar>().currentHealth = 300;
+            leben200 = true;
+        }
+
+
+
         else if (leben200 == true)
         {
             Debug.Log("Russe kommt");
@@ -154,7 +164,7 @@ public class TransformersKampf : MonoBehaviour
         if (drohnenNummer == 0)
         {
             yield return new WaitForSeconds(5);
-            leben200 = true;
+            //leben200 = true;
         }
     }
 
