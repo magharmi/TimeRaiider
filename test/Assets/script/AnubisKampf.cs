@@ -37,7 +37,7 @@ public class AnubisKampf : MonoBehaviour {
 	void Update () {
         if(leben350 == true)
         {
-            if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 800 && wenigerAls350 == false)
+            if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 1000 && wenigerAls350 == false)
             {
                 if (anubisZurück == false)
                 {
@@ -67,7 +67,7 @@ public class AnubisKampf : MonoBehaviour {
         else if(leben200 == true)
         {
             wenigerAls200 = true;
-            if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 400 && wenigerAls200 == true)
+            if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 500 && wenigerAls200 == true)
             {
                 if (anubisZurück == false)
                 {
@@ -96,6 +96,7 @@ public class AnubisKampf : MonoBehaviour {
         }
         else if(leben0 == true)
         {
+            /* wird jetzt von EnemyHealthBar gehandelt
             if (anubis.GetComponent<EnemyHealthBar>().currentHealth <= 20)
             {
                 zielItem.GetComponent<SpriteRenderer>().enabled = true;
@@ -103,7 +104,8 @@ public class AnubisKampf : MonoBehaviour {
                 mainCamera.GetComponent<Camera>().enabled = true;
                 unsichtbareWand.SetActive(false);
                 leben0 = false;
-            }
+            }*/
+            leben0 = false; //entfernen falls oberes wieder einkommentiert wird
         }
 	}
 
@@ -171,11 +173,14 @@ public class AnubisKampf : MonoBehaviour {
         {
             StartCoroutine(mumienSpawnenFunc2(mumienNummer - 1, steinNummer - 1));
             StartCoroutine(mumienSpawnenFunc2(mumienNummer - 2, steinNummer - 2));
-            AnubisAngriff();
         }
         else if (mumienNummer > 8)
         {
             StartCoroutine(mumienSpawnenFunc2(mumienNummer - 1, steinNummer - 1));
+        }
+        if (mumienNummer < 4)
+        {
+            AnubisAngriff();
         }
     }
 

@@ -10,44 +10,70 @@ public class EnemyHealthBar : MonoBehaviour {
     public bool gibtEp = true;
     public int ep = 10;
     public GameObject lebenOderGeld;
-    public static  float epp;
+    public static float epp;
+    public int special = 0;
     int gibLeben = 50;
-    
-    // public GameObject enemyDeathFX;
-    //Animator enemyAnimator;
-      public Slider enemySlider;
-   // public Transform pos;
-    //public GameObject blut;
-   public float currentHealth;
 
-	// Use this for initialization
-	void Start () {
+    //Fuer Feldherr
+    private GameObject MainCamera, BosskampfKamera, BosskampfWandRechts;
+
+    //Fuer Anubis
+    public GameObject zielItem, kampfKamera, mainCamera, unsichtbareWand;
+
+    public Slider enemySlider;
+    public float currentHealth;
+
+    //Use this for initialization
+    void Start()
+    {
         sl = GameObject.Find("lvlmanager").GetComponent<GameControlScript>();
-      //  enemyAnimator = GetComponentInChildren<Animator>();
         currentHealth = enemyMaxHealth;
         enemySlider.maxValue = currentHealth;
         enemySlider.value = currentHealth;
-	}
+
+        if (special == 1) //Feldherr
+        {
+            MainCamera = GameObject.Find("Main Camera");
+            BosskampfKamera = GameObject.Find("Bosskampf Kamera");
+            BosskampfWandRechts = GameObject.Find("Bosskampf Wand rechts");
+        }
+        else if (special == 2) //Anubis
+        {
+            kampfKamera = GameObject.Find("Kampf Kamera");
+            mainCamera = GameObject.Find("Main Camera");
+            unsichtbareWand = GameObject.Find("Ende Arena");
+        }
+    }
 
     public void addDamage(float damage)
     {
         enemySlider.gameObject.SetActive(true);
-       // SoundManagerScript.PlaySound("messer");
         currentHealth -= damage;
         Debug.Log("dagage Taken");
-       // Instantiate(blut, transform.position, transform.rotation);
         enemySlider.value = currentHealth;
         if (currentHealth <= 0) makeDead();
     }
 
     void makeDead()
     {
+        if (special == 1) //Feldherr
+        {
+            MainCamera.SetActive(true);
+            Destroy(BosskampfKamera);
+            Destroy(BosskampfWandRechts);
+        }
+        if (special == 2) //Anubis
+        {
+            zielItem.GetComponent<SpriteRenderer>().enabled = true;
+            kampfKamera.GetComponent<Camera>().enabled = false;
+            mainCamera.GetComponent<Camera>().enabled = true;
+            unsichtbareWand.SetActive(false);
+        }
 
-        //   enemyAnimator.SetBool("isDead", true);
-       
-       Destroy(gameObject);
+        //enemyAnimator.SetBool("isDead", true);
+        Destroy(gameObject);
 
-        // Instantiate(enemyDeathFX, transform.position, transform.rotation);
+        //Instantiate(enemyDeathFX, transform.position, transform.rotation);
         if (drops)
             Instantiate(lebenOderGeld, transform.position, transform.rotation);
         if (gibtEp)
@@ -55,7 +81,6 @@ public class EnemyHealthBar : MonoBehaviour {
             sl.addEP(ep);
             Debug.Log("Ep hinzugefügt");
         }
-       
     }
    
 }
