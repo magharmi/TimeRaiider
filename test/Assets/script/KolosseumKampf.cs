@@ -24,11 +24,12 @@ public class KolosseumKampf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /* wird jetzt in EnemyHealthBar gehandled
         if(champion.GetComponent<EnemyHealthBar>().currentHealth <= 55)
         {
             zielItem.GetComponent<SpriteRenderer>().enabled = true;
             zielItem.GetComponent<PolygonCollider2D>().enabled = true;
-        }
+        }*/
     }
 
     public void sklavenSpawnenAufruf()

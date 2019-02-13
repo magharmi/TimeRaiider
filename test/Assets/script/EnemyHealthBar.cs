@@ -62,12 +62,17 @@ public class EnemyHealthBar : MonoBehaviour {
             Destroy(BosskampfKamera);
             Destroy(BosskampfWandRechts);
         }
-        if (special == 2) //Anubis
+        else if(special == 2) //Anubis
         {
             zielItem.GetComponent<SpriteRenderer>().enabled = true;
             kampfKamera.GetComponent<Camera>().enabled = false;
             mainCamera.GetComponent<Camera>().enabled = true;
             unsichtbareWand.SetActive(false);
+        }
+        else if(special == 3) //Kolosseum Champion
+        {
+            zielItem.GetComponent<SpriteRenderer>().enabled = true;
+            zielItem.GetComponent<PolygonCollider2D>().enabled = true;
         }
 
         //enemyAnimator.SetBool("isDead", true);
