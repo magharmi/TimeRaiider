@@ -48,16 +48,18 @@ public class GegnerAI : MonoBehaviour {
                 {
 
                     transform.rotation = Quaternion.Euler(0, 180f, 0);
+                  
                 }
                 else
                 {
                     transform.rotation = Quaternion.Euler(0, 0, 0);
-
+                   
                 }
                 if (Vector2.Distance(transform.position, newPos) == 0)
                 {
                     imRadius = true;
-                
+
+                   
                 }
             }
             else
@@ -74,19 +76,23 @@ public class GegnerAI : MonoBehaviour {
                   
                     transform.rotation = Quaternion.Euler(0, 180f, 0);
                     //Hasan 8.1.2019
-                    
+                   // sinnlos
                     enemyAnimator.SetBool("isRun", true);
                     //ENDE
-
+                   
                 }
                 //Bewegung negativ
                 else
                 {
                     transform.rotation = Quaternion.Euler(0, 0, 0);
+                    //sinnlos
                     enemyAnimator.SetBool("isAttack", false);
+                  
+                  
                 }
               
                 tempPos = newPos;
+              
             }
         }
 
@@ -96,10 +102,12 @@ public class GegnerAI : MonoBehaviour {
             {
 
                 transform.rotation = Quaternion.Euler(0, 180f, 0);
+              
             }
             else
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
+              
 
             }
 
@@ -108,29 +116,33 @@ public class GegnerAI : MonoBehaviour {
             if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
             {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), speed * Time.deltaTime);
-             
+                //lauf animation starten,wenn speed groeßer als 0 
+                if(speed>0)
+                    enemyAnimator.SetTrigger("isRun");
+                  
             }
             else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
             {
                 transform.position = this.transform.position;
-         
-
+              
             }
             else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
             {
                 Vector2 ziel = new Vector2(player.position.x, transform.position.y);
                 transform.position = Vector2.MoveTowards(transform.position, ziel, -speed * Time.deltaTime);
+                //klappt
               
+                enemyAnimator.SetTrigger("isRun");
                 if (transform.position.x < ziel.x)
                 {
                  
                     transform.rotation = Quaternion.Euler(0, 180f, 0);
-                    
+                  
                 }
                 else
                 {
                     transform.rotation = Quaternion.Euler(0, 0, 0);
-                    
+                   
                 }
             }
 
@@ -148,7 +160,7 @@ public class GegnerAI : MonoBehaviour {
             // enemyAnimator.SetBool("isAttack", true);
             //ENDE
             enemyAnimator.SetTrigger("isAttack");
-        
+           
             GameObject.FindGameObjectWithTag("spieler").GetComponent<Spieler_Leben>().addDamage(20);
             //Lvlmanager.RespawnSpieler();
             Debug.Log("geht nicht mehr");
