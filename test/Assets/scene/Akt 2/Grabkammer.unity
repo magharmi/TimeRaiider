@@ -11488,6 +11488,7 @@ GameObject:
   - component: {fileID: 593141917}
   - component: {fileID: 593141920}
   - component: {fileID: 593141921}
+  - component: {fileID: 593141922}
   m_Layer: 11
   m_Name: Anubis
   m_TagString: Boss
@@ -11530,7 +11531,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e7db8ae13bdf8ec45ba923ea4f7bd536, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1cb9ab8abd1c83d4886743a903c4a887, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11570,8 +11571,8 @@ BoxCollider2D:
   m_Offset: {x: 0.257082, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 13.1, y: 33.789997}
+    pivot: {x: 0.7, y: 0.56}
+    oldSize: {x: 26.53, y: 31.300003}
     newSize: {x: 13.1, y: 33.789997}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11595,8 +11596,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 13.1, y: 33.789997}
+    pivot: {x: 0.7, y: 0.56}
+    oldSize: {x: 26.53, y: 31.300003}
     newSize: {x: 13.1, y: 33.789997}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11671,7 +11672,7 @@ Animator:
   m_GameObject: {fileID: 593141913}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 931509c92ee05834b81449df5b8abf8a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11680,6 +11681,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &593141922
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 593141913}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -16.70903, y: -2.5818803}
+  serializedVersion: 2
+  m_Radius: 4.9508495
 --- !u!1 &600811900
 GameObject:
   m_ObjectHideFlags: 0
