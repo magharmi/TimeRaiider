@@ -38,17 +38,18 @@ public class DaheimKampf : MonoBehaviour
         foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         agenten[agentenNummer].GetComponent<GegnerAI>().enabled = true;
         yield return new WaitForSeconds(2);
-        if (agentenNummer <= 8)
+        if (agentenNummer <= 3)
         {
             StartCoroutine(agentenSpawnenFunc(agentenNummer - 1));
             StartCoroutine(agentenSpawnenFunc(agentenNummer - 2));
         }
-        else if (agentenNummer > 8)
+        else if (agentenNummer > 1)
         {
             StartCoroutine(agentenSpawnenFunc(agentenNummer - 1));
         }
         if (agentenNummer == 0)
         {
+            yield return new WaitForSeconds(10);
             if (heliLandet == false)
             {
                 Debug.Log("Alle Tot aus erster Welle");
@@ -58,7 +59,7 @@ public class DaheimKampf : MonoBehaviour
                 helikopter.GetComponent<Rigidbody2D>().isKinematic = true;
                 heliLandet = true;
             }
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(5);
             raumschiffAgentenSpawnenAufruf();
         }
     }
@@ -76,17 +77,18 @@ public class DaheimKampf : MonoBehaviour
         myColliders = raumschiffAgenten[raumschiffAgentenNummer].GetComponents<BoxCollider2D>();
         foreach (BoxCollider2D bc in myColliders) bc.enabled = true;
         yield return new WaitForSeconds(2);
-        if (raumschiffAgentenNummer <= 8)
+        if (raumschiffAgentenNummer <= 3)
         {
             StartCoroutine(raumschiffAgentenSpawnen(raumschiffAgentenNummer - 1));
             StartCoroutine(raumschiffAgentenSpawnen(raumschiffAgentenNummer - 2));
         }
-        else if (raumschiffAgentenNummer > 8)
+        else if (raumschiffAgentenNummer > 1)
         {
             StartCoroutine(raumschiffAgentenSpawnen(raumschiffAgentenNummer - 1));
         }
         if (raumschiffAgentenNummer == 0)
         {
+            yield return new WaitForSeconds(10);
             Debug.Log("Alle Tot aus zweiter Welle");
             grossvater.GetComponent<BoxCollider2D>().enabled = true;
             grossvater.GetComponent<GegnerAI>().enabled = true;
