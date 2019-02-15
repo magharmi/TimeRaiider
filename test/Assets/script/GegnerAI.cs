@@ -149,7 +149,14 @@ public class GegnerAI : MonoBehaviour {
         }
         //startPos = transform.position;        Raptor wird zu Usain Bolt, wenn ich diesen Code einfüge
     }
-
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "spieler" && hit == true)
+        {
+            enemyAnimator.SetTrigger("isAttack");
+        }else
+            enemyAnimator.SetTrigger("isRun");
+    }
     void OnCollisionEnter2D(Collision2D other)
     {
 
@@ -157,9 +164,9 @@ public class GegnerAI : MonoBehaviour {
         {
 
             //Hasan 8.1.2019
-            // enemyAnimator.SetBool("isAttack", true);
+          //  enemyAnimator.SetBool("isAttack", true);
             //ENDE
-            enemyAnimator.SetTrigger("isAttack");
+           // enemyAnimator.SetTrigger("isAttack");
            
             GameObject.FindGameObjectWithTag("spieler").GetComponent<Spieler_Leben>().addDamage(20);
             //Lvlmanager.RespawnSpieler();
