@@ -64,8 +64,8 @@ public class PlatformerCharacter : MonoBehaviour
         isAkt2_Schwert3 = false;
        //Akt 4
        isAkt4_Ak = false;
-        isAkt4_Pistol = false;
-        isShoot = false;
+       isAkt4_Pistol = false;
+       isShoot = false;
 
 
         SelectWeapon();
@@ -198,11 +198,12 @@ public class PlatformerCharacter : MonoBehaviour
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
         }
     }
+    /*
     void resetAnim()
     {
         isAkt4_Ak = false;
     }
-
+    */
     public void OnTriggerEnter2D(Collider2D collision)
     {
       if(collision.tag=="zielitem"){
