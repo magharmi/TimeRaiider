@@ -164,7 +164,7 @@ public class GegnerAI : MonoBehaviour {
         {
 
             //Hasan 8.1.2019
-          //  enemyAnimator.SetBool("isAttack", true);
+          // enemyAnimator.SetBool("isAttack", true);
             //ENDE
            // enemyAnimator.SetTrigger("isAttack");
            
