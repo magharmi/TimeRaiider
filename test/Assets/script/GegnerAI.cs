@@ -164,9 +164,9 @@ public class GegnerAI : MonoBehaviour {
         {
 
             //Hasan 8.1.2019
-          // enemyAnimator.SetBool("isAttack", true);
+           enemyAnimator.SetBool("isAttack", true);
             //ENDE
-           // enemyAnimator.SetTrigger("isAttack");
+            enemyAnimator.SetTrigger("isAttack");
            
             GameObject.FindGameObjectWithTag("spieler").GetComponent<Spieler_Leben>().addDamage(20);
             //Lvlmanager.RespawnSpieler();
