@@ -718,7 +718,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -728,7 +728,17 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: stoppingDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
@@ -886,7 +896,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -896,7 +906,12 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
@@ -2479,10 +2494,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0da8c1fbea32d4e97a674742b3a845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletspawn: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  bulletspawn: {fileID: 176791494}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
   bulletSpeed: 750
-  schussGeschwindigkeit: 0
+  schussGeschwindigkeit: 2
   radius: 20
 --- !u!1 &184072865
 GameObject:
@@ -2512,8 +2528,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a058f15481bf4394382f0be5289f4a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 
-  LevelToUnlock: 0
+  level: Finale
+  LevelToUnlock: 21
 --- !u!61 &184072867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3561,127 +3577,6 @@ Transform:
   m_Father: {fileID: 116570819}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &318634880
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 318634886}
-  - component: {fileID: 318634885}
-  - component: {fileID: 318634884}
-  - component: {fileID: 318634883}
-  - component: {fileID: 318634882}
-  - component: {fileID: 318634881}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &318634881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 318634880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d8238cc53530b64fbb7828c3d3bb591, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  damping: 1
-  lookAheadFactor: 3
-  lookAheadReturnSpeed: 0.5
-  lookAheadMoveThreshold: 0.1
---- !u!95 &318634882
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 318634880}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9c8b5f659165d084cbc02f11eaecf32a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!81 &318634883
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 318634880}
-  m_Enabled: 1
---- !u!124 &318634884
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 318634880}
-  m_Enabled: 1
---- !u!20 &318634885
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 318634880}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.064662635, g: 0.16500117, b: 0.19117647, a: 0.841}
-  m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 7.878332
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &318634886
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 318634880}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -57.1, y: -54.6, z: -10}
-  m_LocalScale: {x: 1.6124994, y: 1.2875001, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &339865715
 GameObject:
   m_ObjectHideFlags: 0
@@ -3722,10 +3617,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0da8c1fbea32d4e97a674742b3a845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletspawn: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  bulletspawn: {fileID: 339865716}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
   bulletSpeed: 750
-  schussGeschwindigkeit: 0
+  schussGeschwindigkeit: 2
   radius: 20
 --- !u!1 &339935577
 GameObject:
@@ -3971,7 +3867,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -3981,7 +3877,17 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: stoppingDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
@@ -4807,11 +4713,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4794391398358864, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4814898278121372, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4181492885102316, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
       propertyPath: m_RootOrder
@@ -4831,15 +4737,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4822161606857224, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4030535825454204, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4928986231453258, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4341581462358380, guid: 2ef6fe001f6998241b29ec9c991f8bce, type: 2}
       propertyPath: m_RootOrder
@@ -5307,7 +5213,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -5317,7 +5223,17 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: stoppingDistance
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
@@ -9347,10 +9263,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0da8c1fbea32d4e97a674742b3a845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletspawn: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  bulletspawn: {fileID: 704148744}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
   bulletSpeed: 750
-  schussGeschwindigkeit: 0
+  schussGeschwindigkeit: 2
   radius: 20
 --- !u!1 &704239534
 GameObject:
@@ -10282,10 +10199,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0da8c1fbea32d4e97a674742b3a845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletspawn: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  bulletspawn: {fileID: 766230114}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
   bulletSpeed: 750
-  schussGeschwindigkeit: 0
+  schussGeschwindigkeit: 2
   radius: 20
 --- !u!114 &771500195 stripped
 MonoBehaviour:
@@ -11941,7 +11859,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -11951,7 +11869,17 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: stoppingDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
@@ -14510,7 +14438,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -14520,7 +14448,17 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: stoppingDistance
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
@@ -14642,6 +14580,127 @@ Canvas:
   m_SortingLayerID: 1072735969
   m_SortingOrder: 2
   m_TargetDisplay: 0
+--- !u!1 &1007625417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1007625423}
+  - component: {fileID: 1007625422}
+  - component: {fileID: 1007625421}
+  - component: {fileID: 1007625420}
+  - component: {fileID: 1007625419}
+  - component: {fileID: 1007625418}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1007625418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007625417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8238cc53530b64fbb7828c3d3bb591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  damping: 0
+  lookAheadFactor: 0
+  lookAheadReturnSpeed: 0
+  lookAheadMoveThreshold: 0.1
+--- !u!95 &1007625419
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007625417}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c8b5f659165d084cbc02f11eaecf32a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!81 &1007625420
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007625417}
+  m_Enabled: 1
+--- !u!124 &1007625421
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007625417}
+  m_Enabled: 1
+--- !u!20 &1007625422
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007625417}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.064662635, g: 0.16500117, b: 0.19117647, a: 0.841}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 7.878332
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1007625423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007625417}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 49.82, y: 0.4600001, z: -10}
+  m_LocalScale: {x: 1.6124994, y: 1.2875001, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1015185744
 GameObject:
   m_ObjectHideFlags: 0
@@ -16813,7 +16872,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -16823,7 +16882,17 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: stoppingDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
@@ -17119,7 +17188,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -17129,7 +17198,12 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
@@ -17571,10 +17645,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0da8c1fbea32d4e97a674742b3a845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletspawn: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  bulletspawn: {fileID: 1276709329}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
   bulletSpeed: 750
-  schussGeschwindigkeit: 0
+  schussGeschwindigkeit: 2
   radius: 20
 --- !u!1 &1279648906
 GameObject:
@@ -20463,7 +20538,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -20473,7 +20548,12 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
@@ -24468,7 +24548,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -24478,7 +24558,17 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: stoppingDistance
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
@@ -25173,7 +25263,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -25183,7 +25273,17 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: stoppingDistance
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
@@ -25702,7 +25802,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -25712,7 +25812,17 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: stoppingDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
@@ -27471,10 +27581,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0da8c1fbea32d4e97a674742b3a845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletspawn: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  bulletspawn: {fileID: 1990937396}
+  bulletPrefab: {fileID: 50219311634563828, guid: 93f3fcf4467591640bb528b0e9d0ce0c,
+    type: 2}
   bulletSpeed: 750
-  schussGeschwindigkeit: 0
+  schussGeschwindigkeit: 2
   radius: 20
 --- !u!1 &1996001969
 GameObject:
@@ -27755,7 +27866,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -27765,7 +27876,12 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
@@ -29141,7 +29257,7 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: enemyMaxHealth
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
@@ -29151,7 +29267,12 @@ Prefab:
     - target: {fileID: 114373831279935180, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
         type: 2}
       propertyPath: currentHealth
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646872394342532, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09,
+        type: 2}
+      propertyPath: retreatDistance
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c7e85c3cffd2c46b0b7a0eeeec8a09, type: 2}
