@@ -9,7 +9,7 @@ public class GegnerTotErfüllt : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(gameObject.GetComponent<EnemyHealthBar>().currentHealth <= 10)
+		if(gameObject.GetComponent<EnemyHealthBar>().currentHealth <= 100)
         {
             Debug.Log("Gegner tot");
             Destroy(altesZiel);
