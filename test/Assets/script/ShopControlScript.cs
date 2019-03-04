@@ -197,7 +197,7 @@ public class ShopControlScript : MonoBehaviour {
         }
         else if (aktuelleScene.name == "ShopWueste")
         {
-            SceneManager.LoadScene("Stadt");
+            SceneManager.LoadScene("StadtNachAngriff");
         }
         else if (aktuelleScene.name == "ShopRom")
         {
