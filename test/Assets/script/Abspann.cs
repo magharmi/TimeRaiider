@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class Abspann : MonoBehaviour {
 
     private int bildNummer = 0;
-    GameObject[] bilder;  
+    GameObject[] bilder;
+    bool klick = false;
 
     void Start()
     {    
@@ -28,11 +29,16 @@ public class Abspann : MonoBehaviour {
         if(bildNummer < bilder.Length - 1){
             Destroy(GameObject.Find("00" + bildNummer));
         }
-        else
+        else if(klick == false)
         {
             Destroy(GameObject.Find("00" + bildNummer));
-            Destroy(GameObject.Find("1"));
-            Destroy(GameObject.Find("Text"));
+            klick = true;
+            //Destroy(GameObject.Find("1"));
+            //Destroy(GameObject.Find("Text"));
+        }
+        else if(klick == true)
+        {
+            SceneManager.LoadScene("Hauptmenü");
         }
     }
 }

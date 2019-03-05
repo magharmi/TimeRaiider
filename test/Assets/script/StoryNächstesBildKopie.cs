@@ -29,7 +29,7 @@ public class StoryNächstesBildKopie : MonoBehaviour {
             Destroy(GameObject.Find("00" + bildNummer));
         }
         else{
-            SceneManager.LoadScene("test");
+            SceneManager.LoadScene("Hauptmenü");
         }
     }
 }
