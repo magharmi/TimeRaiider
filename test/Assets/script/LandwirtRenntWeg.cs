@@ -25,7 +25,7 @@ public class LandwirtRenntWeg : MonoBehaviour
         {
 
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(newPos.x, transform.position.y), speed * Time.deltaTime);
-            sr.flipX = true;
+            sr.flipX = false;
             newPos.x = transform.position.x + 10;
         }
         else
